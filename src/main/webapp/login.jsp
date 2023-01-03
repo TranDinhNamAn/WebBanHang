@@ -74,14 +74,14 @@
         <div class="mb-5 contact-info">
 
             <div class="col-md-88 block-9 mb-md-5">
-                <form action="#" class="bg-light p-5 contact-form">
+                <form action="Login" method="post" class="bg-light p-5 contact-form">
                     <h1>Đăng nhập</h1>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="SĐT hoặc Email" id="username">
+                        <input type="text" class="form-control" placeholder="SĐT hoặc Email" id="username" name="username">
                         <span class="icon icon-envelope u"></span>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Mật khẩu" id="pass">
+                        <input type="password" class="form-control" placeholder="Mật khẩu" id="pass" name="password">
                         <span class="icon icon-lock u"></span>
                     </div>
                     <div class="form-group">
