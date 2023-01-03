@@ -34,12 +34,12 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">Giới thiệu</a></li>
-                <li class="nav-item active"><a href="pricing.html" class="nav-link">Bảng giá</a></li>
+                <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
+                <li class="nav-item active"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
                 <li class="nav-item"><a href="car.jsp" class="nav-link">Xe máy</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Bài viết</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Liên hệ</a></li>
-                <li class="nav-item"><a href="login.html" class="nav-link">Đăng nhập</a></li>
+                <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
+                <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
+                <li class="nav-item"><a href="login.jsp" class="nav-link">Đăng nhập</a></li>
                 <li class="nav-item"><a href="cart.html" class="nav-link"><p style="margin-top: 6px"
                                                                              class="icon icon-cart-plus"></p></a></li>
             </ul>
@@ -56,7 +56,7 @@
             <div class="col-md-9 ftco-animate pb-5">
                 <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ <i
                         class="ion-ios-arrow-forward"></i></a></span>
-                    <span><a href="pricing.html">Bảng giá <i class="ion-ios-arrow-forward"></i></a></span></p>
+                    <span><a href="pricing.jsp">Bảng giá <i class="ion-ios-arrow-forward"></i></a></span></p>
                 <h1 class="mb-3 bread">Bảng giá thuê xe</h1>
             </div>
         </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Giới thiệu</title>
+    <title>Đăng ký</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -40,14 +40,15 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
-                <li class="nav-item active"><a href="about.html" class="nav-link">Giới thiệu</a></li>
-                <li class="nav-item"><a href="pricing.html" class="nav-link">Bảng giá</a></li>
+                <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
+                <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
                 <li class="nav-item"><a href="car.jsp" class="nav-link">Xe máy</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Bài viết</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Liên hệ</a></li>
-                <li class="nav-item"><a href="login.html" class="nav-link">Đăng nhập</a></li>
+                <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
+                <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
+                <li class="nav-item active"><a href="login.jsp" class="nav-link">Đăng nhập</a></li>
                 <li class="nav-item"><a href="cart.html" class="nav-link"><p style="margin-top: 6px"
                                                                              class="icon icon-cart-plus"></p></a></li>
+
             </ul>
         </div>
     </div>
@@ -62,57 +63,48 @@
             <div class="col-md-9 ftco-animate pb-5">
                 <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ <i
                         class="ion-ios-arrow-forward"></i></a></span>
-                    <span><a href="about.html">Giới thiệu <i class="ion-ios-arrow-forward"></i></a></span></p>
-                <h1 class="mb-3 bread">Giới thiệu về chúng tôi</h1>
+                    <span><a href="login.jsp">Đăng ký <i class="ion-ios-arrow-forward"></i></a></span></p>
+                <h1 class="mb-3 bread">Đăng ký tài khoản</h1>
             </div>
         </div>
     </div>
 </section>
 
-<section class="ftco-section ftco-about">
+<section class="ftco-section contact-section">
     <div class="container">
-        <div class="row no-gutters">
-            <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center"
-                 style="background-image: url(images/bg2.jpg);">
-            </div>
-            <div class="col-md-6 wrap-about ftco-animate">
-                <div class="heading-section heading-section-white pl-md-5">
-                    <span class="subheading">Giới thiệu</span>
-                    <h2 class="mb-4">Chào mừng đến với ThueXeMay</h2>
+        <div class="roww mb-5 contact-info">
 
-                    <p>Dịch vụ cho thuê xe máy trải dài khắp các tỉnh thành của Việt Nam, ThueXeMay hân hạnh được
-                        phục vụ quý khách mong muốn trải nghiệm du lịch Phượt hay tự túc. Dịch vụ Thuê xe máy ThueXeMay
-                        có những ưu điểm sau:</p>
-                    <p>DỊCH VỤ CHUYÊN NGHIỆP – XE ĐẸP, ĐỦ SỐ LƯỢNG CUNG ỨNG<br/>
-                        ThueXeMay cam kết cung ứng đầu đủ các loại xe mà quý khách yêu cầu, phù hợp với vùng miền và địa
-                        hình mà bạn muốn đến.
-                        Dịch vụ chuyên cho thuê xe máy Anh Vũ bao gồm nhiều loại xe như: Xe tay ga, xe số, hợp thời
-                        trang, đảm bảo đẹp và sử dụng tốt.
-                        Tha hồ để lựa chọn cho gia đình và bản thân mình khi đi du lịch.</p>
-
-                    <p>CHÍNH SÁCH THUÊ XE MÁY RÕ RÀNG VÀ UY TÍN<br/>
-                        Chúng tôi có chính sách cho thuê xe máy rõ ràng, đảm bảo quyền lợi của khách hàng muốn thuê xe
-                        máy.
-                        Cách phục vụ chuyên nghiệp cũng như hỗ trợ trước và sau khi thuê xe sẽ làm hài lòng mọi khách
-                        hàng dù khó tính đến đâu.
-                        Thủ tục nhanh và hợp đồng ngắn gọn dễ hiểu là ưu điểm của Motorbike.vn, giúp cho quý khách hàng
-                        tiết kiệm được thời gian, công sức.
-                        Chúng tôi giao xe tận nơi và có thể linh động nhận xe tại địa điểm gần quý khách nhất có thể.
-                    </p>
-                    <p><a href="car.jsp" class="btn btn-primary py-3 px-4">Tìm xe</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="ftco-section ftco-intro" style="background-image: url(images/bg3.jpg);">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row justify-content-end">
-            <div class="col-md-6 heading-section heading-section-white ftco-animate">
-                <h2 class="mb-3">Liên hệ ngay với ThueXeMay để được tư vấn đặt xe và hưởng dịch vụ tốt nhất.</h2>
-                <a href="contact.html" class="btn btn-primary btn-lg">Liên hệ</a>
+            <div class="col-md-88 block-9 mb-md-5">
+                <form action="#" class="bg-light p-5 contact-form">
+                    <h1>Đăng ký</h1>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Nhập email hoặc sđt" id="username">
+                        <span class="icon icon-envelope u"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Mật khẩu" id="pass">
+                        <span class="icon icon-lock u"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Nhập lại mật khẩu" id="pass1">
+                        <span class="icon icon-lock u"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Đăng ký miễn phí" id="button" class="btn btn-primary py-3 px-5">
+                    </div>
+                    <div class="form-group">
+                        <p>Hoặc đăng ký bằng</p>
+                        <ul class="ftco-footer-social list-unstyled  float-lft">
+                            <li class="ftco-animate e"><a href="#"><span class="icon-twitter"></span></a></li>
+                            <li class="ftco-animate e"><a href="#"><span class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate e"><a href="#"><span class="icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Đăng nhập với tài khoản" id="button1"
+                               class="btn btn-primary py-3 px-5">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -204,6 +196,6 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
-
+<script src="js/signup.js"></script>
 </body>
 </html>

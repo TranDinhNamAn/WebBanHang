@@ -3,7 +3,7 @@ $(document).ready(function () {
     var index = -1;
     $('#button1').click(function () {
         event.preventDefault();
-        var url = "signup.html";
+        var url = "signup.jsp";
         location.replace(url);
     });
     $('#button').click(function () {

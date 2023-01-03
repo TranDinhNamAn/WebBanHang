@@ -46,8 +46,8 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a href="trangchu" class="nav-link">Trang chủ</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">Giới thiệu</a></li>
-                <li class="nav-item"><a href="pricing.html" class="nav-link">Bảng giá</a></li>
+                <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
+                <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
                 <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
                     <ul class="dr-menu">
                         <li class="subb"><a href="honda.html">Honda </a></li>
@@ -58,9 +58,9 @@
                         <li class="subb"><a href="yamaha.html">Yamaha </a></li>
                     </ul>
                 </li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Bài viết</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Liên hệ</a></li>
-                <li class="nav-item"><a href="login.html" class="nav-link">Đăng nhập</a></li>
+                <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
+                <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
+                <li class="nav-item"><a href="login.jsp" class="nav-link">Đăng nhập</a></li>
                 <li class="nav-item"><a href="cart.html" class="nav-link"><p style="margin-top: 6px"
                                                                              class="icon icon-cart-plus"></p></a></li>
             </ul>
@@ -111,13 +111,13 @@
                          style="background-image: url(<%=p.getImg()%>);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.html"><%=p.getName()%>
+                        <h2 class="mb-0"><a href="car-single.jsp"><%=p.getName()%>
                         </a></h2>
                         <div class="d-flex mb-3">
                             <p class="price ml-auto"><%=p.getPrice()%><span>/ngày</span></p>
                         </div>
                         <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
                     </div>
                 </div>
             </div>

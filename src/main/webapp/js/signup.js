@@ -2,7 +2,7 @@ $(document).ready(function () {
     var checkU = false;
     $('#button1').click(function () {
         event.preventDefault();
-        var url = "login.html";
+        var url = "login.jsp";
         location.replace(url);
     });
     $('#button').click(function () {
@@ -21,7 +21,7 @@ $(document).ready(function () {
             if (matkhau == matkhau1) {
                 alert("Đăng ký thành công");
                 event.preventDefault();
-                var url = "login.html";
+                var url = "login.jsp";
                 location.replace(url);
             } else {
                 alert("Mật khẩu nhập lại không chính xác");

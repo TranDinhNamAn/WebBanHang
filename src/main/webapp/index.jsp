@@ -44,12 +44,12 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active"><a href="trangchu" class="nav-link">Trang chủ</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">Giới thiệu</a></li>
-                <li class="nav-item"><a href="pricing.html" class="nav-link">Bảng giá</a></li>
+                <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
+                <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
                 <li class="nav-item"><a href="xemay" class="nav-link">Xe máy</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Bài viết</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Liên hệ</a></li>
-                <li class="nav-item"><a href="login.html" class="nav-link">Đăng nhập</a></li>
+                <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
+                <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
+                <li class="nav-item"><a href="login.jsp" class="nav-link">Đăng nhập</a></li>
                 <li class="nav-item"><a href="cart.html" class="nav-link"><p style="margin-top: 6px"
                                                                              class="icon icon-cart-plus"></p></a></li>
 
@@ -308,7 +308,7 @@
         <div class="row d-flex">
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('images/bl1.jpg');">
+                    <a href="blog-single.jsp" class="block-20" style="background-image: url('images/bl1.jpg');">
                     </a>
                     <div class="text pt-4">
                         <h3 class="heading mt-2"><a href="#">Top 6 Địa Chỉ Thuê Xe Máy Hai Bà Trưng Hà Nội Tốt Nhất
@@ -319,7 +319,7 @@
             </div>
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('images/bl2.jpg');">
+                    <a href="blog-single.jsp" class="block-20" style="background-image: url('images/bl2.jpg');">
                     </a>
                     <div class="text pt-4">
                         <h3 class="heading mt-2"><a href="#">Thuê Xe Máy Phố Cổ Hà Nội | Địa Điểm Thuê Xe Tốt Nhất
@@ -330,7 +330,7 @@
             </div>
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('images/bl3.jpg');">
+                    <a href="blog-single.jsp" class="block-20" style="background-image: url('images/bl3.jpg');">
                     </a>
                     <div class="text pt-4">
                         <h3 class="heading mt-2"><a href="#">TOP 10 Địa Điểm Thuê Xe Máy Hà Nội Uy Tín Nhất Không Thể Bỏ
