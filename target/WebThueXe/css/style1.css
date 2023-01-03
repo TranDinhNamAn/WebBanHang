@@ -1,0 +1,36 @@
+ul{
+    padding-inline-start: 0 !important;
+}
+ul li {
+    list-style-type: none;
+
+}
+nav .navbar-nav  .subb{
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #000000;
+}
+nav .navbar-nav .subb:hover, .subb:hover a{
+   color: #ffff00;
+    cursor: pointer;
+}
+
+nav .navbar-nav .nav-item:hover ,nav .navbar-nav .nav-item:hover span, .subb:hover{
+    color: white;
+    text-decoration: none;
+}
+nav .navbar-nav .dr-menu{
+    position: absolute;
+    display: none;
+}
+nav .navbar-nav .dr-menu .sub{
+    border-bottom: 2px solid #cfcfcf;
+}
+
+.navbar-nav .nav-item:hover .dr-menu{
+    display: block;
+}
+.dr-menu .subb, a{
+    color: white;
+}
