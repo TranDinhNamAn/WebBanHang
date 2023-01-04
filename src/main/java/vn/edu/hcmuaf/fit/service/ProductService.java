@@ -16,7 +16,6 @@ public class ProductService {
         Statement statement = DBConnect.getInstall().get();
         if (statement != null) {
             ResultSet rs = statement.executeQuery("select * from product");
-
             while (rs.next()) {
                 list.add(new Product(
                         rs.getString(1),

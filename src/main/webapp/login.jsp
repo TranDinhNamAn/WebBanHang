@@ -1,6 +1,8 @@
+<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <title>Đăng nhập</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -74,10 +76,13 @@
         <div class="mb-5 contact-info">
 
             <div class="col-md-88 block-9 mb-md-5">
-                <form action="Login" method="post" class="bg-light p-5 contact-form">
+                <form action="dangnhap" method="post" class="bg-light p-5 contact-form">
                     <h1>Đăng nhập</h1>
+                    <% String error = (String) request.getAttribute("Error");%>
+                    <% String username = (String) request.getParameter("username");%>
+                    <p style="color: red;text-align: center"><%= error!=null ? error:""%> </p>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="SĐT hoặc Email" id="username" name="username">
+                        <input type="text" class="form-control" placeholder="Tên tài khoản" id="username" name="username" value="<%=username!=null? username:""%>">
                         <span class="icon icon-envelope u"></span>
                     </div>
                     <div class="form-group">
@@ -193,6 +198,5 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
-<script src="js/login.js"></script>
 </body>
 </html>
