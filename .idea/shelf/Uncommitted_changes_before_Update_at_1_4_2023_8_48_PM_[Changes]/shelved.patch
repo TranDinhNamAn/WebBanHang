@@ -1,0 +1,168 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -9,12 +9,27 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="641f49b5-a701-41c7-b517-2ea183966c2f" name="Changes" comment="Nguyen Toi" />
++    <list default="true" id="641f49b5-a701-41c7-b517-2ea183966c2f" name="Changes" comment="Nguyen Toi">
++      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Piaggio.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/SYM.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Suzuki.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Vespa.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Yamaha.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
++  </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+@@ -185,6 +200,8 @@
+       <updated>1672759254374</updated>
+       <workItem from="1672759256248" duration="1334000" />
+       <workItem from="1672803424123" duration="6957000" />
++      <workItem from="1672810404076" duration="274000" />
++      <workItem from="1672839728385" duration="392000" />
+     </task>
+     <task id="LOCAL-00001" summary="Nguyen Toi">
+       <created>1672807842093</created>
+@@ -207,7 +224,21 @@
+       <option name="project" value="LOCAL" />
+       <updated>1672809288895</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="Nguyen Toi">
++      <created>1672810488652</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1672810488652</updated>
++    </task>
++    <task id="LOCAL-00005" summary="Nguyen Toi">
++      <created>1672810633400</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1672810633400</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+Index: src/main/java/vn/edu/hcmuaf/fit/controller/Suzuki.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/vn/edu/hcmuaf/fit/controller/Suzuki.java b/src/main/java/vn/edu/hcmuaf/fit/controller/Suzuki.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/vn/edu/hcmuaf/fit/controller/Suzuki.java	
+@@ -0,0 +1,19 @@
++package vn.edu.hcmuaf.fit.controller;
++
++import javax.servlet.*;
++import javax.servlet.http.*;
++import javax.servlet.annotation.*;
++import java.io.IOException;
++
++@WebServlet(name = "Suzuki", value = "/Suzuki")
++public class Suzuki extends HttpServlet {
++    @Override
++    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
++
++    }
++
++    @Override
++    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
++
++    }
++}
+Index: src/main/java/vn/edu/hcmuaf/fit/controller/Piaggio.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/vn/edu/hcmuaf/fit/controller/Piaggio.java b/src/main/java/vn/edu/hcmuaf/fit/controller/Piaggio.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/vn/edu/hcmuaf/fit/controller/Piaggio.java	
+@@ -0,0 +1,31 @@
++package vn.edu.hcmuaf.fit.controller;
++
++import vn.edu.hcmuaf.fit.model.Product;
++import vn.edu.hcmuaf.fit.service.ProductService;
++
++import javax.servlet.*;
++import javax.servlet.http.*;
++import javax.servlet.annotation.*;
++import java.io.IOException;
++import java.sql.SQLException;
++import java.util.List;
++
++@WebServlet(name = "Piaggio", value = "/Piaggio")
++public class Piaggio extends HttpServlet {
++    @Override
++    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
++        List<Product> list = null;
++        try {
++            list = ProductService.getListProductByCategory("");
++            request.setAttribute("list2", list);
++            request.getRequestDispatcher("piaggio.jsp").forward(request, response);
++        } catch (SQLException e) {
++            throw new RuntimeException(e);
++        }
++    }
++
++    @Override
++    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
++
++    }
++}
+Index: src/main/java/vn/edu/hcmuaf/fit/controller/SYM.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/vn/edu/hcmuaf/fit/controller/SYM.java b/src/main/java/vn/edu/hcmuaf/fit/controller/SYM.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/vn/edu/hcmuaf/fit/controller/SYM.java	
+@@ -0,0 +1,19 @@
++package vn.edu.hcmuaf.fit.controller;
++
++import javax.servlet.*;
++import javax.servlet.http.*;
++import javax.servlet.annotation.*;
++import java.io.IOException;
++
++@WebServlet(name = "SYM", value = "/SYM")
++public class SYM extends HttpServlet {
++    @Override
++    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
++
++    }
++
++    @Override
++    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
++
++    }
++}

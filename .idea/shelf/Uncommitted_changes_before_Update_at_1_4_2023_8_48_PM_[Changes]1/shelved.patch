@@ -1,0 +1,58 @@
+Index: src/main/java/vn/edu/hcmuaf/fit/controller/Vespa.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/vn/edu/hcmuaf/fit/controller/Vespa.java b/src/main/java/vn/edu/hcmuaf/fit/controller/Vespa.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/vn/edu/hcmuaf/fit/controller/Vespa.java	
+@@ -0,0 +1,19 @@
++package vn.edu.hcmuaf.fit.controller;
++
++import javax.servlet.*;
++import javax.servlet.http.*;
++import javax.servlet.annotation.*;
++import java.io.IOException;
++
++@WebServlet(name = "Vespa", value = "/Vespa")
++public class Vespa extends HttpServlet {
++    @Override
++    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
++
++    }
++
++    @Override
++    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
++
++    }
++}
+Index: src/main/java/vn/edu/hcmuaf/fit/controller/Yamaha.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/vn/edu/hcmuaf/fit/controller/Yamaha.java b/src/main/java/vn/edu/hcmuaf/fit/controller/Yamaha.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/vn/edu/hcmuaf/fit/controller/Yamaha.java	
+@@ -0,0 +1,19 @@
++package vn.edu.hcmuaf.fit.controller;
++
++import javax.servlet.*;
++import javax.servlet.http.*;
++import javax.servlet.annotation.*;
++import java.io.IOException;
++
++@WebServlet(name = "Yamaha", value = "/Yamaha")
++public class Yamaha extends HttpServlet {
++    @Override
++    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
++
++    }
++
++    @Override
++    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
++
++    }
++}
