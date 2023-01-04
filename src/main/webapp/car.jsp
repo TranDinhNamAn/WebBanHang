@@ -50,7 +50,7 @@
                 <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
                 <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
                     <ul class="dr-menu">
-                        <li class="subb"><a href="honda.html">Honda </a></li>
+                        <li class="subb"><a href="honda">Honda </a></li>
                         <li class="subb"><a href="piaggio.html">Piaggio </a></li>
                         <li class="subb"><a href="sym.html">SYM </a></li>
                         <li class="subb"><a href="suzuki.html">Suzuki </a></li>

@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Xe máy</title>
+    <title>Xe Máy Honda</title>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -78,7 +78,7 @@
                 <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ <i
                         class="ion-ios-arrow-forward"></i></a></span>
                     <span><a href="car.jsp">Xe máy <i class="ion-ios-arrow-forward"></i></a></span></p>
-                <h1 class="mb-3 bread">Chọn xe của bạn</h1>
+                <h1 class="mb-3 bread">Xe Honda</h1>
             </div>
         </div>
     </div>
@@ -88,7 +88,8 @@
 <section class="ftco-section bg-light">
     <div class="container">
         <div class="row">
-            <% List<Product> list = (List<Product>) request.getAttribute("list1");
+            <%
+                List<Product> list = (List<Product>) request.getAttribute("list2");
 
                 int start = 0, end = 9;
                 if (list.size() < 9) {
@@ -100,28 +101,30 @@
                 if (request.getParameter("end") != null) {
                     end = Integer.parseInt(request.getParameter("end"));
                 }
-                List<Product> arr = ProductService.getListByPage(list, start, end);
+                List<Product> arr = ProductService.getListByPage(list,start,end);
+            %>
+            <%
+                for (Product p1:arr
+                     ) {
             %>
 
-            <% for (Product p : arr) {
-            %>
             <div class="col-md-4">
                 <div class="car-wrap rounded ftco-animate">
                     <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(<%=p.getImg()%>);">
+                         style="background-image: url(<%=p1.getImg()%>);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp"><%=p.getName()%>
+                        <h2 class="mb-0"><a href="car-single.jsp"><%=p1.getName()%>
                         </a></h2>
                         <div class="d-flex mb-3">
-                            <p class="price ml-auto"><%=p.getPrice()%><span>/ngày</span></p>
+                            <p class="price ml-auto"><%=p1.getPrice()%>vnđ<span>/ngày</span></p>
                         </div>
                         <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
                                 href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
                     </div>
                 </div>
             </div>
-            <% }%>
+            <%}%>
         </div>
         <div class="row mt-5">
             <div class="col text-center">
@@ -139,7 +142,7 @@
                                     b = list.size();
                                 }%>
 
-                        <li class="active"><a href="xemay?start=<%=a%>&end=<%=b%>"><%=i%>
+                        <li class="active"><a href="honda?start=<%=a%>&end=<%=b%>"><%=i%>
                         </a></li>
                         <% }%>
                     </ul>
@@ -147,6 +150,7 @@
             </div>
         </div>
     </div>
+
 </section>
 
 
@@ -235,5 +239,6 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
+
 </body>
 </html>
