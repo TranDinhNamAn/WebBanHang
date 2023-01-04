@@ -6,14 +6,16 @@ public class Product {
     String img;
     double price;
     boolean isNew;
+    int brandID;
     public Product() {
     }
 
-    public Product(String name, String img, double price, boolean isNew) {
+    public Product(String name, String img, double price, boolean isNew,int brandID) {
         this.name = name;
         this.img = img;
         this.price = price;
         this.isNew = isNew;
+        this.brandID = brandID;
     }
     public String getName() {
         return name;
@@ -53,5 +55,13 @@ public class Product {
 
     public void setNew(boolean aNew) {
         isNew = aNew;
+    }
+
+    public int getBrandID() {
+        return brandID;
+    }
+
+    public void setBrandID(int brandID) {
+        this.brandID = brandID;
     }
 }

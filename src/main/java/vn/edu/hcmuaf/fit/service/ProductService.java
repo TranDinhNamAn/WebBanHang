@@ -21,7 +21,8 @@ public class ProductService {
                         rs.getString(1),
                         rs.getString(2),
                         rs.getDouble(3),
-                        rs.getBoolean(4)
+                        rs.getBoolean(4),
+                        rs.getInt(5)
 
                 ));
             }
@@ -42,7 +43,8 @@ public class ProductService {
                         rs.getString(1),
                         rs.getString(2),
                         rs.getDouble(3),
-                        rs.getBoolean(4)
+                        rs.getBoolean(4),
+                        rs.getInt(5)
                 ));
             }
         } else {
@@ -57,5 +59,30 @@ public class ProductService {
             list.add(arr.get(i));
         }
         return list;
+    }
+    public static List<Product> getListProductByCategory(String san_pham) throws SQLException {
+        List<Product> list1 = new LinkedList<>();
+        Statement statement = DBConnect.getInstall().get();
+        if (statement != null) {
+            ResultSet rs = statement.executeQuery("select * from product inner join brand on product.brandID = brand.brandID where brand.brandID = '"+ san_pham + "'");
+
+            while (rs.next()) {
+                list1.add(new Product(
+                        rs.getString(1),
+                        rs.getString(2),
+                        rs.getDouble(3),
+                        rs.getBoolean(4),
+                        rs.getInt(5)
+                ));
+            }
+        } else {
+            System.out.println("No result");
+        }
+        return list1;
+    }
+
+    public static void main(String[] args) throws SQLException {
+        ProductService sv = new ProductService();
+        System.out.println(sv.getListProductByCategory("1").size());
     }
 }
