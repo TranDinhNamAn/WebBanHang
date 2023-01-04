@@ -51,11 +51,11 @@
                 <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
                     <ul class="dr-menu">
                         <li class="subb"><a href="honda">Honda </a></li>
-                        <li class="subb"><a href="piaggio.jsp">Piaggio </a></li>
-                        <li class="subb"><a href="sym.jsp">SYM </a></li>
-                        <li class="subb"><a href="suzuki.jsp">Suzuki </a></li>
-                        <li class="subb"><a href="vespa.jsp">Vespa </a></li>
-                        <li class="subb"><a href="yamaha.jsp">Yamaha </a></li>
+                        <li class="subb"><a href="piaggio">Piaggio </a></li>
+                        <li class="subb"><a href="sym">SYM </a></li>
+                        <li class="subb"><a href="suzuki">Suzuki </a></li>
+                        <li class="subb"><a href="vespa">Vespa </a></li>
+                        <li class="subb"><a href="yamaha">Yamaha </a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
