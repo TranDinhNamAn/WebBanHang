@@ -11,7 +11,7 @@ import java.util.List;
 public class CheckLogin {
     public static Account Check(String username, String password) throws SQLException, ClassNotFoundException {
         Statement statement = DBConnect.getInstall().get();
-        String sql = "select*from user where username = '"+"username"+ "' and password= '"+"password"+"'";
+        String sql = "select*from user where username = '"+username+ "' and password= '"+password+"'";
         ResultSet rs = statement.executeQuery(sql);
         Account acc = null;
         while (rs.next()) {
@@ -23,7 +23,7 @@ public class CheckLogin {
     }
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        CheckLogin.Check("naman123","123");
+        System.out.println(CheckLogin.Check("naman123","124"));
     }
 }
 
