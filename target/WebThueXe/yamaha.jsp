@@ -50,7 +50,7 @@
                 <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
                 <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
-                <li class="nav-item active"><a href="#" class="nav-link">Xe máy</a>
+                <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
                     <ul class="dr-menu">
                         <%List<Brand> arr1 = ProductService.getListBrand();%>
                         <%

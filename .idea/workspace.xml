@@ -10,34 +10,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="416c06ed-0398-4fcb-a2d0-6804377f658f" name="Changes" comment="NguyenToi">
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/model/Brand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/DashBoard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/addProduct.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css1/adminlte.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css1/all.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css1/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css1/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css1/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css1/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css1/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css1/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css1/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css1/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css1/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css1/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css1/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css1/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-regular-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fromdangbai.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fromdsbaiviet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js1/adminlte.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js1/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js1/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js1/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js1/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js1/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js1/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js1/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js1/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js1/bs-custom-file-input.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js1/dataTables.bootstrap4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js1/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js1/jquery.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js1/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js1/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/listProduct.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/listUser.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/newProduct.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/newUser.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/removeProduct.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/updateProduct.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/updateUserAdmin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Honda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Honda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Piaggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Piaggio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/SYM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/SYM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Suzuki.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Suzuki.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Vespa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Vespa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Yamaha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Yamaha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/db/DBConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/db/DBConnect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/car.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/car.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/honda.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/honda.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/piaggio.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/piaggio.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/suzuki.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/suzuki.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/sym.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sym.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/vespa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vespa.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/yamaha.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/yamaha.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebThueXe.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/honda.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/honda.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebThueXe/piaggio.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/piaggio.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebThueXe/suzuki.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/suzuki.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebThueXe/sym.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/sym.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebThueXe/vespa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/vespa.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebThueXe/yamaha.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/yamaha.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,15 +105,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/USER/IdeaProjects/WebThueXe&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/ltweb/WebThueXe/src/main/webapp/fonts"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ltweb\WebThueXe\src\main\webapp\fonts" />
+      <recent name="D:\ltweb\WebThueXe\src\main\webapp\css1" />
+      <recent name="D:\ltweb\WebThueXe\src\main\webapp\js1" />
+      <recent name="D:\ltweb\WebThueXe\src\main\webapp\fonts1" />
+      <recent name="D:\ltweb\WebThueXe\src\main\webapp\css" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="excludedTypes">
       <set>
@@ -288,7 +332,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672842914224</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="NguyenToi">
+      <created>1672845956228</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1672845956228</updated>
+    </task>
+    <task id="LOCAL-00009" summary="NguyenToi">
+      <created>1672846065671</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1672846065671</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
