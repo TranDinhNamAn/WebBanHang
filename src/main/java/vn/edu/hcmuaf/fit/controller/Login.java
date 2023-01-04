@@ -1,14 +1,13 @@
 package vn.edu.hcmuaf.fit.controller;
 
 import vn.edu.hcmuaf.fit.model.Account;
-import vn.edu.hcmuaf.fit.service.CheckLogin;
+import vn.edu.hcmuaf.fit.service.Check;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.List;
 
 @WebServlet(name = "Login", value = "/dangnhap")
 public class Login extends HttpServlet {
@@ -26,7 +25,7 @@ public class Login extends HttpServlet {
         try {
             String user = request.getParameter("username");
             String pass = request.getParameter("password");
-            Account acc = CheckLogin.Check(user, pass);
+            Account acc = Check.CheckLogin(user, pass);
             if (acc != null) {
                 response.sendRedirect("trangchu");
             } else {

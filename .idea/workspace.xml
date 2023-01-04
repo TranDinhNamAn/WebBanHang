@@ -10,14 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="416c06ed-0398-4fcb-a2d0-6804377f658f" name="Changes" comment="Nam An">
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/db/DBConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/db/DBConnect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Signup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Signup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/CheckLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/Check.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/signup.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebThueXe.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/car.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/car.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/piaggio.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/suzuki.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/sym.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/vespa.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/yamaha.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Signup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Signup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/CheckLogin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Signup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Signup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/CheckLogin.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +54,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/USER/IdeaProjects/WebThueXe"
   }
@@ -58,9 +66,9 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DBConnect">
-    <configuration name="CheckLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.fit.service.CheckLogin" />
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.68">
+    <configuration name="Check" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.fit.service.Check" />
       <module name="WebThueXe" />
       <extension name="coverage">
         <pattern>
@@ -195,7 +203,7 @@
       <updated>1672758511428</updated>
       <workItem from="1672758513423" duration="519000" />
       <workItem from="1672761768599" duration="6020000" />
-      <workItem from="1672797374118" duration="8186000" />
+      <workItem from="1672797374118" duration="11613000" />
     </task>
     <task id="LOCAL-00001" summary="Nam An">
       <created>1672805231465</created>
@@ -225,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672809199519</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Nam An">
+      <created>1672810248209</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672810248209</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

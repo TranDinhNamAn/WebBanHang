@@ -79,10 +79,15 @@
             <div class="col-md-88 block-9 mb-md-5">
                 <form action="dangky" method="post" class="bg-light p-5 contact-form">
                     <h1>Đăng ký</h1>
+                    <% String error = (String) request.getAttribute("Error");%>
+                    <% String username = (String) request.getParameter("username");%>
+                    <p style="color: red;text-align: center"><%= error!=null ? error:""%> </p>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Tên tài khoản" id="username" name="username">
+                        <input type="text" class="form-control" placeholder="Tên tài khoản" id="username" name="username" value="<%=username!=null? username:""%>">
                         <span class="icon icon-envelope u"></span>
                     </div>
+                    <% String error1 = (String) request.getAttribute("Error1");%>
+                    <p style="color: red;text-align: center"><%= error1!=null ? error1:""%> </p>
                     <div class="form-group">
                         <input type="password" class="form-control" placeholder="Mật khẩu" id="pass" name="password">
                         <span class="icon icon-lock u"></span>
