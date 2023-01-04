@@ -1,0 +1,24 @@
+<changelist name="Uncommitted_changes_before_Update_at_1_4_2023_11_48_AM_[Changes]1" date="1672807775561" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_48_AM_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 1/4/2023 11:48 AM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" />
+    <option name="AFTER_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_48_AM_[Changes]1/DBConnect.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/vn/edu/hcmuaf/fit/model/Product.class" />
+    <option name="AFTER_PATH" value="target/classes/vn/edu/hcmuaf/fit/model/Product.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_48_AM_[Changes]1/Product.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/vn/edu/hcmuaf/fit/service/ProductService.class" />
+    <option name="AFTER_PATH" value="target/classes/vn/edu/hcmuaf/fit/service/ProductService.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_48_AM_[Changes]1/ProductService.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/WebThueXe.war" />
+    <option name="AFTER_PATH" value="target/WebThueXe.war" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_48_AM_[Changes]1/WebThueXe.war" />
+  </binary>
+</changelist>
