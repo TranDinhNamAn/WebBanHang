@@ -33,7 +33,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="index.jsp">Thue<span>XeMay</span></a>
+        <a class="navbar-brand" href="trangchu">Thue<span>XeMay</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
@@ -41,13 +41,13 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
+                <li class="nav-item"><a href="trangchu" class="nav-link">Trang chủ</a></li>
                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
                 <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
                 <li class="nav-item"><a href="car.jsp" class="nav-link">Xe máy</a></li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
-                <li class="nav-item active"><a href="login.jsp" class="nav-link">Đăng nhập</a></li>
+                <li class="nav-item active"><a href="dangnhap" class="nav-link">Đăng nhập</a></li>
                 <li class="nav-item"><a href="cart.html" class="nav-link"><p style="margin-top: 6px"
                                                                              class="icon icon-cart-plus"></p></a></li>
             </ul>
@@ -62,9 +62,9 @@
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
             <div class="col-md-9 ftco-animate pb-5">
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ <i
+                <p class="breadcrumbs"><span class="mr-2"><a href="trangchu">Trang chủ <i
                         class="ion-ios-arrow-forward"></i></a></span>
-                    <span><a href="login.jsp">Đăng nhập <i class="ion-ios-arrow-forward"></i></a></span></p>
+                    <span><a href="dangnhap">Đăng nhập <i class="ion-ios-arrow-forward"></i></a></span></p>
                 <h1 class="mb-3 bread">Đăng nhập vào ThueXeMay</h1>
             </div>
         </div>
@@ -101,7 +101,7 @@
                         </ul>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Đăng ký ngay" id="button1" class="btn btn-primary py-3 px-5">
+                        <a href="dangky" class="btn btn-primary py-3 px-5">Đăng ký ngay</a>
                     </div>
                     <div class="form-group">
                         <a href="#">Quên mật khẩu ?</a>

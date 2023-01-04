@@ -17,7 +17,6 @@ public class Login extends HttpServlet {
         try{
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }catch (Exception e){
-
         }
 
     }

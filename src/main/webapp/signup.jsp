@@ -1,6 +1,8 @@
+<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <title>Đăng ký</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -31,7 +33,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="index.jsp">Thue<span>XeMay</span></a>
+        <a class="navbar-brand" href="trangchu">Thue<span>XeMay</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
@@ -39,13 +41,13 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
+                <li class="nav-item"><a href="trangchu" class="nav-link">Trang chủ</a></li>
                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
                 <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
                 <li class="nav-item"><a href="car.jsp" class="nav-link">Xe máy</a></li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
-                <li class="nav-item active"><a href="login.jsp" class="nav-link">Đăng nhập</a></li>
+                <li class="nav-item active"><a href="dangnhap" class="nav-link">Đăng nhập</a></li>
                 <li class="nav-item"><a href="cart.html" class="nav-link"><p style="margin-top: 6px"
                                                                              class="icon icon-cart-plus"></p></a></li>
 
@@ -61,9 +63,9 @@
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
             <div class="col-md-9 ftco-animate pb-5">
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ <i
+                <p class="breadcrumbs"><span class="mr-2"><a href="trangchu">Trang chủ <i
                         class="ion-ios-arrow-forward"></i></a></span>
-                    <span><a href="login.jsp">Đăng ký <i class="ion-ios-arrow-forward"></i></a></span></p>
+                    <span><a href="dangky">Đăng ký <i class="ion-ios-arrow-forward"></i></a></span></p>
                 <h1 class="mb-3 bread">Đăng ký tài khoản</h1>
             </div>
         </div>
@@ -75,22 +77,22 @@
         <div class="roww mb-5 contact-info">
 
             <div class="col-md-88 block-9 mb-md-5">
-                <form action="#" class="bg-light p-5 contact-form">
+                <form action="dangky" method="post" class="bg-light p-5 contact-form">
                     <h1>Đăng ký</h1>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Nhập email hoặc sđt" id="username">
+                        <input type="text" class="form-control" placeholder="Tên tài khoản" id="username" name="username">
                         <span class="icon icon-envelope u"></span>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Mật khẩu" id="pass">
+                        <input type="password" class="form-control" placeholder="Mật khẩu" id="pass" name="password">
                         <span class="icon icon-lock u"></span>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Nhập lại mật khẩu" id="pass1">
+                        <input type="password" class="form-control" placeholder="Nhập lại mật khẩu" id="pass1" name="repass">
                         <span class="icon icon-lock u"></span>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Đăng ký miễn phí" id="button" class="btn btn-primary py-3 px-5">
+                        <input type="submit" value="Đăng ký" id="button" class="btn btn-primary py-3 px-5">
                     </div>
                     <div class="form-group">
                         <p>Hoặc đăng ký bằng</p>
@@ -101,8 +103,7 @@
                         </ul>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Đăng nhập với tài khoản" id="button1"
-                               class="btn btn-primary py-3 px-5">
+                        <a href="dangnhap" class="btn btn-primary py-3 px-5">Đăng nhập bằng tài khoản</a>
                     </div>
                 </form>
             </div>
@@ -196,6 +197,5 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
-<script src="js/signup.js"></script>
 </body>
 </html>

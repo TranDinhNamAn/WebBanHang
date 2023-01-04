@@ -10,17 +10,9 @@ import java.util.List;
 
 public class CheckLogin {
     public static Account Check(String username, String password) throws SQLException, ClassNotFoundException {
-        List<Account> accList = new ArrayList<>();
-        String url = "jdbc:mysql://localhost:3306/xemay";
-        String user = "root";
-        String pass = "";
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection connection = DriverManager.getConnection(url, user, pass);
-        String sql = "select*from user where username = ? and password= ?";
-        PreparedStatement ps = connection.prepareStatement(sql);
-        ps.setString(1, username);
-        ps.setString(2, password);
-        ResultSet rs = ps.executeQuery();
+        Statement statement = DBConnect.getInstall().get();
+        String sql = "select*from user where username = '"+"username"+ "' and password= '"+"password"+"'";
+        ResultSet rs = statement.executeQuery(sql);
         Account acc = null;
         while (rs.next()) {
             acc = new Account(
@@ -28,6 +20,10 @@ public class CheckLogin {
                     rs.getString(2));
         }
         return acc;
+    }
+
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+        CheckLogin.Check("naman123","123");
     }
 }
 
