@@ -11,7 +11,7 @@ import java.util.List;
 public class CheckLogin {
     public static Account Check(String username, String password) throws SQLException, ClassNotFoundException {
         List<Account> accList = new ArrayList<>();
-        String url = "jdbc:mysql://localhost:3306/xemay";
+        String url = "jdbc:mysql://localhost:8111/xemay";
         String user = "root";
         String pass = "";
         Class.forName("com.mysql.cj.jdbc.Driver");
