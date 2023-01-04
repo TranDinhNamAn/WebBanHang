@@ -118,7 +118,7 @@
         <div class="row mb-5">
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2"><a href="#" class="logo">Thue<span>XeMay</span></a></h2>
+                    <h2 class="ftco-heading-2"><a href="trangchu" class="logo">Thue<span>XeMay</span></a></h2>
                     <p>ThueXeMay với dàn xe chất lượng cao, đội ngũ nhân viên chuyên nghiệp, nhiệt tình sẽ mang đến cho
                         bạn những trải nghiệm thú vị...</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">

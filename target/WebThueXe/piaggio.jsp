@@ -1,7 +1,13 @@
+<%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
+<%@ page import="java.util.List" %>
+<%@ page import="vn.edu.hcmuaf.fit.service.ProductService" %>
+<%@ page import="vn.edu.hcmuaf.fit.model.Brand" %>
+<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Xe máy Piaggio</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -45,12 +51,13 @@
                 <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
                 <li class="nav-item active"><a href="#" class="nav-link">Xe máy</a>
                     <ul class="dr-menu">
-                        <li class="subb"><a href="honda.html">Honda </a></li>
-                        <li class="subb"><a href="piaggio.jsp">Piaggio </a></li>
-                        <li class="subb"><a href="sym.jsp">SYM </a></li>
-                        <li class="subb"><a href="suzuki.jsp">Suzuki </a></li>
-                        <li class="subb"><a href="vespa.jsp">Vespa </a></li>
-                        <li class="subb"><a href="yamaha.jsp">Yamaha </a></li>
+                        <%List<Brand> arr1 = ProductService.getListBrand();%>
+                        <%
+                            for (Brand b:arr1
+                            ) {
+                        %>
+                        <li class="subb"><a href="<%=b.getName()%>"><%=b.getName()%> </a></li>
+                        <%}%>
                     </ul>
                 </li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
@@ -83,168 +90,61 @@
 <section class="ftco-section bg-light">
     <div class="container">
         <div class="row">
+            <%
+                List<Product> list = (List<Product>) request.getAttribute("list2");
+
+                int start = 0, end = 9;
+                if (list.size() < 9) {
+                    end = list.size();
+                }
+                if (request.getParameter("start") != null) {
+                    start = Integer.parseInt(request.getParameter("start"));
+                }
+                if (request.getParameter("end") != null) {
+                    end = Integer.parseInt(request.getParameter("end"));
+                }
+                List<Product> arr = ProductService.getListByPage(list,start,end);
+            %>
+            <%
+                for (Product p1:arr
+                ) {
+            %>
             <div class="col-md-4">
                 <div class="car-wrap rounded ftco-animate">
                     <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/piaggio-fly.jpg);">
+                         style="background-image: url(<%=p1.getImg()%>);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Fly</a></h2>
+                        <h2 class="mb-0"><a href="car-single.jsp"><%=p1.getName()%></a></h2>
                         <div class="d-flex mb-3">
-                            <p class="price ml-auto">110.000vnđ<span>/ngày</span></p>
+                            <p class="price ml-auto"><%=p1.getPrice()%>vnđ<span>/ngày</span></p>
                         </div>
                         <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
                                 href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/piaggio-liberty50.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Liberty 50</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">110.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/piaggio-liberty125.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Liberty 125</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">110.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/piaggio-liberty125italy.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Liberty Italia 125</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">110.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/piaggio-liberty125one.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Liberty One 125</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">110.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/piaggio-liberty125s.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Liberty S 125</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">110.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/piaggio-medley125.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Medley 125</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">110.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/piaggio-medley125abs.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Medley 125 ABS</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">110.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/piaggio-medley150s.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Medley S 150</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">110.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/piaggio-zip100.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Zip 100</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">110.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
+            <%}%>
         </div>
         <div class="row mt-5">
             <div class="col text-center">
                 <div class="block-27">
-                    <ul>
-                        <li><a href="#">&lt;</a></li>
-                        <li class="active"><span>1</span></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&gt;</a></li>
+                    <ul class="">
+                        <% int a, b;
+                            int limit = list.size() / 9;
+                            if (limit * 9 < list.size()) {
+                                limit += 1;
+                            }
+                            for (int i = 1; i <= limit; i++) {
+                                a = (i - 1) * 9;
+                                b = i * 9;
+                                if (b > list.size()) {
+                                    b = list.size();
+                                }%>
+
+                        <li class="active"><a href="piaggio?start=<%=a%>&end=<%=b%>"><%=i%>
+                        </a></li>
+                        <% }%>
                     </ul>
                 </div>
             </div>
