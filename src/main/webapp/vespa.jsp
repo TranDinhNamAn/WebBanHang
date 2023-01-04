@@ -1,3 +1,6 @@
+<%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
+<%@ page import="java.util.List" %>
+<%@ page import="vn.edu.hcmuaf.fit.service.ProductService" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,12 +48,12 @@
                 <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
                 <li class="nav-item active"><a href="#" class="nav-link">Xe máy</a>
                     <ul class="dr-menu">
-                        <li class="subb"><a href="honda.html">Honda </a></li>
-                        <li class="subb"><a href="piaggio.jsp">Piaggio </a></li>
-                        <li class="subb"><a href="sym.jsp">SYM </a></li>
-                        <li class="subb"><a href="suzuki.jsp">Suzuki </a></li>
-                        <li class="subb"><a href="vespa.jsp">Vespa </a></li>
-                        <li class="subb"><a href="yamaha.jsp">Yamaha </a></li>
+                        <li class="subb"><a href="honda">Honda </a></li>
+                        <li class="subb"><a href="piaggio">Piaggio </a></li>
+                        <li class="subb"><a href="sym">SYM </a></li>
+                        <li class="subb"><a href="suzuki">Suzuki </a></li>
+                        <li class="subb"><a href="vespa">Vespa </a></li>
+                        <li class="subb"><a href="yamaha">Yamaha </a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
@@ -83,198 +86,61 @@
 <section class="ftco-section bg-light">
     <div class="container">
         <div class="row">
+            <%
+                List<Product> list = (List<Product>) request.getAttribute("list2");
+
+                int start = 0, end = 9;
+                if (list.size() < 9) {
+                    end = list.size();
+                }
+                if (request.getParameter("start") != null) {
+                    start = Integer.parseInt(request.getParameter("start"));
+                }
+                if (request.getParameter("end") != null) {
+                    end = Integer.parseInt(request.getParameter("end"));
+                }
+                List<Product> arr = ProductService.getListByPage(list,start,end);
+            %>
+            <%
+                for (Product p1:arr
+                ) {
+            %>
             <div class="col-md-4">
                 <div class="car-wrap rounded ftco-animate">
                     <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-gts125.jpg);">
+                         style="background-image: url(<%=p1.getImg()%>);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">GTS 125</a></h2>
+                        <h2 class="mb-0"><a href="car-single.jsp"><%=p1.getName()%></a></h2>
                         <div class="d-flex mb-3">
-                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
+                            <p class="price ml-auto"><%=p1.getPrice()%>vnđ<span>/ngày</span></p>
                         </div>
                         <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
                                 href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-gts150.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">GTS 150</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-gts1251.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">GTS 125 Super</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-lx125.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Lx 125</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-lx150.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Lx 150</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-lxv125.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Lxv 125</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-primavera125.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Primavera 125</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-primavera125abs.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Primavera 125 ABS</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-px125.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Px 125</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-pxtour.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Px 125 Tour</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-sprint125.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Sprint 125</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-sprintadv.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Sprint Adventure</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
+            <%}%>
         </div>
         <div class="row mt-5">
             <div class="col text-center">
                 <div class="block-27">
-                    <ul>
-                        <li><a href="#">&lt;</a></li>
-                        <li class="active"><span>1</span></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&gt;</a></li>
+                    <ul class="">
+                        <% int a, b;
+                            int limit = list.size() / 9;
+                            if (limit * 9 < list.size()) {
+                            limit += 1;
+                            }
+                            for (int i = 1; i <= limit; i++) {
+                            a = (i - 1) * 9;
+                            b = i * 9;
+                            if (b > list.size()) {
+                            b = list.size();
+                            }%>
+
+                        <li class="active"><a href="vespa?start=<%=a%>&end=<%=b%>"><%=i%>
+                        </a></li>
+                        <% }%>
                     </ul>
                 </div>
             </div>
