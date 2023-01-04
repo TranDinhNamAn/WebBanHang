@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.service;
 
 import vn.edu.hcmuaf.fit.db.DBConnect;
+import vn.edu.hcmuaf.fit.model.Brand;
 import vn.edu.hcmuaf.fit.model.Product;
 
 import java.sql.ResultSet;
@@ -80,9 +81,26 @@ public class ProductService {
         }
         return list1;
     }
+    public static List<Brand> getListBrand() throws SQLException {
+        List<Brand> list1 = new LinkedList<>();
+        Statement statement = DBConnect.getInstall().get();
+        if (statement != null) {
+            ResultSet rs = statement.executeQuery("select * from brand");
+
+            while (rs.next()) {
+                list1.add(new Brand(
+                        rs.getInt(1),
+                        rs.getString(2)
+                ));
+            }
+        } else {
+            System.out.println("No result");
+        }
+        return list1;
+    }
 
     public static void main(String[] args) throws SQLException {
         ProductService sv = new ProductService();
-        System.out.println(sv.getListProductByCategory("1").size());
+        sv.getListBrand();
     }
 }

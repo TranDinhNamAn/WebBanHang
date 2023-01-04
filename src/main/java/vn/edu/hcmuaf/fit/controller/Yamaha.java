@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name = "Yamaha", value = "/yamaha")
+@WebServlet(name = "Yamaha", value = "/Yamaha")
 public class Yamaha extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

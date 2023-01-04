@@ -37,7 +37,7 @@ public class DBConnect {
     public static void main(String[] args) throws SQLException {
         Statement statement = DBConnect.getInstall().get();
         if (statement != null) {
-            ResultSet rs = statement.executeQuery("select * from product inner join brand on product.brandID = brand.id where brand.brandName = 'd' ");
+            ResultSet rs = statement.executeQuery("select * from product ");
             rs.last();
             System.out.println(rs.getRow());
             rs.beforeFirst();

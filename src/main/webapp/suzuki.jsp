@@ -1,10 +1,13 @@
 <%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
 <%@ page import="java.util.List" %>
 <%@ page import="vn.edu.hcmuaf.fit.service.ProductService" %>
+<%@ page import="vn.edu.hcmuaf.fit.model.Brand" %>
+<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Xe máy Suzuki</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -46,14 +49,15 @@
                 <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
                 <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
-                <li class="nav-item active"><a href="#" class="nav-link">Xe máy</a>
+                <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
                     <ul class="dr-menu">
-                        <li class="subb"><a href="honda">Honda </a></li>
-                        <li class="subb"><a href="piaggio">Piaggio </a></li>
-                        <li class="subb"><a href="sym">SYM </a></li>
-                        <li class="subb"><a href="suzuki">Suzuki </a></li>
-                        <li class="subb"><a href="vespa">Vespa </a></li>
-                        <li class="subb"><a href="yamaha">Yamaha </a></li>
+                        <%List<Brand> arr1 = ProductService.getListBrand();%>
+                        <%
+                            for (Brand b:arr1
+                            ) {
+                        %>
+                        <li class="subb"><a href="<%=b.getName()%>"><%=b.getName()%> </a></li>
+                        <%}%>
                     </ul>
                 </li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>

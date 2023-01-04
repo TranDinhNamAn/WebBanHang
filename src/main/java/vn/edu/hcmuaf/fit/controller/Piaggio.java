@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name = "Piaggio", value = "/piaggio")
+@WebServlet(name = "Piaggio", value = "/Piaggio")
 public class Piaggio extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
