@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Xe máy Vespa</title>
+    <title>Xe máy Yamaha</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -46,11 +46,11 @@
                 <li class="nav-item active"><a href="#" class="nav-link">Xe máy</a>
                     <ul class="dr-menu">
                         <li class="subb"><a href="honda.html">Honda </a></li>
-                        <li class="subb"><a href="piaggio.html">Piaggio </a></li>
-                        <li class="subb"><a href="sym.html">SYM </a></li>
-                        <li class="subb"><a href="suzuki.html">Suzuki </a></li>
-                        <li class="subb"><a href="vespa.html">Vespa </a></li>
-                        <li class="subb"><a href="yamaha.html">Yamaha </a></li>
+                        <li class="subb"><a href="piaggio.jsp">Piaggio </a></li>
+                        <li class="subb"><a href="sym.jsp">SYM </a></li>
+                        <li class="subb"><a href="suzuki.jsp">Suzuki </a></li>
+                        <li class="subb"><a href="vespa.jsp">Vespa </a></li>
+                        <li class="subb"><a href="yamaha.jsp">Yamaha </a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
@@ -73,7 +73,7 @@
                 <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ <i
                         class="ion-ios-arrow-forward"></i></a></span>
                     <span><a href="car.jsp">Xe máy <i class="ion-ios-arrow-forward"></i></a></span></p>
-                <h1 class="mb-3 bread">Xe Vespa</h1>
+                <h1 class="mb-3 bread">Xe Yamaha</h1>
             </div>
         </div>
     </div>
@@ -86,10 +86,10 @@
             <div class="col-md-4">
                 <div class="car-wrap rounded ftco-animate">
                     <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-gts125.jpg);">
+                         style="background-image: url(images/product/yamaha-acruzo.jpg);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">GTS 125</a></h2>
+                        <h2 class="mb-0"><a href="car-single.jsp">Acruzo</a></h2>
                         <div class="d-flex mb-3">
                             <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
                         </div>
@@ -101,10 +101,10 @@
             <div class="col-md-4">
                 <div class="car-wrap rounded ftco-animate">
                     <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-gts150.jpg);">
+                         style="background-image: url(images/product/yamaha-aerox.jpg);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">GTS 150</a></h2>
+                        <h2 class="mb-0"><a href="car-single.jsp">Aerox</a></h2>
                         <div class="d-flex mb-3">
                             <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
                         </div>
@@ -116,10 +116,10 @@
             <div class="col-md-4">
                 <div class="car-wrap rounded ftco-animate">
                     <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-gts1251.jpg);">
+                         style="background-image: url(images/product/yamaha-exciter150rc.jpg);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">GTS 125 Super</a></h2>
+                        <h2 class="mb-0"><a href="car-single.jsp">Exciter 150 RC</a></h2>
                         <div class="d-flex mb-3">
                             <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
                         </div>
@@ -131,10 +131,10 @@
             <div class="col-md-4">
                 <div class="car-wrap rounded ftco-animate">
                     <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-lx125.jpg);">
+                         style="background-image: url(images/product/yamaha-exciter155.jpg);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Lx 125</a></h2>
+                        <h2 class="mb-0"><a href="car-single.jsp">Exciter 155</a></h2>
                         <div class="d-flex mb-3">
                             <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
                         </div>
@@ -146,10 +146,10 @@
             <div class="col-md-4">
                 <div class="car-wrap rounded ftco-animate">
                     <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-lx150.jpg);">
+                         style="background-image: url(images/product/yamaha-exciter155gp.jpg);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Lx 150</a></h2>
+                        <h2 class="mb-0"><a href="car-single.jsp">Exciter 155 GP</a></h2>
                         <div class="d-flex mb-3">
                             <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
                         </div>
@@ -161,10 +161,10 @@
             <div class="col-md-4">
                 <div class="car-wrap rounded ftco-animate">
                     <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-lxv125.jpg);">
+                         style="background-image: url(images/product/yamaha-exciter155master.jpg);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Lxv 125</a></h2>
+                        <h2 class="mb-0"><a href="car-single.jsp">Exciter 155 Master Art</a></h2>
                         <div class="d-flex mb-3">
                             <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
                         </div>
@@ -176,10 +176,10 @@
             <div class="col-md-4">
                 <div class="car-wrap rounded ftco-animate">
                     <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-primavera125.jpg);">
+                         style="background-image: url(images/product/yamaha-exciter15560.jpg);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Primavera 125</a></h2>
+                        <h2 class="mb-0"><a href="car-single.jsp">Exciter 155 60 năm</a></h2>
                         <div class="d-flex mb-3">
                             <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
                         </div>
@@ -191,10 +191,10 @@
             <div class="col-md-4">
                 <div class="car-wrap rounded ftco-animate">
                     <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-primavera125abs.jpg);">
+                         style="background-image: url(images/product/yamaha-excitermonster.jpg);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Primavera 125 ABS</a></h2>
+                        <h2 class="mb-0"><a href="car-single.jsp">Exciter 155 Moonster Energy</a></h2>
                         <div class="d-flex mb-3">
                             <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
                         </div>
@@ -206,10 +206,10 @@
             <div class="col-md-4">
                 <div class="car-wrap rounded ftco-animate">
                     <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-px125.jpg);">
+                         style="background-image: url(images/product/yamaha-freego.jpg);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Px 125</a></h2>
+                        <h2 class="mb-0"><a href="car-single.jsp">Freego</a></h2>
                         <div class="d-flex mb-3">
                             <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
                         </div>
@@ -221,10 +221,10 @@
             <div class="col-md-4">
                 <div class="car-wrap rounded ftco-animate">
                     <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-pxtour.jpg);">
+                         style="background-image: url(images/product/yamaha-freegos.jpg);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Px 125 Tour</a></h2>
+                        <h2 class="mb-0"><a href="car-single.jsp">Freego S</a></h2>
                         <div class="d-flex mb-3">
                             <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
                         </div>
@@ -236,10 +236,10 @@
             <div class="col-md-4">
                 <div class="car-wrap rounded ftco-animate">
                     <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-sprint125.jpg);">
+                         style="background-image: url(images/product/yamaha-grande.jpg);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Sprint 125</a></h2>
+                        <h2 class="mb-0"><a href="car-single.jsp">Grande</a></h2>
                         <div class="d-flex mb-3">
                             <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
                         </div>
@@ -251,10 +251,220 @@
             <div class="col-md-4">
                 <div class="car-wrap rounded ftco-animate">
                     <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/vespa-sprintadv.jpg);">
+                         style="background-image: url(images/product/yamaha-grandebch.jpg);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Sprint Adventure</a></h2>
+                        <h2 class="mb-0"><a href="car-single.jsp">Grande Blue Core Hybrid</a></h2>
+                        <div class="d-flex mb-3">
+                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
+                        </div>
+                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="car-wrap rounded ftco-animate">
+                    <div class="img rounded d-flex align-items-end"
+                         style="background-image: url(images/product/yamaha-janus.jpg);">
+                    </div>
+                    <div class="text">
+                        <h2 class="mb-0"><a href="car-single.jsp">Janus</a></h2>
+                        <div class="d-flex mb-3">
+                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
+                        </div>
+                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="car-wrap rounded ftco-animate">
+                    <div class="img rounded d-flex align-items-end"
+                         style="background-image: url(images/product/yamaha-jupiterfi.jpg);">
+                    </div>
+                    <div class="text">
+                        <h2 class="mb-0"><a href="car-single.jsp">Jupiter FI</a></h2>
+                        <div class="d-flex mb-3">
+                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
+                        </div>
+                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="car-wrap rounded ftco-animate">
+                    <div class="img rounded d-flex align-items-end"
+                         style="background-image: url(images/product/yamaha-jupiterfinn.jpg);">
+                    </div>
+                    <div class="text">
+                        <h2 class="mb-0"><a href="car-single.jsp">Jupiter Finn</a></h2>
+                        <div class="d-flex mb-3">
+                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
+                        </div>
+                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="car-wrap rounded ftco-animate">
+                    <div class="img rounded d-flex align-items-end"
+                         style="background-image: url(images/product/yamaha-latte.jpg);">
+                    </div>
+                    <div class="text">
+                        <h2 class="mb-0"><a href="car-single.jsp">Latte</a></h2>
+                        <div class="d-flex mb-3">
+                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
+                        </div>
+                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="car-wrap rounded ftco-animate">
+                    <div class="img rounded d-flex align-items-end"
+                         style="background-image: url(images/product/yamaha-nouvofi.jpg);">
+                    </div>
+                    <div class="text">
+                        <h2 class="mb-0"><a href="car-single.jsp">Nouvo FI</a></h2>
+                        <div class="d-flex mb-3">
+                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
+                        </div>
+                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="car-wrap rounded ftco-animate">
+                    <div class="img rounded d-flex align-items-end"
+                         style="background-image: url(images/product/yamaha-nouvosx.jpg);">
+                    </div>
+                    <div class="text">
+                        <h2 class="mb-0"><a href="car-single.jsp">Nouvo SX</a></h2>
+                        <div class="d-flex mb-3">
+                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
+                        </div>
+                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="car-wrap rounded ftco-animate">
+                    <div class="img rounded d-flex align-items-end"
+                         style="background-image: url(images/product/yamaha-nvx155monster.jpg);">
+                    </div>
+                    <div class="text">
+                        <h2 class="mb-0"><a href="car-single.jsp">NVX 155 Monster Energy</a></h2>
+                        <div class="d-flex mb-3">
+                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
+                        </div>
+                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="car-wrap rounded ftco-animate">
+                    <div class="img rounded d-flex align-items-end"
+                         style="background-image: url(images/product/yamaha-nvx155.jpg);">
+                    </div>
+                    <div class="text">
+                        <h2 class="mb-0"><a href="car-single.jsp">NVX 155</a></h2>
+                        <div class="d-flex mb-3">
+                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
+                        </div>
+                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="car-wrap rounded ftco-animate">
+                    <div class="img rounded d-flex align-items-end"
+                         style="background-image: url(images/product/yamaha-siriusfipc.jpg);">
+                    </div>
+                    <div class="text">
+                        <h2 class="mb-0"><a href="car-single.jsp">Sirius FI phanh cơ</a></h2>
+                        <div class="d-flex mb-3">
+                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
+                        </div>
+                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="car-wrap rounded ftco-animate">
+                    <div class="img rounded d-flex align-items-end"
+                         style="background-image: url(images/product/yamaha-siriusfipd.jpg);">
+                    </div>
+                    <div class="text">
+                        <h2 class="mb-0"><a href="car-single.jsp">Sirius FI phanh dĩa</a></h2>
+                        <div class="d-flex mb-3">
+                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
+                        </div>
+                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="car-wrap rounded ftco-animate">
+                    <div class="img rounded d-flex align-items-end"
+                         style="background-image: url(images/product/yamaha-siriusfivd.jpg);">
+                    </div>
+                    <div class="text">
+                        <h2 class="mb-0"><a href="car-single.jsp">Sirius FI vành đúc</a></h2>
+                        <div class="d-flex mb-3">
+                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
+                        </div>
+                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="car-wrap rounded ftco-animate">
+                    <div class="img rounded d-flex align-items-end"
+                         style="background-image: url(images/product/yamaha-siriuspc.jpg);">
+                    </div>
+                    <div class="text">
+                        <h2 class="mb-0"><a href="car-single.jsp">Sirius phanh cơ</a></h2>
+                        <div class="d-flex mb-3">
+                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
+                        </div>
+                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="car-wrap rounded ftco-animate">
+                    <div class="img rounded d-flex align-items-end"
+                         style="background-image: url(images/product/yamaha-siriuspd.jpg);">
+                    </div>
+                    <div class="text">
+                        <h2 class="mb-0"><a href="car-single.jsp">Sirius phanh dĩa</a></h2>
+                        <div class="d-flex mb-3">
+                            <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
+                        </div>
+                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="car-wrap rounded ftco-animate">
+                    <div class="img rounded d-flex align-items-end"
+                         style="background-image: url(images/product/yamaha-siriusrc.jpg);">
+                    </div>
+                    <div class="text">
+                        <h2 class="mb-0"><a href="car-single.jsp">Sirius RC vành đúc</a></h2>
                         <div class="d-flex mb-3">
                             <p class="price ml-auto">140.000vnđ<span>/ngày</span></p>
                         </div>
