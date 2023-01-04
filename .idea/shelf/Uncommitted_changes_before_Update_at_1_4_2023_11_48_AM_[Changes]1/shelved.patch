@@ -1,0 +1,1218 @@
+Index: src/main/webapp/car.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/car.jsp b/src/main/webapp/car.jsp
+--- a/src/main/webapp/car.jsp	
++++ b/src/main/webapp/car.jsp	
+@@ -50,7 +50,7 @@
+                 <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
+                 <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
+                     <ul class="dr-menu">
+-                        <li class="subb"><a href="honda.html">Honda </a></li>
++                        <li class="subb"><a href="honda">Honda </a></li>
+                         <li class="subb"><a href="piaggio.html">Piaggio </a></li>
+                         <li class="subb"><a href="sym.html">SYM </a></li>
+                         <li class="subb"><a href="suzuki.html">Suzuki </a></li>
+Index: src/main/webapp/honda.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/honda.html b/src/main/webapp/honda.jsp
+rename from src/main/webapp/honda.html
+rename to src/main/webapp/honda.jsp
+--- a/src/main/webapp/honda.html	
++++ b/src/main/webapp/honda.jsp	
+@@ -1,7 +1,12 @@
++<%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
++<%@ page import="java.util.List" %>
++<%@ page import="vn.edu.hcmuaf.fit.service.ProductService" %>
++<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <title>Xe Máy Honda</title>
++    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+@@ -40,12 +45,12 @@
+ 
+         <div class="collapse navbar-collapse" id="ftco-nav">
+             <ul class="navbar-nav ml-auto">
+-                <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
++                <li class="nav-item"><a href="trangchu" class="nav-link">Trang chủ</a></li>
+                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
+                 <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
+-                <li class="nav-item active"><a href="#" class="nav-link">Xe máy</a>
++                <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
+                     <ul class="dr-menu">
+-                        <li class="subb"><a href="honda.html">Honda </a></li>
++                        <li class="subb"><a href="honda">Honda </a></li>
+                         <li class="subb"><a href="piaggio.html">Piaggio </a></li>
+                         <li class="subb"><a href="sym.html">SYM </a></li>
+                         <li class="subb"><a href="suzuki.html">Suzuki </a></li>
+@@ -83,323 +88,69 @@
+ <section class="ftco-section bg-light">
+     <div class="container">
+         <div class="row">
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-airblade125.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">Air Blade 125</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-airblade150.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">Air Blade 150</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-airblade160.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">Air Blade 160</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-blade.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">Blade 110</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-dream100.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">Dream 100</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-dream125.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">Dream 125</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-future.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">Future 125 FI</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-futurex.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">Future X</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-lead.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">Lead 125</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-sh125i.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">SH125i</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-sh350i.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">SH350i</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-shmode125.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">Sh Mode 125</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-vision.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">Vision</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-vision1.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">Vision (Bản cá tính)</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-wavea.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">Wave Alpha 110</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
++            <%
++                List<Product> list = (List<Product>) request.getAttribute("list2");
++
++                int start = 0, end = 9;
++                if (list.size() < 9) {
++                    end = list.size();
++                }
++                if (request.getParameter("start") != null) {
++                    start = Integer.parseInt(request.getParameter("start"));
++                }
++                if (request.getParameter("end") != null) {
++                    end = Integer.parseInt(request.getParameter("end"));
++                }
++                List<Product> arr = ProductService.getListByPage(list,start,end);
++            %>
++            <%
++                for (Product p1:arr
++                     ) {
++            %>
++
+             <div class="col-md-4">
+                 <div class="car-wrap rounded ftco-animate">
+                     <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-waversx.jpg);">
++                         style="background-image: url(<%=p1.getImg()%>);">
+                     </div>
+                     <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">Wave RSX FI 110</a></h2>
++                        <h2 class="mb-0"><a href="car-single.jsp"><%=p1.getName()%>
++                        </a></h2>
+                         <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
++                            <p class="price ml-auto"><%=p1.getPrice()%>vnđ<span>/ngày</span></p>
+                         </div>
+                         <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+                                 href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                     </div>
+                 </div>
+             </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-wave50.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">Wave 50</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-wave125i.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">Wave 125i</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-winner.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">Winner</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-winnerx.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.jsp">Winner X</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
++            <%}%>
+         </div>
+         <div class="row mt-5">
+             <div class="col text-center">
+                 <div class="block-27">
+-                    <ul>
+-                        <li><a href="#">&lt;</a></li>
+-                        <li class="active"><span>1</span></li>
+-                        <li><a href="#">2</a></li>
+-                        <li><a href="#">3</a></li>
+-                        <li><a href="#">4</a></li>
+-                        <li><a href="#">5</a></li>
+-                        <li><a href="#">&gt;</a></li>
++                    <ul class="">
++                        <% int a, b;
++                            int limit = list.size() / 9;
++                            if (limit * 9 < list.size()) {
++                                limit += 1;
++                            }
++                            for (int i = 1; i <= limit; i++) {
++                                a = (i - 1) * 9;
++                                b = i * 9;
++                                if (b > list.size()) {
++                                    b = list.size();
++                                }%>
++
++                        <li class="active"><a href="honda?start=<%=a%>&end=<%=b%>"><%=i%>
++                        </a></li>
++                        <% }%>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
++
+ </section>
+ 
+ 
+Index: src/main/java/vn/edu/hcmuaf/fit/db/DBConnect.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/vn/edu/hcmuaf/fit/db/DBConnect.java b/src/main/java/vn/edu/hcmuaf/fit/db/DBConnect.java
+--- a/src/main/java/vn/edu/hcmuaf/fit/db/DBConnect.java	
++++ b/src/main/java/vn/edu/hcmuaf/fit/db/DBConnect.java	
+@@ -3,7 +3,7 @@
+ import java.sql.*;
+ 
+ public class DBConnect {
+-    String url = "jdbc:mysql://localhost:3306/xemay";
++    String url = "jdbc:mysql://localhost:8111/xemay";
+     String user = "root";
+     String pass = "";
+     Connection connection;
+Index: src/main/java/vn/edu/hcmuaf/fit/service/ProductService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/vn/edu/hcmuaf/fit/service/ProductService.java b/src/main/java/vn/edu/hcmuaf/fit/service/ProductService.java
+--- a/src/main/java/vn/edu/hcmuaf/fit/service/ProductService.java	
++++ b/src/main/java/vn/edu/hcmuaf/fit/service/ProductService.java	
+@@ -22,7 +22,8 @@
+                         rs.getString(1),
+                         rs.getString(2),
+                         rs.getDouble(3),
+-                        rs.getBoolean(4)
++                        rs.getBoolean(4),
++                        rs.getInt(5)
+ 
+                 ));
+             }
+@@ -43,7 +44,8 @@
+                         rs.getString(1),
+                         rs.getString(2),
+                         rs.getDouble(3),
+-                        rs.getBoolean(4)
++                        rs.getBoolean(4),
++                        rs.getInt(5)
+                 ));
+             }
+         } else {
+@@ -59,4 +61,29 @@
+         }
+         return list;
+     }
++    public static List<Product> getListProductByCategory(String san_pham) throws SQLException {
++        List<Product> list1 = new LinkedList<>();
++        Statement statement = DBConnect.getInstall().get();
++        if (statement != null) {
++            ResultSet rs = statement.executeQuery("select * from product inner join brand on product.brandID = brand.brandID where brand.brandID = '"+ san_pham + "'");
++
++            while (rs.next()) {
++                list1.add(new Product(
++                        rs.getString(1),
++                        rs.getString(2),
++                        rs.getDouble(3),
++                        rs.getBoolean(4),
++                        rs.getInt(5)
++                ));
++            }
++        } else {
++            System.out.println("No result");
++        }
++        return list1;
++    }
++
++    public static void main(String[] args) throws SQLException {
++        ProductService sv = new ProductService();
++        System.out.println(sv.getListProductByCategory("1").size());
++    }
+ }
+Index: src/main/java/vn/edu/hcmuaf/fit/model/Product.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/vn/edu/hcmuaf/fit/model/Product.java b/src/main/java/vn/edu/hcmuaf/fit/model/Product.java
+--- a/src/main/java/vn/edu/hcmuaf/fit/model/Product.java	
++++ b/src/main/java/vn/edu/hcmuaf/fit/model/Product.java	
+@@ -6,14 +6,16 @@
+     String img;
+     double price;
+     boolean isNew;
++    int brandID;
+     public Product() {
+     }
+ 
+-    public Product(String name, String img, double price, boolean isNew) {
++    public Product(String name, String img, double price, boolean isNew,int brandID) {
+         this.name = name;
+         this.img = img;
+         this.price = price;
+         this.isNew = isNew;
++        this.brandID = brandID;
+     }
+     public String getName() {
+         return name;
+@@ -54,4 +56,12 @@
+     public void setNew(boolean aNew) {
+         isNew = aNew;
+     }
++
++    public int getBrandID() {
++        return brandID;
++    }
++
++    public void setBrandID(int brandID) {
++        this.brandID = brandID;
++    }
+ }
+Index: target/WebThueXe/honda.html
+===================================================================
+diff --git a/target/WebThueXe/honda.html b/target/WebThueXe/honda.html
+deleted file mode 100644
+--- a/target/WebThueXe/honda.html	
++++ /dev/null	
+@@ -1,493 +0,0 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-    <title>Xe Máy Honda</title>
+-    <meta charset="utf-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+-
+-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
+-          rel="stylesheet">
+-
+-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+-    <link rel="stylesheet" href="css/animate.css">
+-
+-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+-    <link rel="stylesheet" href="css/magnific-popup.css">
+-
+-    <link rel="stylesheet" href="css/aos.css">
+-
+-    <link rel="stylesheet" href="css/ionicons.min.css">
+-
+-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+-
+-
+-    <link rel="stylesheet" href="css/flaticon.css">
+-    <link rel="stylesheet" href="css/icomoon.css">
+-    <link rel="stylesheet" href="css/style.css">
+-    <link rel="stylesheet" href="css/style1.css">
+-</head>
+-<body>
+-
+-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+-    <div class="container">
+-        <a class="navbar-brand" href="index.jsp">Thue<span>XeMay</span></a>
+-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+-            <span class="oi oi-menu"></span> Menu
+-        </button>
+-
+-        <div class="collapse navbar-collapse" id="ftco-nav">
+-            <ul class="navbar-nav ml-auto">
+-                <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
+-                <li class="nav-item"><a href="about.html" class="nav-link">Giới thiệu</a></li>
+-                <li class="nav-item"><a href="pricing.html" class="nav-link">Bảng giá</a></li>
+-                <li class="nav-item active"><a href="#" class="nav-link">Xe máy</a>
+-                    <ul class="dr-menu">
+-                        <li class="subb"><a href="honda.html">Honda </a></li>
+-                        <li class="subb"><a href="piaggio.html">Piaggio </a></li>
+-                        <li class="subb"><a href="sym.html">SYM </a></li>
+-                        <li class="subb"><a href="suzuki.html">Suzuki </a></li>
+-                        <li class="subb"><a href="vespa.html">Vespa </a></li>
+-                        <li class="subb"><a href="yamaha.html">Yamaha </a></li>
+-                    </ul>
+-                </li>
+-                <li class="nav-item"><a href="blog.html" class="nav-link">Bài viết</a></li>
+-                <li class="nav-item"><a href="contact.html" class="nav-link">Liên hệ</a></li>
+-                <li class="nav-item"><a href="login.html" class="nav-link">Đăng nhập</a></li>
+-                <li class="nav-item"><a href="cart.html" class="nav-link"><p style="margin-top: 6px"
+-                                                                             class="icon icon-cart-plus"></p></a></li>
+-            </ul>
+-        </div>
+-    </div>
+-</nav>
+-<!-- END nav -->
+-
+-<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg1.jpg');"
+-         data-stellar-background-ratio="0.5">
+-    <div class="overlay"></div>
+-    <div class="container">
+-        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+-            <div class="col-md-9 ftco-animate pb-5">
+-                <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ <i
+-                        class="ion-ios-arrow-forward"></i></a></span>
+-                    <span><a href="car.jsp">Xe máy <i class="ion-ios-arrow-forward"></i></a></span></p>
+-                <h1 class="mb-3 bread">Xe Honda</h1>
+-            </div>
+-        </div>
+-    </div>
+-</section>
+-
+-
+-<section class="ftco-section bg-light">
+-    <div class="container">
+-        <div class="row">
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-airblade125.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">Air Blade 125</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-airblade150.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">Air Blade 150</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-airblade160.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">Air Blade 160</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-blade.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">Blade 110</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-dream100.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">Dream 100</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-dream125.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">Dream 125</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-future.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">Future 125 FI</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-futurex.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">Future X</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-lead.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">Lead 125</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-sh125i.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">SH125i</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-sh350i.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">SH350i</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-shmode125.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">Sh Mode 125</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-vision.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">Vision</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-vision1.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">Vision (Bản cá tính)</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-wavea.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">Wave Alpha 110</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-waversx.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">Wave RSX FI 110</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-wave50.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">Wave 50</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-wave125i.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">Wave 125i</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-winner.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">Winner</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="col-md-4">
+-                <div class="car-wrap rounded ftco-animate">
+-                    <div class="img rounded d-flex align-items-end"
+-                         style="background-image: url(images/product/honda-winnerx.jpg);">
+-                    </div>
+-                    <div class="text">
+-                        <h2 class="mb-0"><a href="car-single.html">Winner X</a></h2>
+-                        <div class="d-flex mb-3">
+-                            <p class="price ml-auto">120.000vnđ<span>/ngày</span></p>
+-                        </div>
+-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
+-                                href="car-single.html" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+-                    </div>
+-                </div>
+-            </div>
+-        </div>
+-        <div class="row mt-5">
+-            <div class="col text-center">
+-                <div class="block-27">
+-                    <ul>
+-                        <li><a href="#">&lt;</a></li>
+-                        <li class="active"><span>1</span></li>
+-                        <li><a href="#">2</a></li>
+-                        <li><a href="#">3</a></li>
+-                        <li><a href="#">4</a></li>
+-                        <li><a href="#">5</a></li>
+-                        <li><a href="#">&gt;</a></li>
+-                    </ul>
+-                </div>
+-            </div>
+-        </div>
+-    </div>
+-</section>
+-
+-
+-<footer class="ftco-footer ftco-bg-dark ftco-section">
+-    <div class="container">
+-        <div class="row mb-5">
+-            <div class="col-md">
+-                <div class="ftco-footer-widget mb-4">
+-                    <h2 class="ftco-heading-2"><a href="#" class="logo">Thue<span>XeMay</span></a></h2>
+-                    <p>ThueXeMay với dàn xe chất lượng cao, đội ngũ nhân viên chuyên nghiệp, nhiệt tình sẽ mang đến cho
+-                        bạn những trải nghiệm thú vị...</p>
+-                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+-                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+-                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+-                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+-                    </ul>
+-                </div>
+-            </div>
+-            <div class="col-md">
+-                <div class="ftco-footer-widget mb-4 ml-md-5">
+-                    <h2 class="ftco-heading-2">Thông tin</h2>
+-                    <ul class="list-unstyled">
+-                        <li><a href="#" class="py-2 d-block">Giới thiệu</a></li>
+-                        <li><a href="#" class="py-2 d-block">Dịch vụ</a></li>
+-                        <li><a href="#" class="py-2 d-block">Chính sách bảo mật</a></li>
+-                        <li><a href="#" class="py-2 d-block">Cẩm nang du lịch</a></li>
+-                        <li><a href="#" class="py-2 d-block">Hợp tác</a></li>
+-                    </ul>
+-                </div>
+-            </div>
+-            <div class="col-md">
+-                <div class="ftco-footer-widget mb-4">
+-                    <h2 class="ftco-heading-2">Hỗ trợ khách hàng</h2>
+-                    <ul class="list-unstyled">
+-                        <li><a href="#" class="py-2 d-block">Câu hỏi thường gặp</a></li>
+-                        <li><a href="#" class="py-2 d-block">Phương thức thanh toán</a></li>
+-                        <li><a href="#" class="py-2 d-block">Thủ tục thuê xe</a></li>
+-                        <li><a href="#" class="py-2 d-block">Liên hệ</a></li>
+-                    </ul>
+-                </div>
+-            </div>
+-            <div class="col-md">
+-                <div class="ftco-footer-widget mb-4">
+-                    <h2 class="ftco-heading-2">Thông tin liên hệ</h2>
+-                    <div class="block-23 mb-3">
+-                        <ul>
+-                            <li><span class="icon icon-map-marker"></span><span class="text">Trường đại học Nông Lâm, khu phố 6, phường Linh Trung, TP.Thủ Đức, TP.Hồ Chí Minh</span>
+-                            </li>
+-                            <li><a href="#"><span class="icon icon-phone"></span><span
+-                                    class="text">+84 326 500 729</span></a></li>
+-                            <li><a href="#"><span class="icon icon-envelope"></span><span
+-                                    class="text">ltweb@gmail.com</span></a></li>
+-                        </ul>
+-                    </div>
+-                </div>
+-            </div>
+-        </div>
+-    </div>
+-</footer>
+-
+-
+-<!-- loader -->
+-<div id="ftco-loader" class="show fullscreen">
+-    <svg class="circular" width="48px" height="48px">
+-        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+-        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+-                stroke="#F96D00"/>
+-    </svg>
+-</div>
+-
+-
+-<script src="js/jquery.min.js"></script>
+-<script src="js/jquery-migrate-3.0.1.min.js"></script>
+-<script src="js/popper.min.js"></script>
+-<script src="js/bootstrap.min.js"></script>
+-<script src="js/jquery.easing.1.3.js"></script>
+-<script src="js/jquery.waypoints.min.js"></script>
+-<script src="js/jquery.stellar.min.js"></script>
+-<script src="js/owl.carousel.min.js"></script>
+-<script src="js/jquery.magnific-popup.min.js"></script>
+-<script src="js/aos.js"></script>
+-<script src="js/jquery.animateNumber.min.js"></script>
+-<script src="js/bootstrap-datepicker.js"></script>
+-<script src="js/jquery.timepicker.min.js"></script>
+-<script src="js/scrollax.min.js"></script>
+-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+-<script src="js/google-map.js"></script>
+-<script src="js/main.js"></script>
+-
+-</body>
+-</html>
+\ No newline at end of file
+Index: .idea/webContexts.xml
+===================================================================
+diff --git a/.idea/webContexts.xml b/.idea/webContexts.xml
+deleted file mode 100644
+--- a/.idea/webContexts.xml	
++++ /dev/null	
+@@ -1,11 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="WebContextManager">
+-    <option name="state">
+-      <map>
+-        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/suzuki.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+-        <entry key="file://$PROJECT_DIR$/src/main/webapp/index.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
+-      </map>
+-    </option>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/.gitignore
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore	
++++ /dev/null	
+@@ -1,8 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+-# Editor-based HTTP Client requests
+-/httpRequests/
+-# Datasource local storage ignored files
+-/dataSources/
+-/dataSources.local.xml
+Index: .idea/encodings.xml
+===================================================================
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+deleted file mode 100644
+--- a/.idea/encodings.xml	
++++ /dev/null	
+@@ -1,7 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="Encoding">
+-    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+-    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/uiDesigner.xml
+===================================================================
+diff --git a/.idea/uiDesigner.xml b/.idea/uiDesigner.xml
+deleted file mode 100644
+--- a/.idea/uiDesigner.xml	
++++ /dev/null	
+@@ -1,124 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="Palette2">
+-    <group name="Swing">
+-      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
+-      </item>
+-      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
+-      </item>
+-      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
+-      </item>
+-      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.svg" removable="false" auto-create-binding="false" can-attach-label="true">
+-        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
+-      </item>
+-      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
+-        <initial-values>
+-          <property name="text" value="Button" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+-        <initial-values>
+-          <property name="text" value="RadioButton" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+-        <initial-values>
+-          <property name="text" value="CheckBox" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
+-        <initial-values>
+-          <property name="text" value="Label" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+-          <preferred-size width="150" height="-1" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+-          <preferred-size width="150" height="-1" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+-          <preferred-size width="150" height="-1" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
+-      </item>
+-      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+-          <preferred-size width="200" height="200" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+-          <preferred-size width="200" height="200" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+-      </item>
+-      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+-      </item>
+-      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
+-      </item>
+-      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
+-      </item>
+-      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
+-          <preferred-size width="-1" height="20" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
+-      </item>
+-      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
+-      </item>
+-    </group>
+-  </component>
+-</project>
+\ No newline at end of file
