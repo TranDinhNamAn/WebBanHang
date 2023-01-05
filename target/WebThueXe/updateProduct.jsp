@@ -195,7 +195,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="examplprice">isNew</label>
-                                    <input type="text" name="isNew" i placeholder="">
+                                    <input <%=product.isNew()%>type="text" name="isNew" i placeholder="">
                                 </div>
                                 <div class="form-group">
                                     <label>Loại sản phẩm</label>
