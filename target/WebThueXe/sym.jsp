@@ -6,8 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%List<Brand> arr1 = ProductService.getListBrand();%>
-    <title>Xe Máy Honda</title>
+    <title>Xe Máy SYM</title>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -51,7 +50,9 @@
                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
                 <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
                 <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
+
                     <ul class="dr-menu">
+                        <%List<Brand> arr1 = ProductService.getListBrand();%>
                         <%
                             for (Brand b:arr1
                             ) {
@@ -79,8 +80,8 @@
             <div class="col-md-9 ftco-animate pb-5">
                 <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ <i
                         class="ion-ios-arrow-forward"></i></a></span>
-                    <span><a href="car.jsp">Xe máy <i class="ion-ios-arrow-forward"></i></a></span></p>
-                <h1 class="mb-3 bread">Xe Honda</h1>
+                    <span><a href="SYM">Xe máy <i class="ion-ios-arrow-forward"></i></a></span></p>
+                <h1 class="mb-3 bread">Xe SYM</h1>
             </div>
         </div>
     </div>

@@ -1,10 +1,13 @@
 <%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
 <%@ page import="java.util.List" %>
 <%@ page import="vn.edu.hcmuaf.fit.service.ProductService" %>
+<%@ page import="vn.edu.hcmuaf.fit.model.Brand" %>
+<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Xe máy Suzuki</title>
+    <title>Xe Máy Suzuki</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -43,17 +46,19 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
+                <li class="nav-item"><a href="trangchu" class="nav-link">Trang chủ</a></li>
                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
                 <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
                 <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
+
                     <ul class="dr-menu">
-                        <li class="subb"><a href="honda">Honda </a></li>
-                        <li class="subb"><a href="piaggio">Piaggio </a></li>
-                        <li class="subb"><a href="sym">SYM </a></li>
-                        <li class="subb"><a href="suzuki">Suzuki </a></li>
-                        <li class="subb"><a href="vespa">Vespa </a></li>
-                        <li class="subb"><a href="yamaha">Yamaha </a></li>
+                        <%List<Brand> arr1 = ProductService.getListBrand();%>
+                        <%
+                            for (Brand b:arr1
+                            ) {
+                        %>
+                        <li class="subb"><a href="<%=b.getName()%>"><%=b.getName()%></a></li>
+                        <%}%>
                     </ul>
                 </li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
@@ -75,7 +80,7 @@
             <div class="col-md-9 ftco-animate pb-5">
                 <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ <i
                         class="ion-ios-arrow-forward"></i></a></span>
-                    <span><a href="car.jsp">Xe máy <i class="ion-ios-arrow-forward"></i></a></span></p>
+                    <span><a href="Suzuki">Xe máy <i class="ion-ios-arrow-forward"></i></a></span></p>
                 <h1 class="mb-3 bread">Xe Suzuki</h1>
             </div>
         </div>
@@ -105,13 +110,15 @@
                 for (Product p1:arr
                 ) {
             %>
+
             <div class="col-md-4">
                 <div class="car-wrap rounded ftco-animate">
                     <div class="img rounded d-flex align-items-end"
                          style="background-image: url(<%=p1.getImg()%>);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp"><%=p1.getName()%></a></h2>
+                        <h2 class="mb-0"><a href="car-single.jsp"><%=p1.getName()%>
+                        </a></h2>
                         <div class="d-flex mb-3">
                             <p class="price ml-auto"><%=p1.getPrice()%>vnđ<span>/ngày</span></p>
                         </div>
@@ -138,7 +145,7 @@
                                     b = list.size();
                                 }%>
 
-                        <li class="active"><a href="suzuki?start=<%=a%>&end=<%=b%>"><%=i%>
+                        <li class="active"><a href="honda?start=<%=a%>&end=<%=b%>"><%=i%>
                         </a></li>
                         <% }%>
                     </ul>
@@ -146,6 +153,7 @@
             </div>
         </div>
     </div>
+
 </section>
 
 
@@ -154,8 +162,8 @@
         <div class="row mb-5">
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2"><a href="#" class="logo">Car<span>book</span></a></h2>
-                    <p>Motorbike với dàn xe chất lượng cao, đội ngũ nhân viên chuyên nghiệp, nhiệt tình sẽ mang đến cho
+                    <h2 class="ftco-heading-2"><a href="#" class="logo">Thue<span>XeMay</span></a></h2>
+                    <p>ThueXeMay với dàn xe chất lượng cao, đội ngũ nhân viên chuyên nghiệp, nhiệt tình sẽ mang đến cho
                         bạn những trải nghiệm thú vị...</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                         <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
@@ -201,17 +209,6 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-
-                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                    All rights reserved | This template is made with <i class="icon-heart color-danger"
-                                                                        aria-hidden="true"></i> by <a
-                            href="https://colorlib.com" target="_blank">Colorlib</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
             </div>
         </div>
     </div>
