@@ -11,15 +11,15 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name = "ListProductADM", value = "/ListProductADM")
+@WebServlet(name = "ListProductADM", value = "/listproductadmin")
 public class ListProductADM extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Product> list = null;
         try {
             list = ProductServerADM.getData();
-            request.setAttribute("list", list);
-            request.getRequestDispatcher("lisProduct.jsp").forward(request, response);
+            request.setAttribute("list3", list);
+            request.getRequestDispatcher("list_product.jsp").forward(request, response);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

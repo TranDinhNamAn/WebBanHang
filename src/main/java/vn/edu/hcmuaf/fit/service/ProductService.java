@@ -23,7 +23,8 @@ public class ProductService {
                         rs.getString(2),
                         rs.getDouble(3),
                         rs.getBoolean(4),
-                        rs.getInt(5)
+                        rs.getInt(5),
+                        rs.getInt(6)
 
                 ));
             }
@@ -45,7 +46,8 @@ public class ProductService {
                         rs.getString(2),
                         rs.getDouble(3),
                         rs.getBoolean(4),
-                        rs.getInt(5)
+                        rs.getInt(5),
+                        rs.getInt(6)
                 ));
             }
         } else {
@@ -73,7 +75,8 @@ public class ProductService {
                         rs.getString(2),
                         rs.getDouble(3),
                         rs.getBoolean(4),
-                        rs.getInt(5)
+                        rs.getInt(5),
+                        rs.getInt(6)
                 ));
             }
         } else {

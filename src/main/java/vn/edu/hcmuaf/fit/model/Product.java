@@ -10,13 +10,15 @@ public class Product {
     public Product() {
     }
 
-    public Product(String name, String img, double price, boolean isNew,int brandID) {
+    public Product(String name, String img, double price, boolean isNew,int brandID,int id) {
+        this.id = id;
         this.name = name;
         this.img = img;
         this.price = price;
         this.isNew = isNew;
         this.brandID = brandID;
     }
+
     public String getName() {
         return name;
     }
@@ -64,4 +66,5 @@ public class Product {
     public void setBrandID(int brandID) {
         this.brandID = brandID;
     }
+
 }
