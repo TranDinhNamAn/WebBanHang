@@ -1,7 +1,12 @@
+<%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
+<%@ page import="vn.edu.hcmuaf.fit.service.ProductServerADM" %>
+<%@ page import="java.util.List" %>
+<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Danh sách sản phẩm</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -185,173 +190,24 @@
                             <th>Tên sản phẩm</th>
                             <th>Hình ảnh</th>
                             <th>Giá thuê</th>
-                            <th>Ngày đăng</th>
-                            <th>Phân loại</th>
                             <th>Nút lệnh</th>
                         </tr>
                         </thead>
                         <tbody>
+                            <%List<Product> list = (List<Product>) request.getAttribute("list");%>
+                            <%
+                            for (Product p:list
+                            ) {
+                        %>
                         <tr>
-                            <td>01</td>
-                            <td>Thông tin xe Honda</td>
-                            <td> <img src="image/h1.jpg" style="width: 50px"></td>
-                            <td> 120000/Ngày</td>
-                            <td> 20/01/2020</td>
-                            <td><span class="badge bg-primary">New</span></td>
+                            <td><%=p.getId()%></td>
+                            <td><%=p.getName()%></td>
+                            <td> <img src="<%=p.getImg()%>" style="width: 50px"></td>
+                            <td> <%=p.getPrice()%>/Ngày</td>
                             <td><button class="btn btn-danger">Xóa sản phẩm</button>
                                 <button class="btn btn-dark">Xem chi tiết</button></td>
                         </tr>
-                        <tr>
-                            <td>02</td>
-                            <td>Thông tin xe Honda</td>
-                            <td> <img src="image/h2.jpg" style="width: 50px"></td>
-                            <td> 120000/Ngày</td>
-                            <td> 20/01/2020</td>
-                            <td><span class="badge bg-primary">New</span></td>
-                            <td><button class="btn btn-danger">Xóa sản phẩm</button>
-                                <button class="btn btn-dark">Xem chi tiết</button></td>
-                        </tr>
-                        <tr>
-                            <td>03</td>
-                            <td>Thông tin xe Honda</td>
-                            <td> <img src="image/h3.jpg" style="width: 50px"></td>
-                            <td> 120000/Ngày</td>
-                            <td> 20/01/2020</td>
-                            <td><span class="badge bg-primary">New</span></td>
-                            <td><button class="btn btn-danger">Xóa sản phẩm</button>
-                                <button class="btn btn-dark">Xem chi tiết</button></td>
-                        </tr>
-                        <tr>
-                            <td>04</td>
-                            <td>Thông tin xe Honda</td>
-                            <td> <img src="image/h4.jpg" style="width: 50px"></td>
-                            <td> 12000/Ngày</td>
-                            <td> 20/01/2020</td>
-                            <td><span class="badge bg-primary">New</span></td>
-                            <td><button class="btn btn-danger">Xóa sản phẩm</button>
-                                <button class="btn btn-dark">Xem chi tiết</button></td>
-                        </tr>
-                        <tr>
-                            <td>05</td>
-                            <td>Thông tin xe Honda</td>
-                            <td> <img src="image/h5.jpg" style="width: 50px"></td>
-                            <td> 120000/Ngày</td>
-                            <td> 20/01/2020</td>
-                            <td><span class="badge bg-primary">New</span></td>
-                            <td><button class="btn btn-danger">Xóa sản phẩm</button>
-                                <button class="btn btn-dark">Xem chi tiết</button></td>
-                        </tr>
-                        <tr>
-                            <td>06</td>
-                            <td>Thông tin xe Wave</td>
-                            <td> <img src="image/h6.jpg" style="width: 50px"></td>
-                            <td> 125000/Ngày</td>
-                            <td> 20/01/2020</td>
-                            <td>  </td>
-                            <td><button class="btn btn-danger">Xóa sản phẩm</button>
-                                <button class="btn btn-dark">Xem chi tiết</button></td>
-                        </tr>
-                        <tr>
-                            <td>07</td>
-                            <td>Thông tin xe Wave</td>
-                            <td> <img src="image/h7.jpg" style="width: 50px"></td>
-                            <td> 125000/Ngày</td>
-                            <td> 20/01/2020</td>
-                            <td>  </td>
-                            <td><button class="btn btn-danger">Xóa sản phẩm</button>
-                                <button class="btn btn-dark">Xem chi tiết</button></td>
-                        </tr>
-                        <tr>
-                            <td>08</td>
-                            <td>Thông tin xe Wave</td>
-                            <td> <img src="image/h8.jpg" style="width: 50px"></td>
-                            <td> 125000/Ngày</td>
-                            <td> 20/01/2020</td>
-                            <td> </td>
-                            <td><button class="btn btn-danger">Xóa sản phẩm</button>
-                                <button class="btn btn-dark">Xem chi tiết</button></td>
-                        </tr>
-                        <tr>
-                            <td>09</td>
-                            <td>Thông tin xe Wave</td>
-                            <td> <img src="image/h9.jpg" style="width: 50px"></td>
-                            <td> 125000/Ngày</td>
-                            <td> 20/01/2020</td>
-                            <td>  </td>
-                            <td><button class="btn btn-danger">Xóa sản phẩm</button>
-                                <button class="btn btn-dark">Xem chi tiết</button></td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>Thông tin xe Wave</td>
-                            <td> <img src="image/h10.jpg" style="width: 50px"></td>
-                            <td> 125000/Ngày</td>
-                            <td> 20/01/2020</td>
-                            <td>  </td>
-                            <td><button class="btn btn-danger">Xóa sản phẩm</button>
-                                <button class="btn btn-dark">Xem chi tiết</button></td>
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td>Thông tin xe Wave</td>
-                            <td> <img src="image/h11.jpg" style="width: 50px"></td>
-                            <td> 125000/Ngày</td>
-                            <td> 20/01/2020</td>
-                            <td>  </td>
-                            <td><button class="btn btn-danger">Xóa sản phẩm</button>
-                                <button class="btn btn-dark">Xem chi tiết</button></td>
-                        </tr>
-                        <tr>
-                            <td>12</td>
-                            <td>Thông tin xe Wave</td>
-                            <td> <img src="image/h12.jpg" style="width: 50px"></td>
-                            <td> 125000/Ngày</td>
-                            <td> 20/01/2020</td>
-                            <td>  </td>
-                            <td><button class="btn btn-danger">Xóa sản phẩm</button>
-                                <button class="btn btn-dark">Xem chi tiết</button></td>
-                        </tr>
-                        <tr>
-                            <td>13</td>
-                            <td>Thông tin xe Honda</td>
-                            <td> <img src="image/h13.jpg" style="width: 50px"></td>
-                            <td> 120000/Ngày</td>
-                            <td> 20/01/2020</td>
-                            <td>  </td>
-                            <td><button class="btn btn-danger">Xóa sản phẩm</button>
-                                <button class="btn btn-dark">Xem chi tiết</button></td>
-                        </tr>
-                        <tr>
-                            <td>14</td>
-                            <td>Thông tin xe Honda</td>
-                            <td> <img src="image/h14.jpg" style="width: 50px"></td>
-                            <td> 120000/Ngày</td>
-                            <td> 20/01/2020</td>
-                            <td>  </td>
-                            <td><button class="btn btn-danger">Xóa sản phẩm</button>
-                                <button class="btn btn-dark">Xem chi tiết</button></td>
-                        </tr>
-                        <tr>
-                            <td>15</td>
-                            <td>Thông tin xe Honda</td>
-                            <td> <img src="image/h15.jpg" style="width: 50px"></td>
-                            <td> 120000/Ngày</td>
-                            <td> 20/01/2020</td>
-                            <td>  </td>
-                            <td><button class="btn btn-danger">Xóa sản phẩm</button>
-                                <button class="btn btn-dark">Xem chi tiết</button></td>
-                        </tr>
-                        <tr>
-                            <td>16</td>
-                            <td>Thông tin xe Honda</td>
-                            <td> <img src="image/h15.jpg" style="width: 50px"></td>
-                            <td> 120000/Ngày</td>
-                            <td> 20/01/2020</td>
-                            <td>  </td>
-                            <td><button class="btn btn-danger">Xóa sản phẩm</button>
-                                <button class="btn btn-dark">Xem chi tiết</button></td>
-                        </tr>
-
+                                <%}%>
 
                         </tfoot>
                     </table>
