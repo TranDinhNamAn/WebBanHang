@@ -37,4 +37,9 @@ public class ProductServerADM {
         Statement statement = DBConnect.getInstall().get();
         statement.executeUpdate(sql);
     }
+
+    public static void main(String[] args) throws SQLException {
+        ProductServerADM ps = new ProductServerADM();
+        ps.deleteProduct("10");
+    }
 }
