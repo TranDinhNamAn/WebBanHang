@@ -1,8 +1,15 @@
+<%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
+<%@ page import="vn.edu.hcmuaf.fit.model.Brand" %>
+<%@ page import="java.util.List" %>
+<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+
     <title>Cập nhật sản phẩm</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css1/all.min.css">
@@ -61,7 +68,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="addProduct.jsp" class="nav-link">
+                                <a href="AddProduct" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Thêm sản phẩm</p>
                                 </a>
@@ -73,7 +80,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./updateProduct.html" class="nav-link">
+                                <a href="edit" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Sửa thông tin</p>
                                 </a>
@@ -96,7 +103,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="list_product.jsp" class="nav-link">
+                                <a href="listproductadmin" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Danh sách sản phẩm</p>
                                 </a>
@@ -170,52 +177,47 @@
                         <div class="card-header">
                             <h3 class="card-title">Sửa thông tin</h3>
                         </div>
-                        <form role="form">
+                        <form action="editProduct" method="post" role="form">
                             <div class="card-body">
-                                <div class="form-group">
-                                    <label for="examplid">Mã sản phẩm</label>
-                                    <input type="text"  id="examplid" placeholder="id">
-                                </div>
+                                <%Product product = (Product) request.getAttribute("product1"); %>
                                 <div class="form-group">
                                     <label for="examplename">Tên sản phẩm</label>
-                                    <input type="text" class="form-control" id="examplename" placeholder="Tên sản phẩm">
+                                    <input value="<%=product.getName()%>" name="name" type="text" class="form-control" id="examplename" placeholder="Tên sản phẩm">
                                 </div>
                                 <div class="form-group">
-                                    <label for="examplType">Loại sản phẩm</label>
-                                    <input type="text" class="form-control" id="examplType" placeholder="Loại sản phẩm">
+                                    <label for="examplType">Hình Ảnh</label>
+                                    <input value="<%=product.getImg()%>" name="image" type="text" class="form-control" id="examplType" placeholder="Loại sản phẩm">
                                 </div>
-                                <div class="form-group">
-                                    <label for="ndbv">Giới thiệu</label>
-                                    <textarea rows="5"  id="ndbv" class="form-control" placeholder="Nội dung không được quá 300 ký tự"></textarea>
-                                </div>
+
                                 <div class="form-group">
                                     <label for="examplprice">Giá thuê</label>
-                                    <input type="text"  id="examplprice" placeholder="">
+                                    <input value="<%=product.getPrice()%> " name="price" type="text"  id="examplprice" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="examplprice">isNew</label>
+                                    <input type="text" name="isNew" i placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label>Loại sản phẩm</label>
+                                    <select name="brandID" class="form-select" >
+                                        <%List<Brand> list = (List<Brand>) request.getAttribute("brand");%>
+                                        <% for (Brand p:list
+                                        ) {
+                                        %>
+                                        <option <%=product.getBrandID()%> value="<%=p.getID()%>"  selected><%=p.getName()%></option>
+                                        <%}%>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="examplid">Mã sản phẩm</label>
+                                    <input value="<%=product.getId()%>" name="id" type="text" readonly id="examplid" placeholder="id">
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-primary">Sửa thông tin</button>
                                 </div>
                             </div>
                         </form>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card card-warning">
-                        <div class="card-header">
-                            <h3 class="card-title">Hình ảnh</h3>
-                        </div>
-                        <img src="image/h5.jpg" style="width: 400px ; height: auto ">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="custom-file">
-                                    <label class="custom-file-label" >Choose file</label>
-                                </div>
-                                <div class="input-group-append">
-                                    <span class="input-group-text" id="">Upload</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Sủa thông tin</button>
                 </div>
             </div>
         </div>
