@@ -119,7 +119,7 @@
                             <p class="price ml-auto"><%=p.getPrice()%><span>/ngày</span></p>
                         </div>
                         <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                                href="chitietxe?id=<%=p.getId()%>" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
                     </div>
                 </div>
             </div>

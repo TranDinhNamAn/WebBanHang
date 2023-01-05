@@ -57,7 +57,7 @@
                             for (Brand b:arr1
                             ) {
                         %>
-                        <li class="subb"><a href="<%=b.getName()%>"><%=b.getName()%> </a></li>
+                        <li class="subb"><a href="<%=b.getName()%>"><%=b.getName()%></a></li>
                         <%}%>
                     </ul>
                 </li>

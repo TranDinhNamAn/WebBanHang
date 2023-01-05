@@ -104,6 +104,6 @@ public class ProductService {
 
     public static void main(String[] args) throws SQLException {
         ProductService sv = new ProductService();
-        sv.getListBrand();
+        sv.getData();
     }
 }

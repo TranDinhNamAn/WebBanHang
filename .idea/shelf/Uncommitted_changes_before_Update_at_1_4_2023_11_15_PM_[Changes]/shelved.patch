@@ -1,0 +1,394 @@
+Index: target/WebThueXe/yamaha.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/WebThueXe/yamaha.jsp b/target/WebThueXe/yamaha.jsp
+--- a/target/WebThueXe/yamaha.jsp	
++++ b/target/WebThueXe/yamaha.jsp	
+@@ -1,10 +1,14 @@
+ <%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
+ <%@ page import="java.util.List" %>
+ <%@ page import="vn.edu.hcmuaf.fit.service.ProductService" %>
++<%@ page import="vn.edu.hcmuaf.fit.model.Brand" %>
++<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
++
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <title>Xe máy Yamaha</title>
++    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+@@ -46,14 +50,15 @@
+                 <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
+                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
+                 <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
+-                <li class="nav-item active"><a href="#" class="nav-link">Xe máy</a>
++                <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
+                     <ul class="dr-menu">
+-                        <li class="subb"><a href="honda">Honda </a></li>
+-                        <li class="subb"><a href="piaggio">Piaggio </a></li>
+-                        <li class="subb"><a href="sym">SYM </a></li>
+-                        <li class="subb"><a href="suzuki">Suzuki </a></li>
+-                        <li class="subb"><a href="vespa">Vespa </a></li>
+-                        <li class="subb"><a href="yamaha">Yamaha </a></li>
++                        <%List<Brand> arr1 = ProductService.getListBrand();%>
++                        <%
++                            for (Brand b:arr1
++                            ) {
++                        %>
++                        <li class="subb"><a href="<%=b.getName()%>"><%=b.getName()%> </a></li>
++                        <%}%>
+                     </ul>
+                 </li>
+                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
+Index: target/WebThueXe/vespa.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/WebThueXe/vespa.jsp b/target/WebThueXe/vespa.jsp
+--- a/target/WebThueXe/vespa.jsp	
++++ b/target/WebThueXe/vespa.jsp	
+@@ -1,10 +1,14 @@
+ <%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
+ <%@ page import="java.util.List" %>
+ <%@ page import="vn.edu.hcmuaf.fit.service.ProductService" %>
++<%@ page import="vn.edu.hcmuaf.fit.model.Brand" %>
++<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
++
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <title>Xe máy Vespa</title>
++    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+@@ -46,14 +50,15 @@
+                 <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
+                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
+                 <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
+-                <li class="nav-item active"><a href="#" class="nav-link">Xe máy</a>
++                <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
+                     <ul class="dr-menu">
+-                        <li class="subb"><a href="honda">Honda </a></li>
+-                        <li class="subb"><a href="piaggio">Piaggio </a></li>
+-                        <li class="subb"><a href="sym">SYM </a></li>
+-                        <li class="subb"><a href="suzuki">Suzuki </a></li>
+-                        <li class="subb"><a href="vespa">Vespa </a></li>
+-                        <li class="subb"><a href="yamaha">Yamaha </a></li>
++                        <%List<Brand> arr1 = ProductService.getListBrand();%>
++                        <%
++                            for (Brand b:arr1
++                            ) {
++                        %>
++                        <li class="subb"><a href="<%=b.getName()%>"><%=b.getName()%> </a></li>
++                        <%}%>
+                     </ul>
+                 </li>
+                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
+Index: target/WebThueXe/piaggio.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/WebThueXe/piaggio.jsp b/target/WebThueXe/piaggio.jsp
+--- a/target/WebThueXe/piaggio.jsp	
++++ b/target/WebThueXe/piaggio.jsp	
+@@ -1,10 +1,13 @@
+ <%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
+ <%@ page import="java.util.List" %>
+ <%@ page import="vn.edu.hcmuaf.fit.service.ProductService" %>
++<%@ page import="vn.edu.hcmuaf.fit.model.Brand" %>
++<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <title>Xe máy Piaggio</title>
++    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+@@ -46,14 +49,15 @@
+                 <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
+                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
+                 <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
+-                <li class="nav-item active"><a href="#" class="nav-link">Xe máy</a>
++                <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
+                     <ul class="dr-menu">
+-                        <li class="subb"><a href="honda">Honda </a></li>
+-                        <li class="subb"><a href="piaggio">Piaggio </a></li>
+-                        <li class="subb"><a href="sym">SYM </a></li>
+-                        <li class="subb"><a href="suzuki">Suzuki </a></li>
+-                        <li class="subb"><a href="vespa">Vespa </a></li>
+-                        <li class="subb"><a href="yamaha">Yamaha </a></li>
++                        <%List<Brand> arr1 = ProductService.getListBrand();%>
++                        <%
++                            for (Brand b:arr1
++                            ) {
++                        %>
++                        <li class="subb"><a href="<%=b.getName()%>"><%=b.getName()%> </a></li>
++                        <%}%>
+                     </ul>
+                 </li>
+                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
+Index: target/WebThueXe/suzuki.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/WebThueXe/suzuki.jsp b/target/WebThueXe/suzuki.jsp
+--- a/target/WebThueXe/suzuki.jsp	
++++ b/target/WebThueXe/suzuki.jsp	
+@@ -1,10 +1,13 @@
+ <%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
+ <%@ page import="java.util.List" %>
+ <%@ page import="vn.edu.hcmuaf.fit.service.ProductService" %>
++<%@ page import="vn.edu.hcmuaf.fit.model.Brand" %>
++<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <title>Xe máy Suzuki</title>
++    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+@@ -46,14 +49,15 @@
+                 <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
+                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
+                 <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
+-                <li class="nav-item active"><a href="#" class="nav-link">Xe máy</a>
++                <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
+                     <ul class="dr-menu">
+-                        <li class="subb"><a href="honda">Honda </a></li>
+-                        <li class="subb"><a href="piaggio">Piaggio </a></li>
+-                        <li class="subb"><a href="sym">SYM </a></li>
+-                        <li class="subb"><a href="suzuki">Suzuki </a></li>
+-                        <li class="subb"><a href="vespa">Vespa </a></li>
+-                        <li class="subb"><a href="yamaha">Yamaha </a></li>
++                        <%List<Brand> arr1 = ProductService.getListBrand();%>
++                        <%
++                            for (Brand b:arr1
++                            ) {
++                        %>
++                        <li class="subb"><a href="<%=b.getName()%>"><%=b.getName()%> </a></li>
++                        <%}%>
+                     </ul>
+                 </li>
+                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
+Index: target/WebThueXe/META-INF/MANIFEST.MF
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/WebThueXe/META-INF/MANIFEST.MF b/target/WebThueXe/META-INF/MANIFEST.MF
+--- a/target/WebThueXe/META-INF/MANIFEST.MF	
++++ b/target/WebThueXe/META-INF/MANIFEST.MF	
+@@ -1,5 +1,5 @@
+ Manifest-Version: 1.0
+ Created-By: IntelliJ IDEA
+-Built-By: DELL
+-Build-Jdk: Oracle OpenJDK version 19
++Built-By: USER
++Build-Jdk: Oracle OpenJDK version 19.0.1
+ 
+Index: target/WebThueXe/sym.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/WebThueXe/sym.jsp b/target/WebThueXe/sym.jsp
+--- a/target/WebThueXe/sym.jsp	
++++ b/target/WebThueXe/sym.jsp	
+@@ -1,10 +1,13 @@
+ <%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
+ <%@ page import="java.util.List" %>
+ <%@ page import="vn.edu.hcmuaf.fit.service.ProductService" %>
++<%@ page import="vn.edu.hcmuaf.fit.model.Brand" %>
++<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <title>Xe máy SYM</title>
++    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+@@ -46,14 +49,15 @@
+                 <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
+                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
+                 <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
+-                <li class="nav-item active"><a href="#" class="nav-link">Xe máy</a>
++                <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
+                     <ul class="dr-menu">
+-                        <li class="subb"><a href="honda">Honda </a></li>
+-                        <li class="subb"><a href="piaggio">Piaggio </a></li>
+-                        <li class="subb"><a href="sym">SYM </a></li>
+-                        <li class="subb"><a href="suzuki">Suzuki </a></li>
+-                        <li class="subb"><a href="vespa">Vespa </a></li>
+-                        <li class="subb"><a href="yamaha">Yamaha </a></li>
++                        <%List<Brand> arr1 = ProductService.getListBrand();%>
++                        <%
++                            for (Brand b:arr1
++                            ) {
++                        %>
++                        <li class="subb"><a href="<%=b.getName()%>"><%=b.getName()%> </a></li>
++                        <%}%>
+                     </ul>
+                 </li>
+                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -9,16 +9,31 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="416c06ed-0398-4fcb-a2d0-6804377f658f" name="Changes" comment="NguyenToi">
++    <list default="true" id="416c06ed-0398-4fcb-a2d0-6804377f658f" name="Changes" comment="Nam An">
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_8_48_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_8_48_PM__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_8_48_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_8_48_PM__Changes_1.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/db/DBConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/db/DBConnect.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe.war" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/META-INF/MANIFEST.MF" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Piaggio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Piaggio.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/SYM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/SYM.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Suzuki.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Suzuki.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Vespa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Vespa.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Yamaha.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Yamaha.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/WebThueXe/honda.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/honda.jsp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/login.jsp" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/WebThueXe/piaggio.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/piaggio.jsp" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/WebThueXe/suzuki.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/suzuki.jsp" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/WebThueXe/sym.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/sym.jsp" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/WebThueXe/vespa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/vespa.jsp" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/WebThueXe/yamaha.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/yamaha.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Piaggio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Piaggio.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/SYM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/SYM.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Suzuki.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Suzuki.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Vespa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Vespa.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Yamaha.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Yamaha.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -60,7 +75,7 @@
+       </set>
+     </option>
+   </component>
+-  <component name="RunManager" selected="Application.DBConnect">
++  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.68">
+     <configuration name="Check" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.fit.service.Check" />
+       <module name="WebThueXe" />
+@@ -212,6 +227,7 @@
+       <workItem from="1672758513423" duration="519000" />
+       <workItem from="1672761768599" duration="6020000" />
+       <workItem from="1672797374118" duration="11613000" />
++      <workItem from="1672846557163" duration="1438000" />
+     </task>
+     <task id="LOCAL-00001" summary="Nam An">
+       <created>1672805231465</created>
+@@ -255,7 +271,21 @@
+       <option name="project" value="LOCAL" />
+       <updated>1672840301901</updated>
+     </task>
+-    <option name="localTasksCounter" value="7" />
++    <task id="LOCAL-00007" summary="Nam An">
++      <created>1672846325865</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1672846325865</updated>
++    </task>
++    <task id="LOCAL-00008" summary="Nam An">
++      <created>1672846509735</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1672846509735</updated>
++    </task>
++    <option name="localTasksCounter" value="9" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -273,8 +303,8 @@
+     </option>
+   </component>
+   <component name="VcsManagerConfiguration">
++    <MESSAGE value="NguyenToi" />
+     <MESSAGE value="Nam An" />
+-    <MESSAGE value="NguyenToi" />
+-    <option name="LAST_COMMIT_MESSAGE" value="NguyenToi" />
++    <option name="LAST_COMMIT_MESSAGE" value="Nam An" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: target/WebThueXe/honda.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/WebThueXe/honda.jsp b/target/WebThueXe/honda.jsp
+--- a/target/WebThueXe/honda.jsp	
++++ b/target/WebThueXe/honda.jsp	
+@@ -1,6 +1,7 @@
+ <%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
+ <%@ page import="java.util.List" %>
+ <%@ page import="vn.edu.hcmuaf.fit.service.ProductService" %>
++<%@ page import="vn.edu.hcmuaf.fit.model.Brand" %>
+ <%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
+ <!DOCTYPE html>
+ <html lang="en">
+@@ -49,13 +50,15 @@
+                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
+                 <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
+                 <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
++
+                     <ul class="dr-menu">
+-                        <li class="subb"><a href="honda">Honda </a></li>
+-                        <li class="subb"><a href="piaggio">Piaggio </a></li>
+-                        <li class="subb"><a href="sym">SYM </a></li>
+-                        <li class="subb"><a href="suzuki">Suzuki </a></li>
+-                        <li class="subb"><a href="vespa">Vespa </a></li>
+-                        <li class="subb"><a href="yamaha">Yamaha </a></li>
++                        <%List<Brand> arr1 = ProductService.getListBrand();%>
++                        <%
++                            for (Brand b:arr1
++                            ) {
++                        %>
++                        <li class="subb"><a href="<%=b.getName()%>"><%=b.getName()%> </a></li>
++                        <%}%>
+                     </ul>
+                 </li>
+                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -11,7 +11,7 @@
+       </list>
+     </option>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" project-jdk-name="19" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file

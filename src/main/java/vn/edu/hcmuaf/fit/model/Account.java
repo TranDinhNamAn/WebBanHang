@@ -3,10 +3,12 @@ package vn.edu.hcmuaf.fit.model;
 public class Account {
     String username;
     String password;
+    int isAdmin;
 
-    public Account(String username, String password) {
+    public Account(String username, String password, int isAdmin) {
         this.username = username;
         this.password = password;
+        this.isAdmin = isAdmin;
     }
 
     public String getUsername() {
@@ -23,5 +25,13 @@ public class Account {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getIsAdmin() {
+        return isAdmin;
+    }
+
+    public void setIsAdmin(int isAdmin) {
+        this.isAdmin = isAdmin;
     }
 }

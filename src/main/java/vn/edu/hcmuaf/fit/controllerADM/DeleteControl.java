@@ -14,12 +14,12 @@ import java.util.List;
 public class DeleteControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         try {
             String id = request.getParameter("id");
+            Product p = new Product();
             ProductServerADM pr = new ProductServerADM();
-            pr.deleteProduct(id);
-            response.sendRedirect("listproductadmin");
+                pr.deleteProduct(id);
+           response.sendRedirect("listproductadmin");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

@@ -1,0 +1,39 @@
+<changelist name="Uncommitted_changes_before_Update_at_1_4_2023_11_15_PM_[Changes]1" date="1672849012236" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_15_PM_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 1/4/2023 11:15 PM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" />
+    <option name="AFTER_PATH" value="target/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_15_PM_[Changes]1/DBConnect.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/SYM.class" />
+    <option name="AFTER_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/SYM.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_15_PM_[Changes]1/SYM.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Piaggio.class" />
+    <option name="AFTER_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Piaggio.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_15_PM_[Changes]1/Piaggio.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/WebThueXe.war" />
+    <option name="AFTER_PATH" value="target/WebThueXe.war" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_15_PM_[Changes]1/WebThueXe.war" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Suzuki.class" />
+    <option name="AFTER_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Suzuki.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_15_PM_[Changes]1/Suzuki.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/vn/edu/hcmuaf/fit/controller/Vespa.class" />
+    <option name="AFTER_PATH" value="target/classes/vn/edu/hcmuaf/fit/controller/Vespa.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_15_PM_[Changes]1/Vespa.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Yamaha.class" />
+    <option name="AFTER_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Yamaha.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_15_PM_[Changes]1/Yamaha.class" />
+  </binary>
+</changelist>
