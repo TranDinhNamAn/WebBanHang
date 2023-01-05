@@ -26,11 +26,17 @@ public class Login extends HttpServlet {
             String user = request.getParameter("username");
             String pass = request.getParameter("password");
             Account acc = Check.CheckLogin(user, pass);
-            if (acc != null) {
+            if (acc != null && acc.getIsAdmin()==0) {
+                HttpSession session = request.getSession();
+                session.setAttribute("account",acc);
                 response.sendRedirect("trangchu");
             } else {
-                request.setAttribute("Error", "Tên tài khoản hoặc mật khẩu không đúng!");
-                request.getRequestDispatcher("login.jsp").forward(request, response);
+                if (acc != null && acc.getIsAdmin() == 1) {
+                    response.sendRedirect("listproductadmin");
+                } else {
+                    request.setAttribute("Error", "Tên tài khoản hoặc mật khẩu không đúng!");
+                    request.getRequestDispatcher("login.jsp").forward(request, response);
+                }
             }
         }catch (SQLException | ClassNotFoundException e) {
                 throw new RuntimeException(e);

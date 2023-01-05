@@ -14,7 +14,8 @@ public class Check {
         while (rs.next()) {
             acc = new Account(
                     rs.getString(1),
-                    rs.getString(2));
+                    rs.getString(2),
+                    rs.getInt(3));
         }
         return acc;
     }
@@ -26,13 +27,14 @@ public class Check {
         while (rs.next()) {
             acc = new Account(
                     rs.getString(1),
-                    rs.getString(2));
+                    rs.getString(2),
+                    rs.getInt(3));
         }
         return acc;
     }
     public static void SignUp(String username, String password) throws SQLException {
         Statement statement = DBConnect.getInstall().get();
-        String sql = "insert into user values ('"+username+"','"+password+"')";
+        String sql = "insert into user values ('"+username+"','"+password+"',0)";
         int rs = statement.executeUpdate(sql);
     }
 

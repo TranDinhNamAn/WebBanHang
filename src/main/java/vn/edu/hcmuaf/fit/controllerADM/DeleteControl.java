@@ -15,14 +15,11 @@ public class DeleteControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            int id = Integer.parseInt(request.getParameter("id"));
+            String id = request.getParameter("id");
             Product p = new Product();
-            p.setId(id);
-
             ProductServerADM pr = new ProductServerADM();
-            pr.deleteProduct(p);
-
-            request.getRequestDispatcher("listproductadmin").forward(request, response);
+                pr.deleteProduct(id);
+           response.sendRedirect("listproductadmin");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

@@ -208,7 +208,7 @@
                                 <td><img src="<%=p.getImg()%>" style="width: 50px"></td>
                                 <td><%=p.getPrice()%>/Ngày</td>
                                 <td>
-                                    <a href="delete?id = <%=p.getId()%>">
+                                    <a href="delete?id=<%=p.getId()%>">
                                         <button class="btn btn-danger">Xóa sản phẩm</button>
                                     </a>
                                     <a href="chitiet">

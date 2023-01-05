@@ -1,6 +1,10 @@
+<%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
+<%@ page import="vn.edu.hcmuaf.fit.model.ProductDetail" %>
+<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <title>Chi tiết xe</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -71,9 +75,9 @@
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
             <div class="col-md-9 ftco-animate pb-5">
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ <i
+                <p class="breadcrumbs"><span class="mr-2"><a href="trangchu">Trang chủ <i
                         class="ion-ios-arrow-forward"></i></a></span>
-                    <span><a href="car-single.jsp">Chi tiết xe <i class="ion-ios-arrow-forward"></i></a></span></p>
+                    <span><a href="chitietxe">Chi tiết xe <i class="ion-ios-arrow-forward"></i></a></span></p>
                 <h1 class="mb-3 bread">Chi tiết xe</h1>
             </div>
         </div>
@@ -85,11 +89,12 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
+                <%ProductDetail p = (ProductDetail) request.getAttribute("detail");%>
                 <div class="car-details">
                     <div class="img rounded"
-                         style="background-image: url(images/product/honda-wavea.jpg); width: 600px;height: 400px"></div>
+                         style="background-image: url(<%=p.getImage()%>); width: 600px;height: 400px"></div>
                     <div class="text text-center">
-                        <h2>Wave Alpha 110</h2>
+                        <h2><%=p.getName()%></h2>
                     </div>
                 </div>
                 <div class="row">
@@ -102,7 +107,7 @@
                                     <div class="text">
                                         <h3 class="heading mb-0 pl-3">
                                             Quãng đường
-                                            <span>45Km/1L</span>
+                                            <span><%=p.getDistance()%>Km/1L</span>
                                         </h3>
                                     </div>
                                 </div>
@@ -118,7 +123,7 @@
                                     <div class="text">
                                         <h3 class="heading mb-0 pl-3">
                                             Động cơ
-                                            <span>Blue Core, 4 kỳ, 2 van, SOHC, Làm mát bằng không khí cưỡng bức</span>
+                                            <span><%=p.getGear()%></span>
                                         </h3>
                                     </div>
                                 </div>
@@ -134,7 +139,7 @@
                                     <div class="text">
                                         <h3 class="heading mb-0 pl-3">
                                             Ngăn chứa đồ
-                                            <span>25L</span>
+                                            <span><%=p.getStorage()%>L</span>
                                         </h3>
                                     </div>
                                 </div>
@@ -150,7 +155,7 @@
                                     <div class="text">
                                         <h3 class="heading mb-0 pl-3">
                                             Dung tích xăng
-                                            <span>4,2L</span>
+                                            <span><%=p.getFuel()%>L</span>
                                         </h3>
                                     </div>
                                 </div>
@@ -160,8 +165,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 </section>
 

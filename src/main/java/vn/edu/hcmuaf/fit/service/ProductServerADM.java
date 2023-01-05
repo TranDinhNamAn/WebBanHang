@@ -32,8 +32,8 @@ public class ProductServerADM {
         return list;
     }
 
-    public static void deleteProduct(Product product) throws SQLException {
-        String sql = " delete from product where productID = "+product.getId();
+    public static void deleteProduct(String id) throws SQLException {
+        String sql = " delete from product where productID = "+id;
         Statement statement = DBConnect.getInstall().get();
         statement.executeUpdate(sql);
     }
