@@ -23,7 +23,6 @@ public class Honda extends HttpServlet {
             throw new RuntimeException(e);
         }
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
