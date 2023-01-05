@@ -21,7 +21,8 @@ public class ProductServerADM {
                         rs.getString(2),
                         rs.getDouble(3),
                         rs.getBoolean(4),
-                        rs.getInt(5)
+                        rs.getInt(5),
+                        rs.getInt(6)
 
                 ));
             }
@@ -29,5 +30,11 @@ public class ProductServerADM {
             System.out.println("No result");
         }
         return list;
+    }
+
+    public static void deleteProduct(Product product) throws SQLException {
+        String sql = " delete from product where productID = "+product.getId();
+        Statement statement = DBConnect.getInstall().get();
+        statement.executeUpdate(sql);
     }
 }

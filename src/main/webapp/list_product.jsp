@@ -65,7 +65,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="./addProduct.html" class="nav-link">
+                                <a href="addProduct.jsp" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Thêm sản phẩm</p>
                                 </a>
@@ -100,7 +100,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./listProduct.html" class="nav-link">
+                                <a href="listproductadmin" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Danh sách sản phẩm</p>
                                 </a>
@@ -174,7 +174,8 @@
 
                         <div class="card-tools">
                             <div class="input-group input-group-sm" style="width: 150px;">
-                                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                                <input type="text" name="table_search" class="form-control float-right"
+                                       placeholder="Search">
 
                                 <div class="input-group-append">
                                     <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
@@ -182,40 +183,48 @@
                             </div>
                         </div>
                     </div>
-                <div class="card-body">
-                    <table id="example2" class="table table-bordered table-hover">
-                        <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Tên sản phẩm</th>
-                            <th>Hình ảnh</th>
-                            <th>Giá thuê</th>
-                            <th>Nút lệnh</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            <%List<Product> list = (List<Product>) request.getAttribute("list");%>
-                            <%
+                    <div class="card-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Hình ảnh</th>
+                                <th>Giá thuê</th>
+                                <th>Nút lệnh</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <%List<Product> list = (List<Product>) request.getAttribute("list3");%>
+                                <%
                             for (Product p:list
                             ) {
                         %>
-                        <tr>
-                            <td><%=p.getId()%></td>
-                            <td><%=p.getName()%></td>
-                            <td> <img src="<%=p.getImg()%>" style="width: 50px"></td>
-                            <td> <%=p.getPrice()%>/Ngày</td>
-                            <td><button class="btn btn-danger">Xóa sản phẩm</button>
-                                <button class="btn btn-dark">Xem chi tiết</button></td>
-                        </tr>
+                            <tr>
+                                <td><%=p.getId()%>
+                                </td>
+                                <td><%=p.getName()%>
+                                </td>
+                                <td><img src="<%=p.getImg()%>" style="width: 50px"></td>
+                                <td><%=p.getPrice()%>/Ngày</td>
+                                <td>
+                                    <a href="delete?id = <%=p.getId()%>">
+                                        <button class="btn btn-danger">Xóa sản phẩm</button>
+                                    </a>
+                                    <a href="chitiet">
+                                        <button class="btn btn-dark">Xem chi tiết</button>
+                                    </a>
+                                </td>
+                            </tr>
                                 <%}%>
 
-                        </tfoot>
-                    </table>
+                            </tfoot>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 </div>
 
