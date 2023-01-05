@@ -11,18 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="416c06ed-0398-4fcb-a2d0-6804377f658f" name="Changes" comment="Nam An">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Honda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Honda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/piaggio.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/piaggio.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/suzuki.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/suzuki.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/sym.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sym.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/vespa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vespa.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/yamaha.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/yamaha.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebThueXe.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/sym.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/sym.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Honda.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Honda.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/SYM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/SYM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Login.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +235,7 @@
       <workItem from="1672888421055" duration="195000" />
       <workItem from="1672888632186" duration="187000" />
       <workItem from="1672888907760" duration="16648000" />
-      <workItem from="1672925436852" duration="1907000" />
+      <workItem from="1672925436852" duration="13235000" />
     </task>
     <task id="LOCAL-00001" summary="Nam An">
       <created>1672805231465</created>
@@ -329,7 +321,28 @@
       <option name="project" value="LOCAL" />
       <updated>1672925995193</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Nam An">
+      <created>1672927363930</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1672927363930</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Nam An">
+      <created>1672927386467</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1672927386467</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Nam An">
+      <created>1672927476593</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1672927476593</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

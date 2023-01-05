@@ -14,12 +14,15 @@ public class Login extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try{
+            Cookie [] c = request.getCookies();
+            for(Cookie cookie: c){
+
+            }
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }catch (Exception e){
         }
 
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
@@ -29,6 +32,9 @@ public class Login extends HttpServlet {
             if (acc != null && acc.getIsAdmin()==0) {
                 HttpSession session = request.getSession();
                 session.setAttribute("account",acc);
+                Cookie u = new Cookie("userC", user);
+                u.setMaxAge(30);
+                response.addCookie(u);
                 response.sendRedirect("trangchu");
             } else {
                 if (acc != null && acc.getIsAdmin() == 1) {
