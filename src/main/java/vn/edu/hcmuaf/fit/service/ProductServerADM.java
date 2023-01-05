@@ -33,13 +33,45 @@ public class ProductServerADM {
     }
 
     public static void deleteProduct(String id) throws SQLException {
-        String sql = " delete from product where productID = "+id;
+        String sql = " delete from product where productID = " + id;
         Statement statement = DBConnect.getInstall().get();
         statement.executeUpdate(sql);
     }
 
+    public static Product getProduct(String id) throws SQLException {
+        String sql = " select * from product where productID = " + id;
+        Statement statement = DBConnect.getInstall().get();
+        ResultSet rs = statement.executeQuery(sql);
+        Product product = null;
+        while (rs.next()) {
+            product = new Product(
+                    rs.getString(1),
+                    rs.getString(2),
+                    rs.getDouble(3),
+                    rs.getBoolean(4),
+                    rs.getInt(5),
+                    rs.getInt(6)
+            );
+        }
+        return product;
+    }
+
+    public static void addProduct(String name, String img, String price, String isNew, String brandID) throws SQLException {
+        String sql = "insert into product values('" + name + "','" + img + "'," + price + "," + isNew + ", '" + brandID + "', productID) ";
+        Statement statement = DBConnect.getInstall().get();
+        statement.executeUpdate(sql);
+
+    }
+    public static void updateProduct(String name, String img, String price, String isNew, String brandID, String pid) throws SQLException {
+        String sql = "update product set name = '"+ name +"', image = '"+ img +"',price = "+
+                price +",isNew = '"+ isNew +"',brandID = '"+ brandID +"'where productID = '"+ pid +"'";
+        Statement statement = DBConnect.getInstall().get();
+        statement.executeUpdate(sql);
+
+    }
+
     public static void main(String[] args) throws SQLException {
         ProductServerADM ps = new ProductServerADM();
-        ps.deleteProduct("10");
+        ps.updateProduct("a","ama","10000","1","3","1");
     }
 }

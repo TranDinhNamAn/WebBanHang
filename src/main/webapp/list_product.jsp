@@ -77,7 +77,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./updateProduct.html" class="nav-link">
+                                <a href="updateProduct.jsp" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Sửa thông tin</p>
                                 </a>
@@ -211,7 +211,7 @@
                                     <a href="delete?id=<%=p.getId()%>">
                                         <button class="btn btn-danger">Xóa sản phẩm</button>
                                     </a>
-                                    <a href="chitiet">
+                                    <a href="UpdateProduct?id=<%=p.getId()%>">
                                         <button class="btn btn-dark">Xem chi tiết</button>
                                     </a>
                                 </td>
