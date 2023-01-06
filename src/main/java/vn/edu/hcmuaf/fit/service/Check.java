@@ -13,9 +13,10 @@ public class Check {
         Account acc = null;
         while (rs.next()) {
             acc = new Account(
-                    rs.getString(1),
+                    rs.getInt(1),
                     rs.getString(2),
-                    rs.getInt(3));
+                    rs.getString(3),
+                    rs.getInt(4));
         }
         return acc;
     }
@@ -26,9 +27,10 @@ public class Check {
         Account acc = null;
         while (rs.next()) {
             acc = new Account(
-                    rs.getString(1),
+                    rs.getInt(1),
                     rs.getString(2),
-                    rs.getInt(3));
+                    rs.getString(3),
+                    rs.getInt(4));
         }
         return acc;
     }
