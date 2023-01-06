@@ -21,17 +21,7 @@
 <!-- Site wrapper -->
 <div class="wrapper">
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
-
         <div class="sidebar">
-            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                <div class="image">
-                    <img src="image/AdminLTELogo.png" class="img-circle elevation-2" alt="User Image">
-                </div>
-                <div class="info">
-                    <a href="#" class="d-block">Admin</a>
-                </div>
-            </div>
-
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                     data-accordion="false">
@@ -68,21 +58,9 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="AddProduct" class="nav-link">
+                                <a href="addProduct" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Thêm sản phẩm</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./removeProduct.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Xóa sản phẩm</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="edit" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Sửa thông tin</p>
                                 </a>
                             </li>
                         </ul>
@@ -96,12 +74,6 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="./newProduct.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Sản phẩm mới </p>
-                                </a>
-                            </li>
                             <li class="nav-item">
                                 <a href="listproductadmin" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
@@ -120,26 +92,12 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="./newUser.html" class="nav-link">
+                                <a href="ListUser" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Khách hàng mới </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="listUser.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Danh sách khách hàng</p>
+                                    <p>Danh sách khách hàng </p>
                                 </a>
                             </li>
                         </ul>
-                    </li>
-                    <li class="nav-item has-treeview">
-                        <a href="./updateUserAdmin.html" class="nav-link">
-                            <i class="nav-icon fas fa-edit"></i>
-                            <p>
-                                Cập nhật thông tin admin
-                            </p>
-                        </a>
                     </li>
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">

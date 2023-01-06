@@ -1,6 +1,8 @@
 package vn.edu.hcmuaf.fit.service;
 
 import vn.edu.hcmuaf.fit.db.DBConnect;
+import vn.edu.hcmuaf.fit.model.Account;
+import vn.edu.hcmuaf.fit.model.Brand;
 import vn.edu.hcmuaf.fit.model.Product;
 
 import java.sql.ResultSet;
@@ -37,6 +39,11 @@ public class ProductServerADM {
         Statement statement = DBConnect.getInstall().get();
         statement.executeUpdate(sql);
     }
+    public static void deleteUser(String id) throws SQLException {
+        String sql = " delete from user where id = " + id;
+        Statement statement = DBConnect.getInstall().get();
+        statement.executeUpdate(sql);
+    }
 
     public static Product getProduct(String id) throws SQLException {
         String sql = " select * from product where productID = " + id;
@@ -69,9 +76,29 @@ public class ProductServerADM {
         statement.executeUpdate(sql);
 
     }
+    public static List<Account> getAllAcount() throws SQLException {
+        List<Account> list1 = new LinkedList<>();
+        Statement statement = DBConnect.getInstall().get();
+        if (statement != null) {
+            ResultSet rs = statement.executeQuery("select * from user");
+
+            while (rs.next()) {
+                list1.add(new Account(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getInt(4)
+                ));
+            }
+        } else {
+            System.out.println("No result");
+        }
+        return list1;
+
+    }
 
     public static void main(String[] args) throws SQLException {
         ProductServerADM ps = new ProductServerADM();
-        ps.updateProduct("a","ama","10000","1","3","1");
+        System.out.println(ps.getAllAcount().toString());
     }
 }

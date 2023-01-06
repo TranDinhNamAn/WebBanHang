@@ -4,11 +4,23 @@ public class Account {
     String username;
     String password;
     int isAdmin;
+    int id;
 
-    public Account(String username, String password, int isAdmin) {
+    public Account(int id,String username, String password, int isAdmin) {
+        this.id= id;
         this.username = username;
         this.password = password;
         this.isAdmin = isAdmin;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", isAdmin=" + isAdmin +
+                ", id=" + id +
+                '}';
     }
 
     public String getUsername() {
@@ -33,5 +45,13 @@ public class Account {
 
     public void setIsAdmin(int isAdmin) {
         this.isAdmin = isAdmin;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
