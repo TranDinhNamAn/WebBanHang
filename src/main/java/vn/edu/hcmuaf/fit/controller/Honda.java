@@ -20,7 +20,7 @@ public class Honda extends HttpServlet {
             request.setAttribute("list2", list);
             request.getRequestDispatcher("honda.jsp").forward(request, response);
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException();
         }
     }
     @Override

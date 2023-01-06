@@ -20,7 +20,7 @@ public class Suzuki extends HttpServlet {
             request.setAttribute("list2", list);
             request.getRequestDispatcher("suzuki.jsp").forward(request, response);
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException();
         }
     }
 

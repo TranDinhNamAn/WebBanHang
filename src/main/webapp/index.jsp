@@ -45,19 +45,20 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active"><a href="trangchu" class="nav-link">Trang chủ</a></li>
                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
-                <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
+                <li class="nav-item"><a href="banggia" class="nav-link">Bảng giá</a></li>
                 <li class="nav-item"><a href="xemay" class="nav-link">Xe máy</a></li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
                 <%if(session.getAttribute("account")!=null){
                %>
                 <li class="nav-item"><a href="dangxuat" class="nav-link">Đăng xuất</a></li>
+                <li class="nav-item"><a href="cart.html" class="nav-link"><p style="margin-top: 6px"
+                                                                             class="icon icon-cart-plus"></p></a></li>
+
                 <%}%>
                 <%if(session.getAttribute("account")==null){%>
                 <li class="nav-item"><a href="dangnhap" class="nav-link">Đăng nhập</a></li>
                 <%}%>
-                <li class="nav-item"><a href="cart.html" class="nav-link"><p style="margin-top: 6px"
-                                                                             class="icon icon-cart-plus"></p></a></li>
 
             </ul>
         </div>

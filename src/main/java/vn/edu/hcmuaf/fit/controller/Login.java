@@ -32,9 +32,7 @@ public class Login extends HttpServlet {
             if (acc != null && acc.getIsAdmin()==0) {
                 HttpSession session = request.getSession();
                 session.setAttribute("account",acc);
-                Cookie u = new Cookie("userC", user);
-                u.setMaxAge(30);
-                response.addCookie(u);
+                session.setMaxInactiveInterval(60);
                 response.sendRedirect("trangchu");
             } else {
                 if (acc != null && acc.getIsAdmin() == 1) {
