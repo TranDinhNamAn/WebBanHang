@@ -20,7 +20,7 @@ public class SYM extends HttpServlet {
             request.setAttribute("list2", list);
             request.getRequestDispatcher("sym.jsp").forward(request, response);
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException();
         }
     }
 
