@@ -46,8 +46,8 @@
                 <li class="nav-item active"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
                 <li class="nav-item"><a href="login.jsp" class="nav-link">Đăng nhập</a></li>
-                <li class="nav-item"><a href="cart.html" class="nav-link"><p style="margin-top: 6px"
-                                                                             class="icon icon-cart-plus"></p></a></li>
+                <li class="nav-item"><a href="cart.jsp" class="nav-link"><p style="margin-top: 6px"
+                                                                            class="icon icon-cart-plus"></p></a></li>
             </ul>
         </div>
     </div>

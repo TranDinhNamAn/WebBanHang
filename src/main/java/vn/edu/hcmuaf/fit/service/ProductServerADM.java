@@ -17,14 +17,16 @@ public class ProductServerADM {
             ResultSet rs = statement.executeQuery("select * from product");
             while (rs.next()) {
                 list.add(new Product(
-                        rs.getString(1),
+                        rs.getInt(1),
                         rs.getString(2),
-                        rs.getDouble(3),
-                        rs.getBoolean(4),
-                        rs.getInt(5),
-                        rs.getInt(6)
-
-                ));
+                        rs.getString(3),
+                        rs.getDouble(4),
+                        rs.getBoolean(5),
+                        rs.getInt(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getString(9),
+                        rs.getString(10)));
             }
         } else {
             System.out.println("No result");
@@ -45,13 +47,16 @@ public class ProductServerADM {
         Product product = null;
         while (rs.next()) {
             product = new Product(
-                    rs.getString(1),
+                    rs.getInt(1),
                     rs.getString(2),
-                    rs.getDouble(3),
-                    rs.getBoolean(4),
-                    rs.getInt(5),
-                    rs.getInt(6)
-            );
+                    rs.getString(3),
+                    rs.getDouble(4),
+                    rs.getBoolean(5),
+                    rs.getInt(6),
+                    rs.getString(7),
+                    rs.getString(8),
+                    rs.getString(9),
+                    rs.getString(10));
         }
         return product;
     }

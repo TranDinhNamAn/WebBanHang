@@ -32,7 +32,7 @@ public class Login extends HttpServlet {
             if (acc != null && acc.getIsAdmin()==0) {
                 HttpSession session = request.getSession();
                 session.setAttribute("account",acc);
-                session.setMaxInactiveInterval(60);
+                session.setMaxInactiveInterval(15);
                 response.sendRedirect("trangchu");
             } else {
                 if (acc != null && acc.getIsAdmin() == 1) {

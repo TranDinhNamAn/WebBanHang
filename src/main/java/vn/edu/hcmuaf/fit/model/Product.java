@@ -7,16 +7,24 @@ public class Product {
     double price;
     boolean isNew;
     int brandID;
+    String distance;
+    String gear;
+    String storage;
+    String fuel;
     public Product() {
     }
 
-    public Product( String name, String img, double price, boolean isNew,int brandID,int id) {
+    public Product(int id, String name, String img, double price, boolean isNew, int brandID, String distance, String gear, String storage, String fuel) {
         this.id = id;
         this.name = name;
         this.img = img;
         this.price = price;
         this.isNew = isNew;
         this.brandID = brandID;
+        this.distance = distance;
+        this.gear = gear;
+        this.storage = storage;
+        this.fuel = fuel;
     }
 
     public String getName() {
@@ -67,4 +75,35 @@ public class Product {
         this.brandID = brandID;
     }
 
+    public String getDistance() {
+        return distance;
+    }
+
+    public void setDistance(String distance) {
+        this.distance = distance;
+    }
+
+    public String getGear() {
+        return gear;
+    }
+
+    public void setGear(String gear) {
+        this.gear = gear;
+    }
+
+    public String getStorage() {
+        return storage;
+    }
+
+    public void setStorage(String storage) {
+        this.storage = storage;
+    }
+
+    public String getFuel() {
+        return fuel;
+    }
+
+    public void setFuel(String fuel) {
+        this.fuel = fuel;
+    }
 }

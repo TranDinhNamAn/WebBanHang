@@ -1,5 +1,4 @@
 <%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
-<%@ page import="vn.edu.hcmuaf.fit.model.ProductDetail" %>
 <%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,8 +59,8 @@
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
                 <li class="nav-item"><a href="login.jsp" class="nav-link">Đăng nhập</a></li>
-                <li class="nav-item"><a href="cart.html" class="nav-link"><p style="margin-top: 6px"
-                                                                             class="icon icon-cart-plus"></p></a></li>
+                <li class="nav-item"><a href="cart.jsp" class="nav-link"><p style="margin-top: 6px"
+                                                                            class="icon icon-cart-plus"></p></a></li>
 
             </ul>
         </div>
@@ -89,10 +88,10 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <%ProductDetail p = (ProductDetail) request.getAttribute("detail");%>
+                <%Product p = (Product) request.getAttribute("detail");%>
                 <div class="car-details">
                     <div class="img rounded"
-                         style="background-image: url(<%=p.getImage()%>); width: 600px;height: 400px"></div>
+                         style="background-image: url(<%=p.getImg()%>); width: 600px;height: 400px"></div>
                     <div class="text text-center">
                         <h2><%=p.getName()%></h2>
                     </div>

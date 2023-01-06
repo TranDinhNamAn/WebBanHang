@@ -44,9 +44,8 @@
                 <%if(session.getAttribute("account")!=null){
                 %>
                 <li class="nav-item"><a href="dangxuat" class="nav-link">Đăng xuất</a></li>
-                <li class="nav-item"><a href="cart.html" class="nav-link"><p style="margin-top: 6px"
-                                                                             class="icon icon-cart-plus"></p></a></li>
-
+                <li class="nav-item"><a href="cart.jsp" class="nav-link"><p style="margin-top: 6px"
+                                                                            class="icon icon-cart-plus"></p></a></li>
                 <%}%>
                 <%if(session.getAttribute("account")==null){%>
                 <li class="nav-item"><a href="dangnhap" class="nav-link">Đăng nhập</a></li>
@@ -63,9 +62,9 @@
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
             <div class="col-md-9 ftco-animate pb-5">
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ <i
+                <p class="breadcrumbs"><span class="mr-2"><a href="trangchu">Trang chủ <i
                         class="ion-ios-arrow-forward"></i></a></span>
-                    <span><a href="pricing.jsp">Bảng giá <i class="ion-ios-arrow-forward"></i></a></span></p>
+                    <span><a href="banggia">Bảng giá <i class="ion-ios-arrow-forward"></i></a></span></p>
                 <h1 class="mb-3 bread">Bảng giá thuê xe</h1>
             </div>
         </div>

@@ -10,25 +10,17 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
           rel="stylesheet">
-
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-
     <link rel="stylesheet" href="css/aos.css">
-
     <link rel="stylesheet" href="css/ionicons.min.css">
-
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
-
-
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
@@ -38,7 +30,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="index.jsp">Thue<span>XeMay</span></a>
+        <a class="navbar-brand" href="trangchu">Thue<span>XeMay</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
@@ -48,7 +40,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a href="trangchu" class="nav-link">Trang chủ</a></li>
                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
-                <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
+                <li class="nav-item"><a href="banggia" class="nav-link">Bảng giá</a></li>
                 <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
                     <ul class="dr-menu">
                         <%List<Brand> arr1 = ProductService.getListBrand();%>
@@ -62,9 +54,16 @@
                 </li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
-                <li class="nav-item"><a href="login.jsp" class="nav-link">Đăng nhập</a></li>
-                <li class="nav-item"><a href="cart.html" class="nav-link"><p style="margin-top: 6px"
-                                                                             class="icon icon-cart-plus"></p></a></li>
+                <%if(session.getAttribute("account")!=null){
+                %>
+                <li class="nav-item"><a href="dangxuat" class="nav-link">Đăng xuất</a></li>
+                <li class="nav-item"><a href="cart.jsp" class="nav-link"><p style="margin-top: 6px"
+                                                                            class="icon icon-cart-plus"></p></a></li>
+
+                <%}%>
+                <%if(session.getAttribute("account")==null){%>
+                <li class="nav-item"><a href="dangnhap" class="nav-link">Đăng nhập</a></li>
+                <%}%>
             </ul>
         </div>
     </div>
@@ -77,9 +76,9 @@
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
             <div class="col-md-9 ftco-animate pb-5">
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ <i
+                <p class="breadcrumbs"><span class="mr-2"><a href="trangchu">Trang chủ <i
                         class="ion-ios-arrow-forward"></i></a></span>
-                    <span><a href="car.jsp">Xe máy <i class="ion-ios-arrow-forward"></i></a></span></p>
+                    <span><a href="xemay">Xe máy <i class="ion-ios-arrow-forward"></i></a></span></p>
                 <h1 class="mb-3 bread">Chọn xe của bạn</h1>
             </div>
         </div>
@@ -118,8 +117,14 @@
                         <div class="d-flex mb-3">
                             <p class="price ml-auto"><%=p.getPrice()%><span>/ngày</span></p>
                         </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="chitietxe?id=<%=p.getId()%>" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                        <p class="d-flex mb-0 d-block">
+                            <%if(session.getAttribute("account")==null){%>
+                            <a href="dangnhap" class="btn btn-primary py-2 mr-1">Thuê</a>
+                            <%}%>
+                            <%if(session.getAttribute("account")!=null){%>
+                            <a href="#?id=<%=p.getId()%>" class="btn btn-primary py-2 mr-1">Thuê</a>
+                            <%}%>
+                            <a href="chitietxe?id=<%=p.getId()%>" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
                     </div>
                 </div>
             </div>

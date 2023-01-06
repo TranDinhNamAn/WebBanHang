@@ -19,14 +19,16 @@ public class ProductService {
             ResultSet rs = statement.executeQuery("select * from product");
             while (rs.next()) {
                 list.add(new Product(
-                        rs.getString(1),
+                        rs.getInt(1),
                         rs.getString(2),
-                        rs.getDouble(3),
-                        rs.getBoolean(4),
-                        rs.getInt(5),
-                        rs.getInt(6)
-
-                ));
+                        rs.getString(3),
+                        rs.getDouble(4),
+                        rs.getBoolean(5),
+                        rs.getInt(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getString(9),
+                        rs.getString(10)));
             }
         } else {
             System.out.println("No result");
@@ -42,13 +44,16 @@ public class ProductService {
 
             while (rs.next()) {
                 list1.add(new Product(
-                        rs.getString(1),
+                        rs.getInt(1),
                         rs.getString(2),
-                        rs.getDouble(3),
-                        rs.getBoolean(4),
-                        rs.getInt(5),
-                        rs.getInt(6)
-                ));
+                        rs.getString(3),
+                        rs.getDouble(4),
+                        rs.getBoolean(5),
+                        rs.getInt(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getString(9),
+                        rs.getString(10)));
             }
         } else {
             System.out.println("No result");
@@ -71,13 +76,16 @@ public class ProductService {
 
             while (rs.next()) {
                 list1.add(new Product(
-                        rs.getString(1),
+                        rs.getInt(1),
                         rs.getString(2),
-                        rs.getDouble(3),
-                        rs.getBoolean(4),
-                        rs.getInt(5),
-                        rs.getInt(6)
-                ));
+                        rs.getString(3),
+                        rs.getDouble(4),
+                        rs.getBoolean(5),
+                        rs.getInt(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getString(9),
+                        rs.getString(10)));
             }
         } else {
             System.out.println("No result");
@@ -100,6 +108,26 @@ public class ProductService {
             System.out.println("No result");
         }
         return list1;
+    }
+    public static Product getDetail(String id) throws SQLException {
+        String sql = " select * from product  where productID = "+id;
+        Statement statement = DBConnect.getInstall().get();
+        ResultSet rs = statement.executeQuery(sql);
+        Product product=null;
+        while(rs.next()){
+            product = new Product(
+                    rs.getInt(1),
+                    rs.getString(2),
+                    rs.getString(3),
+                    rs.getDouble(4),
+                    rs.getBoolean(5),
+                    rs.getInt(6),
+                    rs.getString(7),
+                    rs.getString(8),
+                    rs.getString(9),
+                    rs.getString(10));
+        }
+        return product;
     }
 
     public static void main(String[] args) throws SQLException {

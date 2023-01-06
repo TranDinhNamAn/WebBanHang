@@ -52,8 +52,8 @@
                 <%if(session.getAttribute("account")!=null){
                %>
                 <li class="nav-item"><a href="dangxuat" class="nav-link">Đăng xuất</a></li>
-                <li class="nav-item"><a href="cart.html" class="nav-link"><p style="margin-top: 6px"
-                                                                             class="icon icon-cart-plus"></p></a></li>
+                <li class="nav-item"><a href="cart.jsp" class="nav-link"><p style="margin-top: 6px"
+                                                                            class="icon icon-cart-plus"></p></a></li>
 
                 <%}%>
                 <%if(session.getAttribute("account")==null){%>

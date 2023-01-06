@@ -45,7 +45,7 @@
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
                 <li class="nav-item"><a href="login.jsp" class="nav-link">Đăng nhập</a></li>
-                <li class="nav-item active"><a href="cart.html" class="nav-link"><span
+                <li class="nav-item active"><a href="cart.jsp" class="nav-link"><span
                         class="icon icon-cart-plus"></span></a></li>
             </ul>
         </div>
@@ -60,7 +60,7 @@
             <div class="col-md-9 ftco-animate pb-5">
                 <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ <i
                         class="ion-ios-arrow-forward"></i></a></span>
-                    <span><a href="cart.html">Giỏ hàng <i class="ion-ios-arrow-forward"></i></a></span></p>
+                    <span><a href="cart.jsp">Giỏ hàng <i class="ion-ios-arrow-forward"></i></a></span></p>
                 <h1 class="mb-3 bread">Giỏ hàng</h1>
             </div>
         </div>
