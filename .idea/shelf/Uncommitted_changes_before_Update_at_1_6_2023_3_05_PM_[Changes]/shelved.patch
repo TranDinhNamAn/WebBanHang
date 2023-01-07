@@ -1,0 +1,114 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -10,68 +10,16 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="416c06ed-0398-4fcb-a2d0-6804377f658f" name="Changes" comment="NguyenToi">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/DeleteUser.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/ListUser.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_10_29_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_10_29_PM__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_10_36_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_10_36_PM__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_15_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_15_PM__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_15_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_15_PM__Changes_1.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_48_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_48_AM__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_48_AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_48_AM__Changes_1.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_12_31_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_12_31_PM__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_8_48_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_8_48_PM__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_8_48_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_8_48_PM__Changes_1.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_9_35_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_9_35_PM__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_9_35_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_9_35_PM__Changes_1.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_5_2023_12_38_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_5_2023_12_38_PM__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_5_2023_8_40_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_5_2023_8_40_PM__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/AddControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/AddControl.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/model/Account.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/Check.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/ProductServerADM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/ProductServerADM.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/DashBoard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DashBoard.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fromdangbai.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fromdangbai.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fromdsbaiviet.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fromdsbaiviet.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/listUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listUser.jsp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/list_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list_product.jsp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/newProduct.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/newUser.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/removeProduct.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/updateProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/updateProduct.jsp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/updateUserAdmin.html" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/WebThueXe.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe.war" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/DashBoard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/DashBoard.html" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Piaggio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Piaggio.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Suzuki.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Suzuki.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Vespa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Vespa.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Yamaha.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Yamaha.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controllerADM/AddControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controllerADM/AddControl.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controllerADM/DeleteControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controllerADM/DeleteControl.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/model/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/model/Account.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/Check.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/Check.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/addProduct.jsp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/fromdangbai.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/fromdangbai.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/fromdsbaiviet.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/fromdsbaiviet.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/listUser.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/list_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/list_product.jsp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/newProduct.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/newUser.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/removeProduct.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/updateProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/updateProduct.jsp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/updateUserAdmin.html" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Piaggio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Piaggio.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Suzuki.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Suzuki.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Vespa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Vespa.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Yamaha.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Yamaha.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controllerADM/AddControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controllerADM/AddControl.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controllerADM/DeleteControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controllerADM/DeleteControl.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/model/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/model/Account.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/Check.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/Check.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -311,7 +259,7 @@
+       <workItem from="1672941867789" duration="388000" />
+       <workItem from="1672942273235" duration="3000" />
+       <workItem from="1672942900463" duration="644000" />
+-      <workItem from="1672987178076" duration="3807000" />
++      <workItem from="1672987178076" duration="4836000" />
+     </task>
+     <task id="LOCAL-00001" summary="Nam An">
+       <created>1672805231465</created>
+@@ -418,7 +366,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1672927476593</updated>
+     </task>
+-    <option name="localTasksCounter" value="16" />
++    <task id="LOCAL-00016" summary="NguyenToi">
++      <created>1672991184855</created>
++      <option name="number" value="00016" />
++      <option name="presentableId" value="LOCAL-00016" />
++      <option name="project" value="LOCAL" />
++      <updated>1672991184855</updated>
++    </task>
++    <option name="localTasksCounter" value="17" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -436,9 +391,9 @@
+     </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+-    <MESSAGE value="NguyenToi" />
+     <MESSAGE value="Nam An" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Nam An" />
++    <MESSAGE value="NguyenToi" />
++    <option name="LAST_COMMIT_MESSAGE" value="NguyenToi" />
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+     <SUITE FILE_PATH="coverage/WebThueXe$addProduct_jsp.ic" NAME="addProduct.jsp Coverage Results" MODIFIED="1672928432397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
