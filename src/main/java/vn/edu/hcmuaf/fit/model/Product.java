@@ -4,17 +4,18 @@ public class Product {
     int id;
     String name;
     String img;
-    double price;
+    long price;
     boolean isNew;
     int brandID;
     String distance;
     String gear;
     String storage;
     String fuel;
+
     public Product() {
     }
 
-    public Product(int id, String name, String img, double price, boolean isNew, int brandID, String distance, String gear, String storage, String fuel) {
+    public Product(int id, String name, String img, long price, boolean isNew, int brandID, String distance, String gear, String storage, String fuel) {
         this.id = id;
         this.name = name;
         this.img = img;
@@ -25,6 +26,22 @@ public class Product {
         this.gear = gear;
         this.storage = storage;
         this.fuel = fuel;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", img='" + img + '\'' +
+                ", price=" + price +
+                ", isNew=" + isNew +
+                ", brandID=" + brandID +
+                ", distance='" + distance + '\'' +
+                ", gear='" + gear + '\'' +
+                ", storage='" + storage + '\'' +
+                ", fuel='" + fuel + '\'' +
+                '}';
     }
 
     public String getName() {
@@ -43,11 +60,11 @@ public class Product {
         this.img = img;
     }
 
-    public double getPrice() {
+    public long getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(long price) {
         this.price = price;
     }
 
@@ -106,4 +123,5 @@ public class Product {
     public void setFuel(String fuel) {
         this.fuel = fuel;
     }
+
 }

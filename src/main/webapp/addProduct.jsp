@@ -1,5 +1,6 @@
 <%@ page import="vn.edu.hcmuaf.fit.model.Brand" %>
 <%@ page import="java.util.List" %>
+<%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
 <%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -73,7 +74,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="listproductadmin" class="nav-link">
+                                <a href="ShowAllProduct" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Danh sách sản phẩm</p>
                                 </a>
@@ -150,7 +151,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="examplprice">isNew</label>
-                                    <input type="text" name="isNew" i placeholder="">
+                                    <select name="isNew" class="form-select" >
+
+                                        <option value="1">True</option>
+                                        <option value="0">False</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Loại sản phẩm</label>
@@ -162,6 +167,22 @@
                                     <option value="<%=p.getID()%>"><%=p.getName()%></option>
                                         <%}%>
                                     </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="examplprice">Quãng Đường</label>
+                                    <input type="text" name="distance"  placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="examplprice">Động cơ</label>
+                                    <input type="text" name="gear"  placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="examplprice">Ngăn chứa đồ</label>
+                                    <input type="text" name="storage"  placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="examplprice">Dung tích Xăng</label>
+                                    <input type="text" name="fuel"  placeholder="">
                                 </div>
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>

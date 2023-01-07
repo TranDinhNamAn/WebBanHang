@@ -73,7 +73,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="listproductadmin" class="nav-link">
+                                <a href="ShowAllProduct" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Danh sách sản phẩm</p>
                                 </a>
