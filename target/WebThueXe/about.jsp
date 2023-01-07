@@ -1,8 +1,11 @@
+<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Giới thiệu</title>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
@@ -41,7 +44,6 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
                 <li class="nav-item active"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
-                <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
                 <li class="nav-item"><a href="car.jsp" class="nav-link">Xe máy</a></li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
