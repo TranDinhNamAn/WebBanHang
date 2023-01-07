@@ -34,7 +34,7 @@ public class Login extends HttpServlet {
                 response.sendRedirect("trangchu");
             } else {
                 if (acc != null && acc.getIsAdmin() == 1) {
-                    response.sendRedirect("listproductadmin");
+                    response.sendRedirect("ShowAllProduct");
                 } else {
                     request.setAttribute("Error", "Tên tài khoản hoặc mật khẩu không đúng!");
                     request.getRequestDispatcher("login.jsp").forward(request, response);

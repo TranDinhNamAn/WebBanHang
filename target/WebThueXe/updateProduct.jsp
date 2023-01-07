@@ -175,7 +175,7 @@
                                         <% for (Brand p:list
                                         ) {
                                         %>
-                                        <option href="id=<%=product.getBrandID()%>"  value="<%=p.getID()%>" ><%=p.getName()%></option>
+                                        <option value="<%=p.getID()%>" ><%=p.getName()%></option>
                                         <%}%>
                                     </select>
                                 </div>

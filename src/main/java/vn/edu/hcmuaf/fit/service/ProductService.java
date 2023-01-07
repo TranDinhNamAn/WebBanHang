@@ -129,9 +129,17 @@ public class ProductService {
         }
         return product;
     }
-
+    public static int getByBrandID(String id) throws SQLException {
+        String sql = " select brandID from product  where productID = " + id;
+        Statement statement = DBConnect.getInstall().get();
+        ResultSet rs = statement.executeQuery(sql);
+        while (rs.next()) {
+            return rs.getInt(1);
+        }
+        return 0;
+    }
     public static void main(String[] args) throws SQLException {
         ProductService sv = new ProductService();
-        sv.getData();
+        System.out.println(sv.getByBrandID("8"));
     }
 }

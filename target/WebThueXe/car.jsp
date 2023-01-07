@@ -40,7 +40,6 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a href="trangchu" class="nav-link">Trang chủ</a></li>
                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
-                <li class="nav-item"><a href="banggia" class="nav-link">Bảng giá</a></li>
                 <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
                     <ul class="dr-menu">
                         <%List<Brand> arr1 = ProductService.getListBrand();%>
@@ -53,7 +52,14 @@
                     </ul>
                 </li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
+
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
+                <li class="nav-item">
+                <form action="timkiem" style="margin-top: 7px">
+                    <input type="text" name="searchProcuct" >
+                   <button type="submit"><i class="nav-icon fas icon-search"></i></button>
+                </form>
+                </li>
                 <%if(session.getAttribute("account")!=null){
                 %>
                 <li class="nav-item"><a href="dangxuat" class="nav-link">Đăng xuất</a></li>
