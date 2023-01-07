@@ -82,29 +82,29 @@
         <div class="row no-gutters">
             <div class="col-md-12	featured-top">
                 <div class="row no-gutters">
-                    <div class="col-md-4 d-flex align-items-center">
-                        <form id="motor" action="#" class="request-form ftco-animate bg-primary">
-                            <h2>Đặt xe</h2>
-                            <div class="form-group">
-                                <label for="" class="label">Địa điểm thuê xe</label>
-                                <input type="text" class="form-control" placeholder="Thành phố, Quận,Huyện">
-                            </div>
-                            <div class="form-group">
-                                <label for="motors" class="label">Chọn loại xe</label>
-                                <select name="motor" id="motors" style="display: block">
-                                    <option value="volvo">Yamaha</option>
-                                    <option value="saab">Honda</option>
-                                    <option value="opel">Piaggio</option>
-                                    <option value="audi">SYM</option>
-                                    <option value="audi">Suzuki</option>
-                                    <option value="audi">Vespa</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" value="Tìm xe ngay" class="btn btn-secondary py-3 px-4">
-                            </div>
-                        </form>
-                    </div>
+<%--                    <div class="col-md-4 d-flex align-items-center">--%>
+<%--                        <form id="motor" action="#" class="request-form ftco-animate bg-primary">--%>
+<%--                            <h2>Đặt xe</h2>--%>
+<%--                            <div class="form-group">--%>
+<%--                                <label for="" class="label">Địa điểm thuê xe</label>--%>
+<%--                                <input type="text" class="form-control" placeholder="Thành phố, Quận,Huyện">--%>
+<%--                            </div>--%>
+<%--                            <div class="form-group">--%>
+<%--                                <label for="motors" class="label">Chọn loại xe</label>--%>
+<%--                                <select name="motor" id="motors" style="display: block">--%>
+<%--                                    <option value="volvo">Yamaha</option>--%>
+<%--                                    <option value="saab">Honda</option>--%>
+<%--                                    <option value="opel">Piaggio</option>--%>
+<%--                                    <option value="audi">SYM</option>--%>
+<%--                                    <option value="audi">Suzuki</option>--%>
+<%--                                    <option value="audi">Vespa</option>--%>
+<%--                                </select>--%>
+<%--                            </div>--%>
+<%--                            <div class="form-group">--%>
+<%--                                <input type="submit" value="Tìm xe ngay" class="btn btn-secondary py-3 px-4">--%>
+<%--                            </div>--%>
+<%--                        </form>--%>
+<%--                    </div>--%>
                     <div class="col-md-8 d-flex align-items-center">
                         <div class="services-wrap rounded-right w-100">
                             <h3 class="heading-section mb-4">Ưu điểm khi thuê xe tại ThueXeMay</h3>
@@ -175,7 +175,7 @@
                                     <p class="price ml-auto"><%=p.getPrice()%> vnd<span>/Ngày</span></p>
                                 </div>
                                 <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê
-                                    ngay</a> <a href="#" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                                    ngay</a> <a href="chitietxe?id=<%=p.getId()%>" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
                             </div>
                         </div>
                     </div>

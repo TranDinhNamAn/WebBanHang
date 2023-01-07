@@ -1,4 +1,5 @@
 <%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,10 +44,9 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
+                <li class="nav-item"><a href="trangchu" class="nav-link">Trang chủ</a></li>
                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
-                <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
-                <li class="nav-item active"><a href="car.jsp" class="nav-link">Xe máy</a>
+                <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
                     <ul class="dr-menu">
                         <li class="subb"><a href="honda.html">Honda </a></li>
                         <li class="subb"><a href="piaggio.jsp">Piaggio </a></li>
@@ -176,49 +176,28 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/honda-wave50.jpg)">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Wave 50</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">120.000vnđ <span>/ngày</span></p>
+            <div class="col-md-12">
+                <div class="carousel-car owl-carousel">
+                    <% List<Product> list = (List<Product>) request.getAttribute("same");
+                        for (Product p1: list) {
+                    %>
+
+                    <div class="item">
+                        <div class="car-wrap rounded ftco-animate">
+                            <div class="img rounded d-flex align-items-end"
+                                 style="background-image: url(<%=p1.getImg()%>);">
+                            </div>
+                            <div class="text">
+                                <h2 class="mb-0"><a href="#"><%=p1.getName()%></a></h2>
+                                <div class="d-flex mb-3">
+                                    <p class="price ml-auto"><%=p1.getPrice()%> vnd<span>/Ngày</span></p>
+                                </div>
+                                <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê
+                                    ngay</a> <a href="chitietxe?id=<%=p1.getId()%>" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                            </div>
                         </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/honda-wave125i.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Wave 125i</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">120.000vnđ <span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(images/product/honda-waversx.jpg);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp">Wave RSX FI 110</a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto">120.000vnđ <span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
-                    </div>
+                    <% } %>
                 </div>
             </div>
         </div>
