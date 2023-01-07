@@ -48,9 +48,6 @@
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
                 <li class="nav-item active"><a href="dangnhap" class="nav-link">Đăng nhập</a></li>
-                <li class="nav-item"><a href="cart.jsp" class="nav-link"><p style="margin-top: 6px"
-                                                                            class="icon icon-cart-plus"></p></a></li>
-
             </ul>
         </div>
     </div>
@@ -77,17 +74,25 @@
         <div class="roww mb-5 contact-info">
 
             <div class="col-md-88 block-9 mb-md-5">
-                <form action="dangky" method="post" class="bg-light p-5 contact-form">
+                <form id="formdangky" action="dangky" method="post" class="bg-light p-5 contact-form">
                     <h1>Đăng ký</h1>
                     <% String error = (String) request.getAttribute("Error");%>
-                    <% String username = (String) request.getParameter("username");%>
+                    <% String username = request.getParameter("username");%>
+                    <% String email = request.getParameter("email");%>
                     <p style="color: red;text-align: center"><%= error!=null ? error:""%> </p>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Tên tài khoản" id="username" name="username" value="<%=username!=null? username:""%>">
+                        <p id="text"></p>
+                        <input type="text" class="form-control" placeholder="Email" id="email" name="email" value="<%=email!=null? email:""%>">
                         <span class="icon icon-envelope u"></span>
                     </div>
                     <% String error1 = (String) request.getAttribute("Error1");%>
                     <p style="color: red;text-align: center"><%= error1!=null ? error1:""%> </p>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Tên tài khoản" id="username" name="username" value="<%=username!=null? username:""%>">
+                        <span class="icon icon-envelope u"></span>
+                    </div>
+                    <% String error2 = (String) request.getAttribute("Error2");%>
+                    <p style="color: red;text-align: center"><%= error2!=null ? error2:""%> </p>
                     <div class="form-group">
                         <input type="password" class="form-control" placeholder="Mật khẩu" id="pass" name="password">
                         <span class="icon icon-lock u"></span>
@@ -182,8 +187,6 @@
                 stroke="#F96D00"/>
     </svg>
 </div>
-
-
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-migrate-3.0.1.min.js"></script>
 <script src="js/popper.min.js"></script>

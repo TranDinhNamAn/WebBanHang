@@ -36,5 +36,6 @@ public class EditControl extends HttpServlet {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
     }
 }

@@ -22,24 +22,47 @@ public class Signup extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             try {
+                request.setCharacterEncoding("UTF-8");
+                String email = request.getParameter("email");
                 String user = request.getParameter("username");
                 String pass = request.getParameter("password");
                 String repass = request.getParameter("repass");
-                    if (!pass.equals(repass)) {
-                        request.setAttribute("Error1", "Mật khẩu nhập lại không chính xác!");
+                if(email.equals("")) {
+                    request.setAttribute("Error", "Email không được để trống!");
+                    request.getRequestDispatcher("signup.jsp").forward(request, response);
+                }else {
+                    if (!email.matches("^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$")) {
+                        request.setAttribute("Error", "Email không hợp lệ!");
                         request.getRequestDispatcher("signup.jsp").forward(request, response);
-                    }else{
-                        Account acc = Check.CheckSignup(user);
-                        if(acc==null){
-                            Check.SignUp(user, pass);
-                            response.sendRedirect("dangnhap");
-                        }else{
-                            request.setAttribute("Error", "Tên tài khoản đã được sử dụng!");
+                    } else {
+                        if (user.equals("")) {
+                            request.setAttribute("Error1", "Tên tài khoản không được để trống!");
                             request.getRequestDispatcher("signup.jsp").forward(request, response);
+                        } else {
+                            if (pass.equals("") && repass.equals("")) {
+                                request.setAttribute("Error2", "Mật khẩu không được để trống!");
+                                request.getRequestDispatcher("signup.jsp").forward(request, response);
+                            } else {
+                                if (!pass.equals(repass)) {
+                                    request.setAttribute("Error2", "Mật khẩu nhập lại không chính xác!");
+                                    request.getRequestDispatcher("signup.jsp").forward(request, response);
+                                } else {
+                                    Account acc = Check.CheckSignup(email, user);
+                                    if (acc == null) {
+                                        Check.SignUp(email, user, pass);
+                                        response.sendRedirect("dangnhap");
+                                    } else {
+                                        request.setAttribute("Error", "Email hoặc tên tài khoản đã được sử dụng!");
+                                        request.getRequestDispatcher("signup.jsp").forward(request, response);
+                                    }
+                                }
+                            }
                         }
                     }
+                }
             }catch(SQLException|ClassNotFoundException e){
                 throw new RuntimeException();
             }
+
     }
 }
