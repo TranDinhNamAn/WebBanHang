@@ -140,6 +140,6 @@ public class ProductServerADM {
 
     public static void main(String[] args) throws SQLException {
         ProductServerADM ps = new ProductServerADM();
-        System.out.println(ps.searchByName("honda").toString());
+        System.out.println(ps.getProduct("6"));
     }
 }

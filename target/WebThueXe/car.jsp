@@ -122,7 +122,7 @@
                             <a href="dangnhap" class="btn btn-primary py-2 mr-1">Thuê</a>
                             <%}%>
                             <%if(session.getAttribute("account")!=null){%>
-                            <a href="#?id=<%=p.getId()%>" class="btn btn-primary py-2 mr-1">Thuê</a>
+                            <a href="addToCart?id=<%=p.getId()%>" class="btn btn-primary py-2 mr-1">Thuê</a>
                             <%}%>
                             <a href="chitietxe?id=<%=p.getId()%>" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
                     </div>

@@ -1,3 +1,5 @@
+<%@ page import="java.util.List" %>
+<%@ page import="vn.edu.hcmuaf.fit.model.Cart" %>
 <%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
@@ -28,7 +30,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="index.jsp">Thue<span>XeMay</span></a>
+        <a class="navbar-brand" href="trangchu">Thue<span>XeMay</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
@@ -36,10 +38,9 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
+                <li class="nav-item"><a href="trangchu" class="nav-link">Trang chủ</a></li>
                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
-                <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
-                <li class="nav-item"><a href="car.jsp" class="nav-link">Xe máy</a></li>
+                <li class="nav-item"><a href="xemay" class="nav-link">Xe máy</a></li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Cá nhân</a>
@@ -88,66 +89,36 @@
                         <th>Tên sản phẩm</th>
                         <th>Số lượng</th>
                         <th>Đơn giá</th>
-                        <th>Thành tiền</th>
                         <th>Hành động</th>
                     </tr>
                     </thead>
                     <tbody id="datarow">
+                    <%int i=1;
+                        List<Cart> cartList = (List<Cart>) request.getAttribute("cart");
+                    for(Cart c: cartList){ i++;%>
+
                     <tr>
-                        <td>1</td>
+                        <td><%=i%></td>
                         <td>
-                            <img style="width: 75px;height: 65px" src="images/product/yamaha-exciter150rc.jpg"
+                            <img style="width: 75px;height: 65px" src="<%=c.getImg()%>>"
                                  class="hinhdaidien" alt="">
                         </td>
-                        <td>Exciter 150 RC</td>
-                        <td class="text-right">2</td>
-                        <td class="text-right">140.000</td>
-                        <td class="text-right">280.000</td>
+                        <td><%=c.getName()%></td>
+                        <td class="text-right"><%=c.getQuantity()%></td>
+                        <td class="text-right"><%=c.getPrice()*c.getQuantity()%></td>
                         <td>
                             <a id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
                                 <i class="fa fa-trash" aria-hidden="true"></i> Xóa
                             </a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>
-                            <img style="width: 75px;height: 65px" src="images/product/honda-vision.jpg"
-                                 class="hinhdaidien" alt="">
-                        </td>
-                        <td>Vision</td>
-                        <td class="text-right">1</td>
-                        <td class="text-right">120.000</td>
-                        <td class="text-right">120.000</td>
-                        <td>
-
-                            <a id="delete_2" data-sp-ma="6" class="btn btn-danger btn-delete-sanpham">
-                                <i class="fa fa-trash" aria-hidden="true"></i> Xóa
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>
-                            <img style="width: 75px;height: 65px" src="images/product/piaggio-liberty125.jpg"
-                                 class="hinhdaidien" alt="">
-                        </td>
-                        <td>Liberty 125</td>
-                        <td class="text-right">3</td>
-                        <td class="text-right">110.000</td>
-                        <td class="text-right">330.000</td>
-                        <td>
-                            <a id="delete_3" data-sp-ma="4" class="btn btn-danger btn-delete-sanpham">
-                                <i class="fa fa-trash" aria-hidden="true"></i> Xóa
-                            </a>
-                        </td>
-                    </tr>
+                    <%}%>
                     </tbody>
                 </table>
 
-                <a href="car.jsp" class="btn btn-warning btn-md"><i class="fa fa-arrow-re" aria-hidden="true"></i>>Tiếp
+                <a href="xemay" class="btn btn-warning btn-md"><i class="fa fa-arrow-re" aria-hidden="true"></i>>Tiếp
                     tục mua hàng</a>
-                <a href="index.jsp" class="btn btn-warning btn-md"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Quay
+                <a href="trangchu" class="btn btn-warning btn-md"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Quay
                     về trang chủ</a>
                 <a class="btn btn-primary" href="payment.html">Tiến hành thanh toán</a>
 
@@ -161,7 +132,7 @@
         <div class="row mb-5">
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2"><a href="#" class="logo">Thue<span>XeMay</span></a></h2>
+                    <h2 class="ftco-heading-2"><a href="trangchu" class="logo">Thue<span>XeMay</span></a></h2>
                     <p>ThueXeMay với dàn xe chất lượng cao, đội ngũ nhân viên chuyên nghiệp, nhiệt tình sẽ mang đến cho
                         bạn những trải nghiệm thú vị...</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
