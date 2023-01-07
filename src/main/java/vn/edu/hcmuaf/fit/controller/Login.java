@@ -13,25 +13,23 @@ import java.sql.SQLException;
 public class Login extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try{
-            Cookie [] c = request.getCookies();
-            for(Cookie cookie: c){
-
-            }
+        try {
             request.getRequestDispatcher("login.jsp").forward(request, response);
-        }catch (Exception e){
+        } catch (Exception e) {
         }
 
     }
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             String user = request.getParameter("username");
             String pass = request.getParameter("password");
             Account acc = Check.CheckLogin(user, pass);
-            if (acc != null && acc.getIsAdmin()==0) {
+            if (acc != null && acc.getIsAdmin() == 0) {
+                System.out.println(acc);
                 HttpSession session = request.getSession();
-                session.setAttribute("account",acc);
+                session.setAttribute("account", acc);
                 session.setMaxInactiveInterval(15);
                 response.sendRedirect("trangchu");
             } else {
@@ -42,9 +40,10 @@ public class Login extends HttpServlet {
                     request.getRequestDispatcher("login.jsp").forward(request, response);
                 }
             }
-        }catch (SQLException | ClassNotFoundException e) {
-                throw new RuntimeException(e);
-            }
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
+
     }
+}
 

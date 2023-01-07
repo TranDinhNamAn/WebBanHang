@@ -1,16 +1,18 @@
 package vn.edu.hcmuaf.fit.model;
 
 public class Account {
+    String email;
     String username;
     String password;
     int isAdmin;
     int id;
 
-    public Account(int id,String username, String password, int isAdmin) {
+    public Account(int id,String email, String username, String password, int isAdmin) {
         this.id= id;
         this.username = username;
         this.password = password;
         this.isAdmin = isAdmin;
+        this.email = email;
     }
 
     @Override
@@ -53,5 +55,13 @@ public class Account {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

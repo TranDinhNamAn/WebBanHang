@@ -46,5 +46,6 @@ public class AddControl extends HttpServlet {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
     }
 }

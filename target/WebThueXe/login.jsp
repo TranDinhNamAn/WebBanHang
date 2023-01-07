@@ -43,13 +43,10 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a href="trangchu" class="nav-link">Trang chủ</a></li>
                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
-                <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
-                <li class="nav-item"><a href="car.jsp" class="nav-link">Xe máy</a></li>
+                <li class="nav-item"><a href="xemay" class="nav-link">Xe máy</a></li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
                 <li class="nav-item active"><a href="dangnhap" class="nav-link">Đăng nhập</a></li>
-                <li class="nav-item"><a href="cart.jsp" class="nav-link"><p style="margin-top: 6px"
-                                                                            class="icon icon-cart-plus"></p></a></li>
             </ul>
         </div>
     </div>
@@ -104,7 +101,7 @@
                         <a href="dangky" class="btn btn-primary py-3 px-5">Đăng ký ngay</a>
                     </div>
                     <div class="form-group">
-                        <a href="#">Quên mật khẩu ?</a>
+                        <a href="reset">Quên mật khẩu ?</a>
                     </div>
                 </form>
             </div>
