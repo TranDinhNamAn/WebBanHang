@@ -9,64 +9,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="416c06ed-0398-4fcb-a2d0-6804377f658f" name="Changes" comment="Nam An">
+    <list default="true" id="416c06ed-0398-4fcb-a2d0-6804377f658f" name="Changes" comment="NguyenToi">
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/ShowAllProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Detail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Detail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Logout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/AddControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/AddControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/DeleteControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/DeleteControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/EditControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/EditControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/ListProductADM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/SearchProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/db/DBConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/db/DBConnect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/model/ProductDetail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/GetDetail.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/ProductServerADM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/ProductServerADM.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/about.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/blog-single.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/blog-single.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/blog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/blog.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/car-single.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/car-single.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/car.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/car.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/contact.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/honda.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/honda.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/piaggio.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/piaggio.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pricing.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pricing.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/suzuki.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/suzuki.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/sym.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sym.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/vespa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/vespa.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/yamaha.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/yamaha.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/listUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listUser.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/list_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list_product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/updateProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/updateProduct.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebThueXe.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebThueXe/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Logout.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Logout.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Detail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Detail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controllerADM/AddControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controllerADM/AddControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controllerADM/EditControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controllerADM/EditControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controllerADM/ListProductADM.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/model/ProductDetail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/GetDetail.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/about.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/blog-single.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/blog-single.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/blog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/blog.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/car-single.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/car-single.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/car.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/car.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/cart.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/contact.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/honda.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/honda.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/piaggio.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/piaggio.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/pricing.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/pricing.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/suzuki.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/suzuki.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/sym.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/sym.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/vespa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/vespa.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/yamaha.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/yamaha.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Logout.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Logout.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/list_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/list_product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/updateProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/updateProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Detail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Detail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controllerADM/AddControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controllerADM/AddControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controllerADM/EditControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controllerADM/EditControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controllerADM/ListProductADM.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/model/ProductDetail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/GetDetail.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductService.class" afterDir="false" />
     </list>
@@ -79,6 +60,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -107,10 +89,15 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/USER/IdeaProjects/WebThueXe&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/ltweb/WebThueXe/src/main/webapp&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.applicationServers&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ltweb\WebThueXe\src\main\webapp" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="excludedTypes">
       <set>
@@ -158,6 +145,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductServerADM" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.fit.service.ProductServerADM" />
+      <module name="WebThueXe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vn.edu.hcmuaf.fit.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="vn.edu.hcmuaf.fit.service.ProductService" />
       <module name="WebThueXe" />
@@ -171,7 +171,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.68" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.68" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.68" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.70" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/WebThueXe/trangchu" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -260,6 +260,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.ProductServerADM" />
       <item itemvalue="Application.GetDetail" />
       <item itemvalue="Application.Check" />
       <item itemvalue="Application.ProductService" />
@@ -268,6 +269,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ProductServerADM" />
         <item itemvalue="Application.ProductService" />
         <item itemvalue="Application.DBConnect" />
         <item itemvalue="Application.GetDetail" />
@@ -292,6 +294,8 @@
       <workItem from="1672925436852" duration="14392000" />
       <workItem from="1672976136512" duration="1511000" />
       <workItem from="1672987187014" duration="3877000" />
+      <workItem from="1673013381745" duration="16002000" />
+      <workItem from="1673068448337" duration="6584000" />
     </task>
     <task id="LOCAL-00001" summary="Nam An">
       <created>1672805231465</created>
@@ -435,6 +439,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="Nam An" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/WebThueXe$addProduct_jsp.ic" NAME="addProduct.jsp Coverage Results" MODIFIED="1672928432397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/WebThueXe$DBConnect.ic" NAME="DBConnect Coverage Results" MODIFIED="1672888970780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>vn.edu.hcmuaf.fit.db.*</FILTER>
     </SUITE>

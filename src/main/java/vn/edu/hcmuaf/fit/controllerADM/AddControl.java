@@ -35,9 +35,14 @@ public class AddControl extends HttpServlet {
             String price = request.getParameter("price");
             String isNew = request.getParameter("isNew");
             String brandID = request.getParameter("brandID");
+            String distance = request.getParameter("distance");
+            String gear = request.getParameter("gear");
+            String storage = request.getParameter("storage");
+            String fuel = request.getParameter("fuel");
+
             ProductServerADM pr = new ProductServerADM();
-            pr.addProduct(name, img, price,isNew, brandID);
-            response.sendRedirect("listproductadmin");
+            pr.addProduct(name, img, price,isNew, brandID,distance,gear,storage,fuel );
+            response.sendRedirect("ShowAllProduct");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

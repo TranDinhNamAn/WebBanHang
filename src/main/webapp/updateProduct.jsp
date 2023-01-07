@@ -75,7 +75,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="listproductadmin" class="nav-link">
+                                <a href="ShowAllProduct" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Danh sách sản phẩm</p>
                                 </a>
@@ -139,6 +139,10 @@
                             <div class="card-body">
                                 <%Product product = (Product) request.getAttribute("product1"); %>
                                 <div class="form-group">
+                                    <label for="examplid">Mã sản phẩm</label>
+                                    <input value="<%=product.getId()%>" name="id" type="text" readonly id="examplid" placeholder="id">
+                                </div>
+                                <div class="form-group">
                                     <label for="examplename">Tên sản phẩm</label>
                                     <input value="<%=product.getName()%>" name="name" type="text" class="form-control" id="examplename" placeholder="Tên sản phẩm">
                                 </div>
@@ -153,7 +157,16 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="examplprice">isNew</label>
-                                    <input <%=product.isNew()%>type="text" name="isNew" i placeholder="">
+                                    <select name="isNew" class="form-select" >
+                                        <%if(product.isNew()){%>
+                                        <option value="1"><%=product.isNew()%></option>
+                                        <option value="0"><%=!product.isNew()%></option>
+                                        <%}%>
+                                        <%if(!product.isNew()){%>
+                                        <option value="0"><%=product.isNew()%></option>
+                                        <option value="1"><%=!product.isNew()%></option>
+                                        <%}%>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Loại sản phẩm</label>
@@ -162,13 +175,25 @@
                                         <% for (Brand p:list
                                         ) {
                                         %>
-                                        <option <%=product.getBrandID()%> value="<%=p.getID()%>"  selected><%=p.getName()%></option>
+                                        <option value="<%=p.getID()%>" ><%=p.getName()%></option>
                                         <%}%>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="examplid">Mã sản phẩm</label>
-                                    <input value="<%=product.getId()%>" name="id" type="text" readonly id="examplid" placeholder="id">
+                                    <label for="examplprice">Quãng Đường</label>
+                                    <input value="<%=product.getDistance()%>"type="text" name="distance"  placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="examplprice">Động cơ</label>
+                                    <input value="<%=product.getGear()%>"type="text" name="gear"  placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="examplprice">Ngăn chứa đồ</label>
+                                    <input value="<%=product.getStorage()%>"type="text" name="storage"  placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="examplprice">Dung tích Xăng</label>
+                                    <input value="<%=product.getFuel()%>"type="text" name="fuel"  placeholder="">
                                 </div>
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary">Sửa thông tin</button>

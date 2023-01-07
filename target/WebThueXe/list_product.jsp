@@ -1,6 +1,7 @@
 <%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
 <%@ page import="vn.edu.hcmuaf.fit.service.ProductServerADM" %>
 <%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -72,7 +73,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="listproductadmin" class="nav-link">
+                                <a href="ShowAllProduct">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Danh sách sản phẩm</p>
                                 </a>
@@ -127,21 +128,12 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">Danh sách sản phẩm</h3>
 
-                        <div class="card-tools">
-                            <div class="input-group input-group-sm" style="width: 150px;">
-                                <input type="text" name="table_search" class="form-control float-right"
-                                       placeholder="Search">
-
-                                <div class="input-group-append">
-                                    <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="card-body">
+                        <form action="search" >
+                            <input type="text" name="search" placeholder="Nhập tên sản phẩm">
+                            <input type="submit" value="Tìm kiếm">
+                        </form>
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
@@ -153,11 +145,13 @@
                             </tr>
                             </thead>
                             <tbody>
-                                <%List<Product> list = (List<Product>) request.getAttribute("list3");%>
+
                                 <%
-                            for (Product p:list
-                            ) {
-                        %>
+                                List<Product> list = (List<Product>) request.getAttribute("list3");
+                                %>
+
+                                    <% for
+                                 (Product p:list ) { %>
                             <tr>
                                 <td><%=p.getId()%>
                                 </td>
@@ -183,7 +177,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 <footer class="main-footer">

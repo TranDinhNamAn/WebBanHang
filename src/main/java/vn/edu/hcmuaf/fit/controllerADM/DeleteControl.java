@@ -19,7 +19,7 @@ public class DeleteControl extends HttpServlet {
             Product p = new Product();
             ProductServerADM pr = new ProductServerADM();
                 pr.deleteProduct(id);
-           response.sendRedirect("listproductadmin");
+           response.sendRedirect("ShowAllProduct");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
