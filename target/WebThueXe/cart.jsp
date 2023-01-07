@@ -1,10 +1,12 @@
+<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <title>Giỏ hàng</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
@@ -12,18 +14,14 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-
     <link rel="stylesheet" href="css/aos.css">
-
     <link rel="stylesheet" href="css/ionicons.min.css">
-
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
-
-
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
     <link rel="stylesheet" href="css/tt.css">
 </head>
 <body>
@@ -44,9 +42,14 @@
                 <li class="nav-item"><a href="car.jsp" class="nav-link">Xe máy</a></li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
-                <li class="nav-item"><a href="login.jsp" class="nav-link">Đăng nhập</a></li>
-                <li class="nav-item active"><a href="cart.jsp" class="nav-link"><span
-                        class="icon icon-cart-plus"></span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Cá nhân</a>
+                    <ul class="dr-menu">
+                        <li class="subb"><a href="cart"><p style="margin-top: 6px"
+                                                           class="icon icon-cart-plus"></p></a></li>
+                        <li class="subb"><a href="changepass">Đổi mật khẩu</a></li>
+                        <li class="subb"><a href="dangxuat">Đăng xuất</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
@@ -58,9 +61,9 @@
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
             <div class="col-md-9 ftco-animate pb-5">
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ <i
+                <p class="breadcrumbs"><span class="mr-2"><a href="trangchu">Trang chủ <i
                         class="ion-ios-arrow-forward"></i></a></span>
-                    <span><a href="cart.jsp">Giỏ hàng <i class="ion-ios-arrow-forward"></i></a></span></p>
+                    <span><a href="cart">Giỏ hàng <i class="ion-ios-arrow-forward"></i></a></span></p>
                 <h1 class="mb-3 bread">Giỏ hàng</h1>
             </div>
         </div>
@@ -101,7 +104,6 @@
                         <td class="text-right">140.000</td>
                         <td class="text-right">280.000</td>
                         <td>
-
                             <a id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
                                 <i class="fa fa-trash" aria-hidden="true"></i> Xóa
                             </a>
