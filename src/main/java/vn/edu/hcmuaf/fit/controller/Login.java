@@ -30,7 +30,9 @@ public class Login extends HttpServlet {
                 System.out.println(acc);
                 HttpSession session = request.getSession();
                 session.setAttribute("account", acc);
-                session.setMaxInactiveInterval(15);
+                session.setAttribute("user", user);
+                session.setAttribute("pass", pass);
+                session.setMaxInactiveInterval(30);
                 response.sendRedirect("trangchu");
             } else {
                 if (acc != null && acc.getIsAdmin() == 1) {

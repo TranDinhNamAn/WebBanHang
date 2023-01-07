@@ -56,6 +56,11 @@ public class Check {
         String sql = "update user set password = '"+password+"' where email = '"+ email +"'";
         statement.executeUpdate(sql);
     }
+    public static void Change(String username, String password) throws SQLException {
+        Statement statement = DBConnect.getInstall().get();
+        String sql = "update user set password = '"+password+"' where username = '"+ username +"'";
+        statement.executeUpdate(sql);
+    }
 
     public static void SignUp(String email, String username, String password) throws SQLException {
         Statement statement = DBConnect.getInstall().get();

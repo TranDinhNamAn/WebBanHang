@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
 </head>
 <body>
 
@@ -42,21 +43,23 @@
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
                 <%if(session.getAttribute("account")!=null){
                %>
-                <li class="nav-item"><a href="dangxuat" class="nav-link">Đăng xuất</a></li>
-                <li class="nav-item"><a href="cart.jsp" class="nav-link"><p style="margin-top: 6px"
-                                                                            class="icon icon-cart-plus"></p></a></li>
-
+                <li class="nav-item"><a href="#" class="nav-link">Cá nhân</a>
+                <ul class="dr-menu">
+                    <li class="subb"><a href="cart"><p style="margin-top: 6px"
+                                                                                class="icon icon-cart-plus"></p></a></li>
+                    <li class="subb"><a href="changepass">Đổi mật khẩu</a></li>
+                    <li class="subb"><a href="dangxuat">Đăng xuất</a></li>
+                </ul>
+                </li>
                 <%}%>
                 <%if(session.getAttribute("account")==null){%>
                 <li class="nav-item"><a href="dangnhap" class="nav-link">Đăng nhập</a></li>
                 <%}%>
-
             </ul>
         </div>
     </div>
 </nav>
 <!-- END nav -->
-
 <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/bg1.jpg');"
      data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
