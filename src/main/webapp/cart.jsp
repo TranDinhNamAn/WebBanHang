@@ -48,7 +48,7 @@
                         <li class="subb"><a href="cart"><p style="margin-top: 6px"
                                                            class="icon icon-cart-plus"></p></a></li>
                         <li class="subb"><a href="changepass">Đổi mật khẩu</a></li>
-                        <li class="subb"><a href="dangxuat">Đăng xuất</a></li>
+                        <li class="subb"><a href="dangxuat" >Đăng xuất</a></li>
                     </ul>
                 </li>
             </ul>
@@ -96,7 +96,6 @@
                     <%int i=0;
                         List<Cart> cartList = (List<Cart>) request.getAttribute("cart");
                     for(Cart c: cartList){ i++;%>
-
                     <tr>
                         <td><%=i%></td>
                         <td>

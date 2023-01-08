@@ -94,6 +94,11 @@ small {
     font-size: 80%
 }
 
+
+a:hover {
+    color: #ffff00;
+}
+
 a:not([href]):not([tabindex]) {
     color: inherit;
     text-decoration: none

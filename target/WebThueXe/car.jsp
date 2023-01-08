@@ -121,7 +121,7 @@
                          style="background-image: url(<%=p.getImg()%>);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp"><%=p.getName()%>
+                        <h2 class="mb-0"><a href="chitietxe?id=<%=p.getId()%>"><%=p.getName()%>
                         </a></h2>
                         <div class="d-flex mb-3">
                             <p class="price ml-auto"><%=p.getPrice()%><span>/ngày</span></p>
