@@ -1,10 +1,7 @@
 package vn.edu.hcmuaf.fit.service;
 
 import vn.edu.hcmuaf.fit.db.DBConnect;
-import vn.edu.hcmuaf.fit.model.Account;
-import vn.edu.hcmuaf.fit.model.Brand;
-import vn.edu.hcmuaf.fit.model.Order;
-import vn.edu.hcmuaf.fit.model.Product;
+import vn.edu.hcmuaf.fit.model.*;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -138,7 +135,8 @@ public class ProductServerADM {
         return list1;
 
     }
-    public static List<Order> getAllOrderDetail() throws SQLException {
+
+    public static List<Order> getAllOrderList() throws SQLException {
         String sql = "select * from orders";
         Statement statement = DBConnect.getInstall().get();
         List<Order> list1 = new ArrayList<>();
@@ -158,9 +156,32 @@ public class ProductServerADM {
         }
         return list1;
     }
+    public static List<OrderDetail> getAllOrderDetail(String id) throws SQLException {
+        String sql = "SELECT orderdetail.* FROM orderdetail INNER JOIN orders on orderdetail.id = orders.id where orders.id = "+ id;
+        Statement statement = DBConnect.getInstall().get();
+        List<OrderDetail> list1 = new ArrayList<>();
+        if (statement != null) {
+            ResultSet rs = statement.executeQuery(sql);
+
+            while (rs.next()) {
+                list1.add(new OrderDetail(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getLong(5),
+                        rs.getInt(6)
+                ));
+            }
+        } else {
+            System.out.println("No result");
+        }
+        return list1;
+    }
+
 
     public static void main(String[] args) throws SQLException {
         ProductServerADM ps = new ProductServerADM();
-        System.out.println(ps.getAllOrderDetail());
+        System.out.println(ps.getAllOrderDetail("679"));
     }
 }
