@@ -54,6 +54,16 @@ public class CartServices {
         String sql = "update cart set quantity = quantity + 1 where id="+id;
         statement.executeUpdate(sql);
     }
+    public static void DecsQuantity(String id) throws SQLException {
+        Statement statement = DBConnect.getInstall().get();
+        String sql = "update cart set quantity = quantity - 1 where id="+id;
+        statement.executeUpdate(sql);
+    }
+    public static void RemoveFromCart(String id) throws SQLException {
+        String sql = " delete from cart where id = " + id;
+        Statement statement = DBConnect.getInstall().get();
+        statement.executeUpdate(sql);
+    }
 
 
     public static void main(String[] args) throws SQLException {

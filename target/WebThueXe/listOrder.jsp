@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="vn.edu.hcmuaf.fit.model.Account" %>
+<%@ page import="vn.edu.hcmuaf.fit.model.Order" %>
 <%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
@@ -73,7 +74,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="ShowAllProduct" class="nav-link">
+                                <a href="ShowAllProduct">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Danh sách sản phẩm</p>
                                 </a>
@@ -96,6 +97,13 @@
                                 </a>
                             </li>
                         </ul>
+                    </li>
+                    <li class="nav-item has-treeview">
+                        <a href="listorder" class="nav-link">
+                            <p>
+                                Hóa đơn
+                            </p>
+                        </a>
                     </li>
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
@@ -130,16 +138,6 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Danh sách hóa đơn</h3>
-
-                        <div class="card-tools">
-                            <div class="input-group input-group-sm" style="width: 150px;">
-                                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-                                <div class="input-group-append">
-                                    <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -147,31 +145,29 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Tài khoản</th>
-                                <th>Mật khẩu</th>
-                                <th>Phân loại</th>
+                                <th>Ngày lập hóa đơn</th>
+                                <th>Người thuê</th>
+                                <th>Tổng tiền</th>
+                                <th>Nút lệnh</th>
                             </tr>
                             </thead>
                             <tbody>
-                                <% List<Account> list = (List<Account>) request.getAttribute("listAcount");%>
+                                <% List<Order> list = (List<Order>) request.getAttribute("list");%>
                                 <%
-        for (Account a:list
+        for (Order a:list
              ) {%>
                             <tr>
                                 <td><%=a.getId()%>
                                 </td>
-                                <td><%=a.getUsername()%>
+                                <td><%=a.getDate()%>
                                 </td>
-                                <td><%=a.getPassword()%></td>
-                                <%if(a.getIsAdmin() == 1){%>
-                                <td><span class="badge bg-primary">Admin</span></td>
-                                <%}else{%>
-                                <td><span class="badge bg-primary">User</span></td>
-                                <%}%>
-                                <td> <a href="Delete?id=<%=a.getId()%>"><button class="btn btn-danger">Xóa user</button></a>
+                                <td><%=a.getUser()%>
+                                </td>
+                                <td><%=a.getTotalPrice()%>
+                                </td>
+                                <td> <a href="OrderDetailADM?id=<%=a.getId()%>"><button class="btn btn-danger">Xem chi tiết</button></a>
                                 </td>
                             </tr>
-
                                 <%}%>
                             </tfoot>
                         </table>

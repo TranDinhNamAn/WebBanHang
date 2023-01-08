@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="vn.edu.hcmuaf.fit.model.Cart" %>
+<%@ page import="vn.edu.hcmuaf.fit.model.Order" %>
 <%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
@@ -47,6 +48,7 @@
           <ul class="dr-menu">
             <li class="subb"><a href="cart"><p style="margin-top: 6px"
                                                class="icon icon-cart-plus"></p></a></li>
+            <li class="subb"><a href="OrderList" class="nav-link">Lịch sử giao dịch</a>
             <li class="subb"><a href="changepass">Đổi mật khẩu</a></li>
             <li class="subb"><a href="dangxuat" >Đăng xuất</a></li>
           </ul>
@@ -78,48 +80,34 @@
         <span aria-hidden="true">×</span>
       </button>
     </div>
-    <h1 class="text-center">Giỏ hàng Của Tôi</h1>
+    <h1 class="text-center">Đơn hàng</h1>
     <div class="row" >
       <div class="col col-md-12">
         <table class="table table-bordered">
           <thead>
           <tr>
-            <th>STT</th>
-            <th>Ảnh đại diện</th>
-            <th>Tên sản phẩm</th>
-            <th>Số lượng</th>
-            <th>Đơn giá</th>
+            <th>id</th>
+            <th>Ngày thanh toán</th>
+            <th>Thành tiền</th>
             <th>Hành động</th>
           </tr>
           </thead>
           <tbody id="datarow">
-          <%int i=0;
-            List<Cart> cartList = (List<Cart>) request.getAttribute("cart");
-            request.getSession().getAttribute("user");
-            for(Cart c: cartList){ i++;%>
+          <%
+            List<Order> orderList = (List<Order>) request.getAttribute("list");
+            for(Order o: orderList){ %>
           <tr>
-            <td><%=i%></td>
+            <td><%=o.getId()%></td>
+            <td><%=o.getDate()%></td>
+            <td class="text-right" ><%=o.getTotalPrice()%></td>
             <td>
-              <img style="width: 75px;height: 65px" src="<%=c.getImg()%>>"
-                   class="hinhdaidien" alt="">
-            </td>
-            <td><%=c.getName()%></td>
-            <td class="text-right"><%=c.getQuantity()%></td>
-            <td class="text-right" ><%=c.getPrice()*c.getQuantity()%></td>
-            <td>
-              <a href="deleteFromCart?id=<%=c.getId()%>" id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
-                <i class="fa fa-trash" aria-hidden="true"></i> Xóa
-              </a>
+              <a href="getOrderDetail?id=<%=o.getId()%>" id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
+                <i class="fa fa-trash" aria-hidden="true"></i>Chi tiết đơn hàng </a>
             </td>
           </tr>
-          <%--                    <a href="xemay" class="btn btn-warning btn-md"><i class="fa fa-arrow-re" aria-hidden="true"></i>>Tiếp--%>
-          <%--                        tục mua hàng</a>--%>
-          <%--                    <a href="trangchu" class="btn btn-warning btn-md"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Quay--%>
-          <%--                        về trang chủ</a>--%>
           <%}%>
           </tbody>
         </table>
-        <a class="btn btn-primary" href="AddOrder?user=<%=request.getSession().getAttribute("user")%>">Tiến hành thanh toán</a>
       </div>
     </div>
   </div>

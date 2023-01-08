@@ -30,7 +30,7 @@ public class AddOrder extends HttpServlet {
             int orderID = rd.nextInt(1234);
             for (Cart c : listCart
             ) {
-                totalMoney = c.totalMoney();
+                totalMoney += c.totalMoney();
             }
             ProductService.addOrder(Integer.toString(orderID),simpleDateFormat, user, Long.toString(totalMoney));
             for (Cart c : listCart

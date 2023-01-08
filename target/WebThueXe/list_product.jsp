@@ -98,7 +98,6 @@
                         </ul>
                     </li>
                     <li class="nav-item has-treeview">
-                        <i class="nav-icon fas fa-jedi-order"></i>
                         <a href="listorder" class="nav-link">
                             <p>
                                Hóa đơn
