@@ -48,7 +48,7 @@
                         <li class="subb"><a href="cart"><p style="margin-top: 6px"
                                                            class="icon icon-cart-plus"></p></a></li>
                         <li class="subb"><a href="changepass">Đổi mật khẩu</a></li>
-                        <li class="subb"><a href="dangxuat">Đăng xuất</a></li>
+                        <li class="subb"><a href="dangxuat" >Đăng xuất</a></li>
                     </ul>
                 </li>
             </ul>
@@ -97,7 +97,6 @@
                         List<Cart> cartList = (List<Cart>) request.getAttribute("cart");
                         request.getSession().getAttribute("user");
                     for(Cart c: cartList){ i++;%>
-
                     <tr>
                         <td><%=i%></td>
                         <td>
@@ -108,7 +107,7 @@
                         <td class="text-right"><%=c.getQuantity()%></td>
                         <td class="text-right" ><%=c.getPrice()*c.getQuantity()%></td>
                         <td>
-                            <a id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
+                            <a href="deleteFromCart?id=<%=c.getId()%>" id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
                                 <i class="fa fa-trash" aria-hidden="true"></i> Xóa
                             </a>
                         </td>

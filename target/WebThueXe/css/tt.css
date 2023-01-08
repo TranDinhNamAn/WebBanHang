@@ -94,14 +94,9 @@ small {
     font-size: 80%
 }
 
-a {
-    color: #007bff;
-    text-decoration: none;
-    background-color: transparent
-}
 
 a:hover {
-    color: #0056b3
+    color: #ffff00;
 }
 
 a:not([href]):not([tabindex]) {

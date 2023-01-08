@@ -42,13 +42,11 @@ public class Reset extends HttpServlet {
             HttpSession mySession = request.getSession();
             Account acc = Check.CheckEmail(email);
             if(acc!=null) {
-                // sending otp
                 System.out.println(acc.getEmail());
                 Random rand = new Random();
                 otpvalue = rand.nextInt(1255650);
                 System.out.println(otpvalue);
-                String to = email;// change accordingly
-                // Get the session object
+                String to = email;
                 Properties props = new Properties();
                 props.put("mail.smtp.host", "smtp.gmail.com");
                 props.put("mail.smtp.socketFactory.port", "465");
@@ -58,18 +56,14 @@ public class Reset extends HttpServlet {
                 Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
                     protected PasswordAuthentication getPasswordAuthentication() {
                         return new PasswordAuthentication("trandinhnamanc3lqdla@gmail.com", "yrlxpglbottivcke");// Put your email
-                        // id and
-                        // password here
                     }
                 });
-                // compose message
                 try {
                     MimeMessage message = new MimeMessage(session);
-                    message.setFrom(new InternetAddress(email));// change accordingly
+                    message.setFrom(new InternetAddress(email));
                     message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
                     message.setSubject("Hello");
                     message.setText("your OTP is: " + otpvalue);
-                    // send message
                     Transport.send(message);
                     System.out.println("message sent successfully");
                 }
@@ -84,8 +78,6 @@ public class Reset extends HttpServlet {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
-
     }
 
 }

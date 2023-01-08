@@ -1,5 +1,7 @@
 <%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
 <%@ page import="java.util.List" %>
+<%@ page import="vn.edu.hcmuaf.fit.model.Contact" %>
+<%@ page import="vn.edu.hcmuaf.fit.service.ContactServices" %>
 <%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,33 +83,10 @@
     <div class="container">
         <div class="row no-gutters">
             <div class="col-md-12	featured-top">
-                <div class="row no-gutters">
-<%--                    <div class="col-md-4 d-flex align-items-center">--%>
-<%--                        <form id="motor" action="#" class="request-form ftco-animate bg-primary">--%>
-<%--                            <h2>Đặt xe</h2>--%>
-<%--                            <div class="form-group">--%>
-<%--                                <label for="" class="label">Địa điểm thuê xe</label>--%>
-<%--                                <input type="text" class="form-control" placeholder="Thành phố, Quận,Huyện">--%>
-<%--                            </div>--%>
-<%--                            <div class="form-group">--%>
-<%--                                <label for="motors" class="label">Chọn loại xe</label>--%>
-<%--                                <select name="motor" id="motors" style="display: block">--%>
-<%--                                    <option value="volvo">Yamaha</option>--%>
-<%--                                    <option value="saab">Honda</option>--%>
-<%--                                    <option value="opel">Piaggio</option>--%>
-<%--                                    <option value="audi">SYM</option>--%>
-<%--                                    <option value="audi">Suzuki</option>--%>
-<%--                                    <option value="audi">Vespa</option>--%>
-<%--                                </select>--%>
-<%--                            </div>--%>
-<%--                            <div class="form-group">--%>
-<%--                                <input type="submit" value="Tìm xe ngay" class="btn btn-secondary py-3 px-4">--%>
-<%--                            </div>--%>
-<%--                        </form>--%>
-<%--                    </div>--%>
+                <div class="row no-gutters" style="width: 1660px">
                     <div class="col-md-8 d-flex align-items-center">
                         <div class="services-wrap rounded-right w-100">
-                            <h3 class="heading-section mb-4">Ưu điểm khi thuê xe tại ThueXeMay</h3>
+                            <h3 class="heading-section mb-4" style="text-align: center">Ưu điểm khi thuê xe tại ThueXeMay</h3>
                             <div class="row d-flex mb-4">
                                 <div class="col-md-4 d-flex align-self-stretch ftco-animate">
                                     <div class="services w-100 text-center">
@@ -137,7 +116,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <p><a href="#" class="btn btn-primary py-3 px-5">Đặt trước chiếc xe hoàn hảo của bạn</a></p>
                         </div>
                     </div>
                 </div>
@@ -163,7 +141,6 @@
                         for (Product p: list) {
                     if(p.isNew()){
                     %>
-
                     <div class="item">
                         <div class="car-wrap rounded ftco-animate">
                             <div class="img rounded d-flex align-items-end"
@@ -174,12 +151,18 @@
                                 <div class="d-flex mb-3">
                                     <p class="price ml-auto"><%=p.getPrice()%> vnd<span>/Ngày</span></p>
                                 </div>
-                                <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê
-                                    ngay</a> <a href="chitietxe?id=<%=p.getId()%>" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                                <p class="d-flex mb-0 d-block">
+                                    <%if(session.getAttribute("account")==null){%>
+                                    <a href="dangnhap" class="btn btn-primary py-2 mr-1">Thuê</a>
+                                    <%}%>
+                                    <%if(session.getAttribute("account")!=null){%>
+                                    <a href="addToCart?id=<%=p.getId()%>" class="btn btn-primary py-2 mr-1">Thuê</a>
+                                    <%}%>
+                                    <a href="chitietxe?id=<%=p.getId()%>" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
                             </div>
                         </div>
                     </div>
-                    <% } }%>
+                    <%}}%>
                 </div>
             </div>
 
@@ -292,7 +275,7 @@
                         tiết kiệm được thời gian, công sức.
                         Chúng tôi giao xe tận nơi và có thể linh động nhận xe tại địa điểm gần quý khách nhất có thể.
                     </p>
-                    <p><a href="car.jsp" class="btn btn-primary py-3 px-4">Tìm xe</a></p>
+                    <p><a href="xemay" class="btn btn-primary py-3 px-4">Tìm xe</a></p>
                 </div>
             </div>
         </div>
@@ -384,15 +367,16 @@
             </div>
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
+                    <%Contact contact = ContactServices.getContact();%>
                     <h2 class="ftco-heading-2">Thông tin liên hệ</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="icon icon-map-marker"></span><span class="text">Trường đại học Nông Lâm, khu phố 6, phường Linh Trung, TP.Thủ Đức, TP.Hồ Chí Minh</span>
+                            <li><span class="icon icon-map-marker"></span><span class="text"><%=contact.getAddress()%></span>
                             </li>
                             <li><a href="#"><span class="icon icon-phone"></span><span
-                                    class="text">+84 326 500 729</span></a></li>
+                                    class="text"><%=contact.getPhone()%></span></a></li>
                             <li><a href="#"><span class="icon icon-envelope"></span><span
-                                    class="text">ltweb@gmail.com</span></a></li>
+                                    class="text"><%=contact.getEmail()%></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -410,7 +394,6 @@
                 stroke="#F96D00"/>
     </svg>
 </div>
-
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-migrate-3.0.1.min.js"></script>
