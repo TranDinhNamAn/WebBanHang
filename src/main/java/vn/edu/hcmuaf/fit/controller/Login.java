@@ -32,6 +32,7 @@ public class Login extends HttpServlet {
                 session.setAttribute("account", acc);
                 session.setAttribute("user", user);
                 session.setAttribute("pass", pass);
+                session.setAttribute("id",acc.getId());
                 session.setMaxInactiveInterval(30);
                 response.sendRedirect("trangchu");
             } else {

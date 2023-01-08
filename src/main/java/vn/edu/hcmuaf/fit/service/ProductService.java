@@ -1,12 +1,15 @@
 package vn.edu.hcmuaf.fit.service;
 
 import vn.edu.hcmuaf.fit.db.DBConnect;
+import vn.edu.hcmuaf.fit.model.Account;
 import vn.edu.hcmuaf.fit.model.Brand;
+import vn.edu.hcmuaf.fit.model.Cart;
 import vn.edu.hcmuaf.fit.model.Product;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -137,8 +140,23 @@ public class ProductService {
         }
         return 0;
     }
+    public static void addOrder(String id, String date,String user,String totalMoney) throws SQLException {
+            String sql1 = "insert into orders values("+id+",'"+date+ "','"+user+ "', "+totalMoney+" ) ";
+            Statement statement1 = DBConnect.getInstall().get();
+            statement1.executeUpdate(sql1);
+    }
+    public static void addOrderDetail(String id, String username,String name,String image,String price,String quantity) throws SQLException {
+        String sql = "insert into orderdetail values("+id+",'"+username+"','"+name+"','"+image+"',"+price+","+quantity+")";
+        Statement statement = DBConnect.getInstall().get();
+        statement.executeUpdate(sql);
+    }
+    public static void deleteCart(String user) throws SQLException {
+        String sql = "delete from cart where user='"+user+"'";
+        Statement statement = DBConnect.getInstall().get();
+        statement.executeUpdate(sql);
+    }
+
     public static void main(String[] args) throws SQLException {
-        ProductService sv = new ProductService();
-        System.out.println(sv.getByBrandID("8"));
+        ProductService pr = new ProductService();
     }
 }

@@ -64,7 +64,9 @@ public class Cart {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-
+    public long totalMoney(){
+        return this.getPrice() * this.getQuantity();
+    }
     @Override
     public String toString() {
         return "Cart{" +

@@ -3,6 +3,7 @@ package vn.edu.hcmuaf.fit.service;
 import vn.edu.hcmuaf.fit.db.DBConnect;
 import vn.edu.hcmuaf.fit.model.Account;
 import vn.edu.hcmuaf.fit.model.Brand;
+import vn.edu.hcmuaf.fit.model.Order;
 import vn.edu.hcmuaf.fit.model.Product;
 
 import java.sql.ResultSet;
@@ -137,9 +138,29 @@ public class ProductServerADM {
         return list1;
 
     }
+    public static List<Order> getAllOrderDetail() throws SQLException {
+        String sql = "select * from orders";
+        Statement statement = DBConnect.getInstall().get();
+        List<Order> list1 = new ArrayList<>();
+        if (statement != null) {
+            ResultSet rs = statement.executeQuery(sql);
+
+            while (rs.next()) {
+                list1.add(new Order(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getLong(4)
+                ));
+            }
+        } else {
+            System.out.println("No result");
+        }
+        return list1;
+    }
 
     public static void main(String[] args) throws SQLException {
         ProductServerADM ps = new ProductServerADM();
-        System.out.println(ps.getProduct("6"));
+        System.out.println(ps.getAllOrderDetail());
     }
 }
