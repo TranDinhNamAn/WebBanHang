@@ -45,7 +45,7 @@
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
                 <%if(session.getAttribute("account")!=null){
                %>
-                <li class="nav-item"><a href="#" class="nav-link">Cá nhân</a>
+                <li class="nav-item"><a href="orderDetail" class="nav-link">Cá nhân</a>
                 <ul class="dr-menu">
                     <li class="subb"><a href="cart"><p style="margin-top: 6px"
                                                                                 class="icon icon-cart-plus"></p></a></li>
