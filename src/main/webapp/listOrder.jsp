@@ -1,15 +1,15 @@
-<%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
-<%@ page import="vn.edu.hcmuaf.fit.service.ProductServerADM" %>
 <%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
+<%@ page import="vn.edu.hcmuaf.fit.model.Account" %>
 <%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Danh sách sản phẩm</title>
+    <title>Danh sách khách hàng</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css1/all.min.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -73,7 +73,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="ShowAllProduct">
+                                <a href="ShowAllProduct" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Danh sách sản phẩm</p>
                                 </a>
@@ -114,12 +114,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Danh sách sản phẩm</h1>
+                        <h1>Danh sách user</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Danh sách sản phẩm</li>
+                            <li class="breadcrumb-item active">Danh sách user</li>
                         </ol>
                     </div>
                 </div>
@@ -128,48 +128,51 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Danh sách hóa đơn</h3>
 
+                        <div class="card-tools">
+                            <div class="input-group input-group-sm" style="width: 150px;">
+                                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
                     <div class="card-body">
-                        <form action="search" >
-                            <input type="text" name="search" placeholder="Nhập tên sản phẩm">
-                            <input type="submit" value="Tìm kiếm">
-                        </form>
                         <table id="example2" class="table table-bordered table-hover">
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Tên sản phẩm</th>
-                                <th>Hình ảnh</th>
-                                <th>Giá thuê</th>
-                                <th>Nút lệnh</th>
+                                <th>Tài khoản</th>
+                                <th>Mật khẩu</th>
+                                <th>Phân loại</th>
                             </tr>
                             </thead>
                             <tbody>
-
+                                <% List<Account> list = (List<Account>) request.getAttribute("listAcount");%>
                                 <%
-                                List<Product> list = (List<Product>) request.getAttribute("list3");
-                                %>
-
-                                    <% for
-                                 (Product p:list ) { %>
+        for (Account a:list
+             ) {%>
                             <tr>
-                                <td><%=p.getId()%>
+                                <td><%=a.getId()%>
                                 </td>
-                                <td><%=p.getName()%>
+                                <td><%=a.getUsername()%>
                                 </td>
-                                <td><img src="<%=p.getImg()%>" style="width: 50px"></td>
-                                <td ><%=p.getPrice()%>/Ngày</td>
-                                <td>
-                                    <a href="delete?id=<%=p.getId()%>">
-                                        <button class="btn btn-danger">Xóa sản phẩm</button>
-                                    </a>
-                                    <a href="UpdateProduct?id=<%=p.getId()%>">
-                                        <button class="btn btn-dark">Xem chi tiết</button>
-                                    </a>
+                                <td><%=a.getPassword()%></td>
+                                <%if(a.getIsAdmin() == 1){%>
+                                <td><span class="badge bg-primary">Admin</span></td>
+                                <%}else{%>
+                                <td><span class="badge bg-primary">User</span></td>
+                                <%}%>
+                                <td> <a href="Delete?id=<%=a.getId()%>"><button class="btn btn-danger">Xóa user</button></a>
                                 </td>
                             </tr>
-                                <%}%>
 
+                                <%}%>
                             </tfoot>
                         </table>
                     </div>
@@ -182,12 +185,10 @@
 <footer class="main-footer">
 </footer>
 <script src="js1/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
 <script src="js1/bootstrap.bundle.min.js"></script>
 <script src="js1/jquery.dataTables.js"></script>
 <script src="js1/dataTables.bootstrap4.min.js"></script>
 
-<!-- AdminLTE App -->
 <script src="js1/adminlte.min.js"></script>
 <script src="js1/demo.js"></script>
 <script>

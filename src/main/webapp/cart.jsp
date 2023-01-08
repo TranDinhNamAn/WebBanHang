@@ -79,7 +79,7 @@
             </button>
         </div>
         <h1 class="text-center">Giỏ hàng Của Tôi</h1>
-        <div class="row">
+        <div class="row" >
             <div class="col col-md-12">
                 <table class="table table-bordered">
                     <thead>
@@ -95,6 +95,7 @@
                     <tbody id="datarow">
                     <%int i=0;
                         List<Cart> cartList = (List<Cart>) request.getAttribute("cart");
+                        request.getSession().getAttribute("user");
                     for(Cart c: cartList){ i++;%>
                     <tr>
                         <td><%=i%></td>
@@ -104,23 +105,21 @@
                         </td>
                         <td><%=c.getName()%></td>
                         <td class="text-right"><%=c.getQuantity()%></td>
-                        <td class="text-right"><%=c.getPrice()*c.getQuantity()%></td>
+                        <td class="text-right" ><%=c.getPrice()*c.getQuantity()%></td>
                         <td>
                             <a href="deleteFromCart?id=<%=c.getId()%>" id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
                                 <i class="fa fa-trash" aria-hidden="true"></i> Xóa
                             </a>
                         </td>
                     </tr>
+<%--                    <a href="xemay" class="btn btn-warning btn-md"><i class="fa fa-arrow-re" aria-hidden="true"></i>>Tiếp--%>
+<%--                        tục mua hàng</a>--%>
+<%--                    <a href="trangchu" class="btn btn-warning btn-md"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Quay--%>
+<%--                        về trang chủ</a>--%>
                     <%}%>
                     </tbody>
                 </table>
-
-                <a href="xemay" class="btn btn-warning btn-md"><i class="fa fa-arrow-re" aria-hidden="true"></i>>Tiếp
-                    tục mua hàng</a>
-                <a href="trangchu" class="btn btn-warning btn-md"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Quay
-                    về trang chủ</a>
-                <a class="btn btn-primary" href="payment.html">Tiến hành thanh toán</a>
-
+                <a class="btn btn-primary" href="AddOrder?user=<%=request.getSession().getAttribute("user")%>">Tiến hành thanh toán</a>
             </div>
         </div>
     </div>
