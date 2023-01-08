@@ -84,10 +84,10 @@
         <table class="table table-bordered">
           <thead>
           <tr>
-            <th>STT</th>
-            <th>Ảnh đại diện</th>
-            <th>Tên sản phẩm</th>
-            <th>Số lượng</th>
+            <th>id</th>
+            <th>Ngày thanh toán</th>
+            <th>Người dùng</th>
+            <th>Thành tiền</th>
             <th>Đơn giá</th>
           </tr>
           </thead>
@@ -107,8 +107,7 @@
             <td class="text-right" ><%=c.getPrice()*c.getQuantity()%></td>
             <td>
               <a href="deleteFromCart?id=<%=c.getId()%>" id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
-                <i class="fa fa-trash" aria-hidden="true"></i> Xóa
-              </a>
+                <i class="fa fa-trash" aria-hidden="true"></i> Chi tiết đơn hàng </a>
             </td>
           </tr>
           <%--                    <a href="xemay" class="btn btn-warning btn-md"><i class="fa fa-arrow-re" aria-hidden="true"></i>>Tiếp--%>
