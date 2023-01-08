@@ -93,7 +93,7 @@
                     </tr>
                     </thead>
                     <tbody id="datarow">
-                    <%int i=1;
+                    <%int i=0;
                         List<Cart> cartList = (List<Cart>) request.getAttribute("cart");
                     for(Cart c: cartList){ i++;%>
 
@@ -107,7 +107,7 @@
                         <td class="text-right"><%=c.getQuantity()%></td>
                         <td class="text-right"><%=c.getPrice()*c.getQuantity()%></td>
                         <td>
-                            <a id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
+                            <a href="deleteFromCart?id=<%=c.getId()%>" id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
                                 <i class="fa fa-trash" aria-hidden="true"></i> Xóa
                             </a>
                         </td>

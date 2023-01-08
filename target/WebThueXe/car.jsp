@@ -52,20 +52,23 @@
                     </ul>
                 </li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
-
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
                 <li class="nav-item">
-                <form action="timkiem" style="margin-top: 7px">
-                    <input type="text" name="searchProcuct" >
+                <form action="timkiem" style="margin-top: 15px">
+                    <input type="text" name="searchProcuct" style="width: 100px;" >
                    <button type="submit"><i class="nav-icon fas icon-search"></i></button>
                 </form>
                 </li>
                 <%if(session.getAttribute("account")!=null){
                 %>
-                <li class="nav-item"><a href="dangxuat" class="nav-link">Đăng xuất</a></li>
-                <li class="nav-item"><a href="cart.jsp" class="nav-link"><p style="margin-top: 6px"
-                                                                            class="icon icon-cart-plus"></p></a></li>
-
+                <li class="nav-item"><a href="#" class="nav-link">Cá nhân</a>
+                    <ul class="dr-menu">
+                        <li class="subb"><a href="cart"><p style="margin-top: 6px"
+                                                           class="icon icon-cart-plus"></p></a></li>
+                        <li class="subb"><a href="changepass">Đổi mật khẩu</a></li>
+                        <li class="subb"><a href="dangxuat">Đăng xuất</a></li>
+                    </ul>
+                </li>
                 <%}%>
                 <%if(session.getAttribute("account")==null){%>
                 <li class="nav-item"><a href="dangnhap" class="nav-link">Đăng nhập</a></li>
