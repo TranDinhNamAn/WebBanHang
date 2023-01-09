@@ -38,34 +38,45 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="index.jsp">Thue<span>XeMay</span></a>
+        <a class="navbar-brand" href="trangchu">Thue<span>XeMay</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
         </button>
-
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a href="trangchu" class="nav-link">Trang chủ</a></li>
                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
                 <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
                 <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
-
                     <ul class="dr-menu">
                         <%List<Brand> arr1 = ProductService.getListBrand();%>
-                        <%
-                            for (Brand b:arr1
-                            ) {
-                        %>
-                        <li class="subb"><a href="<%=b.getName()%>"><%=b.getName()%></a></li>
+                        <%for (Brand b:arr1) {%>
+                        <li class="subb"><a href="phanloai?id=<%=b.getID()%>"><%=b.getName()%></a></li>
                         <%}%>
                     </ul>
                 </li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
-                <li class="nav-item"><a href="login.jsp" class="nav-link">Đăng nhập</a></li>
-                <li class="nav-item"><a href="cart.jsp" class="nav-link"><p style="margin-top: 6px"
-                                                                            class="icon icon-cart-plus"></p></a></li>
+                <li class="nav-item">
+                    <form action="timkiem" style="margin-top: 15px">
+                        <input type="text" name="searchProcuct" style="width: 100px;" >
+                        <button type="submit"><i class="nav-icon fas icon-search"></i></button>
+                    </form>
+                </li>
+                <%if(session.getAttribute("account")!=null){%>
+                <li class="nav-item"><a href="#" class="nav-link">Cá nhân</a>
+                    <ul class="dr-menu">
+                        <li class="subb"><a href="cart"><p style="margin-top: 6px" class="icon icon-cart-plus"></p></a></li>
+                        <li class="subb"><a href="OrderList">Lịch sử giao dịch</a>
+                        <li class="subb"><a href="changepass">Đổi mật khẩu</a></li>
+                        <li class="subb"><a href="dangxuat">Đăng xuất</a></li>
+                    </ul>
+                </li>
+                <%}%>
+                <%if(session.getAttribute("account")==null){%>
+                <li class="nav-item"><a href="dangnhap" class="nav-link">Đăng nhập</a></li>
+                <%}%>
             </ul>
         </div>
     </div>
@@ -76,25 +87,21 @@
          data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
+        <%List<Product> list = (List<Product>) request.getAttribute("listbrand");%>
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
             <div class="col-md-9 ftco-animate pb-5">
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ <i
+                <p class="breadcrumbs"><span class="mr-2"><a href="trangchu">Trang chủ <i
                         class="ion-ios-arrow-forward"></i></a></span>
-                    <span><a href="car.jsp">Xe máy <i class="ion-ios-arrow-forward"></i></a></span></p>
-                <h1 class="mb-3 bread">Xe Honda</h1>
+                    <span><a href="xemay">Xe máy <i class="ion-ios-arrow-forward"></i></a></span></p>
+                <h1 class="mb-3 bread">Xe máy</h1>
             </div>
         </div>
     </div>
 </section>
-
-
 <section class="ftco-section bg-light">
     <div class="container">
         <div class="row">
-            <%
-                List<Product> list = (List<Product>) request.getAttribute("list2");
-
-                int start = 0, end = 9;
+            <%  int start = 0, end = 9;
                 if (list.size() < 9) {
                     end = list.size();
                 }
@@ -106,24 +113,20 @@
                 }
                 List<Product> arr = ProductService.getListByPage(list,start,end);
             %>
-            <%
-                for (Product p1:arr
-                     ) {
-            %>
-
+            <%for (Product p1:arr) {%>
             <div class="col-md-4">
                 <div class="car-wrap rounded ftco-animate">
                     <div class="img rounded d-flex align-items-end"
                          style="background-image: url(<%=p1.getImg()%>);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp"><%=p1.getName()%>
+                        <h2 class="mb-0"><a href="#"><%=p1.getName()%>
                         </a></h2>
                         <div class="d-flex mb-3">
                             <p class="price ml-auto"><%=p1.getPrice()%>vnđ<span>/ngày</span></p>
                         </div>
                         <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="car-single.jsp" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                                href="chitietxe?id=<%=p1.getId()%>" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
                     </div>
                 </div>
             </div>
@@ -145,7 +148,7 @@
                                     b = list.size();
                                 }%>
 
-                        <li class="active"><a href="honda?start=<%=a%>&end=<%=b%>"><%=i%>
+                        <li class="active"><a href="phanloai?start=<%=a%>&end=<%=b%>"><%=i%>
                         </a></li>
                         <% }%>
                     </ul>

@@ -67,12 +67,11 @@ public class ProductService {
         }
         return list;
     }
-    public static List<Product> getListProductByCategory(String san_pham) throws SQLException {
+    public static List<Product> getListProductByCategory(String id) throws SQLException {
         List<Product> list1 = new LinkedList<>();
         Statement statement = DBConnect.getInstall().get();
         if (statement != null) {
-            ResultSet rs = statement.executeQuery("select * from product inner join brand on product.brandID = brand.brandID where brand.brandID = '"+ san_pham + "'");
-
+            ResultSet rs = statement.executeQuery("select * from product inner join brand on product.brandID = brand.brandID where brand.brandID ="+ id);
             while (rs.next()) {
                 list1.add(new Product(
                         rs.getInt(1),

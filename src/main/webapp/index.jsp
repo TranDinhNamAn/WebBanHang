@@ -45,12 +45,12 @@
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
                 <%if(session.getAttribute("account")!=null){%>
                 <li class="nav-item"><a href="#" class="nav-link">Cá nhân</a>
-                <ul class="dr-menu">
-                    <li class="subb"><a href="cart"><p style="margin-top: 6px" class="icon icon-cart-plus"></p></a></li>
-                    <li class="subb"><a href="OrderList">Lịch sử giao dịch</a>
-                    <li class="subb"><a href="changepass">Đổi mật khẩu</a></li>
-                    <li class="subb"><a href="dangxuat">Đăng xuất</a></li>
-                </ul>
+                    <ul class="dr-menu">
+                        <li class="subb"><a href="cart"><p style="margin-top: 6px" class="icon icon-cart-plus"></p></a></li>
+                        <li class="subb"><a href="OrderList">Lịch sử giao dịch</a>
+                        <li class="subb"><a href="changepass">Đổi mật khẩu</a></li>
+                        <li class="subb"><a href="dangxuat">Đăng xuất</a></li>
+                    </ul>
                 </li>
                 <%}%>
                 <%if(session.getAttribute("account")==null){%>

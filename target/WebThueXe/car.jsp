@@ -43,11 +43,9 @@
                 <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
                     <ul class="dr-menu">
                         <%List<Brand> arr1 = ProductService.getListBrand();%>
-                        <%
-                            for (Brand b:arr1
-                            ) {
+                        <%for (Brand b:arr1) {
                         %>
-                        <li class="subb"><a href="<%=b.getName()%>"><%=b.getName()%> </a></li>
+                        <li class="subb"><a href="phanloai?id=<%=b.getID()%>"><%=b.getName()%></a></li>
                         <%}%>
                     </ul>
                 </li>
@@ -98,8 +96,10 @@
 <section class="ftco-section bg-light">
     <div class="container">
         <div class="row">
-            <% List<Product> list = (List<Product>) request.getAttribute("list1");
-
+            <% List<Product> list = (List<Product>) request.getAttribute("list");
+                List<Product> list1 = (List<Product>) request.getAttribute("listbrand");
+                if(list1!=null)
+                    list = list1;
                 int start = 0, end = 9;
                 if (list.size() < 9) {
                     end = list.size();
@@ -110,11 +110,8 @@
                 if (request.getParameter("end") != null) {
                     end = Integer.parseInt(request.getParameter("end"));
                 }
-                List<Product> arr = ProductService.getListByPage(list, start, end);
-            %>
-
-            <% for (Product p : arr) {
-            %>
+                List<Product> arr = ProductService.getListByPage(list, start, end);%>
+            <% for (Product p : arr){%>
             <div class="col-md-4">
                 <div class="car-wrap rounded ftco-animate">
                     <div class="img rounded d-flex align-items-end"
@@ -137,7 +134,7 @@
                     </div>
                 </div>
             </div>
-            <% }%>
+            <%}%>
         </div>
         <div class="row mt-5">
             <div class="col text-center">
@@ -154,7 +151,6 @@
                                 if (b > list.size()) {
                                     b = list.size();
                                 }%>
-
                         <li class="active"><a href="xemay?start=<%=a%>&end=<%=b%>"><%=i%>
                         </a></li>
                         <% }%>
