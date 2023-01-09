@@ -17,12 +17,11 @@ public class xemay extends HttpServlet {
         List<Product> list = null;
         try {
             list = ProductService.getProduct();
-            request.setAttribute("list1", list);
+            request.setAttribute("list", list);
             request.getRequestDispatcher("car.jsp").forward(request, response);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     @Override
