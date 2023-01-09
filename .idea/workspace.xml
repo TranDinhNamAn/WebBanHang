@@ -9,7 +9,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="416c06ed-0398-4fcb-a2d0-6804377f658f" name="Changes" comment="NguyenToi" />
+    <list default="true" id="416c06ed-0398-4fcb-a2d0-6804377f658f" name="Changes" comment="NguyenToi">
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/ShowAllBlog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/ShowAllBlogDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/model/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/db/DBConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/db/DBConnect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/ProductServerADM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/ProductServerADM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/blog-single.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/blog-single.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/blog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/blog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/fromdangbai.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fromdangbai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/fromdsbaiviet.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fromdsbaiviet.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/listOrder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listOrder.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/listUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listUser.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/list_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list_product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/orderDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/orderDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/updateProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/updateProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/blog-single.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/blog-single.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/blog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/blog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/honda.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/honda.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/db/DBConnect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductService.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -228,8 +260,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ProductServerADM" />
         <item itemvalue="Application.ProductService" />
+        <item itemvalue="Application.ProductServerADM" />
         <item itemvalue="Application.CartServices" />
         <item itemvalue="Application.Check" />
         <item itemvalue="Application.DBConnect" />
@@ -259,7 +291,7 @@
       <workItem from="1673089955637" duration="1821000" />
       <workItem from="1673100303439" duration="8248000" />
       <workItem from="1673186010569" duration="4858000" />
-      <workItem from="1673240660899" duration="621000" />
+      <workItem from="1673240660899" duration="6871000" />
     </task>
     <task id="LOCAL-00001" summary="Nam An">
       <created>1672805231465</created>
@@ -464,7 +496,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673241276131</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="NguyenToi">
+      <created>1673241293689</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1673241293689</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -183,8 +183,48 @@ public class ProductService {
         }
         return list;
     }
+    public static List<Blog> getAllBlog() throws SQLException {
+        String sql = "select * from blog";
+        List<Blog> list = new ArrayList<>();
+        Statement statement = DBConnect.getInstall().get();
+        ResultSet rs = statement.executeQuery(sql);
+        while (rs.next()) {
+            list.add(new Blog(rs.getInt(1),
+                    rs.getString(2),
+                    rs.getString(3),
+                    rs.getString(4),
+                    rs.getString(5),
+                    rs.getString(6),
+                    rs.getString(7),
+                    rs.getString(8),
+                    rs.getString(9),
+                    rs.getString(10)
+            ));
+        }
+        return list;
+    }
+    public static Blog getBlogByID(String id) throws SQLException {
+        String sql = " select * from blog  where id = " + id;
+        Statement statement = DBConnect.getInstall().get();
+        ResultSet rs = statement.executeQuery(sql);
+        Blog b = null;
+        while (rs.next()) {
+            b = new Blog(rs.getInt(1),
+                    rs.getString(2),
+                    rs.getString(3),
+                    rs.getString(4),
+                    rs.getString(5),
+                    rs.getString(6),
+                    rs.getString(7),
+                    rs.getString(8),
+                    rs.getString(9),
+                    rs.getString(10)
+            );
+        }
+        return b;
+    }
 
     public static void main(String[] args) throws SQLException {
-        System.out.println( ProductService.getOrderDetailByUser("889"));
+        System.out.println( ProductService.getBlogByID("1"));
     }
 }

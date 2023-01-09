@@ -1,8 +1,14 @@
+<%@ page import="java.util.List" %>
+<%@ page import="vn.edu.hcmuaf.fit.model.Blog" %>
+<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Bài viết</title>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
@@ -72,70 +78,29 @@
 <section class="ftco-section">
     <div class="container">
         <div class="row d-flex justify-content-center">
+            <% List< Blog> list = (List<Blog>) request.getAttribute("blog");%>
+            <%
+        for (Blog b:list
+             ) {
+            %>
             <div class="col-md-12 text-center d-flex ftco-animate">
                 <div class="blog-entry justify-content-end mb-md-5">
                     <a href="blog-single.jsp" class="block-20 img"
-                       style="background-image: url('images/bl1.jpg');">
+                       style="background-image: url(<%=b.getImg()%>);">
                     </a>
                     <div class="text px-md-5 pt-4">
                         <div class="meta mb-3">
-                            <div><a href="#">29/10/2019</a></div>
-                            <div><a href="#">ThueXeMay</a></div>
+                            <div><a href="#"><%=b.getDate()%></a></div>
+                            <div><a href="#"><%=b.getUser()%></a></div>
                         </div>
-                        <h3 class="heading mt-2"><a href="blog-single.jsp">Top 6 Địa Chỉ Thuê Xe Máy Hai Bà Trưng Hà
-                            Nội Tốt Nhất 2022</a></h3>
-                        <p>Hiện nay có khá nhiều cơ sở cho thuê xe máy Hà Nội ở khu vực Hai Bà Trưng. Tuy nhiên chất
-                            lượng của những địa chỉ này vẫn là dẫu chẩm hỏi. Nếu chẳng may gặp phải cơ sở kém chất lượng
-                            thì bạn sẽ gặp rủi ro rất lớn. Chính vì thế chúng tôi đã tổng hợp những địa chỉ uy tín nhất
-                            dưới đây dành cho bạn.</p>
-                        <p><a href="blog-single.jsp" class="btn btn-primary">Xem thêm<span
+                        <h3 class="heading mt-2"><a href="blog-single.jsp"><%=b.getName()%></a></h3>
+                        <p><%=b.getCotent()%></p>
+                        <p><a href="blogDatail?id=<%=b.getId()%>" class="btn btn-primary">Xem thêm<span
                                 class="icon-long-arrow-right"></span></a></p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 text-center d-flex ftco-animate">
-                <div class="blog-entry justify-content-end mb-md-5">
-                    <a href="blog-single.jsp" class="block-20 img"
-                       style="background-image: url('images/bl2.jpg');">
-                    </a>
-                    <div class="text px-md-5 pt-4">
-                        <div class="meta mb-3">
-                            <div><a href="#">29/10/2019</a></div>
-                            <div><a href="#">ThueXeMay</a></div>
-                        </div>
-                        <h3 class="heading mt-2"><a href="blog-single.jsp">TOP 10 Địa Điểm Thuê Xe Máy Hà Nội Uy Tín
-                            Nhất Không Thể Bỏ Qua!</a></h3>
-                        <p>ThueXeMay là cơ sở cho thuê xe máy chuyên nghiệp số 1 tại Hai Bà Trưng. Khi đến đây thuê xe
-                            bạn sẽ không cần lăn tăn về cấn đề chất lượng nữa. Nơi đây cung cấp cho bạn những chiếc xe
-                            cực mới cùng nhiều dịch vụ tiện ích đi kèm. Bởi vậy nên các khách hàng từng đến đây thuê xe
-                            đều đánh giá cao địa chỉ này.</p>
-                        <p><a href="blog-single.jsp" class="btn btn-primary">Xem thêm<span
-                                class="icon-long-arrow-right"></span></a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 text-center d-flex ftco-animate">
-                <div class="blog-entry justify-content-end mb-md-5">
-                    <a href="blog-single.jsp" class="block-20 img"
-                       style="background-image: url('images/bl3.jpg');">
-                    </a>
-                    <div class="text px-md-5 pt-4">
-                        <div class="meta mb-3">
-                            <div><a href="#">29/10/2019</a></div>
-                            <div><a href="#">ThueXeMay</a></div>
-                        </div>
-                        <h3 class="heading mt-2"><a href="blog-single.jsp">Thuê Xe Máy Phố Cổ Hà Nội | Địa Điểm Thuê
-                            Xe Tốt Nhất Hiện Nay!</a></h3>
-                        <p>Hiện nay có khá nhiều cơ sở cho thuê xe máy Hà Nội ở khu vực Hai Bà Trưng. Tuy nhiên chất
-                            lượng của những địa chỉ này vẫn là dẫu chẩm hỏi. Nếu chẳng may gặp phải cơ sở kém chất lượng
-                            thì bạn sẽ gặp rủi ro rất lớn. Chính vì thế chúng tôi đã tổng hợp những địa chỉ uy tín nhất
-                            dưới đây dành cho bạn.</p>
-                        <p><a href="blog-single.jsp" class="btn btn-primary">Xem thêm<span
-                                class="icon-long-arrow-right"></span></a></p>
-                    </div>
-                </div>
-            </div>
-
+<%}%>
         </div>
         <div class="row mt-5">
             <div class="col text-center">
