@@ -1,0 +1,69 @@
+<changelist name="Uncommitted_changes_before_Update_at_1_9_2023_9_39_PM_[Changes]" date="1673275177232" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_39_PM_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 1/9/2023 9:39 PM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/vn/edu/hcmuaf/fit/controller/ShowAllBlogDetail.class" />
+    <option name="AFTER_PATH" value="target/classes/vn/edu/hcmuaf/fit/controller/ShowAllBlogDetail.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_39_PM_[Changes]/ShowAllBlogDetail.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/vn/edu/hcmuaf/fit/service/ProductService.class" />
+    <option name="AFTER_PATH" value="target/classes/vn/edu/hcmuaf/fit/service/ProductService.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_39_PM_[Changes]/ProductService.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/CartView.class" />
+    <option name="AFTER_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/CartView.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_39_PM_[Changes]/CartView.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/vn/edu/hcmuaf/fit/controller/CartView.class" />
+    <option name="AFTER_PATH" value="target/classes/vn/edu/hcmuaf/fit/controller/CartView.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_39_PM_[Changes]/CartView1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" />
+    <option name="AFTER_PATH" value="target/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_39_PM_[Changes]/ProductServerADM.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/vn/edu/hcmuaf/fit/controller/OrderList.class" />
+    <option name="AFTER_PATH" value="target/classes/vn/edu/hcmuaf/fit/controller/OrderList.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_39_PM_[Changes]/OrderList.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" />
+    <option name="AFTER_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_39_PM_[Changes]/ProductServerADM1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductService.class" />
+    <option name="AFTER_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductService.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_39_PM_[Changes]/ProductService1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/WebThueXe.war" />
+    <option name="AFTER_PATH" value="target/WebThueXe.war" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_39_PM_[Changes]/WebThueXe.war" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/ShowAllBlogDetail.class" />
+    <option name="AFTER_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/ShowAllBlogDetail.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_39_PM_[Changes]/ShowAllBlogDetail1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/vn/edu/hcmuaf/fit/controller/Changepass.class" />
+    <option name="AFTER_PATH" value="target/classes/vn/edu/hcmuaf/fit/controller/Changepass.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_39_PM_[Changes]/Changepass.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Changepass.class" />
+    <option name="AFTER_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Changepass.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_39_PM_[Changes]/Changepass1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/OrderList.class" />
+    <option name="AFTER_PATH" value="target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/OrderList.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_39_PM_[Changes]/OrderList1.class" />
+  </binary>
+</changelist>
