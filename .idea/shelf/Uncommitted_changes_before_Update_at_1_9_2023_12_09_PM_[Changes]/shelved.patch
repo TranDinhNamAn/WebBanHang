@@ -1,0 +1,798 @@
+Index: target/WebThueXe/payment.html
+===================================================================
+diff --git a/target/WebThueXe/payment.html b/target/WebThueXe/payment.html
+deleted file mode 100644
+--- a/target/WebThueXe/payment.html	(revision 4cbde04b26cfe9dc589f8cf5c73e8fc93840e1d6)
++++ /dev/null	(revision 4cbde04b26cfe9dc589f8cf5c73e8fc93840e1d6)
+@@ -1,255 +0,0 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-    <title>Thanh toán</title>
+-    <meta charset="utf-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+-
+-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
+-          rel="stylesheet">
+-
+-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+-    <link rel="stylesheet" href="css/animate.css">
+-
+-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+-    <link rel="stylesheet" href="css/magnific-popup.css">
+-
+-    <link rel="stylesheet" href="css/aos.css">
+-
+-    <link rel="stylesheet" href="css/ionicons.min.css">
+-
+-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+-
+-
+-    <link rel="stylesheet" href="css/flaticon.css">
+-    <link rel="stylesheet" href="css/icomoon.css">
+-    <link rel="stylesheet" href="css/style.css">
+-    <link rel="stylesheet" href="css/tt.css">
+-</head>
+-<body>
+-
+-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+-    <div class="container">
+-        <a class="navbar-brand" href="index.jsp">Thue<span>XeMay</span></a>
+-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+-            <span class="oi oi-menu"></span> Menu
+-        </button>
+-
+-        <div class="collapse navbar-collapse" id="ftco-nav">
+-            <ul class="navbar-nav ml-auto">
+-                <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
+-                <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
+-                <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
+-                <li class="nav-item"><a href="car.jsp" class="nav-link">Xe máy</a></li>
+-                <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
+-                <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
+-                <li class="nav-item"><a href="login.jsp" class="nav-link">Đăng nhập</a></li>
+-                <li class="nav-item active"><a href="cart.jsp" class="nav-link"><span
+-                        class="icon icon-cart-plus"></span></a></li>
+-            </ul>
+-        </div>
+-    </div>
+-</nav>
+-<!-- END nav -->
+-<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg1.jpg');"
+-         data-stellar-background-ratio="0.5">
+-    <div class="overlay"></div>
+-    <div class="container">
+-        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+-            <div class="col-md-9 ftco-animate pb-5">
+-                <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ <i
+-                        class="ion-ios-arrow-forward"></i></a></span>
+-                    <span><a href="payment.html">Thanh toán <i class="ion-ios-arrow-forward"></i></a></span></p>
+-                <h1 class="mb-3 bread">Thanh toán</h1>
+-            </div>
+-        </div>
+-    </div>
+-</section>
+-
+-<main role="main">
+-    <div class="container mt-4">
+-        <form class="needs-validation" name="frmthanhtoan" method="post"
+-              action="#">
+-            <input type="hidden" name="kh_tendangnhap" value="dnpcuong">
+-            <div class="py-5 text-center">
+-                <i class="fa fa-credit-card fa-4x" aria-hidden="true"></i>
+-                <h2>Thanh toán</h2>
+-                <p class="lead">Vui lòng kiểm tra thông tin Khách hàng, thông tin Giỏ hàng trước khi Đặt hàng.</p>
+-            </div>
+-
+-            <div class="row">
+-                <div class="col-md-4 order-md-2 mb-4">
+-                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+-                        <span class="text-muted"><a href="cart.jsp">Giỏ hàng</a></span>
+-                        <span class="badge badge-secondary badge-pill">2</span>
+-                    </h4>
+-                    <ul class="list-group mb-3">
+-                        <input type="hidden" name="sanphamgiohang[1][sp_ma]" value="2">
+-                        <input type="hidden" name="sanphamgiohang[1][gia]" value="800.000">
+-                        <input type="hidden" name="sanphamgiohang[1][soluong]" value="2">
+-                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+-                            <div>
+-                                <h6 class="my-0">Vision</h6>
+-                                <small class="text-muted">120.000 x 2</small>
+-                            </div>
+-                            <span class="text-muted">240.000</span>
+-                        </li>
+-                        <input type="hidden" name="sanphamgiohang[2][sp_ma]" value="4">
+-                        <input type="hidden" name="sanphamgiohang[2][gia]" value="350.000">
+-                        <input type="hidden" name="sanphamgiohang[2][soluong]" value="1">
+-                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+-                            <div>
+-                                <h6 class="my-0">Raider 2016</h6>
+-                                <small class="text-muted">125.000 x 1</small>
+-                            </div>
+-                            <span class="text-muted">125.000</span>
+-                        </li>
+-                    </ul>
+-                    <div class="input-group">
+-                        <input type="text" class="form-control" placeholder="Mã khuyến mãi">
+-                        <div class="input-group-append">
+-                            <button type="submit" class="btn btn-secondary">Xác nhận</button>
+-                        </div>
+-                    </div>
+-                </div>
+-                <div class="col-md-8 order-md-1">
+-                    <h4 class="mb-3">Thông tin khách hàng</h4>
+-                    <div class="user-login"><a href="signup.jsp">Đăng ký tài khoản mua hàng</a> |
+-                        <a href="login.jsp">Đăng nhập</a></div>
+-                    <label>Mua hàng không cần tài khoản</label>
+-                    <div class="form-group"><input class="form-control" placeholder="Họ & Tên" type="text"
+-                                                   ng-model="DeliveryName"/></div>
+-                    <div class="form-group"><input class="form-control" placeholder="Số điện thoại" type="text"
+-                                                   ng-model="DeliveryPhone"/></div>
+-                    <div class="form-group"><input class="form-control" placeholder="Email" type="text"
+-                                                   ng-model="DeliveryEmail"/></div>
+-                    <div class="form-group"><input class="form-control" placeholder="Địa chỉ nhận xe" type="text"
+-                                                   ng-model="DeliveryAddress"/></div>
+-                    <div class="d-flex">
+-                        <div class="form-group mr-2">
+-                            <label for="" class="label">Ngày giao xe</label>
+-                            <input type="text" class="form-control" id="book_pick_date" placeholder="Date">
+-                        </div>
+-                        <div class="form-group ml-2">
+-                            <label for="" class="label">Ngày trả xe</label>
+-                            <input type="text" class="form-control" id="book_off_date" placeholder="Date">
+-                        </div>
+-                    </div>
+-                </div>
+-            </div>
+-            <textarea class="form-control" rows="4" placeholder="Ghi chú đơn hàng"
+-                      ng-model="$parent.Description"></textarea>
+-
+-            <h4 class="mb-3">Hình thức thanh toán</h4>
+-            <div class="d-block my-3">
+-                <div class="custom-control custom-radio">
+-                    <input id="httt-1" name="httt_ma" type="radio" class="custom-control-input" required=""
+-                           value="1">
+-                    <label class="custom-control-label" for="httt-1">Tiền mặt</label>
+-                </div>
+-                <div class="custom-control custom-radio">
+-                    <input id="httt-2" name="httt_ma" type="radio" class="custom-control-input" required=""
+-                           value="2">
+-                    <label class="custom-control-label" for="httt-2">Chuyển khoản</label>
+-                </div>
+-            </div>
+-            <hr class="mb-4">
+-            <button class="btn btn-primary btn-lg btn-block" type="submit" name="btnDatHang">Đặt
+-                hàng
+-            </button>
+-        </form>
+-    </div>
+-    <!-- End block content -->
+-</main>
+-
+-<footer class="ftco-footer ftco-bg-dark ftco-section">
+-    <div class="container">
+-        <div class="row mb-5">
+-            <div class="col-md">
+-                <div class="ftco-footer-widget mb-4">
+-                    <h2 class="ftco-heading-2"><a href="#" class="logo">Thue<span>XeMay</span></a></h2>
+-                    <p>ThueXeMay với dàn xe chất lượng cao, đội ngũ nhân viên chuyên nghiệp, nhiệt tình sẽ mang đến cho
+-                        bạn những trải nghiệm thú vị...</p>
+-                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+-                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+-                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+-                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+-                    </ul>
+-                </div>
+-            </div>
+-            <div class="col-md">
+-                <div class="ftco-footer-widget mb-4 ml-md-5">
+-                    <h2 class="ftco-heading-2">Thông tin</h2>
+-                    <ul class="list-unstyled">
+-                        <li><a href="#" class="py-2 d-block">Giới thiệu</a></li>
+-                        <li><a href="#" class="py-2 d-block">Dịch vụ</a></li>
+-                        <li><a href="#" class="py-2 d-block">Chính sách bảo mật</a></li>
+-                        <li><a href="#" class="py-2 d-block">Cẩm nang du lịch</a></li>
+-                        <li><a href="#" class="py-2 d-block">Hợp tác</a></li>
+-                    </ul>
+-                </div>
+-            </div>
+-            <div class="col-md">
+-                <div class="ftco-footer-widget mb-4">
+-                    <h2 class="ftco-heading-2">Hỗ trợ khách hàng</h2>
+-                    <ul class="list-unstyled">
+-                        <li><a href="#" class="py-2 d-block">Câu hỏi thường gặp</a></li>
+-                        <li><a href="#" class="py-2 d-block">Phương thức thanh toán</a></li>
+-                        <li><a href="#" class="py-2 d-block">Thủ tục thuê xe</a></li>
+-                        <li><a href="#" class="py-2 d-block">Liên hệ</a></li>
+-                    </ul>
+-                </div>
+-            </div>
+-            <div class="col-md">
+-                <div class="ftco-footer-widget mb-4">
+-                    <h2 class="ftco-heading-2">Thông tin liên hệ</h2>
+-                    <div class="block-23 mb-3">
+-                        <ul>
+-                            <li><span class="icon icon-map-marker"></span><span class="text">Trường đại học Nông Lâm, khu phố 6, phường Linh Trung, TP.Thủ Đức, TP.Hồ Chí Minh</span>
+-                            </li>
+-                            <li><a href="#"><span class="icon icon-phone"></span><span
+-                                    class="text">+84 326 500 729</span></a></li>
+-                            <li><a href="#"><span class="icon icon-envelope"></span><span
+-                                    class="text">ltweb@gmail.com</span></a></li>
+-                        </ul>
+-                    </div>
+-                </div>
+-            </div>
+-        </div>
+-    </div>
+-</footer>
+-
+-
+-<!-- loader -->
+-<div id="ftco-loader" class="show fullscreen">
+-    <svg class="circular" width="48px" height="48px">
+-        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+-        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+-                stroke="#F96D00"/>
+-    </svg>
+-</div>
+-
+-
+-<script src="js/jquery.min.js"></script>
+-<script src="js/jquery-migrate-3.0.1.min.js"></script>
+-<script src="js/popper.min.js"></script>
+-<script src="js/bootstrap.min.js"></script>
+-<script src="js/jquery.easing.1.3.js"></script>
+-<script src="js/jquery.waypoints.min.js"></script>
+-<script src="js/jquery.stellar.min.js"></script>
+-<script src="js/owl.carousel.min.js"></script>
+-<script src="js/jquery.magnific-popup.min.js"></script>
+-<script src="js/aos.js"></script>
+-<script src="js/jquery.animateNumber.min.js"></script>
+-<script src="js/bootstrap-datepicker.js"></script>
+-<script src="js/jquery.timepicker.min.js"></script>
+-<script src="js/scrollax.min.js"></script>
+-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+-<script src="js/google-map.js"></script>
+-<script src="js/main.js"></script>
+-
+-</body>
+-</html>
+\ No newline at end of file
+Index: src/main/webapp/payment.html
+===================================================================
+diff --git a/src/main/webapp/payment.html b/src/main/webapp/payment.html
+deleted file mode 100644
+--- a/src/main/webapp/payment.html	(revision 4cbde04b26cfe9dc589f8cf5c73e8fc93840e1d6)
++++ /dev/null	(revision 4cbde04b26cfe9dc589f8cf5c73e8fc93840e1d6)
+@@ -1,255 +0,0 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-    <title>Thanh toán</title>
+-    <meta charset="utf-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+-
+-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
+-          rel="stylesheet">
+-
+-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+-    <link rel="stylesheet" href="css/animate.css">
+-
+-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+-    <link rel="stylesheet" href="css/magnific-popup.css">
+-
+-    <link rel="stylesheet" href="css/aos.css">
+-
+-    <link rel="stylesheet" href="css/ionicons.min.css">
+-
+-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+-
+-
+-    <link rel="stylesheet" href="css/flaticon.css">
+-    <link rel="stylesheet" href="css/icomoon.css">
+-    <link rel="stylesheet" href="css/style.css">
+-    <link rel="stylesheet" href="css/tt.css">
+-</head>
+-<body>
+-
+-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+-    <div class="container">
+-        <a class="navbar-brand" href="index.jsp">Thue<span>XeMay</span></a>
+-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+-            <span class="oi oi-menu"></span> Menu
+-        </button>
+-
+-        <div class="collapse navbar-collapse" id="ftco-nav">
+-            <ul class="navbar-nav ml-auto">
+-                <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
+-                <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
+-                <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
+-                <li class="nav-item"><a href="car.jsp" class="nav-link">Xe máy</a></li>
+-                <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
+-                <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
+-                <li class="nav-item"><a href="login.jsp" class="nav-link">Đăng nhập</a></li>
+-                <li class="nav-item active"><a href="cart.jsp" class="nav-link"><span
+-                        class="icon icon-cart-plus"></span></a></li>
+-            </ul>
+-        </div>
+-    </div>
+-</nav>
+-<!-- END nav -->
+-<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg1.jpg');"
+-         data-stellar-background-ratio="0.5">
+-    <div class="overlay"></div>
+-    <div class="container">
+-        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+-            <div class="col-md-9 ftco-animate pb-5">
+-                <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ <i
+-                        class="ion-ios-arrow-forward"></i></a></span>
+-                    <span><a href="payment.html">Thanh toán <i class="ion-ios-arrow-forward"></i></a></span></p>
+-                <h1 class="mb-3 bread">Thanh toán</h1>
+-            </div>
+-        </div>
+-    </div>
+-</section>
+-
+-<main role="main">
+-    <div class="container mt-4">
+-        <form class="needs-validation" name="frmthanhtoan" method="post"
+-              action="#">
+-            <input type="hidden" name="kh_tendangnhap" value="dnpcuong">
+-            <div class="py-5 text-center">
+-                <i class="fa fa-credit-card fa-4x" aria-hidden="true"></i>
+-                <h2>Thanh toán</h2>
+-                <p class="lead">Vui lòng kiểm tra thông tin Khách hàng, thông tin Giỏ hàng trước khi Đặt hàng.</p>
+-            </div>
+-
+-            <div class="row">
+-                <div class="col-md-4 order-md-2 mb-4">
+-                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+-                        <span class="text-muted"><a href="cart.jsp">Giỏ hàng</a></span>
+-                        <span class="badge badge-secondary badge-pill">2</span>
+-                    </h4>
+-                    <ul class="list-group mb-3">
+-                        <input type="hidden" name="sanphamgiohang[1][sp_ma]" value="2">
+-                        <input type="hidden" name="sanphamgiohang[1][gia]" value="800.000">
+-                        <input type="hidden" name="sanphamgiohang[1][soluong]" value="2">
+-                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+-                            <div>
+-                                <h6 class="my-0">Vision</h6>
+-                                <small class="text-muted">120.000 x 2</small>
+-                            </div>
+-                            <span class="text-muted">240.000</span>
+-                        </li>
+-                        <input type="hidden" name="sanphamgiohang[2][sp_ma]" value="4">
+-                        <input type="hidden" name="sanphamgiohang[2][gia]" value="350.000">
+-                        <input type="hidden" name="sanphamgiohang[2][soluong]" value="1">
+-                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+-                            <div>
+-                                <h6 class="my-0">Raider 2016</h6>
+-                                <small class="text-muted">125.000 x 1</small>
+-                            </div>
+-                            <span class="text-muted">125.000</span>
+-                        </li>
+-                    </ul>
+-                    <div class="input-group">
+-                        <input type="text" class="form-control" placeholder="Mã khuyến mãi">
+-                        <div class="input-group-append">
+-                            <button type="submit" class="btn btn-secondary">Xác nhận</button>
+-                        </div>
+-                    </div>
+-                </div>
+-                <div class="col-md-8 order-md-1">
+-                    <h4 class="mb-3">Thông tin khách hàng</h4>
+-                    <div class="user-login"><a href="signup.jsp">Đăng ký tài khoản mua hàng</a> |
+-                        <a href="login.jsp">Đăng nhập</a></div>
+-                    <label>Mua hàng không cần tài khoản</label>
+-                    <div class="form-group"><input class="form-control" placeholder="Họ & Tên" type="text"
+-                                                   ng-model="DeliveryName"/></div>
+-                    <div class="form-group"><input class="form-control" placeholder="Số điện thoại" type="text"
+-                                                   ng-model="DeliveryPhone"/></div>
+-                    <div class="form-group"><input class="form-control" placeholder="Email" type="text"
+-                                                   ng-model="DeliveryEmail"/></div>
+-                    <div class="form-group"><input class="form-control" placeholder="Địa chỉ nhận xe" type="text"
+-                                                   ng-model="DeliveryAddress"/></div>
+-                    <div class="d-flex">
+-                        <div class="form-group mr-2">
+-                            <label for="" class="label">Ngày giao xe</label>
+-                            <input type="text" class="form-control" id="book_pick_date" placeholder="Date">
+-                        </div>
+-                        <div class="form-group ml-2">
+-                            <label for="" class="label">Ngày trả xe</label>
+-                            <input type="text" class="form-control" id="book_off_date" placeholder="Date">
+-                        </div>
+-                    </div>
+-                </div>
+-            </div>
+-            <textarea class="form-control" rows="4" placeholder="Ghi chú đơn hàng"
+-                      ng-model="$parent.Description"></textarea>
+-
+-            <h4 class="mb-3">Hình thức thanh toán</h4>
+-            <div class="d-block my-3">
+-                <div class="custom-control custom-radio">
+-                    <input id="httt-1" name="httt_ma" type="radio" class="custom-control-input" required=""
+-                           value="1">
+-                    <label class="custom-control-label" for="httt-1">Tiền mặt</label>
+-                </div>
+-                <div class="custom-control custom-radio">
+-                    <input id="httt-2" name="httt_ma" type="radio" class="custom-control-input" required=""
+-                           value="2">
+-                    <label class="custom-control-label" for="httt-2">Chuyển khoản</label>
+-                </div>
+-            </div>
+-            <hr class="mb-4">
+-            <button class="btn btn-primary btn-lg btn-block" type="submit" name="btnDatHang">Đặt
+-                hàng
+-            </button>
+-        </form>
+-    </div>
+-    <!-- End block content -->
+-</main>
+-
+-<footer class="ftco-footer ftco-bg-dark ftco-section">
+-    <div class="container">
+-        <div class="row mb-5">
+-            <div class="col-md">
+-                <div class="ftco-footer-widget mb-4">
+-                    <h2 class="ftco-heading-2"><a href="#" class="logo">Thue<span>XeMay</span></a></h2>
+-                    <p>ThueXeMay với dàn xe chất lượng cao, đội ngũ nhân viên chuyên nghiệp, nhiệt tình sẽ mang đến cho
+-                        bạn những trải nghiệm thú vị...</p>
+-                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+-                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+-                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+-                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+-                    </ul>
+-                </div>
+-            </div>
+-            <div class="col-md">
+-                <div class="ftco-footer-widget mb-4 ml-md-5">
+-                    <h2 class="ftco-heading-2">Thông tin</h2>
+-                    <ul class="list-unstyled">
+-                        <li><a href="#" class="py-2 d-block">Giới thiệu</a></li>
+-                        <li><a href="#" class="py-2 d-block">Dịch vụ</a></li>
+-                        <li><a href="#" class="py-2 d-block">Chính sách bảo mật</a></li>
+-                        <li><a href="#" class="py-2 d-block">Cẩm nang du lịch</a></li>
+-                        <li><a href="#" class="py-2 d-block">Hợp tác</a></li>
+-                    </ul>
+-                </div>
+-            </div>
+-            <div class="col-md">
+-                <div class="ftco-footer-widget mb-4">
+-                    <h2 class="ftco-heading-2">Hỗ trợ khách hàng</h2>
+-                    <ul class="list-unstyled">
+-                        <li><a href="#" class="py-2 d-block">Câu hỏi thường gặp</a></li>
+-                        <li><a href="#" class="py-2 d-block">Phương thức thanh toán</a></li>
+-                        <li><a href="#" class="py-2 d-block">Thủ tục thuê xe</a></li>
+-                        <li><a href="#" class="py-2 d-block">Liên hệ</a></li>
+-                    </ul>
+-                </div>
+-            </div>
+-            <div class="col-md">
+-                <div class="ftco-footer-widget mb-4">
+-                    <h2 class="ftco-heading-2">Thông tin liên hệ</h2>
+-                    <div class="block-23 mb-3">
+-                        <ul>
+-                            <li><span class="icon icon-map-marker"></span><span class="text">Trường đại học Nông Lâm, khu phố 6, phường Linh Trung, TP.Thủ Đức, TP.Hồ Chí Minh</span>
+-                            </li>
+-                            <li><a href="#"><span class="icon icon-phone"></span><span
+-                                    class="text">+84 326 500 729</span></a></li>
+-                            <li><a href="#"><span class="icon icon-envelope"></span><span
+-                                    class="text">ltweb@gmail.com</span></a></li>
+-                        </ul>
+-                    </div>
+-                </div>
+-            </div>
+-        </div>
+-    </div>
+-</footer>
+-
+-
+-<!-- loader -->
+-<div id="ftco-loader" class="show fullscreen">
+-    <svg class="circular" width="48px" height="48px">
+-        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+-        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+-                stroke="#F96D00"/>
+-    </svg>
+-</div>
+-
+-
+-<script src="js/jquery.min.js"></script>
+-<script src="js/jquery-migrate-3.0.1.min.js"></script>
+-<script src="js/popper.min.js"></script>
+-<script src="js/bootstrap.min.js"></script>
+-<script src="js/jquery.easing.1.3.js"></script>
+-<script src="js/jquery.waypoints.min.js"></script>
+-<script src="js/jquery.stellar.min.js"></script>
+-<script src="js/owl.carousel.min.js"></script>
+-<script src="js/jquery.magnific-popup.min.js"></script>
+-<script src="js/aos.js"></script>
+-<script src="js/jquery.animateNumber.min.js"></script>
+-<script src="js/bootstrap-datepicker.js"></script>
+-<script src="js/jquery.timepicker.min.js"></script>
+-<script src="js/scrollax.min.js"></script>
+-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+-<script src="js/google-map.js"></script>
+-<script src="js/main.js"></script>
+-
+-</body>
+-</html>
+\ No newline at end of file
+Index: target/WebThueXe/listUser.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page import=\"java.util.List\" %>\r\n<%@ page import=\"vn.edu.hcmuaf.fit.model.Account\" %>\r\n<%@ page contentType=\"text/html; charset =UTF-8\" language=\"java\" pageEncoding=\"UTF-8\" %>\r\n\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n    <meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">\r\n\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n    <title>Danh sách khách hàng</title>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n    <link rel=\"stylesheet\" href=\"css1/all.min.css\">\r\n    <link rel=\"stylesheet\" href=\"https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css\">\r\n    <link href=\"https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700\" rel=\"stylesheet\">\r\n    <link rel=\"stylesheet\" href=\"css1/adminlte.min.css\">\r\n</head>\r\n<body class=\"hold-transition sidebar-mini\">\r\n<div class=\"wrapper\">\r\n    <aside class=\"main-sidebar sidebar-dark-primary elevation-4\">\r\n        <div class=\"sidebar\">\r\n            <nav class=\"mt-2\">\r\n                <ul class=\"nav nav-pills nav-sidebar flex-column\" data-widget=\"treeview\" role=\"menu\"\r\n                    data-accordion=\"false\">\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-copy\"></i>\r\n                            <p>\r\n                                Quản lý bài viết\r\n                                <i class=\"fas fa-angle-left right\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"./fromdangbai.html\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Đăng bài viết</p>\r\n                                </a>\r\n                            </li>\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"./fromdsbaiviet.html\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Danh sách bài viết</p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-motorcycle\"></i>\r\n                            <p>\r\n                                Quản lý sản phẩm\r\n                                <i class=\"right fas fa-angle-left\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"addProduct\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Thêm sản phẩm</p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-chart-pie\"></i>\r\n                            <p>\r\n                                Danh mục sản phẩm\r\n                                <i class=\"right fas fa-angle-left\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"ShowAllProduct\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Danh sách sản phẩm</p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-user\"></i>\r\n                            <p>\r\n                                Quản lý user\r\n                                <i class=\"fas fa-angle-left right\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"ListUser\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Danh sách khách hàng </p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-arrow-right\"></i>\r\n                            <p>\r\n                                Đăng xuất\r\n                            </p>\r\n                        </a>\r\n                    </li>\r\n                </ul>\r\n            </nav>\r\n        </div>\r\n    </aside>\r\n    <div class=\"content-wrapper\">\r\n        <section class=\"content-header\">\r\n            <div class=\"container-fluid\">\r\n                <div class=\"row mb-2\">\r\n                    <div class=\"col-sm-6\">\r\n                        <h1>Danh sách user</h1>\r\n                    </div>\r\n                    <div class=\"col-sm-6\">\r\n                        <ol class=\"breadcrumb float-sm-right\">\r\n                            <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>\r\n                            <li class=\"breadcrumb-item active\">Danh sách user</li>\r\n                        </ol>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </section>\r\n        <div class=\"row\">\r\n            <div class=\"col-12\">\r\n                <div class=\"card\">\r\n                    <div class=\"card-header\">\r\n                        <h3 class=\"card-title\">Danh sách user</h3>\r\n\r\n                        <div class=\"card-tools\">\r\n                            <div class=\"input-group input-group-sm\" style=\"width: 150px;\">\r\n                                <input type=\"text\" name=\"table_search\" class=\"form-control float-right\" placeholder=\"Search\">\r\n\r\n                                <div class=\"input-group-append\">\r\n                                    <button type=\"submit\" class=\"btn btn-default\"><i class=\"fas fa-search\"></i></button>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <!-- /.card-header -->\r\n                    <div class=\"card-body\">\r\n                        <table id=\"example2\" class=\"table table-bordered table-hover\">\r\n                            <thead>\r\n                            <tr>\r\n                                <th>ID</th>\r\n                                <th>Tài khoản</th>\r\n                                <th>Mật khẩu</th>\r\n                                <th>Phân loại</th>\r\n                            </tr>\r\n                            </thead>\r\n                            <tbody>\r\n                            <% List<Account> list = (List<Account>) request.getAttribute(\"listAcount\");%>\r\n                            <%\r\n        for (Account a:list\r\n             ) {%>\r\n                            <tr>\r\n                                <td><%=a.getId()%>\r\n                                </td>\r\n                                <td><%=a.getUsername()%>\r\n                                </td>\r\n                                <td><%=a.getPassword()%></td>\r\n                                <%if(a.getIsAdmin() == 1){%>\r\n                                <td><span class=\"badge bg-primary\">Admin</span></td>\r\n                                <%}else{%>\r\n                                <td><span class=\"badge bg-primary\">User</span></td>\r\n                                <%}%>\r\n                                <td> <a href=\"Delete?id=<%=a.getId()%>\"><button class=\"btn btn-danger\">Xóa user</button></a>\r\n                                   </td>\r\n                            </tr>\r\n\r\n<%}%>\r\n                            </tfoot>\r\n                        </table>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<footer class=\"main-footer\">\r\n</footer>\r\n<script src=\"js1/jquery.min.js\"></script>\r\n<script src=\"js1/bootstrap.bundle.min.js\"></script>\r\n<script src=\"js1/jquery.dataTables.js\"></script>\r\n<script src=\"js1/dataTables.bootstrap4.min.js\"></script>\r\n\r\n<script src=\"js1/adminlte.min.js\"></script>\r\n<script src=\"js1/demo.js\"></script>\r\n<script>\r\n    $(function () {\r\n        $('#example2').DataTable({\r\n            \"paging\": true,\r\n            \"lengthChange\": false,\r\n            \"searching\": false,\r\n            \"ordering\": true,\r\n            \"info\": true,\r\n            \"autoWidth\": false,\r\n            \"responsive\": true,\r\n        });\r\n    });\r\n</script>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/WebThueXe/listUser.jsp b/target/WebThueXe/listUser.jsp
+--- a/target/WebThueXe/listUser.jsp	(revision 4cbde04b26cfe9dc589f8cf5c73e8fc93840e1d6)
++++ b/target/WebThueXe/listUser.jsp	(date 1673189777729)
+@@ -73,7 +73,7 @@
+                         </a>
+                         <ul class="nav nav-treeview">
+                             <li class="nav-item">
+-                                <a href="ShowAllProduct" class="nav-link">
++                                <a href="ShowAllProduct">
+                                     <i class="far fa-circle nav-icon"></i>
+                                     <p>Danh sách sản phẩm</p>
+                                 </a>
+@@ -96,6 +96,13 @@
+                                 </a>
+                             </li>
+                         </ul>
++                    </li>
++                    <li class="nav-item has-treeview">
++                        <a href="listorder" class="nav-link">
++                            <p>
++                                Hóa đơn
++                            </p>
++                        </a>
+                     </li>
+                     <li class="nav-item has-treeview">
+                         <a href="#" class="nav-link">
+Index: target/WebThueXe/listOrder.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page import=\"java.util.List\" %>\r\n<%@ page import=\"vn.edu.hcmuaf.fit.model.Account\" %>\r\n<%@ page import=\"vn.edu.hcmuaf.fit.model.Order\" %>\r\n<%@ page contentType=\"text/html; charset =UTF-8\" language=\"java\" pageEncoding=\"UTF-8\" %>\r\n\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n    <meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">\r\n\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n    <title>Danh sách khách hàng</title>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n    <link rel=\"stylesheet\" href=\"css1/all.min.css\">\r\n    <link rel=\"stylesheet\" href=\"https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css\">\r\n    <link href=\"https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700\" rel=\"stylesheet\">\r\n    <link rel=\"stylesheet\" href=\"css1/adminlte.min.css\">\r\n</head>\r\n<body class=\"hold-transition sidebar-mini\">\r\n<div class=\"wrapper\">\r\n    <aside class=\"main-sidebar sidebar-dark-primary elevation-4\">\r\n        <div class=\"sidebar\">\r\n            <nav class=\"mt-2\">\r\n                <ul class=\"nav nav-pills nav-sidebar flex-column\" data-widget=\"treeview\" role=\"menu\"\r\n                    data-accordion=\"false\">\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-copy\"></i>\r\n                            <p>\r\n                                Quản lý bài viết\r\n                                <i class=\"fas fa-angle-left right\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"./fromdangbai.html\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Đăng bài viết</p>\r\n                                </a>\r\n                            </li>\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"./fromdsbaiviet.html\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Danh sách bài viết</p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-motorcycle\"></i>\r\n                            <p>\r\n                                Quản lý sản phẩm\r\n                                <i class=\"right fas fa-angle-left\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"addProduct\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Thêm sản phẩm</p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-chart-pie\"></i>\r\n                            <p>\r\n                                Danh mục sản phẩm\r\n                                <i class=\"right fas fa-angle-left\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"ShowAllProduct\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Danh sách sản phẩm</p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-user\"></i>\r\n                            <p>\r\n                                Quản lý user\r\n                                <i class=\"fas fa-angle-left right\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"ListUser\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Danh sách khách hàng </p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-arrow-right\"></i>\r\n                            <p>\r\n                                Đăng xuất\r\n                            </p>\r\n                        </a>\r\n                    </li>\r\n                </ul>\r\n            </nav>\r\n        </div>\r\n    </aside>\r\n    <div class=\"content-wrapper\">\r\n        <section class=\"content-header\">\r\n            <div class=\"container-fluid\">\r\n                <div class=\"row mb-2\">\r\n                    <div class=\"col-sm-6\">\r\n                        <h1>Danh sách user</h1>\r\n                    </div>\r\n                    <div class=\"col-sm-6\">\r\n                        <ol class=\"breadcrumb float-sm-right\">\r\n                            <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>\r\n                            <li class=\"breadcrumb-item active\">Danh sách user</li>\r\n                        </ol>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </section>\r\n        <div class=\"row\">\r\n            <div class=\"col-12\">\r\n                <div class=\"card\">\r\n                    <div class=\"card-header\">\r\n                        <h3 class=\"card-title\">Danh sách hóa đơn</h3>\r\n                    </div>\r\n                    <!-- /.card-header -->\r\n                    <div class=\"card-body\">\r\n                        <table id=\"example2\" class=\"table table-bordered table-hover\">\r\n                            <thead>\r\n                            <tr>\r\n                                <th>ID</th>\r\n                                <th>Ngày lập hóa đơn</th>\r\n                                <th>Người thuê</th>\r\n                                <th>Tổng tiền</th>\r\n                                <th>Nút lệnh</th>\r\n                            </tr>\r\n                            </thead>\r\n                            <tbody>\r\n                                <% List<Order> list = (List<Order>) request.getAttribute(\"list\");%>\r\n                                <%\r\n        for (Order a:list\r\n             ) {%>\r\n                            <tr>\r\n                                <td><%=a.getId()%>\r\n                                </td>\r\n                                <td><%=a.getDate()%>\r\n                                </td>\r\n                                <td><%=a.getUser()%>\r\n                                </td>\r\n                                <td><%=a.getTotalPrice()%>\r\n                                </td>\r\n                                <td> <a href=\"OrderDetailADM?id=<%=a.getId()%>\"><button class=\"btn btn-danger\">Xem chi tiết</button></a>\r\n                                </td>\r\n                            </tr>\r\n                                <%}%>\r\n                            </tfoot>\r\n                        </table>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<footer class=\"main-footer\">\r\n</footer>\r\n<script src=\"js1/jquery.min.js\"></script>\r\n<script src=\"js1/bootstrap.bundle.min.js\"></script>\r\n<script src=\"js1/jquery.dataTables.js\"></script>\r\n<script src=\"js1/dataTables.bootstrap4.min.js\"></script>\r\n\r\n<script src=\"js1/adminlte.min.js\"></script>\r\n<script src=\"js1/demo.js\"></script>\r\n<script>\r\n    $(function () {\r\n        $('#example2').DataTable({\r\n            \"paging\": true,\r\n            \"lengthChange\": false,\r\n            \"searching\": false,\r\n            \"ordering\": true,\r\n            \"info\": true,\r\n            \"autoWidth\": false,\r\n            \"responsive\": true,\r\n        });\r\n    });\r\n</script>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/WebThueXe/listOrder.jsp b/target/WebThueXe/listOrder.jsp
+--- a/target/WebThueXe/listOrder.jsp	(revision 4cbde04b26cfe9dc589f8cf5c73e8fc93840e1d6)
++++ b/target/WebThueXe/listOrder.jsp	(date 1673189777698)
+@@ -74,7 +74,7 @@
+                         </a>
+                         <ul class="nav nav-treeview">
+                             <li class="nav-item">
+-                                <a href="ShowAllProduct" class="nav-link">
++                                <a href="ShowAllProduct">
+                                     <i class="far fa-circle nav-icon"></i>
+                                     <p>Danh sách sản phẩm</p>
+                                 </a>
+@@ -97,6 +97,13 @@
+                                 </a>
+                             </li>
+                         </ul>
++                    </li>
++                    <li class="nav-item has-treeview">
++                        <a href="listorder" class="nav-link">
++                            <p>
++                                Hóa đơn
++                            </p>
++                        </a>
+                     </li>
+                     <li class="nav-item has-treeview">
+                         <a href="#" class="nav-link">
+Index: target/WebThueXe/list_product.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page import=\"vn.edu.hcmuaf.fit.model.Product\" %>\r\n<%@ page import=\"vn.edu.hcmuaf.fit.service.ProductServerADM\" %>\r\n<%@ page import=\"java.util.List\" %>\r\n<%@ page import=\"java.util.ArrayList\" %>\r\n<%@ page contentType=\"text/html; charset =UTF-8\" language=\"java\" pageEncoding=\"UTF-8\" %>\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n    <meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n    <title>Danh sách sản phẩm</title>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n    <link rel=\"stylesheet\" href=\"css1/all.min.css\">\r\n    <link rel=\"stylesheet\" href=\"https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css\">\r\n    <link href=\"https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700\" rel=\"stylesheet\">\r\n    <link rel=\"stylesheet\" href=\"css1/adminlte.min.css\">\r\n</head>\r\n<body class=\"hold-transition sidebar-mini\">\r\n<div class=\"wrapper\">\r\n    <aside class=\"main-sidebar sidebar-dark-primary elevation-4\">\r\n        <div class=\"sidebar\">\r\n            <nav class=\"mt-2\">\r\n                <ul class=\"nav nav-pills nav-sidebar flex-column\" data-widget=\"treeview\" role=\"menu\"\r\n                    data-accordion=\"false\">\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-copy\"></i>\r\n                            <p>\r\n                                Quản lý bài viết\r\n                                <i class=\"fas fa-angle-left right\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"./fromdangbai.html\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Đăng bài viết</p>\r\n                                </a>\r\n                            </li>\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"./fromdsbaiviet.html\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Danh sách bài viết</p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-motorcycle\"></i>\r\n                            <p>\r\n                                Quản lý sản phẩm\r\n                                <i class=\"right fas fa-angle-left\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"addProduct\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Thêm sản phẩm</p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-chart-pie\"></i>\r\n                            <p>\r\n                                Danh mục sản phẩm\r\n                                <i class=\"right fas fa-angle-left\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"ShowAllProduct\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Danh sách sản phẩm</p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-user\"></i>\r\n                            <p>\r\n                                Quản lý user\r\n                                <i class=\"fas fa-angle-left right\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"ListUser\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Danh sách khách hàng </p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <i class=\"nav-icon fas fa-jedi-order\"></i>\r\n                        <a href=\"listorder\" class=\"nav-link\">\r\n                            <p>\r\n                               Hóa đơn\r\n                            </p>\r\n                        </a>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-arrow-right\"></i>\r\n                            <p>\r\n                                Đăng xuất\r\n                            </p>\r\n                        </a>\r\n                    </li>\r\n                </ul>\r\n            </nav>\r\n        </div>\r\n    </aside>\r\n    <div class=\"content-wrapper\">\r\n        <section class=\"content-header\">\r\n            <div class=\"container-fluid\">\r\n                <div class=\"row mb-2\">\r\n                    <div class=\"col-sm-6\">\r\n                        <h1>Danh sách sản phẩm</h1>\r\n                    </div>\r\n                    <div class=\"col-sm-6\">\r\n                        <ol class=\"breadcrumb float-sm-right\">\r\n                            <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>\r\n                            <li class=\"breadcrumb-item active\">Danh sách sản phẩm</li>\r\n                        </ol>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </section>\r\n        <div class=\"row\">\r\n            <div class=\"col-12\">\r\n                <div class=\"card\">\r\n\r\n                    <div class=\"card-body\">\r\n                        <form action=\"search\" >\r\n                            <input type=\"text\" name=\"search\" placeholder=\"Nhập tên sản phẩm\">\r\n                            <input type=\"submit\" value=\"Tìm kiếm\">\r\n                        </form>\r\n                        <table id=\"example2\" class=\"table table-bordered table-hover\">\r\n                            <thead>\r\n                            <tr>\r\n                                <th>ID</th>\r\n                                <th>Tên sản phẩm</th>\r\n                                <th>Hình ảnh</th>\r\n                                <th>Giá thuê</th>\r\n                                <th>Nút lệnh</th>\r\n                            </tr>\r\n                            </thead>\r\n                            <tbody>\r\n\r\n                                <%\r\n                                List<Product> list = (List<Product>) request.getAttribute(\"list3\");\r\n                                %>\r\n\r\n                                    <% for\r\n                                 (Product p:list ) { %>\r\n                            <tr>\r\n                                <td><%=p.getId()%>\r\n                                </td>\r\n                                <td><%=p.getName()%>\r\n                                </td>\r\n                                <td><img src=\"<%=p.getImg()%>\" style=\"width: 50px\"></td>\r\n                                <td ><%=p.getPrice()%>/Ngày</td>\r\n                                <td>\r\n                                    <a href=\"delete?id=<%=p.getId()%>\">\r\n                                        <button class=\"btn btn-danger\">Xóa sản phẩm</button>\r\n                                    </a>\r\n                                    <a href=\"UpdateProduct?id=<%=p.getId()%>\">\r\n                                        <button class=\"btn btn-dark\">Xem chi tiết</button>\r\n                                    </a>\r\n                                </td>\r\n                            </tr>\r\n                                <%}%>\r\n\r\n                            </tfoot>\r\n                        </table>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<footer class=\"main-footer\">\r\n</footer>\r\n<script src=\"js1/jquery.min.js\"></script>\r\n<!-- Bootstrap 4 -->\r\n<script src=\"js1/bootstrap.bundle.min.js\"></script>\r\n<script src=\"js1/jquery.dataTables.js\"></script>\r\n<script src=\"js1/dataTables.bootstrap4.min.js\"></script>\r\n\r\n<!-- AdminLTE App -->\r\n<script src=\"js1/adminlte.min.js\"></script>\r\n<script src=\"js1/demo.js\"></script>\r\n<script>\r\n    $(function () {\r\n        $('#example2').DataTable({\r\n            \"paging\": true,\r\n            \"lengthChange\": false,\r\n            \"searching\": false,\r\n            \"ordering\": true,\r\n            \"info\": true,\r\n            \"autoWidth\": false,\r\n            \"responsive\": true,\r\n        });\r\n    });\r\n</script>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/WebThueXe/list_product.jsp b/target/WebThueXe/list_product.jsp
+--- a/target/WebThueXe/list_product.jsp	(revision 4cbde04b26cfe9dc589f8cf5c73e8fc93840e1d6)
++++ b/target/WebThueXe/list_product.jsp	(date 1673189777613)
+@@ -98,7 +98,6 @@
+                         </ul>
+                     </li>
+                     <li class="nav-item has-treeview">
+-                        <i class="nav-icon fas fa-jedi-order"></i>
+                         <a href="listorder" class="nav-link">
+                             <p>
+                                Hóa đơn
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"FrameworkDetectionExcludesConfiguration\">\r\n    <file type=\"web\" url=\"file://$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_18\" project-jdk-name=\"19\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 4cbde04b26cfe9dc589f8cf5c73e8fc93840e1d6)
++++ b/.idea/misc.xml	(date 1673190255632)
+@@ -11,7 +11,7 @@
+       </list>
+     </option>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" project-jdk-name="19" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: target/WebThueXe/addProduct.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page import=\"vn.edu.hcmuaf.fit.model.Brand\" %>\r\n<%@ page import=\"java.util.List\" %>\r\n<%@ page import=\"vn.edu.hcmuaf.fit.model.Product\" %>\r\n<%@ page contentType=\"text/html; charset =UTF-8\" language=\"java\" pageEncoding=\"UTF-8\" %>\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n    <title>AddProduct</title>\r\n    <meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">\r\n\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n    <link rel=\"stylesheet\" href=\"css1/all.min.css\">\r\n    <link rel=\"stylesheet\" href=\"https://code.ionicframework.com/ionicons/2.0.1/css1/ionicons.min.css\">\r\n    <link href=\"https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700\" rel=\"stylesheet\">\r\n    <link rel=\"stylesheet\" href=\"css1/adminlte.min.css\">\r\n</head>\r\n<body class=\"hold-transition sidebar-mini\">\r\n<div class=\"wrapper\">\r\n    <aside class=\"main-sidebar sidebar-dark-primary elevation-4\">\r\n        <div class=\"sidebar\">\r\n            <nav class=\"mt-2\">\r\n                <ul class=\"nav nav-pills nav-sidebar flex-column\" data-widget=\"treeview\" role=\"menu\"\r\n                    data-accordion=\"false\">\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-copy\"></i>\r\n                            <p>\r\n                                Quản lý bài viết\r\n                                <i class=\"fas fa-angle-left right\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"./fromdangbai.html\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Đăng bài viết</p>\r\n                                </a>\r\n                            </li>\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"./fromdsbaiviet.html\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Danh sách bài viết</p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-motorcycle\"></i>\r\n                            <p>\r\n                                Quản lý sản phẩm\r\n                                <i class=\"right fas fa-angle-left\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"addProduct\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Thêm sản phẩm</p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-chart-pie\"></i>\r\n                            <p>\r\n                                Danh mục sản phẩm\r\n                                <i class=\"right fas fa-angle-left\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"ShowAllProduct\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Danh sách sản phẩm</p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-user\"></i>\r\n                            <p>\r\n                                Quản lý user\r\n                                <i class=\"fas fa-angle-left right\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"ListUser\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Danh sách khách hàng </p>\r\n                                </a>\r\n                            </li>\r\n                            </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-arrow-right\"></i>\r\n                            <p>\r\n                                Đăng xuất\r\n                            </p>\r\n                        </a>\r\n                    </li>\r\n                </ul>\r\n            </nav>\r\n        </div>\r\n    </aside>\r\n\r\n    <div class=\"content-wrapper\">\r\n        <section class=\"content-header\">\r\n            <div class=\"container-fluid\">\r\n                <div class=\"row mb-2\">\r\n                    <div class=\"col-sm-6\">\r\n                        <h1>Thêm sản phẩm</h1>\r\n                    </div>\r\n                    <div class=\"col-sm-6\">\r\n                        <ol class=\"breadcrumb float-sm-right\">\r\n                            <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>\r\n                            <li class=\"breadcrumb-item active\">Thêm sản phẩm</li>\r\n                        </ol>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </section>\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-6\">\r\n                    <div class=\"card card-primary\">\r\n                        <div class=\"card-header\">\r\n                            <h3 class=\"card-title\">Thêm sản phẩm</h3>\r\n                        </div>\r\n                        <form role=\"form\" action=\"addProduct\" method=\"post\">\r\n                            <div class=\"card-body\">\r\n                                <div class=\"form-group\">\r\n                                    <label for=\"examplename\">Tên sản phẩm</label>\r\n                                    <input type=\"text\"name=\"name\" class=\"form-control\" id=\"examplename\" placeholder=\"Tên sản phẩm\">\r\n                                </div>\r\n                                <div class=\"form-group\">\r\n                                    <label for=\"examplename\">Hình ảnh</label>\r\n                                    <input type=\"text\" name=\"image\" class=\"form-control\"  placeholder=\"Hình ảnh\">\r\n                                </div>\r\n\r\n                                <div class=\"form-group\">\r\n                                    <label for=\"examplprice\">Giá thuê</label>\r\n                                    <input type=\"text\" name=\"price\" id=\"examplprice\" placeholder=\"\">\r\n                                </div>\r\n                                <div class=\"form-group\">\r\n                                    <label for=\"examplprice\">isNew</label>\r\n                                    <select name=\"isNew\" class=\"form-select\" >\r\n\r\n                                        <option value=\"1\">True</option>\r\n                                        <option value=\"0\">False</option>\r\n                                    </select>\r\n                                </div>\r\n                                <div class=\"form-group\">\r\n                                    <label>Loại sản phẩm</label>\r\n                                    <select name=\"brandID\" class=\"form-select\" >\r\n                                        <%List<Brand> list = (List<Brand>) request.getAttribute(\"ListBrand\");%>\r\n                                       <% for (Brand p:list\r\n                                        ) {\r\n                                        %>\r\n                                    <option value=\"<%=p.getID()%>\"><%=p.getName()%></option>\r\n                                        <%}%>\r\n                                    </select>\r\n                                </div>\r\n                                <div class=\"form-group\">\r\n                                    <label for=\"examplprice\">Quãng Đường</label>\r\n                                    <input type=\"text\" name=\"distance\"  placeholder=\"\">\r\n                                </div>\r\n                                <div class=\"form-group\">\r\n                                    <label for=\"examplprice\">Động cơ</label>\r\n                                    <input type=\"text\" name=\"gear\"  placeholder=\"\">\r\n                                </div>\r\n                                <div class=\"form-group\">\r\n                                    <label for=\"examplprice\">Ngăn chứa đồ</label>\r\n                                    <input type=\"text\" name=\"storage\"  placeholder=\"\">\r\n                                </div>\r\n                                <div class=\"form-group\">\r\n                                    <label for=\"examplprice\">Dung tích Xăng</label>\r\n                                    <input type=\"text\" name=\"fuel\"  placeholder=\"\">\r\n                                </div>\r\n                                <div class=\"card-footer\">\r\n                                    <button type=\"submit\" class=\"btn btn-primary\">Thêm sản phẩm</button>\r\n                                </div>\r\n                            </div>\r\n                        </form>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <footer class=\"main-footer\">\r\n    </footer>\r\n</div>\r\n<script src=\"js1/jquery.min.js\"></script>\r\n<script src=\"js1/bootstrap.bundle.min.js\"></script>\r\n<script src=\"js1/adminlte.min.js\"></script>\r\n<script src=\"js1/demo.js\"></script>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/WebThueXe/addProduct.jsp b/target/WebThueXe/addProduct.jsp
+--- a/target/WebThueXe/addProduct.jsp	(revision 4cbde04b26cfe9dc589f8cf5c73e8fc93840e1d6)
++++ b/target/WebThueXe/addProduct.jsp	(date 1673189777653)
+@@ -74,7 +74,7 @@
+                         </a>
+                         <ul class="nav nav-treeview">
+                             <li class="nav-item">
+-                                <a href="ShowAllProduct" class="nav-link">
++                                <a href="ShowAllProduct">
+                                     <i class="far fa-circle nav-icon"></i>
+                                     <p>Danh sách sản phẩm</p>
+                                 </a>
+@@ -96,7 +96,14 @@
+                                     <p>Danh sách khách hàng </p>
+                                 </a>
+                             </li>
+-                            </ul>
++                        </ul>
++                    </li>
++                    <li class="nav-item has-treeview">
++                        <a href="listorder" class="nav-link">
++                            <p>
++                                Hóa đơn
++                            </p>
++                        </a>
+                     </li>
+                     <li class="nav-item has-treeview">
+                         <a href="#" class="nav-link">
+Index: target/WebThueXe/updateProduct.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page import=\"vn.edu.hcmuaf.fit.model.Product\" %>\r\n<%@ page import=\"vn.edu.hcmuaf.fit.model.Brand\" %>\r\n<%@ page import=\"java.util.List\" %>\r\n<%@ page contentType=\"text/html; charset =UTF-8\" language=\"java\" pageEncoding=\"UTF-8\" %>\r\n\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n    <meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">\r\n\r\n    <title>Cập nhật sản phẩm</title>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n    <link rel=\"stylesheet\" href=\"css1/all.min.css\">\r\n    <link rel=\"stylesheet\" href=\"https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css\">\r\n    <link href=\"https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700\" rel=\"stylesheet\">\r\n    <link rel=\"stylesheet\" href=\"css1/adminlte.min.css\">\r\n</head>\r\n<body class=\"hold-transition sidebar-mini\">\r\n<!-- Site wrapper -->\r\n<div class=\"wrapper\">\r\n    <aside class=\"main-sidebar sidebar-dark-primary elevation-4\">\r\n        <div class=\"sidebar\">\r\n            <nav class=\"mt-2\">\r\n                <ul class=\"nav nav-pills nav-sidebar flex-column\" data-widget=\"treeview\" role=\"menu\"\r\n                    data-accordion=\"false\">\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-copy\"></i>\r\n                            <p>\r\n                                Quản lý bài viết\r\n                                <i class=\"fas fa-angle-left right\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"./fromdangbai.html\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Đăng bài viết</p>\r\n                                </a>\r\n                            </li>\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"./fromdsbaiviet.html\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Danh sách bài viết</p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-motorcycle\"></i>\r\n                            <p>\r\n                                Quản lý sản phẩm\r\n                                <i class=\"right fas fa-angle-left\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"addProduct\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Thêm sản phẩm</p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-chart-pie\"></i>\r\n                            <p>\r\n                                Danh mục sản phẩm\r\n                                <i class=\"right fas fa-angle-left\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"ShowAllProduct\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Danh sách sản phẩm</p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-user\"></i>\r\n                            <p>\r\n                                Quản lý user\r\n                                <i class=\"fas fa-angle-left right\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"ListUser\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Danh sách khách hàng </p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-arrow-right\"></i>\r\n                            <p>\r\n                                Đăng xuất\r\n                            </p>\r\n                        </a>\r\n                    </li>\r\n                </ul>\r\n            </nav>\r\n        </div>\r\n    </aside>\r\n\r\n    <div class=\"content-wrapper\">\r\n        <section class=\"content-header\">\r\n            <div class=\"container-fluid\">\r\n                <div class=\"row mb-2\">\r\n                    <div class=\"col-sm-6\">\r\n                        <h1>Sửa thông tin</h1>\r\n                    </div>\r\n                    <div class=\"col-sm-6\">\r\n                        <ol class=\"breadcrumb float-sm-right\">\r\n                            <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>\r\n                            <li class=\"breadcrumb-item active\">Sửa thông tin</li>\r\n                        </ol>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </section>\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-6\">\r\n                    <div class=\"card card-primary\">\r\n                        <div class=\"card-header\">\r\n                            <h3 class=\"card-title\">Sửa thông tin</h3>\r\n                        </div>\r\n                        <form action=\"editProduct\" method=\"post\" role=\"form\">\r\n                            <div class=\"card-body\">\r\n                                <%Product product = (Product) request.getAttribute(\"product1\"); %>\r\n                                <div class=\"form-group\">\r\n                                    <label for=\"examplid\">Mã sản phẩm</label>\r\n                                    <input value=\"<%=product.getId()%>\" name=\"id\" type=\"text\" readonly id=\"examplid\" placeholder=\"id\">\r\n                                </div>\r\n                                <div class=\"form-group\">\r\n                                    <label for=\"examplename\">Tên sản phẩm</label>\r\n                                    <input value=\"<%=product.getName()%>\" name=\"name\" type=\"text\" class=\"form-control\" id=\"examplename\" placeholder=\"Tên sản phẩm\">\r\n                                </div>\r\n                                <div class=\"form-group\">\r\n                                    <label for=\"examplType\">Hình Ảnh</label>\r\n                                    <input value=\"<%=product.getImg()%>\" name=\"image\" type=\"text\" class=\"form-control\" id=\"examplType\" placeholder=\"Loại sản phẩm\">\r\n                                </div>\r\n\r\n                                <div class=\"form-group\">\r\n                                    <label for=\"examplprice\">Giá thuê</label>\r\n                                    <input value=\"<%=product.getPrice()%> \" name=\"price\" type=\"text\"  id=\"examplprice\" placeholder=\"\">\r\n                                </div>\r\n                                <div class=\"form-group\">\r\n                                    <label for=\"examplprice\">isNew</label>\r\n                                    <select name=\"isNew\" class=\"form-select\" >\r\n                                        <%if(product.isNew()){%>\r\n                                        <option value=\"1\"><%=product.isNew()%></option>\r\n                                        <option value=\"0\"><%=!product.isNew()%></option>\r\n                                        <%}%>\r\n                                        <%if(!product.isNew()){%>\r\n                                        <option value=\"0\"><%=product.isNew()%></option>\r\n                                        <option value=\"1\"><%=!product.isNew()%></option>\r\n                                        <%}%>\r\n                                    </select>\r\n                                </div>\r\n                                <div class=\"form-group\">\r\n                                    <label>Loại sản phẩm</label>\r\n                                    <select name=\"brandID\" class=\"form-select\" >\r\n                                        <%List<Brand> list = (List<Brand>) request.getAttribute(\"brand\");%>\r\n                                        <% for (Brand p:list\r\n                                        ) {\r\n                                        %>\r\n                                        <option value=\"<%=p.getID()%>\" ><%=p.getName()%></option>\r\n                                        <%}%>\r\n                                    </select>\r\n                                </div>\r\n                                <div class=\"form-group\">\r\n                                    <label for=\"examplprice\">Quãng Đường</label>\r\n                                    <input value=\"<%=product.getDistance()%>\"type=\"text\" name=\"distance\"  placeholder=\"\">\r\n                                </div>\r\n                                <div class=\"form-group\">\r\n                                    <label for=\"examplprice\">Động cơ</label>\r\n                                    <input value=\"<%=product.getGear()%>\"type=\"text\" name=\"gear\"  placeholder=\"\">\r\n                                </div>\r\n                                <div class=\"form-group\">\r\n                                    <label for=\"examplprice\">Ngăn chứa đồ</label>\r\n                                    <input value=\"<%=product.getStorage()%>\"type=\"text\" name=\"storage\"  placeholder=\"\">\r\n                                </div>\r\n                                <div class=\"form-group\">\r\n                                    <label for=\"examplprice\">Dung tích Xăng</label>\r\n                                    <input value=\"<%=product.getFuel()%>\"type=\"text\" name=\"fuel\"  placeholder=\"\">\r\n                                </div>\r\n                                <div class=\"card-footer\">\r\n                                    <button type=\"submit\" class=\"btn btn-primary\">Sửa thông tin</button>\r\n                                </div>\r\n                            </div>\r\n                        </form>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n    <footer class=\"main-footer\">\r\n    </footer>\r\n<script src=\"js1/jquery.min.js\"></script>\r\n<script src=\"js1/bootstrap.bundle.min.js\"></script>\r\n<script src=\"js1/adminlte.min.js\"></script>\r\n<script src=\"js1/demo.js\"></script>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/WebThueXe/updateProduct.jsp b/target/WebThueXe/updateProduct.jsp
+--- a/target/WebThueXe/updateProduct.jsp	(revision 4cbde04b26cfe9dc589f8cf5c73e8fc93840e1d6)
++++ b/target/WebThueXe/updateProduct.jsp	(date 1673189777688)
+@@ -75,7 +75,7 @@
+                         </a>
+                         <ul class="nav nav-treeview">
+                             <li class="nav-item">
+-                                <a href="ShowAllProduct" class="nav-link">
++                                <a href="ShowAllProduct">
+                                     <i class="far fa-circle nav-icon"></i>
+                                     <p>Danh sách sản phẩm</p>
+                                 </a>
+@@ -98,6 +98,13 @@
+                                 </a>
+                             </li>
+                         </ul>
++                    </li>
++                    <li class="nav-item has-treeview">
++                        <a href="listorder" class="nav-link">
++                            <p>
++                                Hóa đơn
++                            </p>
++                        </a>
+                     </li>
+                     <li class="nav-item has-treeview">
+                         <a href="#" class="nav-link">
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ArtifactsWorkspaceSettings\">\r\n    <artifacts-to-build>\r\n      <artifact name=\"WebThueXe:war\" />\r\n    </artifacts-to-build>\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"416c06ed-0398-4fcb-a2d0-6804377f658f\" name=\"Changes\" comment=\"NguyenToi\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/OrderDetailADM.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/model/OrderDetail.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/ShowAllListOrder.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/ShowAllListOrder.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/ProductServerADM.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/ProductServerADM.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/addProduct.jsp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/webapp/addProduct.jsp\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/listOrder.jsp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/webapp/listOrder.jsp\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/listUser.jsp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/webapp/listUser.jsp\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/list_product.jsp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/webapp/list_product.jsp\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/orderDetail.jsp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/webapp/orderDetail.jsp\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/updateProduct.jsp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/webapp/updateProduct.jsp\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/WebThueXe.war\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/WebThueXe.war\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/WebThueXe/list_product.jsp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/WebThueXe/list_product.jsp\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Jsp File\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PUSH_AUTO_UPDATE\" value=\"true\" />\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"LogFilters\">\r\n    <option name=\"FILTER_ERRORS\" value=\"false\" />\r\n    <option name=\"FILTER_WARNINGS\" value=\"false\" />\r\n    <option name=\"FILTER_INFO\" value=\"true\" />\r\n    <option name=\"FILTER_DEBUG\" value=\"true\" />\r\n    <option name=\"CUSTOM_FILTER\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2Joy0JvsKrzmvkQoO91zMT2kuC6\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/USER/IdeaProjects/lab5&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.applicationServers&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\USER\\IdeaProjects\\WebThueXe\\src\\main\\webapp\\js\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunDashboard\">\r\n    <option name=\"excludedTypes\">\r\n      <set>\r\n        <option value=\"#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory\" />\r\n      </set>\r\n    </option>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Tomcat Server.Tomcat 9.0.68\">\r\n    <configuration name=\"CartServices\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"vn.edu.hcmuaf.fit.service.CartServices\" />\r\n      <module name=\"WebThueXe\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"vn.edu.hcmuaf.fit.service.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Check\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"vn.edu.hcmuaf.fit.service.Check\" />\r\n      <module name=\"WebThueXe\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"vn.edu.hcmuaf.fit.service.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"DBConnect\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"vn.edu.hcmuaf.fit.db.DBConnect\" />\r\n      <module name=\"WebThueXe\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"vn.edu.hcmuaf.fit.db.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ProductServerADM\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"vn.edu.hcmuaf.fit.service.ProductServerADM\" />\r\n      <module name=\"WebThueXe\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"vn.edu.hcmuaf.fit.service.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ProductService\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"vn.edu.hcmuaf.fit.service.ProductService\" />\r\n      <module name=\"WebThueXe\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"vn.edu.hcmuaf.fit.service.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Tomcat 9.0.68\" type=\"#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory\" factoryName=\"Local\" APPLICATION_SERVER_NAME=\"Tomcat 9.0.70\" ALTERNATIVE_JRE_ENABLED=\"false\" nameIsGenerated=\"true\">\r\n      <option name=\"OPEN_IN_BROWSER_URL\" value=\"http://localhost:8080/WebThueXe/trangchu\" />\r\n      <option name=\"UPDATING_POLICY\" value=\"restart-server\" />\r\n      <deployment>\r\n        <artifact name=\"WebThueXe:war\">\r\n          <settings>\r\n            <option name=\"CONTEXT_PATH\" value=\"/WebThueXe\" />\r\n          </settings>\r\n        </artifact>\r\n      </deployment>\r\n      <server-settings>\r\n        <option name=\"BASE_DIRECTORY_NAME\" value=\"580a1075-32b0-42a5-9b30-86c5a702dc23\" />\r\n      </server-settings>\r\n      <predefined_log_file enabled=\"true\" id=\"Tomcat\" />\r\n      <predefined_log_file enabled=\"true\" id=\"Tomcat Catalina\" />\r\n      <predefined_log_file id=\"Tomcat Manager\" />\r\n      <predefined_log_file id=\"Tomcat Host Manager\" />\r\n      <predefined_log_file id=\"Tomcat Localhost Access\" />\r\n      <RunnerSettings RunnerId=\"Debug\">\r\n        <option name=\"DEBUG_PORT\" value=\"56034\" />\r\n      </RunnerSettings>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Cover\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Debug\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Profile\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Run\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n        <option name=\"BuildArtifacts\" enabled=\"true\">\r\n          <artifact name=\"WebThueXe:war\" />\r\n        </option>\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Application.ProductServerADM\" />\r\n      <item itemvalue=\"Application.CartServices\" />\r\n      <item itemvalue=\"Application.Check\" />\r\n      <item itemvalue=\"Application.ProductService\" />\r\n      <item itemvalue=\"Application.DBConnect\" />\r\n      <item itemvalue=\"Tomcat Server.Tomcat 9.0.68\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.ProductServerADM\" />\r\n        <item itemvalue=\"Application.ProductService\" />\r\n        <item itemvalue=\"Application.CartServices\" />\r\n        <item itemvalue=\"Application.Check\" />\r\n        <item itemvalue=\"Application.DBConnect\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"416c06ed-0398-4fcb-a2d0-6804377f658f\" name=\"Changes\" comment=\"\" />\r\n      <created>1672758511428</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1672758511428</updated>\r\n      <workItem from=\"1672758513423\" duration=\"519000\" />\r\n      <workItem from=\"1672761768599\" duration=\"6020000\" />\r\n      <workItem from=\"1672797374118\" duration=\"11613000\" />\r\n      <workItem from=\"1672887662585\" duration=\"740000\" />\r\n      <workItem from=\"1672888421055\" duration=\"195000\" />\r\n      <workItem from=\"1672888632186\" duration=\"187000\" />\r\n      <workItem from=\"1672888907760\" duration=\"16648000\" />\r\n      <workItem from=\"1672925436852\" duration=\"14392000\" />\r\n      <workItem from=\"1672976136512\" duration=\"1511000\" />\r\n      <workItem from=\"1672987187014\" duration=\"7271000\" />\r\n      <workItem from=\"1673009358614\" duration=\"13976000\" />\r\n      <workItem from=\"1673061385760\" duration=\"14400000\" />\r\n      <workItem from=\"1673089955637\" duration=\"1821000\" />\r\n      <workItem from=\"1673100303439\" duration=\"8248000\" />\r\n      <workItem from=\"1673186010569\" duration=\"3764000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Nam An\">\r\n      <created>1672805231465</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672805231465</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Nam An\">\r\n      <created>1672808497777</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672808497777</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Nam An\">\r\n      <created>1672808832394</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672808832394</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Nam An\">\r\n      <created>1672809199519</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672809199519</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Nam An\">\r\n      <created>1672810248209</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672810248209</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"NguyenToi\">\r\n      <created>1672840301901</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672840301901</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Nam An\">\r\n      <created>1672888464035</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672888464035</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Nam An\">\r\n      <created>1672888676606</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672888676606</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Nam An\">\r\n      <created>1672890782257</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672890782257</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Nam An\">\r\n      <created>1672890835503</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672890835503</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Nam An\">\r\n      <created>1672908720889</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672908720889</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"Nam An\">\r\n      <created>1672925995193</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672925995193</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"Nam An\">\r\n      <created>1672927363930</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672927363930</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"Nam An\">\r\n      <created>1672927386467</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672927386467</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"Nam An\">\r\n      <created>1672927476593</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672927476593</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"Nam An\">\r\n      <created>1672941341408</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672941341408</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"Nam An\">\r\n      <created>1672987202770</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672987202770</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"Nam An\">\r\n      <created>1672991305674</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672991305674</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00019\" summary=\"Nam An\">\r\n      <created>1673068400594</created>\r\n      <option name=\"number\" value=\"00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673068400594</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00020\" summary=\"Nam An\">\r\n      <created>1673068443988</created>\r\n      <option name=\"number\" value=\"00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673068443988</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00021\" summary=\"Nam An\">\r\n      <created>1673076056975</created>\r\n      <option name=\"number\" value=\"00021\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673076056975</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00022\" summary=\"Nam An\">\r\n      <created>1673076066709</created>\r\n      <option name=\"number\" value=\"00022\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673076066709</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00023\" summary=\"Nam An\">\r\n      <created>1673076127319</created>\r\n      <option name=\"number\" value=\"00023\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673076127319</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00024\" summary=\"NguyenToi\">\r\n      <created>1673187144309</created>\r\n      <option name=\"number\" value=\"00024\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673187144309</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"25\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Nam An\" />\r\n    <MESSAGE value=\"NguyenToi\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"NguyenToi\" />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/WebThueXe$addProduct_jsp.ic\" NAME=\"addProduct.jsp Coverage Results\" MODIFIED=\"1672928432397\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" />\r\n    <SUITE FILE_PATH=\"coverage/WebThueXe$DBConnect.ic\" NAME=\"DBConnect Coverage Results\" MODIFIED=\"1672888970780\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\r\n      <FILTER>vn.edu.hcmuaf.fit.db.*</FILTER>\r\n    </SUITE>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 4cbde04b26cfe9dc589f8cf5c73e8fc93840e1d6)
++++ b/.idea/workspace.xml	(date 1673191872480)
+@@ -10,21 +10,12 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="416c06ed-0398-4fcb-a2d0-6804377f658f" name="Changes" comment="NguyenToi">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/OrderDetailADM.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/model/OrderDetail.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/ShowAllListOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/ShowAllListOrder.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/ProductServerADM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/ProductServerADM.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/listOrder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listOrder.jsp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/listUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listUser.jsp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/list_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list_product.jsp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/orderDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/orderDetail.jsp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/updateProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/updateProduct.jsp" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/WebThueXe.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe.war" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/listOrder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/listOrder.jsp" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/target/WebThueXe/list_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/list_product.jsp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/orderDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/orderDetail.jsp" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -274,7 +265,7 @@
+       <workItem from="1673061385760" duration="14400000" />
+       <workItem from="1673089955637" duration="1821000" />
+       <workItem from="1673100303439" duration="8248000" />
+-      <workItem from="1673186010569" duration="3764000" />
++      <workItem from="1673186010569" duration="4858000" />
+     </task>
+     <task id="LOCAL-00001" summary="Nam An">
+       <created>1672805231465</created>
+@@ -444,7 +435,21 @@
+       <option name="project" value="LOCAL" />
+       <updated>1673187144309</updated>
+     </task>
+-    <option name="localTasksCounter" value="25" />
++    <task id="LOCAL-00025" summary="NguyenToi">
++      <created>1673189811028</created>
++      <option name="number" value="00025" />
++      <option name="presentableId" value="LOCAL-00025" />
++      <option name="project" value="LOCAL" />
++      <updated>1673189811028</updated>
++    </task>
++    <task id="LOCAL-00026" summary="NguyenToi">
++      <created>1673189853071</created>
++      <option name="number" value="00026" />
++      <option name="presentableId" value="LOCAL-00026" />
++      <option name="project" value="LOCAL" />
++      <updated>1673189853071</updated>
++    </task>
++    <option name="localTasksCounter" value="27" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+Index: target/WebThueXe/orderDetail.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page import=\"java.util.List\" %>\r\n<%@ page import=\"vn.edu.hcmuaf.fit.model.Account\" %>\r\n<%@ page import=\"vn.edu.hcmuaf.fit.model.Order\" %>\r\n<%@ page import=\"vn.edu.hcmuaf.fit.model.OrderDetail\" %>\r\n<%@ page contentType=\"text/html; charset =UTF-8\" language=\"java\" pageEncoding=\"UTF-8\" %>\r\n\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n    <meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">\r\n\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n    <title>Danh sách khách hàng</title>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n    <link rel=\"stylesheet\" href=\"css1/all.min.css\">\r\n    <link rel=\"stylesheet\" href=\"https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css\">\r\n    <link href=\"https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700\" rel=\"stylesheet\">\r\n    <link rel=\"stylesheet\" href=\"css1/adminlte.min.css\">\r\n</head>\r\n<body class=\"hold-transition sidebar-mini\">\r\n<div class=\"wrapper\">\r\n    <aside class=\"main-sidebar sidebar-dark-primary elevation-4\">\r\n        <div class=\"sidebar\">\r\n            <nav class=\"mt-2\">\r\n                <ul class=\"nav nav-pills nav-sidebar flex-column\" data-widget=\"treeview\" role=\"menu\"\r\n                    data-accordion=\"false\">\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-copy\"></i>\r\n                            <p>\r\n                                Quản lý bài viết\r\n                                <i class=\"fas fa-angle-left right\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"./fromdangbai.html\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Đăng bài viết</p>\r\n                                </a>\r\n                            </li>\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"./fromdsbaiviet.html\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Danh sách bài viết</p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-motorcycle\"></i>\r\n                            <p>\r\n                                Quản lý sản phẩm\r\n                                <i class=\"right fas fa-angle-left\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"addProduct\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Thêm sản phẩm</p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-chart-pie\"></i>\r\n                            <p>\r\n                                Danh mục sản phẩm\r\n                                <i class=\"right fas fa-angle-left\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"ShowAllProduct\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Danh sách sản phẩm</p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-user\"></i>\r\n                            <p>\r\n                                Quản lý user\r\n                                <i class=\"fas fa-angle-left right\"></i>\r\n                            </p>\r\n                        </a>\r\n                        <ul class=\"nav nav-treeview\">\r\n                            <li class=\"nav-item\">\r\n                                <a href=\"ListUser\" class=\"nav-link\">\r\n                                    <i class=\"far fa-circle nav-icon\"></i>\r\n                                    <p>Danh sách khách hàng </p>\r\n                                </a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                    <li class=\"nav-item has-treeview\">\r\n                        <a href=\"#\" class=\"nav-link\">\r\n                            <i class=\"nav-icon fas fa-arrow-right\"></i>\r\n                            <p>\r\n                                Đăng xuất\r\n                            </p>\r\n                        </a>\r\n                    </li>\r\n                </ul>\r\n            </nav>\r\n        </div>\r\n    </aside>\r\n    <div class=\"content-wrapper\">\r\n        <section class=\"content-header\">\r\n            <div class=\"container-fluid\">\r\n                <div class=\"row mb-2\">\r\n                    <div class=\"col-sm-6\">\r\n                        <h1>Danh sách user</h1>\r\n                    </div>\r\n                    <div class=\"col-sm-6\">\r\n                        <ol class=\"breadcrumb float-sm-right\">\r\n                            <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>\r\n                            <li class=\"breadcrumb-item active\">Danh sách user</li>\r\n                        </ol>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </section>\r\n        <div class=\"row\">\r\n            <div class=\"col-12\">\r\n                <div class=\"card\">\r\n                    <div class=\"card-header\">\r\n                        <% List<OrderDetail> list = (List<OrderDetail>) request.getAttribute(\"list\");%>\r\n                        <h3 class=\"card-title\">Danh sách hóa đơn</h3>\r\n                    </div>\r\n                    <div class=\"card-body\">\r\n                        <table id=\"example2\" class=\"table table-bordered table-hover\">\r\n                            <thead>\r\n                            <tr>\r\n                                <th>Tên sản phẩm</th>\r\n                                <th>Hình ảnh</th>\r\n                                <th>Giá tiền</th>\r\n                                <th>Số lượng</th>\r\n                            </tr>\r\n                            </thead>\r\n                            <tbody>\r\n                                <%\r\n        for (OrderDetail a:list\r\n             ) {%>\r\n                            <tr>\r\n                                <td><%=a.getName()%>\r\n                                </td>\r\n                                <td><%=a.getImg()%>\r\n                                </td>\r\n                                <td><%=a.getPrice()%>\r\n                                </td>\r\n                                <td><%=a.getQuantity()%>\r\n                                </td>\r\n                            </tr>\r\n                                <%}%>\r\n                            </tfoot>\r\n                        </table>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<footer class=\"main-footer\">\r\n</footer>\r\n<script src=\"js1/jquery.min.js\"></script>\r\n<script src=\"js1/bootstrap.bundle.min.js\"></script>\r\n<script src=\"js1/jquery.dataTables.js\"></script>\r\n<script src=\"js1/dataTables.bootstrap4.min.js\"></script>\r\n\r\n<script src=\"js1/adminlte.min.js\"></script>\r\n<script src=\"js1/demo.js\"></script>\r\n<script>\r\n    $(function () {\r\n        $('#example2').DataTable({\r\n            \"paging\": true,\r\n            \"lengthChange\": false,\r\n            \"searching\": false,\r\n            \"ordering\": true,\r\n            \"info\": true,\r\n            \"autoWidth\": false,\r\n            \"responsive\": true,\r\n        });\r\n    });\r\n</script>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/WebThueXe/orderDetail.jsp b/target/WebThueXe/orderDetail.jsp
+--- a/target/WebThueXe/orderDetail.jsp	(revision 4cbde04b26cfe9dc589f8cf5c73e8fc93840e1d6)
++++ b/target/WebThueXe/orderDetail.jsp	(date 1673189777739)
+@@ -75,7 +75,7 @@
+                         </a>
+                         <ul class="nav nav-treeview">
+                             <li class="nav-item">
+-                                <a href="ShowAllProduct" class="nav-link">
++                                <a href="ShowAllProduct">
+                                     <i class="far fa-circle nav-icon"></i>
+                                     <p>Danh sách sản phẩm</p>
+                                 </a>
+@@ -98,6 +98,13 @@
+                                 </a>
+                             </li>
+                         </ul>
++                    </li>
++                    <li class="nav-item has-treeview">
++                        <a href="listorder" class="nav-link">
++                            <p>
++                                Hóa đơn
++                            </p>
++                        </a>
+                     </li>
+                     <li class="nav-item has-treeview">
+                         <a href="#" class="nav-link">

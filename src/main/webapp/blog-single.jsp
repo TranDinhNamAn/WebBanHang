@@ -1,8 +1,13 @@
+<%@ page import="vn.edu.hcmuaf.fit.model.Blog" %>
+<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Bài viết</title>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
@@ -53,7 +58,8 @@
     </div>
 </nav>
 <!-- END nav -->
-
+<% Blog b = (Blog) request.getAttribute("detail");
+%>
 <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bl1.jpg');"
          data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
@@ -63,7 +69,7 @@
                 <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ<i
                         class="ion-ios-arrow-forward"></i></a></span>
                     <span class="mr-2"><a href="blog.jsp">Bài viết <i class="ion-ios-arrow-forward"></i></a></span>
-                <h1 class="mb-3 bread">Top 6 Địa Chỉ Thuê Xe Máy Hai Bà Trưng Hà Nội Tốt Nhất 2022</h1>
+                <h1 class="mb-3 bread"><%=b.getName()%></h1>
             </div>
         </div>
     </div>
@@ -73,41 +79,17 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 ftco-animate">
-                <h2 class="mb-3">TOP địa điểm cho thuê xe máy Hai Bà Trưng tốt nhất</h2>
+                <h2 class="mb-3"><%=b.getName()%></h2>
 
-                <p>Hiện nay có khá nhiều cơ sở cho thuê xe máy Hà Nội ở khu vực Hai Bà Trưng. Tuy nhiên chất lượng của
-                    những địa chỉ này vẫn là dẫu chẩm hỏi. Nếu chẳng may gặp phải cơ sở kém chất lượng thì bạn sẽ gặp
-                    rủi ro rất lớn. Chính vì thế chúng tôi đã tổng hợp những địa chỉ uy tín nhất dưới đây dành cho
-                    bạn.</p>
+                <p><%=b.getCotent()%></p>
 
-                <h2 class="mb-3 mt-5">1. ThueXeMay cho thuê xe máy quận Hai Bà Trưng chất lượng</h2>
+                <h2 class="mb-3 mt-5"><%=b.getTitle1()%></h2>
 
-                <p>ThueXeMay là cơ sở cho thuê xe máy chuyên nghiệp số 1 tại Hai Bà Trưng. Khi đến đây thuê xe bạn sẽ
-                    không cần lăn tăn về cấn đề chất lượng nữa. Nơi đây cung cấp cho bạn những chiếc xe cực mới cùng
-                    nhiều dịch vụ tiện ích đi kèm. Bởi vậy nên các khách hàng từng đến đây thuê xe đều đánh giá cao địa
-                    chỉ này.</p>
-                <p>Thêm vào đó bạn còn được nhận kèm các vật phẩm khác miễn phí. Cụ thể MOTOGO sẽ chuẩn bị sẵn mũ bảo
-                    hiểm và áo mưa cho bạn. Nếu cần thiết còn có thể lắp thêm kệ để đồ. Ngoài ra còn có chính sách tính
-                    giá theo 24h và không cần đặt cọc (nếu đáp ứng đủ giấy tờ). Vì thế nơi này sẽ giúp bạn có một chuyến
-                    đi rất tiết kiệm đấy.</p>
-                <p>Tất cả những chiếc xe máy cho thuê tại MOTOGO đều là xe mới 100%. Vì thế tất cả các linh kiện đều còn
-                    nguyên vẹn tạo nên trải nghiệm di chuyển tốt nhất cho du khách. Đặc biệt khi thuê xe tại đây bạn còn
-                    được cung cấp đầy đủ giấy tờ xe. Điều này đảm bảo được xe có nguồn gốc rõ ràng, cũng tránh được các
-                    phiền phức khác.</p>
+                <p><%=b.getContent1()%></p>
 
-                <h2 class="mb-3 mt-5">2. Chung Xe – Motorbike & car rental</h2>
+                <h2 class="mb-3 mt-5"><%=b.getTitle2()%></h2>
 
-                <p>Một địa chỉ cho thuê xe máy khác tại hai Bà Trưng mà bạn có thể ghé đến là Chung xe. Cửa hàng này có
-                    quy mô khá lớn với nhiều xe. Chất lượng xe tốt là một điểm cộng lớn của địa chỉ này. Ngoài những
-                    dịch vụ khách hàng tiện ích cũng giúp nơi đây đã chiếm được thiện cảm của nhiều người.</p>
-                <p>Chung xe sở hữu kho xe khá lớn với nhiều loại xe đa dạng. Vì thế bạn có thể thoải mái lựa chọn dòng
-                    xe mình yêu thích. Trông chúng đều rất mới nên chất lượng có thể đảm bảo. Dòng xe được yêu thích
-                    nhất tại đây là Yamaha Exciter đầy mạnh mẽ. Mọi người thường thuê loại xe này để đi du lịch và có
-                    những trải nghiệm rất tốt.</p>
-                <p>Tuy nhiên khi đến đây thuê xe bạn cần hỏi kĩ về các chính sách của cửa hàng. Nơi đây có giới hạn về
-                    số km mà xe chạy là 250km. Nếu vượt quá khoảng cách này bạn có thể phải bù tiền cho cửa hàng đấy.
-                    Sau khi làm rõ những điều này thì nơi đây là địa chỉ mà bạn có thể xem xét khi có nhu cầu thuê xe ở
-                    Hai Bà Trưng.</p>
+                <p><%=b.getContent2()%></p>
 
                 <div class="pt-5 mt-5">
                     <h3 class="mb-5">0 Bình Luận</h3>
@@ -133,6 +115,8 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="col-md-4 sidebar ftco-animate">
                 <div class="sidebar-box ftco-animate">
                     <h3>Bài viết gần đây</h3>
@@ -157,16 +141,6 @@
                                 <div><a href="#"><span class="icon-person"></span> ThueXeMay</a></div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="sidebar-box ftco-animate">
-                    <h3>Thẻ</h3>
-                    <div class="tagcloud">
-                        <a href="#" class="tag-cloud-link">Du lịch</a>
-                        <a href="#" class="tag-cloud-link">Menu</a>
-                        <a href="#" class="tag-cloud-link">Đồ ăn</a>
-                        <a href="#" class="tag-cloud-link">Nước</a>
                     </div>
                 </div>
             </div>
