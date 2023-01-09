@@ -17,13 +17,18 @@ public class CartView extends HttpServlet {
         List<Cart> list = null;
         try {
             HttpSession session = request.getSession();
-            list = CartServices.View((String) session.getAttribute("user"));
-            request.setAttribute("cart", list);
+            if(session.getAttribute("user")!=null) {
+                list = CartServices.View((String) session.getAttribute("user"));
+                request.setAttribute("cart", list);
+                request.getRequestDispatcher("cart.jsp").forward(request, response);
+            }else{
+               response.sendRedirect("dangnhap");
+            }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
-        request.getRequestDispatcher("cart.jsp").forward(request, response);
+
     }
 
     @Override

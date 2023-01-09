@@ -19,7 +19,7 @@ public class SearchProduct extends HttpServlet {
             String search = request.getParameter("searchProcuct");
             list = ProductServerADM.searchByName(search);
             request.setAttribute("list1",list);
-            request.getRequestDispatcher("car.jsp").forward(request, response);
+            request.getRequestDispatcher("motor.jsp").forward(request, response);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

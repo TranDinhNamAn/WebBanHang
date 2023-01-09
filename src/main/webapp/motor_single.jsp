@@ -1,13 +1,15 @@
 <%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
 <%@ page import="java.util.List" %>
-<%@ page import="vn.edu.hcmuaf.fit.service.ProductService" %>
 <%@ page import="vn.edu.hcmuaf.fit.model.Brand" %>
+<%@ page import="vn.edu.hcmuaf.fit.service.ProductService" %>
+<%@ page import="vn.edu.hcmuaf.fit.service.ContactServices" %>
+<%@ page import="vn.edu.hcmuaf.fit.model.Contact" %>
 <%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Xe Máy Honda</title>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>Chi tiết xe</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -38,32 +40,27 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="trangchu">Thue<span>XeMay</span></a>
+        <a class="navbar-brand" href="index.jsp">Thue<span>Xemay</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
         </button>
+
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a href="trangchu" class="nav-link">Trang chủ</a></li>
                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
-                <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
                 <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
                     <ul class="dr-menu">
                         <%List<Brand> arr1 = ProductService.getListBrand();%>
-                        <%for (Brand b:arr1) {%>
+                        <%for (Brand b:arr1) {
+                        %>
                         <li class="subb"><a href="phanloai?id=<%=b.getID()%>"><%=b.getName()%></a></li>
                         <%}%>
                     </ul>
                 </li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
-                <li class="nav-item">
-                    <form action="timkiem" style="margin-top: 15px">
-                        <input type="text" name="searchProcuct" style="width: 100px;" >
-                        <button type="submit"><i class="nav-icon fas icon-search"></i></button>
-                    </form>
-                </li>
                 <%if(session.getAttribute("account")!=null){%>
                 <li class="nav-item"><a href="#" class="nav-link">Cá nhân</a>
                     <ul class="dr-menu">
@@ -91,71 +88,137 @@
             <div class="col-md-9 ftco-animate pb-5">
                 <p class="breadcrumbs"><span class="mr-2"><a href="trangchu">Trang chủ <i
                         class="ion-ios-arrow-forward"></i></a></span>
-                    <span><a href="xemay">Xe máy <i class="ion-ios-arrow-forward"></i></a></span></p>
-                <h1 class="mb-3 bread">Xe máy</h1>
+                    <span><a href="#">Chi tiết xe <i class="ion-ios-arrow-forward"></i></a></span></p>
+                <h1 class="mb-3 bread">Chi tiết xe</h1>
             </div>
         </div>
     </div>
 </section>
-<section class="ftco-section bg-light">
+
+
+<section class="ftco-section ftco-car-details">
     <div class="container">
-        <div class="row">
-            <%List<Product> list = (List<Product>) request.getAttribute("listbrand");
-              int start = 0, end = 9;
-                if (list.size() < 9) {
-                    end = list.size();
-                }
-                if (request.getParameter("start") != null) {
-                    start = Integer.parseInt(request.getParameter("start"));
-                }
-                if (request.getParameter("end") != null) {
-                    end = Integer.parseInt(request.getParameter("end"));
-                }
-                List<Product> arr = ProductService.getListByPage(list,start,end);
-            %>
-            <%for (Product p1:arr) {%>
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                    <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(<%=p1.getImg()%>);">
-                    </div>
-                    <div class="text">
-                        <h2 class="mb-0"><a href="#"><%=p1.getName()%>
-                        </a></h2>
-                        <div class="d-flex mb-3">
-                            <p class="price ml-auto"><%=p1.getPrice()%>vnđ<span>/ngày</span></p>
-                        </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="chitietxe?id=<%=p1.getId()%>" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <%Product p = (Product) request.getAttribute("detail");%>
+                <div class="car-details">
+                    <div class="img rounded"
+                         style="background-image: url(<%=p.getImg()%>); width: 600px;height: 400px"></div>
+                    <div class="text text-center">
+                        <h2><%=p.getName()%></h2>
                     </div>
                 </div>
-            </div>
-            <%}%>
-        </div>
-        <div class="row mt-5">
-            <div class="col text-center">
-                <div class="block-27">
-                    <ul class="">
-                        <% int a, b;
-                            int limit = list.size() / 9;
-                            if (limit * 9 < list.size()) {
-                                limit += 1;
-                            }
-                            for (int i = 1; i <= limit; i++) {
-                                a = (i - 1) * 9;
-                                b = i * 9;
-                                if (b > list.size()) {
-                                    b = list.size();
-                                }%>
-                        <li class="active"><a href="phanloai?start=<%=a%>&end=<%=b%>"><%=i%>
-                        </a></li>
-                        <% }%>
-                    </ul>
+                <div class="row">
+                    <div class="col-md d-flex align-self-stretch ftco-animate">
+                        <div class="media block-6 services">
+                            <div class="media-body py-md-4">
+                                <div class="d-flex mb-3 align-items-center">
+                                    <div class="icon d-flex align-items-center justify-content-center"><span
+                                            class="flaticon-dashboard"></span></div>
+                                    <div class="text">
+                                        <h3 class="heading mb-0 pl-3">
+                                            Quãng đường
+                                            <span><%=p.getDistance()%>Km/1L</span>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md d-flex align-self-stretch ftco-animate">
+                        <div class="media block-6 services">
+                            <div class="media-body py-md-4">
+                                <div class="d-flex mb-3 align-items-center">
+                                    <div class="icon d-flex align-items-center justify-content-center"><span
+                                            class="flaticon-pistons"></span></div>
+                                    <div class="text">
+                                        <h3 class="heading mb-0 pl-3">
+                                            Động cơ
+                                            <span><%=p.getGear()%></span>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md d-flex align-self-stretch ftco-animate">
+                        <div class="media block-6 services">
+                            <div class="media-body py-md-4">
+                                <div class="d-flex mb-3 align-items-center">
+                                    <div class="icon d-flex align-items-center justify-content-center"><span
+                                            class="flaticon-backpack"></span></div>
+                                    <div class="text">
+                                        <h3 class="heading mb-0 pl-3">
+                                            Ngăn chứa đồ
+                                            <span><%=p.getStorage()%>L</span>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md d-flex align-self-stretch ftco-animate">
+                        <div class="media block-6 services">
+                            <div class="media-body py-md-4">
+                                <div class="d-flex mb-3 align-items-center">
+                                    <div class="icon d-flex align-items-center justify-content-center"><span
+                                            class="flaticon-diesel"></span></div>
+                                    <div class="text">
+                                        <h3 class="heading mb-0 pl-3">
+                                            Dung tích xăng
+                                            <span><%=p.getFuel()%>L</span>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
 
+<section class="ftco-section ftco-no-pt">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+                <span class="subheading">Chọn xe</span>
+                <h2 class="mb-2">Các sản phẩm tương tự</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="carousel-car owl-carousel">
+                    <% List<Product> list = (List<Product>) request.getAttribute("same");
+                        for (Product p1: list) {%>
+
+                    <div class="item">
+                        <div class="car-wrap rounded ftco-animate">
+                            <div class="img rounded d-flex align-items-end"
+                                 style="background-image: url(<%=p1.getImg()%>);">
+                            </div>
+                            <div class="text">
+                                <h2 class="mb-0"><a href="#"><%=p1.getName()%></a></h2>
+                                <div class="d-flex mb-3">
+                                    <p class="price ml-auto"><%=p1.getPrice()%> vnd<span>/Ngày</span></p>
+                                </div>
+                                <p class="d-flex mb-0 d-block">
+                                    <%if(session.getAttribute("account")==null){%>
+                                    <a href="dangnhap" class="btn btn-primary py-2 mr-1">Thuê</a>
+                                    <%}%>
+                                    <%if(session.getAttribute("account")!=null){%>
+                                    <a href="addToCart?id=<%=p1.getId()%>" class="btn btn-primary py-2 mr-1">Thuê</a>
+                                    <%}%>
+                                    <a href="chitietxe?id=<%=p1.getId()%>" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 
@@ -164,8 +227,8 @@
         <div class="row mb-5">
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2"><a href="#" class="logo">Thue<span>XeMay</span></a></h2>
-                    <p>ThueXeMay với dàn xe chất lượng cao, đội ngũ nhân viên chuyên nghiệp, nhiệt tình sẽ mang đến cho
+                    <h2 class="ftco-heading-2"><a href="#" class="logo">Car<span>book</span></a></h2>
+                    <p>Motorbike với dàn xe chất lượng cao, đội ngũ nhân viên chuyên nghiệp, nhiệt tình sẽ mang đến cho
                         bạn những trải nghiệm thú vị...</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                         <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
@@ -202,15 +265,27 @@
                     <h2 class="ftco-heading-2">Thông tin liên hệ</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="icon icon-map-marker"></span><span class="text">Trường đại học Nông Lâm, khu phố 6, phường Linh Trung, TP.Thủ Đức, TP.Hồ Chí Minh</span>
+                            <%Contact contact = ContactServices.getContact();%>
+                            <li><span class="icon icon-map-marker"></span><span class="text"><%=contact.getAddress()%></span>
                             </li>
                             <li><a href="#"><span class="icon icon-phone"></span><span
-                                    class="text">+84 326 500 729</span></a></li>
+                                    class="text"><%=contact.getPhone()%></span></a></li>
                             <li><a href="#"><span class="icon icon-envelope"></span><span
-                                    class="text">ltweb@gmail.com</span></a></li>
+                                    class="text"><%=contact.getEmail()%></span></a></li>
                         </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                    All rights reserved | This template is made with <i class="icon-heart color-danger"
+                                                                        aria-hidden="true"></i> by <a
+                            href="https://colorlib.com" target="_blank">Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
             </div>
         </div>
     </div>

@@ -23,7 +23,7 @@ public class Detail extends HttpServlet {
 
             request.setAttribute("same",listSame);
             request.setAttribute("detail",detail);
-            request.getRequestDispatcher("car-single.jsp").forward(request, response);
+            request.getRequestDispatcher("motor_single.jsp").forward(request, response);
         } catch (Exception e) {
         }
 
