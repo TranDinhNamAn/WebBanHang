@@ -104,7 +104,7 @@
                     <tr>
                         <td><%=i%></td>
                         <td>
-                            <img style="width: 75px;height: 65px" src="<%=c.getImg()%>>"
+                            <img style="width: 75px;height: 65px" src="<%=c.getImg()%>"
                                  class="hinhdaidien" alt="">
                         </td>
                         <td><%=c.getName()%></td>

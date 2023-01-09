@@ -44,7 +44,7 @@
                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
                 <li class="nav-item"><a href="xemay" class="nav-link">Xe máy</a></li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
-                <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
+                <li class="nav-item"><a href="contact" class="nav-link">Liên hệ</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Cá nhân</a>
                     <ul class="dr-menu">
                         <li class="subb"><a href="cart"><p style="margin-top: 6px"
@@ -104,7 +104,7 @@
                     <tr>
                         <td><%=i%></td>
                         <td>
-                            <img style="width: 75px;height: 65px" src="<%=c.getImg()%>>"
+                            <img style="width: 75px;height: 65px" src="<%=c.getImg()%>"
                                  class="hinhdaidien" alt="">
                         </td>
                         <td><%=c.getName()%></td>

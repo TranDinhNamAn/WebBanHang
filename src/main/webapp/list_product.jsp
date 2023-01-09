@@ -105,7 +105,7 @@
                         </a>
                     </li>
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
+                        <a href="dangxuat" class="nav-link">
                             <i class="nav-icon fas fa-arrow-right"></i>
                             <p>
                                 Đăng xuất
