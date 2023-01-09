@@ -1,0 +1,51 @@
+Index: target/WebThueXe/index.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/WebThueXe/index.jsp b/target/WebThueXe/index.jsp
+--- a/target/WebThueXe/index.jsp	
++++ b/target/WebThueXe/index.jsp	
+@@ -47,7 +47,7 @@
+                 <li class="nav-item"><a href="#" class="nav-link">Cá nhân</a>
+                 <ul class="dr-menu">
+                     <li class="subb"><a href="cart"><p style="margin-top: 6px" class="icon icon-cart-plus"></p></a></li>
+-                    <li class="subb"><a href="OrderList" class="nav-link">Lịch sử giao dịch</a>
++                    <li class="subb"><a href="OrderList">Lịch sử giao dịch</a>
+                     <li class="subb"><a href="changepass">Đổi mật khẩu</a></li>
+                     <li class="subb"><a href="dangxuat">Đăng xuất</a></li>
+                 </ul>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -11,7 +11,7 @@
+       </list>
+     </option>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" project-jdk-name="19" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: target/WebThueXe/META-INF/MANIFEST.MF
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/WebThueXe/META-INF/MANIFEST.MF b/target/WebThueXe/META-INF/MANIFEST.MF
+--- a/target/WebThueXe/META-INF/MANIFEST.MF	
++++ b/target/WebThueXe/META-INF/MANIFEST.MF	
+@@ -1,5 +1,5 @@
+ Manifest-Version: 1.0
+ Created-By: IntelliJ IDEA
+-Built-By: USER
+-Build-Jdk: Oracle OpenJDK version 19.0.1
++Built-By: DELL
++Build-Jdk: Oracle OpenJDK version 19
+ 
