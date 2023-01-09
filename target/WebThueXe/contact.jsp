@@ -117,9 +117,6 @@
             <div class="col-md-8 block-9 mb-md-5">
                 <form action="contact" method="post" class="bg-light p-5 contact-form">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Họ và tên" name="name">
-                    </div>
-                    <div class="form-group">
                         <input type="text" class="form-control" placeholder="Email" name="email">
                     </div>
                     <div class="form-group">

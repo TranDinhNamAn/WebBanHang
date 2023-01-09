@@ -1,29 +1,28 @@
+<%@ page import="vn.edu.hcmuaf.fit.model.Product" %>
+<%@ page import="vn.edu.hcmuaf.fit.model.Brand" %>
+<%@ page import="java.util.List" %>
+<%@ page import="vn.edu.hcmuaf.fit.model.Blog" %>
+<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Đăng bài viết</title>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+
+  <title>Cập nhật sản phẩm</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css1/all.min.css">
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css1/ionicons.min.css">
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="css1/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
+<!-- Site wrapper -->
 <div class="wrapper">
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
-
     <div class="sidebar">
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="image/AdminLTELogo.png" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">Admin</a>
-        </div>
-      </div>
-
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
             data-accordion="false">
@@ -60,21 +59,9 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="addProduct.jsp" class="nav-link">
+                <a href="addProduct" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Thêm sản phẩm</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./removeProduct.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Xóa sản phẩm</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="updateProduct.jsp" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Sửa thông tin</p>
                 </a>
               </li>
             </ul>
@@ -89,13 +76,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./newProduct.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Sản phẩm mới </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="list_product.jsp" class="nav-link">
+                <a href="ShowAllProduct">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Danh sách sản phẩm</p>
                 </a>
@@ -112,24 +93,17 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./newUser.html" class="nav-link">
+                <a href="ListUser" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Khách hàng mới </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="listUser.jsp" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Danh sách khách hàng</p>
+                  <p>Danh sách khách hàng </p>
                 </a>
               </li>
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="./updateUserAdmin.html" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
+            <a href="listorder" class="nav-link">
               <p>
-                Cập nhật thông tin admin
+                Hóa đơn
               </p>
             </a>
           </li>
@@ -151,12 +125,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Bài viết giới thiệu</h1>
+            <h1>Sửa thông tin</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Bài viết giới thiệu</li>
+              <li class="breadcrumb-item active">Sửa thông tin</li>
             </ol>
           </div>
         </div>
@@ -167,50 +141,66 @@
         <div class="col-md-6">
           <div class="card card-primary">
             <div class="card-header">
-              <h3 class="card-title">Bài viết</h3>
+              <h3 class="card-title">Sửa thông tin</h3>
             </div>
-            <form role="form">
+            <form action="editBlogADM" method="post" role="form">
               <div class="card-body">
+                <%Blog blog = (Blog) request.getAttribute("detail"); %>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Tên bài viết</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Tên bài viết tối đa 100 ký tự">
+                  <label for="examplid">Mã bài viết</label>
+                  <input value="<%=blog.getId()%>" name="id" type="text" readonly id="examplid" placeholder="id">
                 </div>
                 <div class="form-group">
-                  <label for="ndbv">Tên bài viết</label>
-                  <textarea rows="5"  id="ndbv" class="form-control" placeholder="Nội dung không được quá 300 ký tự"></textarea>
+                  <label for="examplename">Người đăng</label>
+                  <input value="<%=blog.getUser()%>" name="user" type="text" class="form-control" placeholder="Tên sản phẩm">
+                </div>
+                <div class="form-group">
+                  <label for="examplename">Tên bài viết</label>
+                  <input value="<%=blog.getName()%>" name="name" type="text" class="form-control" id="examplename" placeholder="Tên sản phẩm">
+                </div>
+                <div class="form-group">
+                  <label >Hình Ảnh</label>
+                  <input value="<%=blog.getImg()%>" name="image" type="text" class="form-control"  placeholder="Loại sản phẩm">
+                </div>
+                <div class="form-group">
+                  <label >Ngày đăng</label>
+                  <input value="<%=blog.getDate()%>" name="date" type="text" class="form-control"  placeholder="Loại sản phẩm">
+                </div>
+
+                <div class="form-group">
+                  <label >Nội dung</label>
+                  <input value="<%=blog.getCotent()%>" name="content" type="text" class="form-control"  placeholder="Loại sản phẩm">
+                </div>
+                <div class="form-group">
+                  <label >Tiêu đề 1</label>
+                  <input value="<%=blog.getTitle1()%>" name="title1" type="text" class="form-control"  placeholder="Loại sản phẩm">
+                </div>
+                <div class="form-group">
+                  <label >Nội dung</label>
+                  <textarea name="content1" rows="5" type="text" class="form-control"  placeholder="Loại sản phẩm"><%=blog.getContent1()%></textarea>
+                </div>
+                <div class="form-group">
+                  <label >Tiêu đề 2</label>
+                  <input value="<%=blog.getTitle2()%>" name="title2" type="text" class="form-control"  placeholder="Loại sản phẩm">
+                </div>
+                <div class="form-group">
+                  <label >Nội dung</label>
+                  <textarea name="content2" rows="5" type="text" class="form-control"  placeholder="Loại sản phẩm"><%=blog.getContent2()%></textarea>
+                </div>
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Sửa thông tin</button>
                 </div>
               </div>
             </form>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="card card-warning">
-            <div class="card-header">
-              <h3 class="card-title">Hình ảnh</h3>
-            </div>
-            <img src="image/h1.jpg" style="width: 400px ; height: auto ">
-            <div class="form-group">
-              <div class="input-group">
-                <div class="custom-file">
-                  <label class="custom-file-label" >Chọn tệp</label>
-                </div>
-                <div class="input-group-append">
-                  <span class="input-group-text" id="">Đăng</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card-footer">
-          <button type="submit" class="btn btn-primary">Đăng bài</button>
-        </div>
       </div>
     </div>
   </div>
-
-  <footer class="main-footer">
-  </footer>
 </div>
+
+<footer class="main-footer">
+</footer>
 <script src="js1/jquery.min.js"></script>
 <script src="js1/bootstrap.bundle.min.js"></script>
 <script src="js1/adminlte.min.js"></script>
