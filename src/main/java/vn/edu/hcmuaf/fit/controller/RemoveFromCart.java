@@ -18,18 +18,17 @@ public class RemoveFromCart extends HttpServlet {
         String id = request.getParameter("id");
         HttpSession session = request.getSession();
         System.out.println(request);
-        Product p = null;
         Cart c = null;
-
         try {
-            p = ProductServerADM.getProduct(id);
             c = CartServices.ViewItem(String.valueOf(session.getAttribute("user")), id);
-            if (c == null) {
-                CartServices.Add(id, (String) session.getAttribute("user"), p.getName(), p.getImg(), Long.toString(p.getPrice()), "1");
-                response.sendRedirect("xemay");
+            if (c.getQuantity()>1) {
+                CartServices.DecsQuantity(id);
+                response.sendRedirect("cart");
             } else {
-                CartServices.AddQuantity(id);
-                response.sendRedirect("xemay");
+                if(c.getQuantity()==1){
+                    CartServices.RemoveFromCart(id);
+                    response.sendRedirect("cart");
+                }
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

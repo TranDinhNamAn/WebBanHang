@@ -74,7 +74,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="ShowAllProduct" class="nav-link">
+                                <a href="ShowAllProduct">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Danh sách sản phẩm</p>
                                 </a>
@@ -97,6 +97,13 @@
                                 </a>
                             </li>
                         </ul>
+                    </li>
+                    <li class="nav-item has-treeview">
+                        <a href="listorder" class="nav-link">
+                            <p>
+                                Hóa đơn
+                            </p>
+                        </a>
                     </li>
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
