@@ -60,7 +60,7 @@
                     </ul>
                 </li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
-                <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
+                <li class="nav-item"><a href="contact" class="nav-link">Liên hệ</a></li>
                 <%if(session.getAttribute("account")!=null){%>
                 <li class="nav-item"><a href="#" class="nav-link">Cá nhân</a>
                     <ul class="dr-menu">

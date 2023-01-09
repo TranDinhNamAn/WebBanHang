@@ -38,9 +38,9 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a href="trangchu" class="nav-link">Trang chủ</a></li>
                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
-                <li class="nav-item"><a href="motor.jsp" class="nav-link">Xe máy</a></li>
+                <li class="nav-item"><a href="xemay" class="nav-link">Xe máy</a></li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
-                <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
+                <li class="nav-item"><a href="contact" class="nav-link">Liên hệ</a></li>
                 <li class="nav-item active"><a href="dangnhap" class="nav-link">Đăng nhập</a></li>
             </ul>
         </div>

@@ -1,3 +1,5 @@
+<%@ page import="vn.edu.hcmuaf.fit.service.ContactServices" %>
+<%@ page import="vn.edu.hcmuaf.fit.model.Contact" %>
 <%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -153,12 +155,13 @@
                     <h2 class="ftco-heading-2">Thông tin liên hệ</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="icon icon-map-marker"></span><span class="text">Trường đại học Nông Lâm, khu phố 6, phường Linh Trung, TP.Thủ Đức, TP.Hồ Chí Minh</span>
+                            <%Contact contact = ContactServices.getContact();%>
+                            <li><span class="icon icon-map-marker"></span><span class="text"><%=contact.getAddress()%></span>
                             </li>
                             <li><a href="#"><span class="icon icon-phone"></span><span
-                                    class="text">+84 326 500 729</span></a></li>
+                                    class="text"><%=contact.getPhone()%></span></a></li>
                             <li><a href="#"><span class="icon icon-envelope"></span><span
-                                    class="text">ltweb@gmail.com</span></a></li>
+                                    class="text"><%=contact.getEmail()%></span></a></li>
                         </ul>
                     </div>
                 </div>

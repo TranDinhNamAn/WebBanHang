@@ -74,6 +74,9 @@ public class Reset extends HttpServlet {
                 mySession.setAttribute("otp",otpvalue);
                 mySession.setAttribute("email",email);
                 dispatcher.forward(request, response);
+            }else{
+                request.setAttribute("Error", "Email không chính xác hoặc chưa được đăng ký!");
+                request.getRequestDispatcher("reset.jsp").forward(request, response);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
