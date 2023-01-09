@@ -51,7 +51,7 @@
                         <%}%>
                     </ul>
                 </li>
-                <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
+                <li class="nav-item"><a href="ShowAllBlog" class="nav-link">Bài viết</a></li>
                 <li class="nav-item"><a href="contact" class="nav-link">Liên hệ</a></li>
                 <li class="nav-item">
                 <form action="timkiem" style="margin-top: 15px">
@@ -65,6 +65,7 @@
                     <ul class="dr-menu">
                         <li class="subb"><a href="cart"><p style="margin-top: 6px"
                                                            class="icon icon-cart-plus"></p></a></li>
+                        <li class="subb"><a href="OrderList">Lịch sử giao dịch</a></li>
                         <li class="subb"><a href="changepass">Đổi mật khẩu</a></li>
                         <li class="subb"><a href="dangxuat">Đăng xuất</a></li>
                     </ul>
@@ -200,10 +201,10 @@
             </div>
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
-                    <%Contact contact = ContactServices.getContact();%>
                     <h2 class="ftco-heading-2">Thông tin liên hệ</h2>
                     <div class="block-23 mb-3">
                         <ul>
+                            <%Contact contact = ContactServices.getContact();%>
                             <li><span class="icon icon-map-marker"></span><span class="text"><%=contact.getAddress()%></span>
                             </li>
                             <li><a href="#"><span class="icon icon-phone"></span><span

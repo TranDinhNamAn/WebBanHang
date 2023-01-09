@@ -10,25 +10,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="416c06ed-0398-4fcb-a2d0-6804377f658f" name="Changes" comment="Nam An">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_39_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_39_PM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_40_PM_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_40_PM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_41_PM_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_41_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/AddToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/AddToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/ShowAllBlogDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/ShowAllBlogDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/DeleteBlogADM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/DeleteBlogADM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/about.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/blog-single.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/blog-single.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/blog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/blog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/changepass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/changepass.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/contact.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/fromdsbaiviet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fromdsbaiviet.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/listOrder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listOrder.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/listUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/list_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/list_product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/orderDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/orderDetail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/updateProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/updateProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/getOrderDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/getOrderDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/motor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/motor.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/motor_single.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/motor_single.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/newpass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/newpass.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/orders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/orders.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/otp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/otp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/phanloai.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/phanloai.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reset.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reset.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/signup.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebThueXe.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/AddToCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/AddToCart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/ShowAllBlogDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/ShowAllBlogDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controllerADM/deleteBlogADM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controllerADM/deleteBlogADM.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebThueXe/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/about.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/blog-single.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/blog-single.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/blog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/blog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/changepass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/changepass.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/contact.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebThueXe/fromdsbaiviet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/fromdsbaiviet.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/listOrder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/listOrder.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/listUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/listUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/list_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/list_product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/orderDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/orderDetail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/updateProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/updateProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/getOrderDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/getOrderDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/motor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/motor.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/motor_single.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/motor_single.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/newpass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/newpass.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/orders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/orders.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/otp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/otp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/phanloai.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/phanloai.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/reset.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/reset.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/AddToCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/AddToCart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/ShowAllBlogDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/ShowAllBlogDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controllerADM/deleteBlogADM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controllerADM/deleteBlogADM.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,7 +314,7 @@
       <workItem from="1673157268305" duration="7907000" />
       <workItem from="1673185132911" duration="9934000" />
       <workItem from="1673230160054" duration="19919000" />
-      <workItem from="1673274953355" duration="3113000" />
+      <workItem from="1673274953355" duration="5692000" />
     </task>
     <task id="LOCAL-00001" summary="Nam An">
       <created>1672805231465</created>
@@ -572,7 +603,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673275245620</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Nam An">
+      <created>1673279773889</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1673279773891</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Nam An">
+      <created>1673279795892</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1673279795892</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -9,12 +9,13 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "DeleteBlogADM", value = "/DeleteBlogADM")
+@WebServlet(name = "DeleteBlogADM", value = "/deleteBlogADM")
 public class DeleteBlogADM extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String id = request.getParameter("id");
+
         try {
+            String id = request.getParameter("id");
             ProductServerADM.deleteBlog(id);
             request.getRequestDispatcher("ShowAllBlogADM").forward(request,response);
         } catch (SQLException e) {
