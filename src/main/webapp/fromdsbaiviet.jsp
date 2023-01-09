@@ -1,9 +1,15 @@
+<%@ page import="java.util.List" %>
+<%@ page import="vn.edu.hcmuaf.fit.model.Blog" %>
+<%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Danh sách bài viết</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css1/all.min.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css1/ionicons.min.css">
@@ -126,14 +132,6 @@
                         </ul>
                     </li>
                     <li class="nav-item has-treeview">
-                        <a href="./updateUserAdmin.html" class="nav-link">
-                            <i class="nav-icon fas fa-edit"></i>
-                            <p>
-                                Cập nhật thông tin admin
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-arrow-right"></i>
                             <p>
@@ -179,56 +177,23 @@
                             </tr>
                             </thead>
                             <tbody>
+                            <%List<Blog> list = (List<Blog>) request.getAttribute("blog");%>
+                            <%
+        for (Blog b:list
+             ) {
+
+        %>
                             <tr>
-                                <td>01</td>
-                                <td>Honda giới thiệu Wave alpha bản 2023</td>
-                                <td>Wave alpha giới thiệu bảng màu đen...</td>
-                                <td>20/10/2020</td>
+                                <td><%=b.getId()%></td>
+                                <td><%=b.getName()%></td>
+                                <td><%=b.getCotent()%></td>
+                                <td><%=b.getDate()%></td>
                                 <td>
-                                    <button class="btn btn-danger">Xóa bài viết</button>
-                                    <button class="btn btn-dark">Xem chi tiết</button>
+                                    <a href="DeleteBlogADM?id=<%=b.getId()%>"><button class="btn btn-danger">Xóa </button></a>
+                                        <a href="blogdetailADM?id=<%=b.getId()%>"><button class="btn btn-dark">Chi tiết</button></a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>02</td>
-                                <td>Honda thực hiện chiên dich triệu hồi 3 sản phẩm</td>
-                                <td>Chi tiết các sản phẩm triệu hồi như sao...</td>
-                                <td> 24/10/2020</td>
-                                <td>
-                                    <button class="btn btn-danger">Xóa bài viết</button>
-                                    <button class="btn btn-dark">Xem chi tiết</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>03</td>
-                                <td>Honda triển khai hỗ trợ mua xe</td>
-                                <td>Khách hàng đăng ký liên minh Winner...</td>
-                                <td> 22/10/2020</td>
-                                <td>
-                                    <button class="btn btn-danger">Xóa bài viết</button>
-                                    <button class="btn btn-dark">Xem chi tiết</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>04</td>
-                                <td>Honda hàng loạt giới thiệu các mẫu xe phân khối lơn</td>
-                                <td>Các loại xe giới thiệu như CBR500R CB500X</td>
-                                <td>20/1/2021</td>
-                                <td>
-                                    <button class="btn btn-danger">Xóa bài viết</button>
-                                    <button class="btn btn-dark">Xem chi tiết</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>05</td>
-                                <td>Honda UNI-Sống động</td>
-                                <td>Sự kiện dành riêng cho sinh viên từ bắt tới nam...</td>
-                                <td> 12/2/2021</td>
-                                <td>
-                                    <button class="btn btn-danger">Xóa bài viết</button>
-                                    <button class="btn btn-dark">Xem chi tiết</button>
-                                </td>
-                            </tr>
+                    <%}%>
                             </tfoot>
                         </table>
                     </div>

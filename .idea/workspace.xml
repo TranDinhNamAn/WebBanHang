@@ -10,25 +10,70 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="416c06ed-0398-4fcb-a2d0-6804377f658f" name="Changes" comment="Nam An">
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Contact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/DeleteBlogADM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/ShowAllBlogADM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/UpdateBlogADM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controllerADM/editBlog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/blogdetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_10_29_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_10_29_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_10_36_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_10_36_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_15_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_15_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_15_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_15_PM__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_48_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_48_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_48_AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_11_48_AM__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_12_31_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_12_31_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_8_48_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_8_48_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_8_48_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_8_48_PM__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_9_35_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_9_35_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_9_35_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_4_2023_9_35_PM__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_5_2023_12_38_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_5_2023_12_38_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_5_2023_8_40_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_5_2023_8_40_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2023_12_56_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2023_12_56_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2023_2_49_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2023_2_49_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2023_3_05_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2023_3_05_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2023_3_05_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_6_2023_3_05_PM__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_7_2023_2_08_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_7_2023_2_08_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_8_2023_12_20_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_8_2023_12_20_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_09_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_09_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_14_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_14_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_15_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_15_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_15_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_15_PM__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_9_39_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Reset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Reset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/changepass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/changepass.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/contact.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/motor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/motor.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/motor_single.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/motor_single.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/newpass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/newpass.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/orders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/orders.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/otp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/otp.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/phanloai.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/phanloai.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/reset.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reset.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/ProductServerADM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/service/ProductServerADM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/fromdsbaiviet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fromdsbaiviet.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebThueXe.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Reset.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Reset.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controllerADM/ShowAllBlogADM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controllerADM/ShowAllBlogADM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controllerADM/deleteBlogADM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controllerADM/deleteBlogADM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controllerADM/editBlog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controllerADM/editBlog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/addProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/changepass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/changepass.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebThueXe/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/contact.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/fromdangbai.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/fromdangbai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/fromdsbaiviet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/fromdsbaiviet.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/listOrder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/listOrder.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/listUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/listUser.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/list_product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/list_product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/motor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/motor.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/motor_single.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/motor_single.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/newpass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/newpass.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/orderDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/orderDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/orders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/orders.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/otp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/otp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/phanloai.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/phanloai.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebThueXe/reset.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/reset.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/updateProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/updateProduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Reset.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Reset.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controllerADM/ShowAllBlogADM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controllerADM/ShowAllBlogADM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controllerADM/deleteBlogADM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controllerADM/deleteBlogADM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controllerADM/editBlog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controllerADM/editBlog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/service/ProductServerADM.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +195,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.68" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.68" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.68" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.70" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/WebThueXe/trangchu" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -283,6 +328,7 @@
       <workItem from="1673157268305" duration="7907000" />
       <workItem from="1673185132911" duration="9934000" />
       <workItem from="1673230160054" duration="18259000" />
+      <workItem from="1673276620709" duration="2951000" />
     </task>
     <task id="LOCAL-00001" summary="Nam An">
       <created>1672805231465</created>

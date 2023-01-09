@@ -179,6 +179,69 @@ public class ProductServerADM {
         return list1;
     }
 
+    public static List<Blog> getAllBlog() throws SQLException {
+        String sql = "SELECT * from blog";
+        Statement statement = DBConnect.getInstall().get();
+        List<Blog> list1 = new ArrayList<>();
+        if (statement != null) {
+            ResultSet rs = statement.executeQuery(sql);
+            while (rs.next()) {
+                list1.add(new Blog(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getString(9),
+                        rs.getString(10)
+
+                ));
+            }
+        } else {
+            System.out.println("No result");
+        }
+        return list1;
+    }
+    public static Blog getBlog(String id) throws SQLException {
+        String sql = "SELECT * from blog where id = " + id;
+        Statement statement = DBConnect.getInstall().get();
+        Blog b = null;
+        if (statement != null) {
+            ResultSet rs = statement.executeQuery(sql);
+            while (rs.next()) {
+               b = new Blog(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getString(9),
+                        rs.getString(10)
+
+                );
+            }
+        } else {
+            System.out.println("No result");
+        }
+        return b;
+    }
+    public static void deleteBlog(String id) throws SQLException {
+        String sql = " delete from blog where id = " + id;
+        Statement statement = DBConnect.getInstall().get();
+        statement.executeUpdate(sql);
+    }
+    public static void updateBlog(String id, String img, String date, String user, String name, String content, String title1, String content1, String title2, String content2) throws SQLException {
+        String sql = "update blog set image ='" + img + "',date ='" + date + "',user ='" + user + "',nameblog ='" + name + "',content ='" + content + "',title1 ='" + title1 + "',content1 ='" + content1 + "',title2 ='" + title2 + "',content2 ='" + content2 + "' where id = '" + id + "'";
+        Statement statement = DBConnect.getInstall().get();
+        statement.executeUpdate(sql);
+
+    }
 
     public static void main(String[] args) throws SQLException {
         ProductServerADM ps = new ProductServerADM();

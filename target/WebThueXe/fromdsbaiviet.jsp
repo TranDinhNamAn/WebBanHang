@@ -7,8 +7,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <title>Danh sách bài viết</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css1/all.min.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css1/ionicons.min.css">
@@ -42,7 +43,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="updateblog.jsp" class="nav-link">
+                                <a href="./fromdangbai.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Đăng bài viết</p>
                                 </a>
@@ -131,14 +132,6 @@
                         </ul>
                     </li>
                     <li class="nav-item has-treeview">
-                        <a href="./updateUserAdmin.html" class="nav-link">
-                            <i class="nav-icon fas fa-edit"></i>
-                            <p>
-                                Cập nhật thông tin admin
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-arrow-right"></i>
                             <p>
@@ -184,26 +177,23 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <% List<Blog> list = (List<Blog>) request.getAttribute("blog");%>
+                            <%List<Blog> list = (List<Blog>) request.getAttribute("blog");%>
                             <%
-        for (Blog p:list
+        for (Blog b:list
              ) {
+
         %>
                             <tr>
-                                <td><%=p.getId()%></td>
-                                <td><%=p.getName()%></td>
-                                <td><%=p.getCotent()%></td>
-                                <td><%=p.getDate()%></td>
+                                <td><%=b.getId()%></td>
+                                <td><%=b.getName()%></td>
+                                <td><%=b.getCotent()%></td>
+                                <td><%=b.getDate()%></td>
                                 <td>
-                                    <a href="deleteBlogADM?id=<%=p.getId()%>">
-                                        <button class="btn btn-danger">Xóa</button>
-                                    </a>
-                                    <a href="blogDetailADM?id=<%=p.getId()%>">
-                                        <button class="btn btn-dark">Chi tiết</button>
-                                    </a>
+                                    <a href="DeleteBlogADM?id=<%=b.getId()%>"><button class="btn btn-danger">Xóa </button></a>
+                                        <a href="blogdetailADM?id=<%=b.getId()%>"><button class="btn btn-dark">Chi tiết</button></a>
                                 </td>
                             </tr>
-                            <%}%>
+                    <%}%>
                             </tfoot>
                         </table>
                     </div>
