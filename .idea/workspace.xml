@@ -10,25 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="416c06ed-0398-4fcb-a2d0-6804377f658f" name="Changes" comment="Nam An">
-      <change afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_14_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_14_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_15_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_15_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_15_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_15_PM__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Reset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/hcmuaf/fit/controller/Reset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/changepass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/changepass.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/contact.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/motor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/motor.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/motor_single.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/motor_single.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/newpass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/newpass.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/orders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/orders.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/otp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/otp.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/phanloai.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/phanloai.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/reset.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reset.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/contact.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/reset.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/reset.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Reset.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Reset.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Reset.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Reset.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +269,7 @@
       <workItem from="1673155003327" duration="1830000" />
       <workItem from="1673157268305" duration="7907000" />
       <workItem from="1673185132911" duration="9934000" />
-      <workItem from="1673230160054" duration="18259000" />
+      <workItem from="1673230160054" duration="19919000" />
     </task>
     <task id="LOCAL-00001" summary="Nam An">
       <created>1672805231465</created>
@@ -550,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673247600142</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Nam An">
+      <created>1673251160849</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1673251160849</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
