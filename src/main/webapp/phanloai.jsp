@@ -2,33 +2,28 @@
 <%@ page import="java.util.List" %>
 <%@ page import="vn.edu.hcmuaf.fit.service.ProductService" %>
 <%@ page import="vn.edu.hcmuaf.fit.model.Brand" %>
+<%@ page import="java.util.LinkedList" %>
+<%@ page import="vn.edu.hcmuaf.fit.service.ContactServices" %>
+<%@ page import="vn.edu.hcmuaf.fit.model.Contact" %>
 <%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Xe Máy Yamaha</title>
+    <title>Xe máy</title>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
           rel="stylesheet">
-
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-
     <link rel="stylesheet" href="css/aos.css">
-
     <link rel="stylesheet" href="css/ionicons.min.css">
-
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
-
-
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
@@ -51,8 +46,9 @@
                 <li class="nav-item active"><a href="xemay" class="nav-link">Xe máy</a>
                     <ul class="dr-menu">
                         <%List<Brand> arr1 = ProductService.getListBrand();%>
-                        <%for (Brand b:arr1) {%>
-                        <li class="subb"><a href="<%=b.getName()%>"><%=b.getName()%></a></li>
+                        <%for (Brand b:arr1) {
+                        %>
+                        <li class="subb"><a href="phanloai?id=<%=b.getID()%>"><%=b.getName()%></a></li>
                         <%}%>
                     </ul>
                 </li>
@@ -64,11 +60,12 @@
                         <button type="submit"><i class="nav-icon fas icon-search"></i></button>
                     </form>
                 </li>
-                <%if(session.getAttribute("account")!=null){%>
+                <%if(session.getAttribute("account")!=null){
+                %>
                 <li class="nav-item"><a href="#" class="nav-link">Cá nhân</a>
                     <ul class="dr-menu">
-                        <li class="subb"><a href="cart"><p style="margin-top: 6px" class="icon icon-cart-plus"></p></a></li>
-                        <li class="subb"><a href="OrderList">Lịch sử giao dịch</a>
+                        <li class="subb"><a href="cart"><p style="margin-top: 6px"
+                                                           class="icon icon-cart-plus"></p></a></li>
                         <li class="subb"><a href="changepass">Đổi mật khẩu</a></li>
                         <li class="subb"><a href="dangxuat">Đăng xuất</a></li>
                     </ul>
@@ -92,7 +89,7 @@
                 <p class="breadcrumbs"><span class="mr-2"><a href="trangchu">Trang chủ <i
                         class="ion-ios-arrow-forward"></i></a></span>
                     <span><a href="xemay">Xe máy <i class="ion-ios-arrow-forward"></i></a></span></p>
-                <h1 class="mb-3 bread">Xe Yamaha</h1>
+                <h1 class="mb-3 bread">Chọn xe của bạn</h1>
             </div>
         </div>
     </div>
@@ -102,7 +99,7 @@
 <section class="ftco-section bg-light">
     <div class="container">
         <div class="row">
-            <%List<Product> list = (List<Product>) request.getAttribute("list2");
+            <% List<Product> list = (List<Product>) request.getAttribute("listbrand");
                 int start = 0, end = 9;
                 if (list.size() < 9) {
                     end = list.size();
@@ -113,21 +110,27 @@
                 if (request.getParameter("end") != null) {
                     end = Integer.parseInt(request.getParameter("end"));
                 }
-                List<Product> arr = ProductService.getListByPage(list,start,end);%>
-            <%for (Product p1:arr) {%>
+                List<Product> arr = ProductService.getListByPage(list, start, end);%>
+            <% for (Product p : arr){%>
             <div class="col-md-4">
                 <div class="car-wrap rounded ftco-animate">
                     <div class="img rounded d-flex align-items-end"
-                         style="background-image: url(<%=p1.getImg()%>);">
+                         style="background-image: url(<%=p.getImg()%>);">
                     </div>
                     <div class="text">
-                        <h2 class="mb-0"><a href="car-single.jsp"><%=p1.getName()%>
+                        <h2 class="mb-0"><a href="chitietxe?id=<%=p.getId()%>"><%=p.getName()%>
                         </a></h2>
                         <div class="d-flex mb-3">
-                            <p class="price ml-auto"><%=p1.getPrice()%>vnđ<span>/ngày</span></p>
+                            <p class="price ml-auto"><%=p.getPrice()%><span>/ngày</span></p>
                         </div>
-                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Thuê</a> <a
-                                href="chitietxe?id=<%=p1.getId()%>" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
+                        <p class="d-flex mb-0 d-block">
+                            <%if(session.getAttribute("account")==null){%>
+                            <a href="dangnhap" class="btn btn-primary py-2 mr-1">Thuê</a>
+                            <%}%>
+                            <%if(session.getAttribute("account")!=null){%>
+                            <a href="addToCart?id=<%=p.getId()%>" class="btn btn-primary py-2 mr-1">Thuê</a>
+                            <%}%>
+                            <a href="chitietxe?id=<%=p.getId()%>" class="btn btn-secondary py-2 ml-1">Chi tiết</a></p>
                     </div>
                 </div>
             </div>
@@ -148,7 +151,7 @@
                                 if (b > list.size()) {
                                     b = list.size();
                                 }%>
-                        <li class="active"><a href="Yamaha?start=<%=a%>&end=<%=b%>"><%=i%>
+                        <li class="active"><a href="phanloai?id=<%=session.getAttribute("id")%>&start=<%=a%>&end=<%=b%>"><%=i%>
                         </a></li>
                         <% }%>
                     </ul>
@@ -156,7 +159,6 @@
             </div>
         </div>
     </div>
-
 </section>
 
 
@@ -203,12 +205,13 @@
                     <h2 class="ftco-heading-2">Thông tin liên hệ</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="icon icon-map-marker"></span><span class="text">Trường đại học Nông Lâm, khu phố 6, phường Linh Trung, TP.Thủ Đức, TP.Hồ Chí Minh</span>
+                            <%Contact contact = ContactServices.getContact();%>
+                            <li><span class="icon icon-map-marker"></span><span class="text"><%=contact.getAddress()%></span>
                             </li>
                             <li><a href="#"><span class="icon icon-phone"></span><span
-                                    class="text">+84 326 500 729</span></a></li>
+                                    class="text"><%=contact.getPhone()%></span></a></li>
                             <li><a href="#"><span class="icon icon-envelope"></span><span
-                                    class="text">ltweb@gmail.com</span></a></li>
+                                    class="text"><%=contact.getEmail()%></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -245,6 +248,5 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
-
 </body>
 </html>

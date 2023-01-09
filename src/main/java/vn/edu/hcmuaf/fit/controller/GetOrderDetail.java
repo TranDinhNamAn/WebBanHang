@@ -17,11 +17,20 @@ public class GetOrderDetail extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            String id =request.getParameter("id");
-            List<OrderDetail> list = ProductService.getOrderDetailByUser(id);
-            request.setAttribute("list", list);
-            request.setAttribute("id",id);
-            request.getRequestDispatcher("getOrderDetail.jsp").forward(request, response);
+            HttpSession session = request.getSession();
+            if(session.getAttribute("user")!=null) {
+                String id = request.getParameter("id");
+                if(id!=null) {
+                    List<OrderDetail> list = ProductService.getOrderDetailByUser(id);
+                    request.setAttribute("list", list);
+                    request.setAttribute("id", id);
+                    request.getRequestDispatcher("getOrderDetail.jsp").forward(request, response);
+                }else{
+                    response.sendRedirect("OrderList");
+                }
+            }else{
+                response.sendRedirect("dangnhap");
+            }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

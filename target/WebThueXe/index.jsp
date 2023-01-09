@@ -82,8 +82,8 @@
     <div class="container">
         <div class="row no-gutters">
             <div class="col-md-12	featured-top">
-                <div class="row no-gutters" style="width: 1660px">
-                    <div class="col-md-8 d-flex align-items-center">
+                <div class="row no-gutters">
+                    <div class="col-md-8 align-items-center"     style=" transform: translateX(180px)">
                         <div class="services-wrap rounded-right w-100">
                             <h3 class="heading-section mb-4" style="text-align: center">Ưu điểm khi thuê xe tại ThueXeMay</h3>
                             <div class="row d-flex mb-4">
@@ -133,7 +133,6 @@
             </div>
         </div>
         <div class="row">
-
             <div class="col-md-12">
                 <div class="carousel-car owl-carousel">
                     <% List<Product> list = (List<Product>) request.getAttribute("list");
@@ -366,10 +365,10 @@
             </div>
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
-                    <%Contact contact = ContactServices.getContact();%>
                     <h2 class="ftco-heading-2">Thông tin liên hệ</h2>
                     <div class="block-23 mb-3">
                         <ul>
+                            <%Contact contact = ContactServices.getContact();%>
                             <li><span class="icon icon-map-marker"></span><span class="text"><%=contact.getAddress()%></span>
                             </li>
                             <li><a href="#"><span class="icon icon-phone"></span><span

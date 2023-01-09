@@ -27,10 +27,10 @@ public class AddToCart extends HttpServlet {
             c = CartServices.ViewItem(String.valueOf(session.getAttribute("user")), id);
             if(c==null){
                 CartServices.Add(id, (String) session.getAttribute("user"),p.getName(), p.getImg(), Long.toString(p.getPrice()),"1");
-                response.sendRedirect("xemay");
+                response.sendRedirect("Xemay");
             }else{
                 CartServices.AddQuantity(id);
-                response.sendRedirect("xemay");
+                response.sendRedirect("Xemay");
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

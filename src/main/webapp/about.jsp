@@ -44,7 +44,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
                 <li class="nav-item active"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
-                <li class="nav-item"><a href="car.jsp" class="nav-link">Xe máy</a></li>
+                <li class="nav-item"><a href="motor.jsp" class="nav-link">Xe máy</a></li>
                 <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
                 <li class="nav-item"><a href="login.jsp" class="nav-link">Đăng nhập</a></li>
@@ -101,7 +101,7 @@
                         tiết kiệm được thời gian, công sức.
                         Chúng tôi giao xe tận nơi và có thể linh động nhận xe tại địa điểm gần quý khách nhất có thể.
                     </p>
-                    <p><a href="car.jsp" class="btn btn-primary py-3 px-4">Tìm xe</a></p>
+                    <p><a href="motor.jsp" class="btn btn-primary py-3 px-4">Tìm xe</a></p>
                 </div>
             </div>
         </div>

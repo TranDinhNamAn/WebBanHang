@@ -1,13 +1,15 @@
 <%@ page import="java.util.List" %>
 <%@ page import="vn.edu.hcmuaf.fit.model.Cart" %>
 <%@ page import="vn.edu.hcmuaf.fit.model.Order" %>
+<%@ page import="vn.edu.hcmuaf.fit.model.Contact" %>
+<%@ page import="vn.edu.hcmuaf.fit.service.ContactServices" %>
 <%@ page contentType="text/html; charset =UTF-8" language="java" pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-  <title>Giỏ hàng</title>
+  <title>Đơn hàng</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
@@ -44,11 +46,11 @@
         <li class="nav-item"><a href="xemay" class="nav-link">Xe máy</a></li>
         <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
         <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
-        <li class="nav-item"><a href="orderDetail" class="nav-link">Cá nhân</a>
+        <li class="nav-item"><a href="#" class="nav-link">Cá nhân</a>
           <ul class="dr-menu">
             <li class="subb"><a href="cart"><p style="margin-top: 6px"
                                                class="icon icon-cart-plus"></p></a></li>
-            <li class="subb"><a href="OrderList" class="nav-link">Lịch sử giao dịch</a>
+            <li class="subb"><a href="OrderList">Lịch sử giao dịch</a>
             <li class="subb"><a href="changepass">Đổi mật khẩu</a></li>
             <li class="subb"><a href="dangxuat" >Đăng xuất</a></li>
           </ul>
@@ -66,7 +68,7 @@
       <div class="col-md-9 ftco-animate pb-5">
         <p class="breadcrumbs"><span class="mr-2"><a href="trangchu">Trang chủ <i
                 class="ion-ios-arrow-forward"></i></a></span>
-          <span><a href="orderDetail">Lịch sử <i class="ion-ios-arrow-forward"></i></a></span></p>
+          <span><a href="OrderList">Lịch sử <i class="ion-ios-arrow-forward"></i></a></span></p>
         <h1 class="mb-3 bread">Lịch sử giao dịch</h1>
       </div>
     </div>
@@ -156,12 +158,13 @@
           <h2 class="ftco-heading-2">Thông tin liên hệ</h2>
           <div class="block-23 mb-3">
             <ul>
-              <li><span class="icon icon-map-marker"></span><span class="text">Trường đại học Nông Lâm, khu phố 6, phường Linh Trung, TP.Thủ Đức, TP.Hồ Chí Minh</span>
+              <%Contact contact = ContactServices.getContact();%>
+              <li><span class="icon icon-map-marker"></span><span class="text"><%=contact.getAddress()%></span>
               </li>
               <li><a href="#"><span class="icon icon-phone"></span><span
-                      class="text">+84 326 500 729</span></a></li>
+                      class="text"><%=contact.getPhone()%></span></a></li>
               <li><a href="#"><span class="icon icon-envelope"></span><span
-                      class="text">ltweb@gmail.com</span></a></li>
+                      class="text"><%=contact.getEmail()%></span></a></li>
             </ul>
           </div>
         </div>

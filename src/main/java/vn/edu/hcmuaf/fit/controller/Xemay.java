@@ -10,22 +10,22 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name = "Honda", value = "/phanloai")
-public class Honda extends HttpServlet {
+@WebServlet(name = "Xemay", value = "/xemay")
+public class Xemay extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Product> list = null;
-        String id = request.getParameter("id");
         try {
-            list = ProductService.getListProductByCategory(id);
-            request.setAttribute("listbrand", list);
-            request.getRequestDispatcher("honda.jsp").forward(request, response);
+            list = ProductService.getProduct();
+            request.setAttribute("list", list);
+            request.getRequestDispatcher("motor.jsp").forward(request, response);
         } catch (SQLException e) {
-            throw new RuntimeException();
+            throw new RuntimeException(e);
         }
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 
     }
 }

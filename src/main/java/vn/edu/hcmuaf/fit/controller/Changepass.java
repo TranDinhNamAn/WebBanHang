@@ -12,7 +12,12 @@ import java.sql.SQLException;
 public class Changepass extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    request.getRequestDispatcher("changepass.jsp").forward(request, response);
+   HttpSession session = request.getSession();
+   if(session.getAttribute("user")!=null) {
+       request.getRequestDispatcher("changepass.jsp").forward(request, response);
+   }else{
+       response.sendRedirect("dangnhap");
+   }
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

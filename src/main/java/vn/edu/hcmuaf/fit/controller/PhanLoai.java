@@ -10,23 +10,24 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name = "Yamaha", value = "/Yamaha")
-public class Yamaha extends HttpServlet {
+@WebServlet(name = "PhanLoai", value = "/phanloai")
+public class PhanLoai extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Product> list = null;
+        String id = request.getParameter("id");
+        HttpSession session = request.getSession();
+        session.setAttribute("id", id);
         try {
-            list = ProductService.getListProductByCategory("6");
-            request.setAttribute("list2", list);
-            request.getRequestDispatcher("yamaha.jsp").forward(request, response);
+            list = ProductService.getListProductByCategory((String) session.getAttribute("id"));
+            request.setAttribute("listbrand", list);
+            request.getRequestDispatcher("phanloai.jsp").forward(request, response);
         } catch (SQLException e) {
             throw new RuntimeException();
         }
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 
     }
 }

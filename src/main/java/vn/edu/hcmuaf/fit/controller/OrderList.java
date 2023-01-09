@@ -17,14 +17,17 @@ public class OrderList extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             HttpSession session = request.getSession();
-            List<Order> list = ProductService.getOrderListByUser((String) session.getAttribute("user"));
-            request.setAttribute("list", list);
-            request.getRequestDispatcher("orders.jsp").forward(request, response);
+            if(session.getAttribute("user")!=null) {
+                List<Order> list = ProductService.getOrderListByUser((String) session.getAttribute("user"));
+                request.setAttribute("list", list);
+                request.getRequestDispatcher("orders.jsp").forward(request, response);
+            }else{
+                response.sendRedirect("dangnhap");
+            }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
