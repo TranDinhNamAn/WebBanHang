@@ -240,7 +240,11 @@ public class ProductServerADM {
         String sql = "update blog set image ='" + img + "',date ='" + date + "',user ='" + user + "',nameblog ='" + name + "',content ='" + content + "',title1 ='" + title1 + "',content1 ='" + content1 + "',title2 ='" + title2 + "',content2 ='" + content2 + "' where id = '" + id + "'";
         Statement statement = DBConnect.getInstall().get();
         statement.executeUpdate(sql);
-
+    }
+    public static void addBlog(String img, String date, String user, String name, String content, String title1, String content1, String title2, String content2) throws SQLException {
+        String sql = "insert into blog values(id,'" + img + "','" + date + "','" + user + "','" + name + "','" + content + "','" + title1 + "','" + content1 + "','" + title2 + "','" + content2 + "' )";
+        Statement statement = DBConnect.getInstall().get();
+        statement.executeUpdate(sql);
     }
 
     public static void main(String[] args) throws SQLException {

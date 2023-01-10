@@ -33,13 +33,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="./fromdangbai.html" class="nav-link">
+                                <a href="addBlog" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Đăng bài viết</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="fromdsbaiviet.jsp" class="nav-link">
+                                <a href="ShowAllBlogADM" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Danh sách bài viết</p>
                                 </a>
@@ -100,7 +100,7 @@
                     <li class="nav-item has-treeview">
                         <a href="listorder" class="nav-link">
                             <p>
-                               Hóa đơn
+                                Hóa đơn
                             </p>
                         </a>
                     </li>

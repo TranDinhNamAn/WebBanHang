@@ -19,17 +19,7 @@
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
-
         <div class="sidebar">
-            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                <div class="image">
-                    <img src="image/AdminLTELogo.png" class="img-circle elevation-2" alt="User Image">
-                </div>
-                <div class="info">
-                    <a href="#" class="d-block">Admin</a>
-                </div>
-            </div>
-
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                     data-accordion="false">
@@ -43,13 +33,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="./fromdangbai.html" class="nav-link">
+                                <a href="addBlog" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Đăng bài viết</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./fromdsbaiviet.html" class="nav-link">
+                                <a href="ShowAllBlogADM" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Danh sách bài viết</p>
                                 </a>
@@ -66,21 +56,9 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="addProduct.jsp" class="nav-link">
+                                <a href="addProduct" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Thêm sản phẩm</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./removeProduct.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Xóa sản phẩm</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="updateProduct.jsp" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Sửa thông tin</p>
                                 </a>
                             </li>
                         </ul>
@@ -95,13 +73,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="./newProduct.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Sản phẩm mới </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="list_product.jsp" class="nav-link">
+                                <a href="ShowAllProduct">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Danh sách sản phẩm</p>
                                 </a>
@@ -118,18 +90,19 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="./newUser.html" class="nav-link">
+                                <a href="ListUser" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Khách hàng mới </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="listUser.jsp" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Danh sách khách hàng</p>
+                                    <p>Danh sách khách hàng </p>
                                 </a>
                             </li>
                         </ul>
+                    </li>
+                    <li class="nav-item has-treeview">
+                        <a href="listorder" class="nav-link">
+                            <p>
+                                Hóa đơn
+                            </p>
+                        </a>
                     </li>
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">

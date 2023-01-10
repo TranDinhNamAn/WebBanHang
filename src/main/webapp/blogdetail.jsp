@@ -36,7 +36,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./fromdangbai.html" class="nav-link">
+                <a href="fromdangbai.jsp" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Đăng bài viết</p>
                 </a>
