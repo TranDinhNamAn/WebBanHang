@@ -56,7 +56,7 @@
                         <%}%>
                     </ul>
                 </li>
-                <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
+                <li class="nav-item"><a href="ShowAllBlog" class="nav-link">Bài viết</a></li>
                 <li class="nav-item"><a href="contact" class="nav-link">Liên hệ</a></li>
                 <li class="nav-item">
                     <form action="timkiem" style="margin-top: 15px">

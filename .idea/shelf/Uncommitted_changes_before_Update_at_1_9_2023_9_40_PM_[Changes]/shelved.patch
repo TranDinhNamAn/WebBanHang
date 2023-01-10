@@ -1,0 +1,329 @@
+Index: target/WebThueXe/fromdsbaiviet.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/WebThueXe/fromdsbaiviet.html b/target/WebThueXe/fromdsbaiviet.html
+deleted file mode 100644
+--- a/target/WebThueXe/fromdsbaiviet.html	(revision e03fd545591e9777c3b90020f2ea0996f515947f)
++++ /dev/null	(revision e03fd545591e9777c3b90020f2ea0996f515947f)
+@@ -1,263 +0,0 @@
+-<!DOCTYPE html>
+-<html>
+-<head>
+-    <meta charset="utf-8">
+-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-    <title>Danh sách bài viết</title>
+-    <meta name="viewport" content="width=device-width, initial-scale=1">
+-    <link rel="stylesheet" href="css1/all.min.css">
+-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css1/ionicons.min.css">
+-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+-    <link rel="stylesheet" href="css1/adminlte.min.css">
+-</head>
+-<body class="hold-transition sidebar-mini">
+-<div class="wrapper">
+-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+-
+-        <div class="sidebar">
+-            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+-                <div class="image">
+-                    <img src="image/AdminLTELogo.png" class="img-circle elevation-2" alt="User Image">
+-                </div>
+-                <div class="info">
+-                    <a href="#" class="d-block">Admin</a>
+-                </div>
+-            </div>
+-
+-            <nav class="mt-2">
+-                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+-                    data-accordion="false">
+-                    <li class="nav-item has-treeview">
+-                        <a href="#" class="nav-link">
+-                            <i class="nav-icon fas fa-copy"></i>
+-                            <p>
+-                                Quản lý bài viết
+-                                <i class="fas fa-angle-left right"></i>
+-                            </p>
+-                        </a>
+-                        <ul class="nav nav-treeview">
+-                            <li class="nav-item">
+-                                <a href="./fromdangbai.html" class="nav-link">
+-                                    <i class="far fa-circle nav-icon"></i>
+-                                    <p>Đăng bài viết</p>
+-                                </a>
+-                            </li>
+-                            <li class="nav-item">
+-                                <a href="./fromdsbaiviet.html" class="nav-link">
+-                                    <i class="far fa-circle nav-icon"></i>
+-                                    <p>Danh sách bài viết</p>
+-                                </a>
+-                            </li>
+-                        </ul>
+-                    </li>
+-                    <li class="nav-item has-treeview">
+-                        <a href="#" class="nav-link">
+-                            <i class="nav-icon fas fa-motorcycle"></i>
+-                            <p>
+-                                Quản lý sản phẩm
+-                                <i class="right fas fa-angle-left"></i>
+-                            </p>
+-                        </a>
+-                        <ul class="nav nav-treeview">
+-                            <li class="nav-item">
+-                                <a href="addProduct.jsp" class="nav-link">
+-                                    <i class="far fa-circle nav-icon"></i>
+-                                    <p>Thêm sản phẩm</p>
+-                                </a>
+-                            </li>
+-                            <li class="nav-item">
+-                                <a href="./removeProduct.html" class="nav-link">
+-                                    <i class="far fa-circle nav-icon"></i>
+-                                    <p>Xóa sản phẩm</p>
+-                                </a>
+-                            </li>
+-                            <li class="nav-item">
+-                                <a href="updateProduct.jsp" class="nav-link">
+-                                    <i class="far fa-circle nav-icon"></i>
+-                                    <p>Sửa thông tin</p>
+-                                </a>
+-                            </li>
+-                        </ul>
+-                    </li>
+-                    <li class="nav-item has-treeview">
+-                        <a href="#" class="nav-link">
+-                            <i class="nav-icon fas fa-chart-pie"></i>
+-                            <p>
+-                                Danh mục sản phẩm
+-                                <i class="right fas fa-angle-left"></i>
+-                            </p>
+-                        </a>
+-                        <ul class="nav nav-treeview">
+-                            <li class="nav-item">
+-                                <a href="./newProduct.html" class="nav-link">
+-                                    <i class="far fa-circle nav-icon"></i>
+-                                    <p>Sản phẩm mới </p>
+-                                </a>
+-                            </li>
+-                            <li class="nav-item">
+-                                <a href="list_product.jsp" class="nav-link">
+-                                    <i class="far fa-circle nav-icon"></i>
+-                                    <p>Danh sách sản phẩm</p>
+-                                </a>
+-                            </li>
+-                        </ul>
+-                    </li>
+-                    <li class="nav-item has-treeview">
+-                        <a href="#" class="nav-link">
+-                            <i class="nav-icon fas fa-user"></i>
+-                            <p>
+-                                Quản lý user
+-                                <i class="fas fa-angle-left right"></i>
+-                            </p>
+-                        </a>
+-                        <ul class="nav nav-treeview">
+-                            <li class="nav-item">
+-                                <a href="./newUser.html" class="nav-link">
+-                                    <i class="far fa-circle nav-icon"></i>
+-                                    <p>Khách hàng mới </p>
+-                                </a>
+-                            </li>
+-                            <li class="nav-item">
+-                                <a href="listUser.jsp" class="nav-link">
+-                                    <i class="far fa-circle nav-icon"></i>
+-                                    <p>Danh sách khách hàng</p>
+-                                </a>
+-                            </li>
+-                        </ul>
+-                    </li>
+-                    <li class="nav-item has-treeview">
+-                        <a href="./updateUserAdmin.html" class="nav-link">
+-                            <i class="nav-icon fas fa-edit"></i>
+-                            <p>
+-                                Cập nhật thông tin admin
+-                            </p>
+-                        </a>
+-                    </li>
+-                    <li class="nav-item has-treeview">
+-                        <a href="#" class="nav-link">
+-                            <i class="nav-icon fas fa-arrow-right"></i>
+-                            <p>
+-                                Đăng xuất
+-                            </p>
+-                        </a>
+-                    </li>
+-                </ul>
+-            </nav>
+-        </div>
+-    </aside>
+-    <div class="content-wrapper">
+-        <section class="content-header">
+-            <div class="container-fluid">
+-                <div class="row mb-2">
+-                    <div class="col-sm-6">
+-                        <h1>Danh sách bài viết</h1>
+-                    </div>
+-                    <div class="col-sm-6">
+-                        <ol class="breadcrumb float-sm-right">
+-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+-                            <li class="breadcrumb-item active">Danh sách bài viết</li>
+-                        </ol>
+-                    </div>
+-                </div>
+-            </div>
+-        </section>
+-        <div class="row">
+-            <div class="col-12">
+-                <div class="card">
+-                    <div class="card-header">
+-                        <h3 class="card-title">Danh sách bài viết</h3>
+-                    </div>
+-                    <div class="card-body">
+-                        <table id="example2" class="table table-bordered table-hover">
+-                            <thead>
+-                            <tr>
+-                                <th>STT</th>
+-                                <th>Tên bài viết</th>
+-                                <th>Nội dung</th>
+-                                <th>Ngày đăng</th>
+-                                <th>Các nút lệnh</th>
+-                            </tr>
+-                            </thead>
+-                            <tbody>
+-                            <tr>
+-                                <td>01</td>
+-                                <td>Honda giới thiệu Wave alpha bản 2023</td>
+-                                <td>Wave alpha giới thiệu bảng màu đen...</td>
+-                                <td>20/10/2020</td>
+-                                <td>
+-                                    <button class="btn btn-danger">Xóa bài viết</button>
+-                                    <button class="btn btn-dark">Xem chi tiết</button>
+-                                </td>
+-                            </tr>
+-                            <tr>
+-                                <td>02</td>
+-                                <td>Honda thực hiện chiên dich triệu hồi 3 sản phẩm</td>
+-                                <td>Chi tiết các sản phẩm triệu hồi như sao...</td>
+-                                <td> 24/10/2020</td>
+-                                <td>
+-                                    <button class="btn btn-danger">Xóa bài viết</button>
+-                                    <button class="btn btn-dark">Xem chi tiết</button>
+-                                </td>
+-                            </tr>
+-                            <tr>
+-                                <td>03</td>
+-                                <td>Honda triển khai hỗ trợ mua xe</td>
+-                                <td>Khách hàng đăng ký liên minh Winner...</td>
+-                                <td> 22/10/2020</td>
+-                                <td>
+-                                    <button class="btn btn-danger">Xóa bài viết</button>
+-                                    <button class="btn btn-dark">Xem chi tiết</button>
+-                                </td>
+-                            </tr>
+-                            <tr>
+-                                <td>04</td>
+-                                <td>Honda hàng loạt giới thiệu các mẫu xe phân khối lơn</td>
+-                                <td>Các loại xe giới thiệu như CBR500R CB500X</td>
+-                                <td>20/1/2021</td>
+-                                <td>
+-                                    <button class="btn btn-danger">Xóa bài viết</button>
+-                                    <button class="btn btn-dark">Xem chi tiết</button>
+-                                </td>
+-                            </tr>
+-                            <tr>
+-                                <td>05</td>
+-                                <td>Honda UNI-Sống động</td>
+-                                <td>Sự kiện dành riêng cho sinh viên từ bắt tới nam...</td>
+-                                <td> 12/2/2021</td>
+-                                <td>
+-                                    <button class="btn btn-danger">Xóa bài viết</button>
+-                                    <button class="btn btn-dark">Xem chi tiết</button>
+-                                </td>
+-                            </tr>
+-                            </tfoot>
+-                        </table>
+-                    </div>
+-                </div>
+-            </div>
+-        </div>
+-    </div>
+-
+-    <footer class="main-footer">
+-    </footer>
+-</div>
+-<script src="js1/jquery.min.js"></script>
+-<script src="js1/bootstrap.bundle.min.js"></script>
+-<script src="js1/jquery.dataTables.js"></script>
+-<script src="js1/dataTables.bootstrap4.min.js"></script>
+-<script src="js1/adminlte.min.js"></script>
+-<script src="js1/demo.js"></script>
+-<script>
+-    $(function () {
+-        $('#example2').DataTable({
+-            "paging": true,
+-            "lengthChange": false,
+-            "searching": false,
+-            "ordering": true,
+-            "info": true,
+-            "autoWidth": false,
+-            "responsive": true,
+-        });
+-    });
+-</script>
+-</body>
+-</html>
+Index: target/WebThueXe/fromdangbai.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html>\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n  <title>Đăng bài viết</title>\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n  <link rel=\"stylesheet\" href=\"css1/all.min.css\">\r\n  <link rel=\"stylesheet\" href=\"https://code.ionicframework.com/ionicons/2.0.1/css1/ionicons.min.css\">\r\n  <link href=\"https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700\" rel=\"stylesheet\">\r\n  <link rel=\"stylesheet\" href=\"css1/adminlte.min.css\">\r\n</head>\r\n<body class=\"hold-transition sidebar-mini\">\r\n<div class=\"wrapper\">\r\n  <aside class=\"main-sidebar sidebar-dark-primary elevation-4\">\r\n\r\n    <div class=\"sidebar\">\r\n      <div class=\"user-panel mt-3 pb-3 mb-3 d-flex\">\r\n        <div class=\"image\">\r\n          <img src=\"image/AdminLTELogo.png\" class=\"img-circle elevation-2\" alt=\"User Image\">\r\n        </div>\r\n        <div class=\"info\">\r\n          <a href=\"#\" class=\"d-block\">Admin</a>\r\n        </div>\r\n      </div>\r\n\r\n      <nav class=\"mt-2\">\r\n        <ul class=\"nav nav-pills nav-sidebar flex-column\" data-widget=\"treeview\" role=\"menu\"\r\n            data-accordion=\"false\">\r\n          <li class=\"nav-item has-treeview\">\r\n            <a href=\"#\" class=\"nav-link\">\r\n              <i class=\"nav-icon fas fa-copy\"></i>\r\n              <p>\r\n                Quản lý bài viết\r\n                <i class=\"fas fa-angle-left right\"></i>\r\n              </p>\r\n            </a>\r\n            <ul class=\"nav nav-treeview\">\r\n              <li class=\"nav-item\">\r\n                <a href=\"./fromdangbai.html\" class=\"nav-link\">\r\n                  <i class=\"far fa-circle nav-icon\"></i>\r\n                  <p>Đăng bài viết</p>\r\n                </a>\r\n              </li>\r\n              <li class=\"nav-item\">\r\n                <a href=\"./fromdsbaiviet.html\" class=\"nav-link\">\r\n                  <i class=\"far fa-circle nav-icon\"></i>\r\n                  <p>Danh sách bài viết</p>\r\n                </a>\r\n              </li>\r\n            </ul>\r\n          </li>\r\n          <li class=\"nav-item has-treeview\">\r\n            <a href=\"#\" class=\"nav-link\">\r\n              <i class=\"nav-icon fas fa-motorcycle\"></i>\r\n              <p>\r\n                Quản lý sản phẩm\r\n                <i class=\"right fas fa-angle-left\"></i>\r\n              </p>\r\n            </a>\r\n            <ul class=\"nav nav-treeview\">\r\n              <li class=\"nav-item\">\r\n                <a href=\"addProduct.jsp\" class=\"nav-link\">\r\n                  <i class=\"far fa-circle nav-icon\"></i>\r\n                  <p>Thêm sản phẩm</p>\r\n                </a>\r\n              </li>\r\n              <li class=\"nav-item\">\r\n                <a href=\"./removeProduct.html\" class=\"nav-link\">\r\n                  <i class=\"far fa-circle nav-icon\"></i>\r\n                  <p>Xóa sản phẩm</p>\r\n                </a>\r\n              </li>\r\n              <li class=\"nav-item\">\r\n                <a href=\"updateProduct.jsp\" class=\"nav-link\">\r\n                  <i class=\"far fa-circle nav-icon\"></i>\r\n                  <p>Sửa thông tin</p>\r\n                </a>\r\n              </li>\r\n            </ul>\r\n          </li>\r\n          <li class=\"nav-item has-treeview\">\r\n            <a href=\"#\" class=\"nav-link\">\r\n              <i class=\"nav-icon fas fa-chart-pie\"></i>\r\n              <p>\r\n                Danh mục sản phẩm\r\n                <i class=\"right fas fa-angle-left\"></i>\r\n              </p>\r\n            </a>\r\n            <ul class=\"nav nav-treeview\">\r\n              <li class=\"nav-item\">\r\n                <a href=\"./newProduct.html\" class=\"nav-link\">\r\n                  <i class=\"far fa-circle nav-icon\"></i>\r\n                  <p>Sản phẩm mới </p>\r\n                </a>\r\n              </li>\r\n              <li class=\"nav-item\">\r\n                <a href=\"list_product.jsp\" class=\"nav-link\">\r\n                  <i class=\"far fa-circle nav-icon\"></i>\r\n                  <p>Danh sách sản phẩm</p>\r\n                </a>\r\n              </li>\r\n            </ul>\r\n          </li>\r\n          <li class=\"nav-item has-treeview\">\r\n            <a href=\"#\" class=\"nav-link\">\r\n              <i class=\"nav-icon fas fa-user\"></i>\r\n              <p>\r\n                Quản lý user\r\n                <i class=\"fas fa-angle-left right\"></i>\r\n              </p>\r\n            </a>\r\n            <ul class=\"nav nav-treeview\">\r\n              <li class=\"nav-item\">\r\n                <a href=\"./newUser.html\" class=\"nav-link\">\r\n                  <i class=\"far fa-circle nav-icon\"></i>\r\n                  <p>Khách hàng mới </p>\r\n                </a>\r\n              </li>\r\n              <li class=\"nav-item\">\r\n                <a href=\"listUser.jsp\" class=\"nav-link\">\r\n                  <i class=\"far fa-circle nav-icon\"></i>\r\n                  <p>Danh sách khách hàng</p>\r\n                </a>\r\n              </li>\r\n            </ul>\r\n          </li>\r\n          <li class=\"nav-item has-treeview\">\r\n            <a href=\"./updateUserAdmin.html\" class=\"nav-link\">\r\n              <i class=\"nav-icon fas fa-edit\"></i>\r\n              <p>\r\n                Cập nhật thông tin admin\r\n              </p>\r\n            </a>\r\n          </li>\r\n          <li class=\"nav-item has-treeview\">\r\n            <a href=\"#\" class=\"nav-link\">\r\n              <i class=\"nav-icon fas fa-arrow-right\"></i>\r\n              <p>\r\n                Đăng xuất\r\n              </p>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </nav>\r\n    </div>\r\n  </aside>\r\n\r\n  <div class=\"content-wrapper\">\r\n    <section class=\"content-header\">\r\n      <div class=\"container-fluid\">\r\n        <div class=\"row mb-2\">\r\n          <div class=\"col-sm-6\">\r\n            <h1>Bài viết giới thiệu</h1>\r\n          </div>\r\n          <div class=\"col-sm-6\">\r\n            <ol class=\"breadcrumb float-sm-right\">\r\n              <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>\r\n              <li class=\"breadcrumb-item active\">Bài viết giới thiệu</li>\r\n            </ol>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </section>\r\n    <div class=\"container-fluid\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-6\">\r\n          <div class=\"card card-primary\">\r\n            <div class=\"card-header\">\r\n              <h3 class=\"card-title\">Bài viết</h3>\r\n            </div>\r\n            <form role=\"form\">\r\n              <div class=\"card-body\">\r\n                <div class=\"form-group\">\r\n                  <label for=\"exampleInputEmail1\">Tên bài viết</label>\r\n                  <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" placeholder=\"Tên bài viết tối đa 100 ký tự\">\r\n                </div>\r\n                <div class=\"form-group\">\r\n                  <label for=\"ndbv\">Tên bài viết</label>\r\n                  <textarea rows=\"5\"  id=\"ndbv\" class=\"form-control\" placeholder=\"Nội dung không được quá 300 ký tự\"></textarea>\r\n                </div>\r\n              </div>\r\n            </form>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <div class=\"card card-warning\">\r\n            <div class=\"card-header\">\r\n              <h3 class=\"card-title\">Hình ảnh</h3>\r\n            </div>\r\n            <img src=\"image/h1.jpg\" style=\"width: 400px ; height: auto \">\r\n            <div class=\"form-group\">\r\n              <div class=\"input-group\">\r\n                <div class=\"custom-file\">\r\n                  <label class=\"custom-file-label\" >Chọn tệp</label>\r\n                </div>\r\n                <div class=\"input-group-append\">\r\n                  <span class=\"input-group-text\" id=\"\">Đăng</span>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"card-footer\">\r\n          <button type=\"submit\" class=\"btn btn-primary\">Đăng bài</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <footer class=\"main-footer\">\r\n  </footer>\r\n</div>\r\n<script src=\"js1/jquery.min.js\"></script>\r\n<script src=\"js1/bootstrap.bundle.min.js\"></script>\r\n<script src=\"js1/adminlte.min.js\"></script>\r\n<script src=\"js1/demo.js\"></script>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/WebThueXe/fromdangbai.html b/target/WebThueXe/fromdangbai.html
+--- a/target/WebThueXe/fromdangbai.html	(revision e03fd545591e9777c3b90020f2ea0996f515947f)
++++ b/target/WebThueXe/fromdangbai.html	(date 1673251180868)
+@@ -43,7 +43,7 @@
+                 </a>
+               </li>
+               <li class="nav-item">
+-                <a href="./fromdsbaiviet.html" class="nav-link">
++                <a href="fromdsbaiviet.jsp" class="nav-link">
+                   <i class="far fa-circle nav-icon"></i>
+                   <p>Danh sách bài viết</p>
+                 </a>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ArtifactsWorkspaceSettings\">\r\n    <artifacts-to-build>\r\n      <artifact name=\"WebThueXe:war\" />\r\n    </artifacts-to-build>\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"416c06ed-0398-4fcb-a2d0-6804377f658f\" name=\"Changes\" comment=\"Nam An\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_14_PM__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_14_PM__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_15_PM__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_15_PM__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_15_PM__Changes_1.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_15_PM__Changes_1.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Reset.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Reset.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Reset.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Reset.class\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n        <option value=\"Jsp File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PUSH_AUTO_UPDATE\" value=\"true\" />\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"LogFilters\">\r\n    <option name=\"FILTER_ERRORS\" value=\"false\" />\r\n    <option name=\"FILTER_WARNINGS\" value=\"false\" />\r\n    <option name=\"FILTER_INFO\" value=\"true\" />\r\n    <option name=\"FILTER_DEBUG\" value=\"true\" />\r\n    <option name=\"CUSTOM_FILTER\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2Joy0JvsKrzmvkQoO91zMT2kuC6\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/USER/IdeaProjects/WebThueXe&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.applicationServers&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\USER\\IdeaProjects\\WebThueXe\\src\\main\\webapp\\js\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunDashboard\">\r\n    <option name=\"excludedTypes\">\r\n      <set>\r\n        <option value=\"#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory\" />\r\n      </set>\r\n    </option>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Tomcat Server.Tomcat 9.0.68\">\r\n    <configuration name=\"CartServices\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"vn.edu.hcmuaf.fit.service.CartServices\" />\r\n      <module name=\"WebThueXe\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"vn.edu.hcmuaf.fit.service.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Check\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"vn.edu.hcmuaf.fit.service.Check\" />\r\n      <module name=\"WebThueXe\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"vn.edu.hcmuaf.fit.service.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"DBConnect\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"vn.edu.hcmuaf.fit.db.DBConnect\" />\r\n      <module name=\"WebThueXe\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"vn.edu.hcmuaf.fit.db.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ProductServerADM\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"vn.edu.hcmuaf.fit.service.ProductServerADM\" />\r\n      <module name=\"WebThueXe\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"vn.edu.hcmuaf.fit.service.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ProductService\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"vn.edu.hcmuaf.fit.service.ProductService\" />\r\n      <module name=\"WebThueXe\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"vn.edu.hcmuaf.fit.service.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Tomcat 9.0.68\" type=\"#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory\" factoryName=\"Local\" APPLICATION_SERVER_NAME=\"Tomcat 9.0.68\" ALTERNATIVE_JRE_ENABLED=\"false\" nameIsGenerated=\"true\">\r\n      <option name=\"OPEN_IN_BROWSER_URL\" value=\"http://localhost:8080/WebThueXe/trangchu\" />\r\n      <option name=\"UPDATING_POLICY\" value=\"restart-server\" />\r\n      <deployment>\r\n        <artifact name=\"WebThueXe:war\">\r\n          <settings>\r\n            <option name=\"CONTEXT_PATH\" value=\"/WebThueXe\" />\r\n          </settings>\r\n        </artifact>\r\n      </deployment>\r\n      <server-settings>\r\n        <option name=\"BASE_DIRECTORY_NAME\" value=\"580a1075-32b0-42a5-9b30-86c5a702dc23\" />\r\n      </server-settings>\r\n      <predefined_log_file enabled=\"true\" id=\"Tomcat\" />\r\n      <predefined_log_file enabled=\"true\" id=\"Tomcat Catalina\" />\r\n      <predefined_log_file id=\"Tomcat Manager\" />\r\n      <predefined_log_file id=\"Tomcat Host Manager\" />\r\n      <predefined_log_file id=\"Tomcat Localhost Access\" />\r\n      <RunnerSettings RunnerId=\"Debug\">\r\n        <option name=\"DEBUG_PORT\" value=\"56034\" />\r\n      </RunnerSettings>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Cover\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Debug\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Profile\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Run\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n        <option name=\"BuildArtifacts\" enabled=\"true\">\r\n          <artifact name=\"WebThueXe:war\" />\r\n        </option>\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Application.ProductServerADM\" />\r\n      <item itemvalue=\"Application.CartServices\" />\r\n      <item itemvalue=\"Application.Check\" />\r\n      <item itemvalue=\"Application.ProductService\" />\r\n      <item itemvalue=\"Application.DBConnect\" />\r\n      <item itemvalue=\"Tomcat Server.Tomcat 9.0.68\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.ProductService\" />\r\n        <item itemvalue=\"Application.CartServices\" />\r\n        <item itemvalue=\"Application.ProductServerADM\" />\r\n        <item itemvalue=\"Application.Check\" />\r\n        <item itemvalue=\"Application.DBConnect\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"416c06ed-0398-4fcb-a2d0-6804377f658f\" name=\"Changes\" comment=\"\" />\r\n      <created>1672758511428</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1672758511428</updated>\r\n      <workItem from=\"1672758513423\" duration=\"519000\" />\r\n      <workItem from=\"1672761768599\" duration=\"6020000\" />\r\n      <workItem from=\"1672797374118\" duration=\"11613000\" />\r\n      <workItem from=\"1672887662585\" duration=\"740000\" />\r\n      <workItem from=\"1672888421055\" duration=\"195000\" />\r\n      <workItem from=\"1672888632186\" duration=\"187000\" />\r\n      <workItem from=\"1672888907760\" duration=\"16648000\" />\r\n      <workItem from=\"1672925436852\" duration=\"14392000\" />\r\n      <workItem from=\"1672976136512\" duration=\"1511000\" />\r\n      <workItem from=\"1672987187014\" duration=\"7271000\" />\r\n      <workItem from=\"1673009358614\" duration=\"13976000\" />\r\n      <workItem from=\"1673061385760\" duration=\"14400000\" />\r\n      <workItem from=\"1673089955637\" duration=\"1821000\" />\r\n      <workItem from=\"1673100303439\" duration=\"8417000\" />\r\n      <workItem from=\"1673112132196\" duration=\"670000\" />\r\n      <workItem from=\"1673155003327\" duration=\"1830000\" />\r\n      <workItem from=\"1673157268305\" duration=\"7907000\" />\r\n      <workItem from=\"1673185132911\" duration=\"9934000\" />\r\n      <workItem from=\"1673230160054\" duration=\"19919000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Nam An\">\r\n      <created>1672805231465</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672805231465</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Nam An\">\r\n      <created>1672808497777</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672808497777</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Nam An\">\r\n      <created>1672808832394</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672808832394</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Nam An\">\r\n      <created>1672809199519</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672809199519</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Nam An\">\r\n      <created>1672810248209</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672810248209</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"NguyenToi\">\r\n      <created>1672840301901</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672840301901</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Nam An\">\r\n      <created>1672888464035</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672888464035</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Nam An\">\r\n      <created>1672888676606</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672888676606</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Nam An\">\r\n      <created>1672890782257</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672890782257</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Nam An\">\r\n      <created>1672890835503</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672890835503</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Nam An\">\r\n      <created>1672908720889</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672908720889</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"Nam An\">\r\n      <created>1672925995193</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672925995193</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"Nam An\">\r\n      <created>1672927363930</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672927363930</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"Nam An\">\r\n      <created>1672927386467</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672927386467</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"Nam An\">\r\n      <created>1672927476593</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672927476593</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"Nam An\">\r\n      <created>1672941341408</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672941341408</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"Nam An\">\r\n      <created>1672987202770</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672987202770</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"Nam An\">\r\n      <created>1672991305674</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672991305674</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00019\" summary=\"Nam An\">\r\n      <created>1673068400594</created>\r\n      <option name=\"number\" value=\"00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673068400594</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00020\" summary=\"Nam An\">\r\n      <created>1673068443988</created>\r\n      <option name=\"number\" value=\"00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673068443988</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00021\" summary=\"Nam An\">\r\n      <created>1673076056975</created>\r\n      <option name=\"number\" value=\"00021\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673076056975</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00022\" summary=\"Nam An\">\r\n      <created>1673076066709</created>\r\n      <option name=\"number\" value=\"00022\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673076066709</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00023\" summary=\"Nam An\">\r\n      <created>1673076127319</created>\r\n      <option name=\"number\" value=\"00023\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673076127319</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00024\" summary=\"Nam An\">\r\n      <created>1673110193213</created>\r\n      <option name=\"number\" value=\"00024\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673110193213</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00025\" summary=\"Nam An\">\r\n      <created>1673110251248</created>\r\n      <option name=\"number\" value=\"00025\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00025\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673110251248</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00026\" summary=\"Nam An\">\r\n      <created>1673157560331</created>\r\n      <option name=\"number\" value=\"00026\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00026\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673157560331</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00027\" summary=\"Nam An\">\r\n      <created>1673187154973</created>\r\n      <option name=\"number\" value=\"00027\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00027\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673187154973</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00028\" summary=\"Nam An\">\r\n      <created>1673188222603</created>\r\n      <option name=\"number\" value=\"00028\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00028\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673188222603</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00029\" summary=\"Nam An\">\r\n      <created>1673188227768</created>\r\n      <option name=\"number\" value=\"00029\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00029\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673188227768</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00030\" summary=\"Nam An\">\r\n      <created>1673189880319</created>\r\n      <option name=\"number\" value=\"00030\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00030\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673189880319</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00031\" summary=\"Nam An\">\r\n      <created>1673189885519</created>\r\n      <option name=\"number\" value=\"00031\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00031\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673189885519</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00032\" summary=\"Nam An\">\r\n      <created>1673195221233</created>\r\n      <option name=\"number\" value=\"00032\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00032\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673195221233</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00033\" summary=\"Nam An\">\r\n      <created>1673241108889</created>\r\n      <option name=\"number\" value=\"00033\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00033\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673241108889</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00034\" summary=\"Nam An\">\r\n      <created>1673241115868</created>\r\n      <option name=\"number\" value=\"00034\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00034\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673241115868</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00035\" summary=\"Nam An\">\r\n      <created>1673241122264</created>\r\n      <option name=\"number\" value=\"00035\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00035\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673241122264</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00036\" summary=\"Nam An\">\r\n      <created>1673247570430</created>\r\n      <option name=\"number\" value=\"00036\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00036\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673247570430</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00037\" summary=\"Nam An\">\r\n      <created>1673247593032</created>\r\n      <option name=\"number\" value=\"00037\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00037\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673247593032</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00038\" summary=\"Nam An\">\r\n      <created>1673247600142</created>\r\n      <option name=\"number\" value=\"00038\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00038\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673247600142</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00039\" summary=\"Nam An\">\r\n      <created>1673251160849</created>\r\n      <option name=\"number\" value=\"00039\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00039\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673251160849</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"40\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"NguyenToi\" />\r\n    <MESSAGE value=\"Nam An\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Nam An\" />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/WebThueXe$DBConnect.ic\" NAME=\"DBConnect Coverage Results\" MODIFIED=\"1672888970780\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\r\n      <FILTER>vn.edu.hcmuaf.fit.db.*</FILTER>\r\n    </SUITE>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision a6e9991ec7a23ffee7532866afa42b4632da7d37)
++++ b/.idea/workspace.xml	(date 1673275248173)
+@@ -10,12 +10,20 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="416c06ed-0398-4fcb-a2d0-6804377f658f" name="Changes" comment="Nam An">
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_14_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_14_PM__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_15_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_15_PM__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_15_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_9_2023_12_15_PM__Changes_1.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Reset.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/WEB-INF/classes/vn/edu/hcmuaf/fit/controller/Reset.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Reset.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vn/edu/hcmuaf/fit/controller/Reset.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/cart.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/changepass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/changepass.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/contact.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/fromdangbai.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/fromdangbai.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/fromdsbaiviet.html" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/login.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/motor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/motor.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/motor_single.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/motor_single.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/newpass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/newpass.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/orders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/orders.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/otp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/otp.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/phanloai.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/phanloai.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/reset.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/reset.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/WebThueXe/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebThueXe/signup.jsp" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />

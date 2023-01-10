@@ -44,7 +44,7 @@
                 <li class="nav-item"><a href="trangchu" class="nav-link">Trang chủ</a></li>
                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
                 <li class="nav-item"><a href="xemay" class="nav-link">Xe máy</a></li>
-                <li class="nav-item"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
+                <li class="nav-item"><a href="ShowAllBlog" class="nav-link">Bài viết</a></li>
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Cá nhân</a>
                     <ul class="dr-menu">
@@ -102,7 +102,7 @@
                     <tr>
                         <td><%=i%></td>
                         <td>
-                            <img style="width: 75px;height: 65px" src="<%=detail.getImg()%>>"
+                            <img style="width: 75px;height: 65px" src="<%=detail.getImg()%>"
                                  class="hinhdaidien" alt="">
                         </td>
                         <td><%=detail.getName()%></td>

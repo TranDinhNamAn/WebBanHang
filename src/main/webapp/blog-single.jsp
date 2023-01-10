@@ -48,7 +48,7 @@
                 <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
                 <li class="nav-item"><a href="pricing.jsp" class="nav-link">Bảng giá</a></li>
                 <li class="nav-item"><a href="motor.jsp" class="nav-link">Xe máy</a></li>
-                <li class="nav-item active"><a href="blog.jsp" class="nav-link">Bài viết</a></li>
+                <li class="nav-item active"><a href="ShowAllBlog" class="nav-link">Bài viết</a></li>
                 <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
                 <li class="nav-item"><a href="login.jsp" class="nav-link">Đăng nhập</a></li>
                 <li class="nav-item"><a href="cart.jsp" class="nav-link"><p style="margin-top: 6px"
@@ -68,7 +68,7 @@
             <div class="col-md-9 ftco-animate pb-5">
                 <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ<i
                         class="ion-ios-arrow-forward"></i></a></span>
-                    <span class="mr-2"><a href="blog.jsp">Bài viết <i class="ion-ios-arrow-forward"></i></a></span>
+                    <span class="mr-2"><a href="ShowAllBlog">Bài viết <i class="ion-ios-arrow-forward"></i></a></span>
                 <h1 class="mb-3 bread"><%=b.getName()%></h1>
             </div>
         </div>
